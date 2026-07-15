@@ -1,5 +1,5 @@
 {
-  "name": "@heroui/docs",
+  "name": "@kinetic/docs",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -23,7 +23,7 @@
   "dependencies": {
     "@fumadocs/language": "0.0.1",
     "@gravity-ui/icons": "2.16.0",
-    "@heroui/react": "workspace:*",
+    "@kinetic/react": "workspace:*",
     "@iconify-json/gravity-ui": "1.2.10",
     "@iconify/react": "6.0.2",
     "@internationalized/date": "3.12.2",
@@ -69,8 +69,8 @@
     "zod": "4.2.1"
   },
   "devDependencies": {
-    "@heroui/standard": "workspace:*",
-    "@heroui/styles": "workspace:*",
+    "@kinetic/standard": "workspace:*",
+    "@kinetic/styles": "workspace:*",
     "@tailwindcss/postcss": "4.3.0",
     "@types/color-convert": "2.0.4",
     "@types/culori": "4.0.1",

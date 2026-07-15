@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, FieldError, Input, Label, TextField} from "@heroui/react";
+import {Description, FieldError, Input, Label, TextField} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 

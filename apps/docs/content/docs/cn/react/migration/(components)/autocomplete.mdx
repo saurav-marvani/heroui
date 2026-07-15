@@ -1,10 +1,10 @@
 ---
 title: Autocomplete
-description: Autocomplete 从 HeroUI v2 到 v3 的迁移指南。
+description: Autocomplete 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  在 v3 中，v2 的 `Autocomplete` 可以迁移为 [v3 Autocomplete](/docs/react/components/autocomplete) 或 [v3 ComboBox](/docs/react/components/combo-box)，取决于你的使用场景。请参阅下文「何时使用 Autocomplete 与 ComboBox」。本指南只关注从 HeroUI v2 的迁移。
+  在 v3 中，v2 的 `Autocomplete` 可以迁移为 [v3 Autocomplete](/docs/react/components/autocomplete) 或 [v3 ComboBox](/docs/react/components/combo-box)，取决于你的使用场景。请参阅下文「何时使用 Autocomplete 与 ComboBox」。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 何时使用 Autocomplete 与 ComboBox
@@ -25,7 +25,7 @@ v3 提供两个组件来替代 v2 的 Autocomplete：
 在 v2 中，Autocomplete 是内部包装 Input 的单一组件：
 
 ```tsx
-import { Autocomplete, AutocompleteItem } from "@heroui/react";
+import { Autocomplete, AutocompleteItem } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -42,7 +42,7 @@ export default function App() {
 ComboBox 提供与 v2 Autocomplete 最接近的体验：内联文本输入并随输入筛选选项。
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from "@heroui/react";
+import { ComboBox, Input, Label, ListBox } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -74,7 +74,7 @@ export default function App() {
 Autocomplete 提供选择器式触发器，并在 Popover 内提供搜索 / 筛选字段：
 
 ```tsx
-import { Autocomplete, Label, SearchField, ListBox, useFilter } from "@heroui/react";
+import { Autocomplete, Label, SearchField, ListBox, useFilter } from "@kinetic/react";
 
 export default function App() {
   const { contains } = useFilter({ sensitivity: "base" });
@@ -168,10 +168,10 @@ v3 Autocomplete 在 `Autocomplete.Filter` 内使用 `SearchField`，作为 Popov
 
 ### 7. useFilter Hook
 
-v3 Autocomplete 使用 `useFilter` hook（来自 React Aria，由 `@heroui/react` 再导出）提供带区域设置感知的筛选函数：
+v3 Autocomplete 使用 `useFilter` hook（来自 React Aria，由 `@kinetic/react` 再导出）提供带区域设置感知的筛选函数：
 
 ```tsx
-import { useFilter } from "@heroui/react";
+import { useFilter } from "@kinetic/react";
 
 const { contains } = useFilter({ sensitivity: "base" });
 
@@ -257,7 +257,7 @@ const { contains } = useFilter({ sensitivity: "base" });
   <Tab value="v3">
     ```tsx
     import { useState } from "react";
-    import type { Key } from "@heroui/react";
+    import type { Key } from "@kinetic/react";
 
     const [selectedKey, setSelectedKey] = useState<Key | null>("cat");
 
@@ -309,8 +309,8 @@ const { contains } = useFilter({ sensitivity: "base" });
   <Tab value="v3">
     ```tsx
     import { useState } from "react";
-    import type { Key } from "@heroui/react";
-    import { Autocomplete, Label, SearchField, ListBox, useFilter } from "@heroui/react";
+    import type { Key } from "@kinetic/react";
+    import { Autocomplete, Label, SearchField, ListBox, useFilter } from "@kinetic/react";
 
     const [value, setValue] = useState<Key | Key[] | null>("cat");
     const { contains } = useFilter({ sensitivity: "base" });
@@ -365,7 +365,7 @@ const { contains } = useFilter({ sensitivity: "base" });
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Header, Separator } from "@heroui/react";
+    import { Header, Separator } from "@kinetic/react";
 
     <ComboBox>
       <Label>Country</Label>
@@ -415,7 +415,7 @@ const { contains } = useFilter({ sensitivity: "base" });
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Autocomplete, Label, SearchField, ListBox, useFilter } from "@heroui/react";
+    import { Autocomplete, Label, SearchField, ListBox, useFilter } from "@kinetic/react";
 
     function FilterExample() {
       const { contains } = useFilter({ sensitivity: "base" });
@@ -477,7 +477,7 @@ const { contains } = useFilter({ sensitivity: "base" });
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { FieldError, Form } from "@heroui/react";
+    import { FieldError, Form } from "@kinetic/react";
 
     {/* Required field */}
     <Form>

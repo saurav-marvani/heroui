@@ -2,8 +2,8 @@
 const normalizeSiteUrl = (siteUrl) => {
   const url = new URL(siteUrl);
 
-  if (url.hostname === "v3.heroui.com") {
-    url.hostname = "heroui.com";
+  if (url.hostname === "v3.kinetic-ui.com") {
+    url.hostname = "kinetic-ui.com";
   }
 
   return url.toString().replace(/\/$/, "");
@@ -36,7 +36,7 @@ export default {
     },
   },
   siteUrl: normalizeSiteUrl(
-    process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://heroui.com",
+    process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://kinetic-ui.com",
   ),
   sitemapSize: 5000,
 };

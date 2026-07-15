@@ -1,5 +1,5 @@
 import {ArrowRightFromSquare, Gear, Persons} from "@gravity-ui/icons";
-import {Avatar, Dropdown, Label} from "@heroui/react";
+import {Avatar, Dropdown, Label} from "@kinetic/react";
 
 export function CustomTrigger() {
   return (
@@ -8,7 +8,7 @@ export function CustomTrigger() {
         <Avatar>
           <Avatar.Image
             alt="Junior Garcia"
-            src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg"
+            src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg"
           />
           <Avatar.Fallback delayMs={600}>JD</Avatar.Fallback>
         </Avatar>
@@ -19,7 +19,7 @@ export function CustomTrigger() {
             <Avatar size="sm">
               <Avatar.Image
                 alt="Jane"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg"
               />
               <Avatar.Fallback delayMs={600}>JD</Avatar.Fallback>
             </Avatar>

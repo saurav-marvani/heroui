@@ -1,6 +1,6 @@
-# HeroUI Contributing Guide
+# Kinetic Contributing Guide
 
-Hello!, I am very excited that you are interested in contributing with HeroUI. However, before submitting your contribution, be sure to take a moment and read the following guidelines.
+Hello!, I am very excited that you are interested in contributing with Kinetic. However, before submitting your contribution, be sure to take a moment and read the following guidelines.
 
 - [Code of Conduct](https://github.com/heroui-inc/heroui/blob/canary/CODE_OF_CONDUCT.md)
 - [Extraction request guidelines](#pull-request-guidelines)
@@ -108,7 +108,7 @@ We use [Turbo Repo](https://turborepo.org/) for the project management.
 2. If you will be working on the components source code, you can use the following command to start the webpack dev server:
 
 ```bash
-## Start the dev babel server of HeroUI core components
+## Start the dev babel server of Kinetic core components
 pnpm dev
 
 ## optional
@@ -119,10 +119,10 @@ pnpm dev:docs ## this will start the documentation next.js server and it will au
 ```
 
 - If you will be working just on the documentation source code / mdx, you can use the following commands to build
-  HeroUI components and then start the next.js dev server:
+  Kinetic components and then start the next.js dev server:
 
 ```bash
-## Build HeroUI source components
+## Build Kinetic source components
 pnpm build
 
 ## Start the next.js documentation dev server
@@ -201,13 +201,13 @@ When making a visual change, please provide screenshots
 and/or screencasts of the proposed change. This will help us to understand the
 desired change easier.
 
-Until HeroUI has a stable release new components will be created only for the core team.
+Until Kinetic has a stable release new components will be created only for the core team.
 
 ## Documentation
 
 Please update the docs with any API changes, the code and docs should always be in sync.
 
-The main documentation lives in the `apps/docs/content` folder, the project uses MDX and all `HeroUI` are already imported.
+The main documentation lives in the `apps/docs/content` folder, the project uses MDX and all `Kinetic` are already imported.
 
 ## Breaking changes
 
@@ -215,7 +215,7 @@ Breaking changes should be accompanied with deprecations of removed functionalit
 
 ## Becoming a maintainer
 
-If you are interested in becoming a HeroUI maintainer, start by
+If you are interested in becoming a Kinetic maintainer, start by
 reviewing issues and pull requests. Answer questions for those in need of
 troubleshooting. Join us in the
 [Discord Community](https://discord.gg/9b6yyZKmH4) chat room.

@@ -91,7 +91,7 @@ const COMPONENT_GROUPS = [
 const componentStatusIcons = ["preview", "new", "updated", "new-dot"];
 
 const VIDEO_BASE_URL =
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/native/components/videos";
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/native/components/videos";
 
 interface ComponentWithStatus {
   component: {

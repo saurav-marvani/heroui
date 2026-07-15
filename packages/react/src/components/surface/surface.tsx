@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {SurfaceVariants} from "@heroui/styles";
+import type {SurfaceVariants} from "@kinetic/styles";
 import type {ReactNode} from "react";
 
-import {surfaceVariants} from "@heroui/styles";
+import {surfaceVariants} from "@kinetic/styles";
 import React, {createContext} from "react";
 
 import {dom} from "../../utils/dom";

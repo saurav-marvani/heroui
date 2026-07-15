@@ -39,7 +39,7 @@ Beta 13 引入多行输入组件 TextArea、Button outline 变体，并为所有
 </Tabs>
 
 <Callout type="info">
-  **使用 AI 助手？** 直接提示「Hey Cursor，把 HeroUI Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [HeroUI Native MCP 服务器](/docs/native/getting-started/mcp-server)。
+  **使用 AI 助手？** 直接提示「Hey Cursor，把 Kinetic Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [Kinetic Native MCP 服务器](/docs/native/getting-started/mcp-server)。
 </Callout>
 
 ## 抢先体验
@@ -68,7 +68,7 @@ Beta 13 引入多行输入组件 TextArea、Button outline 变体，并为所有
 
 **方式二：点击链接**
 
-**[📱 在 Expo Go 中打开演示应用](https://link.heroui.com/native-demo)**
+**[📱 在 Expo Go 中打开演示应用](https://link.kinetic-ui.com/native-demo)**
 
 若设备已安装 Expo Go，将自动在其中打开应用。
 
@@ -336,7 +336,7 @@ Popover、Select、Dialog、BottomSheet 的动画系统已重构：统一进出�
 
 ```tsx
 // 细粒度导入——仅需少量组件时推荐
-import { HeroUINativeProvider } from "heroui-native/provider";
+import { KineticNativeProvider } from "heroui-native/provider";
 import { Button } from "heroui-native/button";
 import { Card } from "heroui-native/card";
 
@@ -637,7 +637,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 - **[Issue #219](https://github.com/heroui-inc/heroui-native/issues/219)**：修复 Button `childrenToString()` 在多子节点时返回 `"[object Object]"`；现正确处理 React 元素与复杂子树，避免错误字符串化。
 
-- **[Issue #232](https://github.com/heroui-inc/heroui-native/issues/232)**：修复 HeroUINativeProvider 与新版 Uniwind Pro 不兼容；现可正常配合最新 Uniwind。
+- **[Issue #232](https://github.com/heroui-inc/heroui-native/issues/232)**：修复 KineticNativeProvider 与新版 Uniwind Pro 不兼容；现可正常配合最新 Uniwind。
 
 - **[Issue #259](https://github.com/heroui-inc/heroui-native/issues/259)**：修复 Bottom Sheet 在快速打开并随即进行手势操作后偶发无法再次打开等问题；进出场动画逻辑重构后已缓解。
 

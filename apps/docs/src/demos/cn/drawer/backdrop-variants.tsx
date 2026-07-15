@@ -1,4 +1,4 @@
-import {Button, Drawer} from "@heroui/react";
+import {Button, Drawer} from "@kinetic/react";
 
 const VARIANT_LABELS = {
   blur: "模糊",

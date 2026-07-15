@@ -1,6 +1,6 @@
 "use client";
 
-import {Label, TimeField} from "@heroui/react";
+import {Label, TimeField} from "@kinetic/react";
 
 export function Basic() {
   return (

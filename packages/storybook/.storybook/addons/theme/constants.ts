@@ -1,7 +1,7 @@
-export const THEME_ADDON_ID = "heroui-theme-addon";
-export const THEME_GLOBAL_TYPE_ID = "heroui-theme";
-export const THEME_PARAM_KEY = "heroui-theme";
-export const THEME_EVENT_NAME = "heroui-theme-changed";
+export const THEME_ADDON_ID = "kinetic-theme-addon";
+export const THEME_GLOBAL_TYPE_ID = "kinetic-theme";
+export const THEME_PARAM_KEY = "kinetic-theme";
+export const THEME_EVENT_NAME = "kinetic-theme-changed";
 
 export const THEME_VALUES = ["light", "dark"] as const;
 export type ThemeKey = (typeof THEME_VALUES)[number];

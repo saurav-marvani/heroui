@@ -1,10 +1,10 @@
 ---
 title: RadioGroup
-description: RadioGroup 从 HeroUI v2 到 v3 的迁移指南。
+description: RadioGroup 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 RadioGroup 文档](/docs/react/components/radio-group)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 RadioGroup 文档](/docs/react/components/radio-group)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: RadioGroup 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，`RadioGroup` 通过 `label` prop 设置标题：
 
 ```tsx
-import { RadioGroup, Radio } from "@heroui/react";
+import { RadioGroup, Radio } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
 在 v3 中，`RadioGroup` 改用 `Label` 组件，并配合 Radio 的复合结构：
 
 ```tsx
-import { RadioGroup, Radio, Label, Description } from "@heroui/react";
+import { RadioGroup, Radio, Label, Description } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -113,7 +113,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { RadioGroup, Radio, Label, Description } from "@heroui/react";
+    import { RadioGroup, Radio, Label, Description } from "@kinetic/react";
 
     <RadioGroup name="plan">
       <Label>Select plan</Label>
@@ -154,7 +154,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { RadioGroup, Radio, Label } from "@heroui/react";
+    import { RadioGroup, Radio, Label } from "@kinetic/react";
 
     {/* Primary variant (default) */}
     <RadioGroup variant="primary" name="plan">
@@ -188,7 +188,7 @@ export default function App() {
 ### 只读
 
 ```tsx
-import { RadioGroup, Radio, Label } from "@heroui/react";
+import { RadioGroup, Radio, Label } from "@kinetic/react";
 
 {/* Prevents value changes while keeping the group focusable */}
 <RadioGroup isReadOnly defaultValue="basic" name="plan">
@@ -218,7 +218,7 @@ import { RadioGroup, Radio, Label } from "@heroui/react";
   <Tab value="v2">
     ```tsx
     import { useState } from "react";
-    import { RadioGroup, Radio } from "@heroui/react";
+    import { RadioGroup, Radio } from "@kinetic/react";
 
     const [value, setValue] = useState("london");
 
@@ -231,7 +231,7 @@ import { RadioGroup, Radio, Label } from "@heroui/react";
   <Tab value="v3">
     ```tsx
     import { useState } from "react";
-    import { RadioGroup, Radio, Label } from "@heroui/react";
+    import { RadioGroup, Radio, Label } from "@kinetic/react";
 
     const [value, setValue] = useState("london");
 

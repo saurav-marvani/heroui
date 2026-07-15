@@ -1,12 +1,12 @@
 ---
 title: 迁移
-description: 将 HeroUI v2 应用迁移到 v3 的完整指南
+description: 将 Kinetic v2 应用迁移到 v3 的完整指南
 index: true
 ---
 
 ## 面向 AI 助手
 
-以下是 AI 助手获取迁移文档的三种方式。***我们推荐使用 HeroUI Migration MCP 服务器***，并充分利用其 prompt 与工具，不过其它方式也都能为 agent 提供完整的文档。
+以下是 AI 助手获取迁移文档的三种方式。***我们推荐使用 Kinetic Migration MCP 服务器***，并充分利用其 prompt 与工具，不过其它方式也都能为 agent 提供完整的文档。
 
 | 对比项 | MCP Server | Agent Skills | AGENTS.md |
 |---------|-----------|--------------|-----------|
@@ -22,8 +22,8 @@ index: true
 
 <section id="major-changes">
 
-- **依赖项**：将 React 升级到 v19+、HeroUI 包升级到 v3、Tailwind CSS 升级到 v4，并移除 Framer Motion
-- **无需 Provider**：v3 不再需要 `HeroUIProvider`
+- **依赖项**：将 React 升级到 v19+、Kinetic 包升级到 v3、Tailwind CSS 升级到 v4，并移除 Framer Motion
+- **无需 Provider**：v3 不再需要 `KineticProvider`
 - **组件 API 更新**：许多组件改用 React Aria Components 模式
 - **复合组件**：全新的复合组件模式带来了更好的定制能力。详情请参阅各组件的迁移指南。
 - **已移除的 Hooks**：v2 中的组件 Hooks（如 `useSwitch`、`useInput`）已被移除——请改用复合组件。`useDisclosure` 已被替换为 `useOverlayState`。详情请参阅 [Hooks 迁移指南](/docs/react/migration/hooks)。
@@ -44,7 +44,7 @@ index: true
 
 ## 迁移策略
 
-如果不做特殊设置，HeroUI v2 与 v3 不能在同一个项目中共存。你可以选择以下两种迁移方式：
+如果不做特殊设置，Kinetic v2 与 v3 不能在同一个项目中共存。你可以选择以下两种迁移方式：
 
 ### 一次性完整迁移
 

@@ -2,7 +2,7 @@
 
 import type {Key} from "react-aria-components";
 
-import {Tabs} from "@heroui/react";
+import {Tabs} from "@kinetic/react";
 import React from "react";
 import {cn} from "tailwind-variants";
 

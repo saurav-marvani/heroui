@@ -1,6 +1,6 @@
 "use client";
 
-import {Switch} from "@heroui/react";
+import {Switch} from "@kinetic/react";
 import React from "react";
 
 export function Controlled() {

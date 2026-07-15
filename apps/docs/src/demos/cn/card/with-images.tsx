@@ -1,5 +1,5 @@
 import {CircleDollar} from "@gravity-ui/icons";
-import {Avatar, Button, Card, CloseButton, Link} from "@heroui/react";
+import {Avatar, Button, Card, CloseButton, Link} from "@kinetic/react";
 
 export function WithImages() {
   return (
@@ -12,7 +12,7 @@ export function WithImages() {
               alt="樱桃"
               className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover select-none"
               loading="lazy"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/cherries.jpeg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/cherries.jpeg"
             />
           </div>
           <div className="flex flex-1 flex-col gap-3">
@@ -73,7 +73,7 @@ export function WithImages() {
                   <Avatar className="size-[56px] rounded-xl">
                     <Avatar.Image
                       alt="演示图片 1"
-                      src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo1.jpg"
+                      src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo1.jpg"
                     />
                     <Avatar.Fallback>JK</Avatar.Fallback>
                   </Avatar>
@@ -86,7 +86,7 @@ export function WithImages() {
                   <Avatar className="size-4">
                     <Avatar.Image
                       alt="约翰"
-                      src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
+                      src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
                     />
                     <Avatar.Fallback>JK</Avatar.Fallback>
                   </Avatar>
@@ -99,7 +99,7 @@ export function WithImages() {
                   <Avatar className="size-[56px] rounded-xl">
                     <Avatar.Image
                       alt="演示图片 2"
-                      src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo2.jpg"
+                      src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo2.jpg"
                     />
                     <Avatar.Fallback>AB</Avatar.Fallback>
                   </Avatar>
@@ -112,7 +112,7 @@ export function WithImages() {
                   <Avatar className="size-4">
                     <Avatar.Image
                       alt="玛莎"
-                      src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
+                      src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
                     />
                     <Avatar.Fallback>M</Avatar.Fallback>
                   </Avatar>
@@ -128,7 +128,7 @@ export function WithImages() {
               alt="NEO 家用机器人"
               aria-hidden="true"
               className="absolute inset-0 h-full w-full object-cover"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/neo2.jpeg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/neo2.jpeg"
             />
 
             {/* 标题区 */}
@@ -162,7 +162,7 @@ export function WithImages() {
               alt="NEO 家用机器人"
               aria-hidden="true"
               className="absolute inset-0 h-full w-full object-cover"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/neo1.jpeg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/neo1.jpeg"
             />
 
             <Card.Footer className="z-10 mt-auto flex items-end justify-between">
@@ -184,7 +184,7 @@ export function WithImages() {
                 alt="未来感机器人"
                 className="aspect-square h-16 w-16 shrink-0 rounded-xl object-cover select-none sm:h-20 sm:w-20"
                 loading="lazy"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/robot1.jpeg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/robot1.jpeg"
               />
               <div className="flex flex-1 flex-col justify-center gap-1">
                 <Card.Title className="text-sm">连接未来</Card.Title>
@@ -197,7 +197,7 @@ export function WithImages() {
                 alt="牛油果"
                 className="aspect-square h-16 w-16 shrink-0 rounded-xl object-cover select-none sm:h-20 sm:w-20"
                 loading="lazy"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/avocado.jpeg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/avocado.jpeg"
               />
               <div className="flex flex-1 flex-col justify-center gap-1">
                 <Card.Title className="text-sm">牛油果黑客松</Card.Title>
@@ -210,7 +210,7 @@ export function WithImages() {
                 alt="Sound Electro 活动"
                 className="aspect-square h-16 w-16 shrink-0 rounded-xl object-cover select-none sm:h-20 sm:w-20"
                 loading="lazy"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/oranges.jpeg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/oranges.jpeg"
               />
               <div className="flex flex-1 flex-col justify-center gap-1">
                 <Card.Title className="text-sm">Sound Electro｜超越艺术</Card.Title>

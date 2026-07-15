@@ -1,10 +1,10 @@
 "use client";
 
-import type {ColorFieldVariants} from "@heroui/styles";
+import type {ColorFieldVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {Color} from "react-aria-components/ColorArea";
 
-import {colorFieldVariants} from "@heroui/styles";
+import {colorFieldVariants} from "@kinetic/styles";
 import React from "react";
 import {ColorField as ColorFieldPrimitive} from "react-aria-components/ColorField";
 

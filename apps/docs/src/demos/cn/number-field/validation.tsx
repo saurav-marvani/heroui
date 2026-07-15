@@ -1,4 +1,4 @@
-import {FieldError, Label, NumberField} from "@heroui/react";
+import {FieldError, Label, NumberField} from "@kinetic/react";
 
 export function Validation() {
   return (

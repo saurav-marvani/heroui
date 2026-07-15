@@ -1,6 +1,6 @@
 "use client";
 
-import {Avatar, Card} from "@heroui/react";
+import {Avatar, Card} from "@kinetic/react";
 import {tv} from "tailwind-variants";
 
 import {useDictionary} from "@/hooks/use-dictionary";
@@ -27,7 +27,7 @@ export function SubtleCardsDemo() {
           <Avatar className={avatar()}>
             <Avatar.Image
               alt={t.indieTitle}
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo1.jpg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo1.jpg"
             />
             <Avatar.Fallback>JK</Avatar.Fallback>
           </Avatar>
@@ -40,7 +40,7 @@ export function SubtleCardsDemo() {
           <Avatar className={footerAvatar()}>
             <Avatar.Image
               alt="John"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
             />
             <Avatar.Fallback>JK</Avatar.Fallback>
           </Avatar>
@@ -52,7 +52,7 @@ export function SubtleCardsDemo() {
           <Avatar className={avatar()}>
             <Avatar.Image
               alt={t.aiTitle}
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo2.jpg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo2.jpg"
             />
             <Avatar.Fallback>J</Avatar.Fallback>
           </Avatar>
@@ -65,7 +65,7 @@ export function SubtleCardsDemo() {
           <Avatar className={footerAvatar()}>
             <Avatar.Image
               alt="Martha"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
             />
             <Avatar.Fallback>M</Avatar.Fallback>
           </Avatar>

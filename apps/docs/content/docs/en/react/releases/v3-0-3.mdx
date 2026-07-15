@@ -18,28 +18,28 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@latest @heroui/react@latest
+    npm i @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@latest @heroui/react@latest
+    pnpm add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@latest @heroui/react@latest
+    yarn add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@latest @heroui/react@latest
+    bun add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI MCP Server](/docs/ui-for-agents/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic MCP Server](/docs/ui-for-agents/mcp-server).
 </Callout>
 
 ## What's New
@@ -58,12 +58,12 @@ Table now supports expandable rows for tree-style data. Set a `treeColumn` and r
 
 ### useTheme hook
 
-For plain React with Vite or Create React App (no Next.js theme provider), import `useTheme` from `@heroui/react`. It accepts any theme name (`"light"`, `"dark"`, `"brutalism-light"`, etc.). Pass `"system"` to follow the OS preference. It persists the value in `localStorage`, and sets both `data-theme` and `class` on `<html>` to the resolved theme name.
+For plain React with Vite or Create React App (no Next.js theme provider), import `useTheme` from `@kinetic/react`. It accepts any theme name (`"light"`, `"dark"`, `"brutalism-light"`, etc.). Pass `"system"` to follow the OS preference. It persists the value in `localStorage`, and sets both `data-theme` and `class` on `<html>` to the resolved theme name.
 
 ```tsx
 "use client";
 
-import { Button, useTheme } from "@heroui/react";
+import { Button, useTheme } from "@kinetic/react";
 
 export function ThemeSwitch() {
   const { theme, setTheme } = useTheme("light");
@@ -100,7 +100,7 @@ The DOM polymorphic helper lets lightweight components that are not built on Rea
 
 ### License change
 
-HeroUI is now licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), replacing the previous MIT license. Apache 2.0 provides the same permissive freedoms while adding an explicit patent grant for additional legal protection. No action is required from existing users.
+Kinetic is now licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), replacing the previous MIT license. Apache 2.0 provides the same permissive freedoms while adding an explicit patent grant for additional legal protection. No action is required from existing users.
 
 ## Bug Fixes
 

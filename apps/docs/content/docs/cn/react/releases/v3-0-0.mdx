@@ -1,5 +1,5 @@
 ---
-title: HeroUI v3 正式发布
+title: Kinetic v3 正式发布
 description: 面向 React 与 React Native 的彻底重写。75+ Web 组件、37 个原生组件、Tailwind CSS v4、React Aria、复合组件架构，以及为 AI 辅助开发而打造的工具链。
 ---
 
@@ -36,12 +36,12 @@ description: 面向 React 与 React Native 的彻底重写。75+ Web 组件、37
 
 [查看详情](#heroui-native)
 
-### HeroUI Pro
+### Kinetic Pro
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/heroui-pro@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/heroui-pro-dark@2x.jpg"
-  alt="HeroUI Pro"
+  alt="Kinetic Pro"
   href="https://heroui.pro"
 />
 
@@ -53,9 +53,9 @@ description: 面向 React 与 React Native 的彻底重写。75+ Web 组件、37
 
 **组合优于配置：** v2 的组件是黑盒。v3 采用复合组件模式：每一个内部部件都是真实的元素，你可以为它们设置样式、调整位置、替换或移除。
 
-**样式与实现分离：** `@heroui/styles` 是独立的 CSS 包，`@heroui/react` 负责行为逻辑。这套样式可以配合 React、原生 HTML + Tailwind 或任意框架使用。BEM 类名让每一个 slot 都能在全局层面被定制。切换主题不仅会改变变量，还能改变组件的外观与质感。
+**样式与实现分离：** `@kinetic/styles` 是独立的 CSS 包，`@kinetic/react` 负责行为逻辑。这套样式可以配合 React、原生 HTML + Tailwind 或任意框架使用。BEM 类名让每一个 slot 都能在全局层面被定制。切换主题不仅会改变变量，还能改变组件的外观与质感。
 
-**按需变身 Headless：** 只要不引入 `@heroui/styles`，你就拥有了一套 headless 组件库。我们负责功能与无障碍，你专注于自己的产品。
+**按需变身 Headless：** 只要不引入 `@kinetic/styles`，你就拥有了一套 headless 组件库。我们负责功能与无障碍，你专注于自己的产品。
 
 **默认就有好性能：** v2 的所有动画都依赖 Framer Motion。v3 已将其替换为原生的 CSS transition 与 keyframes。打包体积更小、可使用 GPU 加速，且无需任何 JS 动画运行时。
 
@@ -156,7 +156,7 @@ Tailwind 的 `@theme` 指令会将这些 token 映射为工具类。`bg-accent`�
 
 ```css
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 ```
 
 ### BEM 类名
@@ -206,10 +206,10 @@ Tailwind 的 `@theme` 指令会将这些 token 映射为工具类。`bg-accent`�
 
 ```css
 @import "tailwindcss";
-@import "@heroui/styles/base" layer(base);
-@import "@heroui/styles/themes/default" layer(theme);
-@import "@heroui/styles/components/button.css" layer(components);
-@import "@heroui/styles/components/card.css" layer(components);
+@import "@kinetic/styles/base" layer(base);
+@import "@kinetic/styles/themes/default" layer(theme);
+@import "@kinetic/styles/components/button.css" layer(components);
+@import "@kinetic/styles/components/card.css" layer(components);
 ```
 
 只发布你实际用到的 CSS，避免在生产环境中携带未使用的组件样式。
@@ -231,7 +231,7 @@ Tailwind 的 `@theme` 指令会将这些 token 映射为工具类。`bg-accent`�
 
 ### Reduce Motion
 
-部分用户需要禁用动画。HeroUI 扩展了 Tailwind 的 `motion-reduce:` 变体，使其同时支持系统级偏好和自定义 data 属性：
+部分用户需要禁用动画。Kinetic 扩展了 Tailwind 的 `motion-reduce:` 变体，使其同时支持系统级偏好和自定义 data 属性：
 
 ```css
 .button {
@@ -243,7 +243,7 @@ Tailwind 的 `@theme` 指令会将这些 token 映射为工具类。`bg-accent`�
 
 ```html
 <html data-reduce-motion="true">
-  <!-- All HeroUI animations are disabled -->
+  <!-- All Kinetic animations are disabled -->
 </html>
 ```
 
@@ -251,11 +251,11 @@ data 属性的优先级高于系统设置。将其设为 `data-reduce-motion="fa
 
 ### 自带动画库也无妨
 
-Framer Motion、Motion One 或任何 CSS 动画库都可以与 HeroUI 内置的过渡共存：
+Framer Motion、Motion One 或任何 CSS 动画库都可以与 Kinetic 内置的过渡共存：
 
 ```tsx
 import { motion } from "framer-motion";
-import { Button } from "@heroui/react";
+import { Button } from "@kinetic/react";
 
 const MotionButton = motion(Button);
 
@@ -352,46 +352,46 @@ Button、ButtonGroup、ToggleButton、ToggleButtonGroup、CloseButton 与 Toolba
 
 ```tsx
 // Root import
-import { Button, Card, Table } from "@heroui/react";
+import { Button, Card, Table } from "@kinetic/react";
 
 // Subpath import
-import { Button } from "@heroui/react/button";
-import { Card } from "@heroui/react/card";
-import { Table } from "@heroui/react/table";
+import { Button } from "@kinetic/react/button";
+import { Card } from "@kinetic/react/card";
+import { Table } from "@kinetic/react/table";
 ```
 
 ## 面向 Agent 的 UI
 
-如今越来越多的开发者通过 prompt 来构建产品，而不是逐字阅读 API 文档。HeroUI v3 为此做好了准备。
+如今越来越多的开发者通过 prompt 来构建产品，而不是逐字阅读 API 文档。Kinetic v3 为此做好了准备。
 
 ### MCP 服务器
 
-HeroUI MCP 服务器将 AI 编码助手（Cursor、Claude Code、VS Code Copilot、Windsurf、Zed）连接到组件文档、props、源码、CSS 样式与主题变量。AI 可以直接读取权威信息源，而不必再依赖训练数据进行猜测。
+Kinetic MCP 服务器将 AI 编码助手（Cursor、Claude Code、VS Code Copilot、Windsurf、Zed）连接到组件文档、props、源码、CSS 样式与主题变量。AI 可以直接读取权威信息源，而不必再依赖训练数据进行猜测。
 
 ```json
 {
   "mcpServers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
 ```
 
-对你的 AI 助手说一句「把 HeroUI 升级到最新版本」，它就会自动对比版本、检查更新日志中的破坏性变更，并完成必要的代码更新。
+对你的 AI 助手说一句「把 Kinetic 升级到最新版本」，它就会自动对比版本、检查更新日志中的破坏性变更，并完成必要的代码更新。
 
 ### Agent Skills
 
-面向 Cursor 与 Claude Code 提供可安装的知识包，覆盖组件模式、变体用法、主题说明以及升级指南。提前注入上下文，让 AI 第一次就能写出正确的 HeroUI 代码。
+面向 Cursor 与 Claude Code 提供可安装的知识包，覆盖组件模式、变体用法、主题说明以及升级指南。提前注入上下文，让 AI 第一次就能写出正确的 Kinetic 代码。
 
 ### LLMs.txt
 
-针对 AI 上下文窗口优化的结构化文档文件。这些文件发布在 `/llms.txt` 与 `/llms-components.txt`，为任何基于 LLM 的工具提供一份机器可读的 HeroUI API 摘要。
+针对 AI 上下文窗口优化的结构化文档文件。这些文件发布在 `/llms.txt` 与 `/llms-components.txt`，为任何基于 LLM 的工具提供一份机器可读的 Kinetic API 摘要。
 
-MCP 服务器、Agent Skills、LLMs.txt——三层组合让 AI 助手能像人类开发者从文档中获取信息一样，获得对 HeroUI 的完整访问能力。
+MCP 服务器、Agent Skills、LLMs.txt——三层组合让 AI 助手能像人类开发者从文档中获取信息一样，获得对 Kinetic 的完整访问能力。
 
-## HeroUI Native
+## Kinetic Native
 
 <VideoPlayer
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/videos/heroui-native-v1-release-.mp4"
@@ -399,7 +399,7 @@ MCP 服务器、Agent Skills、LLMs.txt——三层组合让 AI 助手能像人�
   muted
 />
 
-HeroUI Native 是与 v3 网页版同时推出的全新组件库。渲染引擎不同，但心智模型一致。在平台差异较大的地方，API 也会贴合各自平台的原生体验。
+Kinetic Native 是与 v3 网页版同时推出的全新组件库。渲染引擎不同，但心智模型一致。在平台差异较大的地方，API 也会贴合各自平台的原生体验。
 
 ### 在你的设备上试试
 
@@ -414,7 +414,7 @@ HeroUI Native 是与 v3 网页版同时推出的全新组件库。渲染引擎�
 </div>
 
 <div className="flex justify-center">
-  **[📱 在 Expo Go 中打开演示应用](https://link.heroui.com/native-demo)**
+  **[📱 在 Expo Go 中打开演示应用](https://link.kinetic-ui.com/native-demo)**
 </div>
 
 <Callout type="info">
@@ -445,7 +445,7 @@ import { Dialog, Button } from "heroui-native";
 
 ### 跨平台一致的体验
 
-只要你熟悉 Web 版的 HeroUI，大部分知识都能直接迁移过来。组件命名、点表示法与 prop 模式都尽可能保持一致。在平台差异较大的地方（布局基元、手势、导航等），API 会做出相应调整以贴近原生，但整体的心智模型保持一致：
+只要你熟悉 Web 版的 Kinetic，大部分知识都能直接迁移过来。组件命名、点表示法与 prop 模式都尽可能保持一致。在平台差异较大的地方（布局基元、手势、导航等），API 会做出相应调整以贴近原生，但整体的心智模型保持一致：
 
 ```tsx
 // React (web)
@@ -517,9 +517,9 @@ import { Switch } from "heroui-native";
 <Card animation="disable-all">...</Card>
 
 // App-wide
-<HeroUINativeProvider config={{ animation: "disable-all" }}>
+<KineticNativeProvider config={{ animation: "disable-all" }}>
   <App />
-</HeroUINativeProvider>
+</KineticNativeProvider>
 ```
 
 Reduce Motion 全自动生效。当用户在系统设置中启用它时，所有动画都会停止，无需任何额外代码。
@@ -547,36 +547,36 @@ Popover、Select 与 Menu 通过一个 prop 即可在 popover、bottom-sheet 与
 每一个原生组件都有自己的入口路径，只引入你实际用到的部分即可：
 
 ```tsx
-import { HeroUINativeProvider } from "heroui-native/provider";
+import { KineticNativeProvider } from "heroui-native/provider";
 import { Button } from "heroui-native/button";
 import { Card } from "heroui-native/card";
 ```
 
 ### Native 端的 AI 工具
 
-HeroUI Native 也配套提供了自己的 MCP 服务器、Agent Skills 与 LLMs.txt，与 Web 组件库的工具链结构完全一致：
+Kinetic Native 也配套提供了自己的 MCP 服务器、Agent Skills 与 LLMs.txt，与 Web 组件库的工具链结构完全一致：
 
 ```json
 {
   "mcpServers": {
     "heroui-native": {
       "command": "npx",
-      "args": ["-y", "@heroui/native-mcp@latest"]
+      "args": ["-y", "@kinetic/native-mcp@latest"]
     }
   }
 }
 ```
 
-## HeroUI Pro
+## Kinetic Pro
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/heroui-pro@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/heroui-pro-dark@2x.jpg"
-  alt="HeroUI Pro"
+  alt="Kinetic Pro"
   href="https://heroui.pro"
 />
 
-与 v3 同步，[HeroUI Pro](https://heroui.pro) 的预售也已经上线。面向 React 与 React Native，提供高级组件、模板与 AI 工具。
+与 v3 同步，[Kinetic Pro](https://heroui.pro) 的预售也已经上线。面向 React 与 React Native，提供高级组件、模板与 AI 工具。
 
 ### Pro 组件
 
@@ -601,22 +601,22 @@ Pro 许可包含高级版的 MCP 服务器与 Agent Skills，并内置 Pro 组�
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles @heroui/react
+    npm i @kinetic/styles @kinetic/react
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles @heroui/react
+    pnpm add @kinetic/styles @kinetic/react
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles @heroui/react
+    yarn add @kinetic/styles @kinetic/react
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles @heroui/react
+    bun add @kinetic/styles @kinetic/react
     ```
   </Tab>
 </Tabs>
@@ -625,7 +625,7 @@ Pro 许可包含高级版的 MCP 服务器与 Agent Skills，并内置 Pro 组�
 
 ```css
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 ```
 
 ### React Native
@@ -655,16 +655,16 @@ Pro 许可包含高级版的 MCP 服务器与 Agent Skills，并内置 Pro 组�
 
 完整的安装指南请参阅 [React 文档](/docs/react/getting-started/quick-start) 与 [React Native 文档](/docs/native/getting-started/quick-start)（涵盖 peer dependencies、Uniwind 配置以及 Provider 设置）。
 
-**正在从 HeroUI v2 升级？** 请按照 [迁移指南](/docs/react/migration) 一步步完成升级。
+**正在从 Kinetic v2 升级？** 请按照 [迁移指南](/docs/react/migration) 一步步完成升级。
 
 ## Figma Kit v3
 
-HeroUI v3 中的每一个组件在 Figma 中都有 1:1 的对应实现。变体、命名与结构完全一致。整套 Kit 全程采用 auto layout，使用与代码 token 直接对应的 Figma 变量（`--accent`、`--surface`、`--radius`），并借助 Figma 新推出的 [slots](https://help.figma.com/hc/en-us/articles/38231200344599-Use-slots-to-build-flexible-components-in-Figma) 来实现灵活的组件组合。设计师可以像开发者写代码一样，自由调整、替换与定制组件的各个部件。
+Kinetic v3 中的每一个组件在 Figma 中都有 1:1 的对应实现。变体、命名与结构完全一致。整套 Kit 全程采用 auto layout，使用与代码 token 直接对应的 Figma 变量（`--accent`、`--surface`、`--radius`），并借助 Figma 新推出的 [slots](https://help.figma.com/hc/en-us/articles/38231200344599-Use-slots-to-build-flexible-components-in-Figma) 来实现灵活的组件组合。设计师可以像开发者写代码一样，自由调整、替换与定制组件的各个部件。
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/cover-figma@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/cover-figma-dark@2x.jpg"
-  alt="HeroUI Figma Kit v3"
+  alt="Kinetic Figma Kit v3"
   href="https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3"
 />
 

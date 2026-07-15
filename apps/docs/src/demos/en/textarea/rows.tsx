@@ -1,4 +1,4 @@
-import {Label, TextArea} from "@heroui/react";
+import {Label, TextArea} from "@kinetic/react";
 
 export function Rows() {
   return (

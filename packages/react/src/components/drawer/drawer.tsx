@@ -3,12 +3,12 @@
 import type {UseOverlayStateProps, UseOverlayStateReturn} from "../../hooks/use-overlay-state";
 import type {DOMRenderProps} from "../../utils/dom";
 import type {SurfaceVariants} from "../surface";
-import type {DrawerVariants} from "@heroui/styles";
+import type {DrawerVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 import type {ButtonProps as ButtonPrimitiveProps} from "react-aria-components/Button";
 import type {DialogProps as DialogPrimitiveProps} from "react-aria-components/Dialog";
 
-import {drawerVariants} from "@heroui/styles";
+import {drawerVariants} from "@kinetic/styles";
 import {mergeProps} from "@react-aria/utils";
 import React, {createContext, use, useCallback, useMemo, useRef} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
@@ -239,7 +239,7 @@ const DrawerRoot = ({children, state, ...props}: DrawerRootProps) => {
   );
 };
 
-DrawerRoot.displayName = "HeroUI.Drawer";
+DrawerRoot.displayName = "Kinetic.Drawer";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Trigger
@@ -260,7 +260,7 @@ const DrawerTrigger = ({children, className, ...props}: DrawerTriggerProps) => {
   );
 };
 
-DrawerTrigger.displayName = "HeroUI.Drawer.Trigger";
+DrawerTrigger.displayName = "Kinetic.Drawer.Trigger";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Backdrop
@@ -306,7 +306,7 @@ const DrawerBackdrop = ({
   );
 };
 
-DrawerBackdrop.displayName = "HeroUI.Drawer.Backdrop";
+DrawerBackdrop.displayName = "Kinetic.Drawer.Backdrop";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Content
@@ -349,7 +349,7 @@ const DrawerContent = ({
   );
 };
 
-DrawerContent.displayName = "HeroUI.Drawer.Content";
+DrawerContent.displayName = "Kinetic.Drawer.Content";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Dialog
@@ -377,7 +377,7 @@ const DrawerDialog = ({children, className, ...props}: DrawerDialogProps) => {
   );
 };
 
-DrawerDialog.displayName = "HeroUI.Drawer.Dialog";
+DrawerDialog.displayName = "Kinetic.Drawer.Dialog";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Header
@@ -407,7 +407,7 @@ const DrawerHeader = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-DrawerHeader.displayName = "HeroUI.Drawer.Header";
+DrawerHeader.displayName = "Kinetic.Drawer.Header";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Body
@@ -438,7 +438,7 @@ const DrawerBody = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-DrawerBody.displayName = "HeroUI.Drawer.Body";
+DrawerBody.displayName = "Kinetic.Drawer.Body";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Footer
@@ -468,7 +468,7 @@ const DrawerFooter = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-DrawerFooter.displayName = "HeroUI.Drawer.Footer";
+DrawerFooter.displayName = "Kinetic.Drawer.Footer";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Heading
@@ -490,7 +490,7 @@ const DrawerHeading = ({children, className, ...props}: DrawerHeadingProps) => {
   );
 };
 
-DrawerHeading.displayName = "HeroUI.Drawer.Heading";
+DrawerHeading.displayName = "Kinetic.Drawer.Heading";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Handle
@@ -520,7 +520,7 @@ const DrawerHandle = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-DrawerHandle.displayName = "HeroUI.Drawer.Handle";
+DrawerHandle.displayName = "Kinetic.Drawer.Handle";
 
 /* -------------------------------------------------------------------------------------------------
  * Drawer Close Trigger
@@ -543,7 +543,7 @@ const DrawerCloseTrigger = ({className, ...rest}: DrawerCloseTriggerProps) => {
   );
 };
 
-DrawerCloseTrigger.displayName = "HeroUI.Drawer.CloseTrigger";
+DrawerCloseTrigger.displayName = "Kinetic.Drawer.CloseTrigger";
 
 /* -------------------------------------------------------------------------------------------------
  * Exports

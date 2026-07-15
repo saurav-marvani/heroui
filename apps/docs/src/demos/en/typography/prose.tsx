@@ -1,11 +1,11 @@
-import {Typography} from "@heroui/react";
+import {Typography} from "@kinetic/react";
 
 export const Prose = () => {
   return (
     <Typography.Prose className="flex max-w-xl flex-col gap-3">
       <h1>Prose title</h1>
       <p>
-        Prose is for authored content where the markup is already semantic and HeroUI applies the
+        Prose is for authored content where the markup is already semantic and Kinetic applies the
         default typography rhythm.
       </p>
       <h2>Section title</h2>

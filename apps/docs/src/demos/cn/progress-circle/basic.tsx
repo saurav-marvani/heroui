@@ -1,4 +1,4 @@
-import {ProgressCircle} from "@heroui/react";
+import {ProgressCircle} from "@kinetic/react";
 
 export function Basic() {
   return (

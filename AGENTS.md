@@ -1,10 +1,10 @@
 # AGENTS.md
 
-Instructions for AI agents working with the HeroUI v3 repository.
+Instructions for AI agents working with the Kinetic v3 repository.
 
 ## Repository Overview
 
-HeroUI v3 is a modern React UI library built with **Tailwind CSS v4**, organized as a **pnpm monorepo** managed by **Turborepo**. Components are built on top of [React Aria Components](https://react-spectrum.adobe.com/react-aria/) and follow a compound component pattern similar to Radix UI.
+Kinetic v3 is a modern React UI library built with **Tailwind CSS v4**, organized as a **pnpm monorepo** managed by **Turborepo**. Components are built on top of [React Aria Components](https://react-spectrum.adobe.com/react-aria/) and follow a compound component pattern similar to Radix UI.
 
 ### Tech Stack
 
@@ -28,11 +28,11 @@ HeroUI v3 is a modern React UI library built with **Tailwind CSS v4**, organized
 ├── apps/
 │   └── docs/              # Documentation site (Next.js + Fumadocs)
 ├── packages/
-│   ├── react/             # Main UI library (@heroui/react)
+│   ├── react/             # Main UI library (@kinetic/react)
 │   │   ├── src/components/  # All components
 │   │   ├── src/utils/       # Shared utilities
 │   │   └── scripts/         # Build & codegen scripts
-│   ├── styles/            # CSS styles & variants (@heroui/styles)
+│   ├── styles/            # CSS styles & variants (@kinetic/styles)
 │   │   └── src/components/  # Per-component .css files
 │   ├── standard/          # Shared ESLint, Prettier, TS configs
 │   ├── storybook/         # Storybook configuration
@@ -47,7 +47,7 @@ HeroUI v3 is a modern React UI library built with **Tailwind CSS v4**, organized
 |---|---|
 | Install dependencies | `pnpm i --hoist` |
 | Build all packages | `pnpm build` |
-| Build specific package | `pnpm build --filter=@heroui/react` |
+| Build specific package | `pnpm build --filter=@kinetic/react` |
 | Dev (Storybook, port 6006) | `pnpm dev` |
 | Dev (Docs site, port 3000) | `pnpm dev:docs` |
 | Lint | `pnpm lint` |
@@ -109,7 +109,7 @@ pnpm build
 
 ### Compound Component Pattern
 
-HeroUI uses a compound component pattern. Each component exports its sub-parts so users can compose and style them independently.
+Kinetic uses a compound component pattern. Each component exports its sub-parts so users can compose and style them independently.
 
 ```tsx
 // Context shares state/styles across parts
@@ -164,10 +164,10 @@ export {componentVariants, type ComponentVariants} from "./component.styles";
 ### Styling Rules
 
 1. **Styles go in `.styles.ts` files**, never in `.tsx` files. Use `tv()` from `tailwind-variants`.
-2. **Import from `tailwind-variants`**, never from `@heroui/standard`.
+2. **Import from `tailwind-variants`**, never from `@kinetic/standard`.
 3. **Never use `twMerge` manually** — `tailwind-variants` already includes it.
 4. **Add `"use client"` directive** at the top of every component `.tsx` file.
-5. **Display names** follow: `HeroUI.ComponentName` or `HeroUI.Component.SubPart`.
+5. **Display names** follow: `Kinetic.ComponentName` or `Kinetic.Component.SubPart`.
 
 ### CSS / BEM Naming
 
@@ -261,7 +261,7 @@ Storybook is the primary dev workflow — run with `pnpm dev` (port 6006).
 
 ### Icon Library
 
-HeroUI uses **Iconify** with **gravity-ui** as the default icon set.
+Kinetic uses **Iconify** with **gravity-ui** as the default icon set.
 
 ## Current Components
 
@@ -275,9 +275,9 @@ calendar, calendar-year-picker, range-calendar
 
 ## Non-obvious Gotchas
 
-1. **`pnpm i` triggers builds** — The `postinstall` hook builds `@heroui/styles` and runs `typegen:docs`. If it fails, run `pnpm --filter @heroui/styles build` manually.
+1. **`pnpm i` triggers builds** — The `postinstall` hook builds `@kinetic/styles` and runs `typegen:docs`. If it fails, run `pnpm --filter @kinetic/styles build` manually.
 
-2. **Build order matters** — `@heroui/styles` must build before `@heroui/react`. Running `pnpm build` from root handles this via Turbo's `^build` dependency.
+2. **Build order matters** — `@kinetic/styles` must build before `@kinetic/react`. Running `pnpm build` from root handles this via Turbo's `^build` dependency.
 
 3. **Native addons allowlist** — The `pnpm.onlyBuiltDependencies` field in root `package.json` allows native compilation for `esbuild`, `@swc/core`, `@parcel/watcher`, etc. If this field is missing, you'll see "Ignored build scripts" warnings.
 

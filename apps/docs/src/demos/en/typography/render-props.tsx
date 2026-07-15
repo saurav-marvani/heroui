@@ -1,6 +1,6 @@
 "use client";
 
-import {Typography} from "@heroui/react";
+import {Typography} from "@kinetic/react";
 
 export const RenderProps = () => {
   return (
@@ -9,7 +9,7 @@ export const RenderProps = () => {
         H1 visual style, h2 semantic element
       </Typography>
       <Typography render={({children, ...domProps}) => <span {...domProps}>{children}</span>}>
-        The render prop can swap the underlying element while preserving HeroUI props and styles.
+        The render prop can swap the underlying element while preserving Kinetic props and styles.
       </Typography>
     </div>
   );

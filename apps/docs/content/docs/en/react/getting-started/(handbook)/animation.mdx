@@ -1,14 +1,14 @@
 ---
 title: Animation
-description: Add smooth animations and transitions to HeroUI v3 components
+description: Add smooth animations and transitions to Kinetic v3 components
 icon: copy-transparent
 ---
 
-HeroUI components support multiple animation approaches: built-in CSS transitions, custom CSS animations, and JavaScript libraries like Framer Motion.
+Kinetic components support multiple animation approaches: built-in CSS transitions, custom CSS animations, and JavaScript libraries like Framer Motion.
 
 ## Built-in Animations
 
-HeroUI components use data attributes to expose their state for animation:
+Kinetic components use data attributes to expose their state for animation:
 
 ```css
 /* Popover entrance/exit */
@@ -82,13 +82,13 @@ HeroUI components use data attributes to expose their state for animation:
 
 ## Framer Motion
 
-HeroUI components work seamlessly with Framer Motion for advanced animations.
+Kinetic components work seamlessly with Framer Motion for advanced animations.
 
 **Basic usage:**
 
 ```tsx
 import { motion } from 'framer-motion';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 const MotionButton = motion(Button);
 
@@ -159,12 +159,12 @@ Apply dynamic animations based on component state:
 
 ## Accessibility
 
-**Respecting motion preferences:** HeroUI automatically respects user motion preferences using Tailwind's `motion-reduce:` utility. All built-in transitions and animations are disabled when users enable "reduce motion" in their system settings.
+**Respecting motion preferences:** Kinetic automatically respects user motion preferences using Tailwind's `motion-reduce:` utility. All built-in transitions and animations are disabled when users enable "reduce motion" in their system settings.
 
-HeroUI extends Tailwind's `motion-reduce:` variant to support both the native `prefers-reduced-motion` media query and the `data-reduce-motion` attribute.
+Kinetic extends Tailwind's `motion-reduce:` variant to support both the native `prefers-reduced-motion` media query and the `data-reduce-motion` attribute.
 
 ```css
-/* HeroUI pattern - uses Tailwind's motion-reduce: */
+/* Kinetic pattern - uses Tailwind's motion-reduce: */
 .button {
   @apply transition-colors motion-reduce:transition-none;
 }
@@ -205,11 +205,11 @@ function AnimatedCard() {
 
 ```html
 <html data-reduce-motion="true">
-  <!-- All HeroUI animations will be disabled -->
+  <!-- All Kinetic animations will be disabled -->
 </html>
 ```
 
-HeroUI automatically detects the user's `prefers-reduced-motion: reduce` setting and disables animations accordingly.
+Kinetic automatically detects the user's `prefers-reduced-motion: reduce` setting and disables animations accordingly.
 
 ## Performance Tips
 

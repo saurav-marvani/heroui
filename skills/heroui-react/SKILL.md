@@ -1,14 +1,14 @@
 ---
 name: heroui-react
-description: "HeroUI v3 React component library (Tailwind CSS v4 + React Aria). Use when building UIs with HeroUI — creating Buttons, Modals, Forms, Cards; installing @heroui/react; configuring dark/light themes with oklch variables; or fetching component docs. Keywords: HeroUI, Hero UI, heroui, @heroui/react, @heroui/styles."
+description: "Kinetic UI v3 React component library (Tailwind CSS v4 + React Aria). Use when building UIs with Kinetic UI — creating Buttons, Modals, Forms, Cards; installing @kinetic/react; configuring dark/light themes with oklch variables; or fetching component docs. Keywords: Kinetic UI, Kinetic UI, heroui, @kinetic/react, @kinetic/styles."
 metadata:
   author: heroui
   version: "3.0.1"
 ---
 
-# HeroUI v3 React Development Guide
+# Kinetic UI v3 React Development Guide
 
-HeroUI v3 is a component library built on **Tailwind CSS v4** and **React Aria Components**, providing accessible, customizable UI components for React applications.
+Kinetic UI v3 is a component library built on **Tailwind CSS v4** and **React Aria Components**, providing accessible, customizable UI components for React applications.
 
 ---
 
@@ -22,31 +22,31 @@ curl -fsSL https://heroui.com/install | bash -s heroui-react
 
 ## CRITICAL: v3 Only - Ignore v2 Knowledge
 
-**This guide is for HeroUI v3 ONLY.** Do NOT apply v2 patterns — the provider, styling, and component API all changed:
+**This guide is for Kinetic UI v3 ONLY.** Do NOT apply v2 patterns — the provider, styling, and component API all changed:
 
 | Feature       | v2 (DO NOT USE)                   | v3 (USE THIS)                               |
 | ------------- | --------------------------------- | ------------------------------------------- |
-| Provider      | `<HeroUIProvider>` required       | **No Provider needed**                      |
+| Provider      | `<Kinetic UIProvider>` required       | **No Provider needed**                      |
 | Animations    | `framer-motion` package           | CSS-based, no extra deps                    |
 | Component API | Flat props: `<Card title="x">`    | Compound: `<Card><Card.Header>`             |
-| Styling       | Tailwind v3 + `@heroui/theme`     | Tailwind v4 + `@heroui/styles`         	  |
-| Packages      | `@heroui/system`, `@heroui/theme` | `@heroui/react`, `@heroui/styles` 		  |
+| Styling       | Tailwind v3 + `@kinetic/theme`     | Tailwind v4 + `@kinetic/styles`         	  |
+| Packages      | `@kinetic/system`, `@kinetic/theme` | `@kinetic/react`, `@kinetic/styles` 		  |
 
 ```tsx
 // DO NOT DO THIS - v2 pattern
-import { HeroUIProvider } from "@heroui/react";
+import { Kinetic UIProvider } from "@kinetic/react";
 import { motion } from "framer-motion";
 
-<HeroUIProvider>
+<Kinetic UIProvider>
 	<Card title="Product" description="A great product" />
-</HeroUIProvider>;
+</Kinetic UIProvider>;
 ```
 
 ### CORRECT (v3 patterns)
 
 ```tsx
 // DO THIS - v3 pattern (no provider, compound components)
-import { Card } from "@heroui/react";
+import { Card } from "@kinetic/react";
 
 <Card>
 	<Card.Header>
@@ -117,7 +117,7 @@ Getting started guides: `https://heroui.com/docs/react/getting-started/{topic}.m
 ### Quick Install
 
 ```bash
-npm i @heroui/styles @heroui/react tailwind-variants
+npm i @kinetic/styles @kinetic/react tailwind-variants
 ```
 
 ### Framework Setup (Next.js App Router - Recommended)
@@ -125,7 +125,7 @@ npm i @heroui/styles @heroui/react tailwind-variants
 1. **Install dependencies:**
 
 ```bash
-npm i @heroui/styles @heroui/react tailwind-variants tailwindcss @tailwindcss/postcss postcss
+npm i @kinetic/styles @kinetic/react tailwind-variants tailwindcss @tailwindcss/postcss postcss
 ```
 
 2. **Create/update `app/globals.css`:**
@@ -134,8 +134,8 @@ npm i @heroui/styles @heroui/react tailwind-variants tailwindcss @tailwindcss/po
 /* Tailwind CSS v4 - Must be first */
 @import "tailwindcss";
 
-/* HeroUI v3 styles - Must be after Tailwind */
-@import "@heroui/styles";
+/* Kinetic UI v3 styles - Must be after Tailwind */
+@import "@kinetic/styles";
 ```
 
 3. **Import in `app/layout.tsx`:**
@@ -151,7 +151,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body>
-				{/* No Provider needed in HeroUI v3! */}
+				{/* No Provider needed in Kinetic UI v3! */}
 				{children}
 			</body>
 		</html>
@@ -171,10 +171,10 @@ export default {
 
 ### Critical Setup Requirements
 
-1. **Tailwind CSS v4 is MANDATORY** - HeroUI v3 will NOT work with Tailwind CSS v3
+1. **Tailwind CSS v4 is MANDATORY** - Kinetic UI v3 will NOT work with Tailwind CSS v3
 2. **Use Compound Components** - Components use compound structure (e.g., `Card.Header`, `Card.Content`)
 3. **Use onPress, not onClick** - For better accessibility, use `onPress` event handlers
-4. **Import Order Matters** - Always import Tailwind CSS before HeroUI styles
+4. **Import Order Matters** - Always import Tailwind CSS before Kinetic UI styles
 
 ---
 
@@ -186,7 +186,7 @@ All components use the **compound pattern** shown above (dot-notation subcompone
 
 ## Semantic Variants
 
-HeroUI uses semantic naming to communicate functional intent:
+Kinetic UI uses semantic naming to communicate functional intent:
 
 | Variant     | Purpose                           | Usage          |
 | ----------- | --------------------------------- | -------------- |
@@ -203,7 +203,7 @@ HeroUI uses semantic naming to communicate functional intent:
 
 ## Theming
 
-HeroUI v3 uses CSS variables with `oklch` color space:
+Kinetic UI v3 uses CSS variables with `oklch` color space:
 
 ```css
 :root {

@@ -4,7 +4,7 @@ import type {DOMRenderProps} from "../../utils/dom";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 import type {RadioButtonRenderProps, RadioFieldRenderProps} from "react-aria-components/RadioGroup";
 
-import {radioVariants} from "@heroui/styles";
+import {radioVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {
   RadioButton as RadioButtonPrimitive,
@@ -47,7 +47,7 @@ const RadioRoot = ({children, className, ...props}: RadioRootProps) => {
   );
 };
 
-RadioRoot.displayName = "HeroUI.Radio";
+RadioRoot.displayName = "Kinetic.Radio";
 
 /* -------------------------------------------------------------------------------------------------
  * Radio.Content — the clickable `RadioButton` label wrapping the control + `Label`.
@@ -69,7 +69,7 @@ const RadioContent = ({children, className, ...props}: RadioContentProps) => {
   );
 };
 
-RadioContent.displayName = "HeroUI.Radio.Content";
+RadioContent.displayName = "Kinetic.Radio.Content";
 
 /* -----------------------------------------------------------------------------------------------*/
 
@@ -98,7 +98,7 @@ const RadioControl = <E extends keyof React.JSX.IntrinsicElements = "span">({
   );
 };
 
-RadioControl.displayName = "HeroUI.Radio.Control";
+RadioControl.displayName = "Kinetic.Radio.Control";
 
 /* -----------------------------------------------------------------------------------------------*/
 
@@ -131,7 +131,7 @@ const RadioIndicator = <E extends keyof React.JSX.IntrinsicElements = "span">({
   );
 };
 
-RadioIndicator.displayName = "HeroUI.Radio.Indicator";
+RadioIndicator.displayName = "Kinetic.Radio.Indicator";
 
 /* ----------------------------------------------------------------------------------------------*/
 

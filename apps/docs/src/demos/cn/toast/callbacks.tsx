@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, toast} from "@heroui/react";
+import {Button, toast} from "@kinetic/react";
 import React from "react";
 
 export function Callbacks() {

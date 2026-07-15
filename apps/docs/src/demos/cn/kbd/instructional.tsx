@@ -1,4 +1,4 @@
-import {Kbd} from "@heroui/react";
+import {Kbd} from "@kinetic/react";
 
 export function InstructionalText() {
   return (

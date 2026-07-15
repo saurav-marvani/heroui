@@ -1,6 +1,6 @@
 "use client";
 
-import {FieldError, Input, Label, TextField} from "@heroui/react";
+import {FieldError, Input, Label, TextField} from "@kinetic/react";
 import {useState} from "react";
 
 export function Basic() {

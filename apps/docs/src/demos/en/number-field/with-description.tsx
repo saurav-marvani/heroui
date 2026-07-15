@@ -1,4 +1,4 @@
-import {Description, Label, NumberField} from "@heroui/react";
+import {Description, Label, NumberField} from "@kinetic/react";
 
 export function WithDescription() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import {Rocket} from "@gravity-ui/icons";
-import {AlertDialog, Button} from "@heroui/react";
+import {AlertDialog, Button} from "@kinetic/react";
 
 const SIZE_LABELS = {
   cover: "通栏",

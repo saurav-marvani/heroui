@@ -1,19 +1,19 @@
 "use client";
 
 import {ChevronDown, ChevronUp} from "@gravity-ui/icons";
-import {Accordion, Button, useDisclosureGroupNavigation} from "@heroui/react";
+import {Accordion, Button, useDisclosureGroupNavigation} from "@kinetic/react";
 import React from "react";
 
 const items = [
   {
     content:
-      "Learn the basics of HeroUI and how to integrate it into your React project. This section covers installation, setup, and your first component.",
+      "Learn the basics of Kinetic and how to integrate it into your React project. This section covers installation, setup, and your first component.",
     id: "getting-started",
     title: "Getting Started",
   },
   {
     content:
-      "Understand the fundamental concepts behind HeroUI, including the compound component pattern, styling with Tailwind CSS, and accessibility features.",
+      "Understand the fundamental concepts behind Kinetic, including the compound component pattern, styling with Tailwind CSS, and accessibility features.",
     id: "core-concepts",
     title: "Core Concepts",
   },

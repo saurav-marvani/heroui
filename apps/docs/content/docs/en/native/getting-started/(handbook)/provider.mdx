@@ -1,18 +1,18 @@
 ---
 title: Provider
-description: Configure HeroUI Native provider with text, text input, animation, and toast settings
+description: Configure Kinetic Native provider with text, text input, animation, and toast settings
 icon: chevrons-expand-horizontal
 ---
 
-The `HeroUINativeProvider` is the root provider component that configures and initializes HeroUI Native in your React Native application. It provides global configuration and portal management for your application.
+The `KineticNativeProvider` is the root provider component that configures and initializes Kinetic Native in your React Native application. It provides global configuration and portal management for your application.
 
 ## Overview
 
-The provider serves as the main entry point for HeroUI Native, wrapping your application with essential contexts and configurations:
+The provider serves as the main entry point for Kinetic Native, wrapping your application with essential contexts and configurations:
 
 - **Safe Area Insets**: Automatically handles safe area insets updates via `SafeAreaListener` and syncs them with Uniwind for use in Tailwind classes (e.g., `pb-safe-offset-3`)
-- **Text Configuration**: Global text component settings for consistency across all HeroUI components
-- **Text Input Configuration**: Global text input settings for consistency across all HeroUI input components
+- **Text Configuration**: Global text component settings for consistency across all Kinetic components
+- **Text Input Configuration**: Global text input settings for consistency across all Kinetic input components
 - **Animation Configuration**: Global animation control to disable all animations across the application
 - **Toast Configuration**: Global toast system configuration including insets, default props, and wrapper components
 - **Portal Management**: Handles overlays, modals, and other components that render on top of the app hierarchy
@@ -22,13 +22,13 @@ The provider serves as the main entry point for HeroUI Native, wrapping your app
 Wrap your application root with the provider:
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProvider>{/* Your app content */}</HeroUINativeProvider>
+      <KineticNativeProvider>{/* Your app content */}</KineticNativeProvider>
     </GestureHandlerRootView>
   );
 }
@@ -40,13 +40,13 @@ The provider accepts a `config` prop with the following options:
 
 ### Text Component Configuration
 
-Global settings for all Text components within HeroUI Native. These props are carefully selected to include only those that make sense to configure globally across all Text components in the application:
+Global settings for all Text components within Kinetic Native. These props are carefully selected to include only those that make sense to configure globally across all Text components in the application:
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     // Disable font scaling for accessibility
     allowFontScaling: false,
@@ -64,22 +64,22 @@ const config: HeroUINativeConfig = {
 
 export default function App() {
   return (
-    <HeroUINativeProvider config={config}>
+    <KineticNativeProvider config={config}>
       {/* Your app content */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
 
 ### Text Input Component Configuration
 
-Global settings for all TextInput-based components within HeroUI Native (e.g. Input, TextArea, SearchField, InputGroup, InputOTP). These props are carefully selected to include only those that make sense to configure globally across all inputs in the application:
+Global settings for all TextInput-based components within Kinetic Native (e.g. Input, TextArea, SearchField, InputGroup, InputOTP). These props are carefully selected to include only those that make sense to configure globally across all inputs in the application:
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textInputProps: {
     // Respect Text Size accessibility settings
     allowFontScaling: false,
@@ -91,9 +91,9 @@ const config: HeroUINativeConfig = {
 
 export default function App() {
   return (
-    <HeroUINativeProvider config={config}>
+    <KineticNativeProvider config={config}>
       {/* Your app content */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
@@ -107,7 +107,7 @@ export default function App() {
 Global animation configuration for the entire application:
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // Disable all animations across the application (cascades to all children)
   animation: 'disable-all',
 };
@@ -122,7 +122,7 @@ const config: HeroUINativeConfig = {
 Control developer-facing informational messages displayed in the console:
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   devInfo: {
     // Disable styling principles information message
     stylingPrinciples: false,
@@ -141,7 +141,7 @@ Configure the global toast system including insets, default props, and wrapper c
 **Option 1: Disable Toast Provider**
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // Disable toast provider entirely
   toast: false,
   // or
@@ -158,7 +158,7 @@ const config: HeroUINativeConfig = {
 ```tsx
 import { KeyboardAvoidingView } from 'react-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   toast: {
     // Global toast configuration (used as defaults for all toasts)
     defaultProps: {
@@ -195,11 +195,11 @@ const config: HeroUINativeConfig = {
 Here's a comprehensive example showing all configuration options:
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // Global text configuration
   textProps: {
     minimumFontScale: 0.5,
@@ -242,9 +242,9 @@ const config: HeroUINativeConfig = {
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProvider config={config}>
+      <KineticNativeProvider config={config}>
         <YourApp />
-      </HeroUINativeProvider>
+      </KineticNativeProvider>
     </GestureHandlerRootView>
   );
 }
@@ -256,11 +256,11 @@ When using Expo Router, wrap your root layout:
 
 ```tsx
 // app/_layout.tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 import { Stack } from 'expo-router';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     minimumFontScale: 0.5,
     maxFontSizeMultiplier: 1.5,
@@ -269,9 +269,9 @@ const config: HeroUINativeConfig = {
 
 export default function RootLayout() {
   return (
-    <HeroUINativeProvider config={config}>
+    <KineticNativeProvider config={config}>
       <Stack />
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
@@ -280,10 +280,10 @@ export default function RootLayout() {
 
 ### Provider Hierarchy
 
-The `HeroUINativeProvider` internally composes multiple providers:
+The `KineticNativeProvider` internally composes multiple providers:
 
 ```
-HeroUINativeProvider
+KineticNativeProvider
 ├── SafeAreaListener (handles safe area insets updates)
 │   └── GlobalAnimationSettingsProvider (animation configuration)
 │       └── TextComponentProvider (text configuration)
@@ -303,11 +303,11 @@ The provider automatically wraps your application with [`SafeAreaListener`](http
 
 ## Raw Provider
 
-`HeroUINativeProviderRaw` is a lightweight variant of `HeroUINativeProvider` designed for bundle optimization. It excludes `ToastProvider` and `PortalHost`, giving you a bare minimum starting point where you only install and add what you actually need.
+`KineticNativeProviderRaw` is a lightweight variant of `KineticNativeProvider` designed for bundle optimization. It excludes `ToastProvider` and `PortalHost`, giving you a bare minimum starting point where you only install and add what you actually need.
 
 ### When to Use
 
-Use `HeroUINativeProviderRaw` when you want full control over which dependencies are included in your bundle. With the raw provider imported from `heroui-native/provider-raw`, the following dependencies are optional and only required if you use the corresponding components:
+Use `KineticNativeProviderRaw` when you want full control over which dependencies are included in your bundle. With the raw provider imported from `heroui-native/provider-raw`, the following dependencies are optional and only required if you use the corresponding components:
 
 - **react-native-screens** -- required for overlay components (Popover, Dialog)
 - **@gorhom/bottom-sheet** -- required for BottomSheet component
@@ -317,12 +317,12 @@ Use `HeroUINativeProviderRaw` when you want full control over which dependencies
 
 ```tsx
 import {
-  HeroUINativeProviderRaw,
-  type HeroUINativeConfigRaw,
+  KineticNativeProviderRaw,
+  type KineticNativeConfigRaw,
 } from 'heroui-native/provider-raw';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const config: HeroUINativeConfigRaw = {
+const config: KineticNativeConfigRaw = {
   textProps: {
     maxFontSizeMultiplier: 1.5,
   },
@@ -331,9 +331,9 @@ const config: HeroUINativeConfigRaw = {
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProviderRaw config={config}>
+      <KineticNativeProviderRaw config={config}>
         {/* Your app content */}
-      </HeroUINativeProviderRaw>
+      </KineticNativeProviderRaw>
     </GestureHandlerRootView>
   );
 }
@@ -344,19 +344,19 @@ export default function App() {
 If you need toast or portal functionality with the raw provider, add them yourself:
 
 ```tsx
-import { HeroUINativeProviderRaw } from 'heroui-native/provider-raw';
+import { KineticNativeProviderRaw } from 'heroui-native/provider-raw';
 import { PortalHost } from 'heroui-native/portal';
 import { ToastProvider } from 'heroui-native/toast';
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProviderRaw>
+      <KineticNativeProviderRaw>
         <ToastProvider>
           {/* Your app content */}
           <PortalHost />
         </ToastProvider>
-      </HeroUINativeProviderRaw>
+      </KineticNativeProviderRaw>
     </GestureHandlerRootView>
   );
 }
@@ -365,7 +365,7 @@ export default function App() {
 ### Provider Hierarchy
 
 ```
-HeroUINativeProviderRaw
+KineticNativeProviderRaw
 ├── SafeAreaListener (handles safe area insets updates)
 │   └── GlobalAnimationSettingsProvider (animation configuration)
 │       └── TextComponentProvider (text configuration)
@@ -377,24 +377,24 @@ HeroUINativeProviderRaw
 
 ### 1. Single Provider Instance
 
-Always use a single `HeroUINativeProvider` at the root of your app. Don't nest multiple providers:
+Always use a single `KineticNativeProvider` at the root of your app. Don't nest multiple providers:
 
 ```tsx
 // ❌ Bad
-<HeroUINativeProvider>
+<KineticNativeProvider>
   <SomeComponent>
-    <HeroUINativeProvider> {/* Don't do this */}
+    <KineticNativeProvider> {/* Don't do this */}
       <AnotherComponent />
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   </SomeComponent>
-</HeroUINativeProvider>
+</KineticNativeProvider>
 
 // ✅ Good
-<HeroUINativeProvider>
+<KineticNativeProvider>
   <SomeComponent>
     <AnotherComponent />
   </SomeComponent>
-</HeroUINativeProvider>
+</KineticNativeProvider>
 ```
 
 ### 2. Configuration Object
@@ -405,7 +405,7 @@ Define your configuration outside the component to prevent recreating on each re
 // ❌ Bad
 function App() {
   return (
-    <HeroUINativeProvider
+    <KineticNativeProvider
       config={{
         textProps: {
           /* inline config */
@@ -413,12 +413,12 @@ function App() {
       }}
     >
       {/* ... */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 
 // ✅ Good
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     maxFontSizeMultiplier: 1.5,
   },
@@ -426,7 +426,7 @@ const config: HeroUINativeConfig = {
 
 function App() {
   return (
-    <HeroUINativeProvider config={config}>{/* ... */}</HeroUINativeProvider>
+    <KineticNativeProvider config={config}>{/* ... */}</KineticNativeProvider>
   );
 }
 ```
@@ -436,7 +436,7 @@ function App() {
 Consider accessibility when configuring text props:
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     // Allow font scaling for accessibility
     allowFontScaling: true,
@@ -451,9 +451,9 @@ const config: HeroUINativeConfig = {
 The provider is fully typed. Import types for better IDE support:
 
 ```tsx
-import { HeroUINativeProvider, type HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider, type KineticNativeConfig } from 'heroui-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // Full type safety and autocomplete
   textProps: {
     allowFontScaling: true,

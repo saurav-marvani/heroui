@@ -1,4 +1,4 @@
-import {Description, Input, Label, TextField} from "@heroui/react";
+import {Description, Input, Label, TextField} from "@kinetic/react";
 
 export function Disabled() {
   return (

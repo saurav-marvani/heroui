@@ -1,4 +1,4 @@
-import {Checkbox} from "@heroui/react";
+import {Checkbox} from "@kinetic/react";
 
 export function DefaultSelected() {
   return (

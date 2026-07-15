@@ -28,9 +28,9 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {scrollShadowVariants} from "@heroui/styles";
+export {scrollShadowVariants} from "@kinetic/styles";
 
-export type {ScrollShadowVariants} from "@heroui/styles";
+export type {ScrollShadowVariants} from "@kinetic/styles";
 
 /* -------------------------------------------------------------------------------------------------
  * Hooks

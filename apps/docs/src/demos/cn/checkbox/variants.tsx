@@ -1,4 +1,4 @@
-import {Checkbox, Description} from "@heroui/react";
+import {Checkbox, Description} from "@kinetic/react";
 
 export function Variants() {
   return (

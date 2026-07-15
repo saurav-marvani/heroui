@@ -1,6 +1,6 @@
 "use client";
 
-import {ColorField, Description, Label} from "@heroui/react";
+import {ColorField, Description, Label} from "@kinetic/react";
 
 export function Disabled() {
   return (

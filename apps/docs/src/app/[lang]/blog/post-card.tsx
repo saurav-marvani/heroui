@@ -2,7 +2,7 @@
 
 import type {BlogPost} from "@/lib/blog";
 
-import {Chip} from "@heroui/react";
+import {Chip} from "@kinetic/react";
 import Link from "next/link";
 import {useState} from "react";
 
@@ -12,7 +12,7 @@ const TAG_COLORS: Record<string, string> = {
   dashboards: "from-amber-500 to-orange-500",
   "design-system": "from-pink-500 to-rose-500",
   ecommerce: "from-yellow-500 to-amber-500",
-  heroui: "from-blue-600 to-violet-600",
+  kinetic: "from-blue-600 to-violet-600",
   "landing-page": "from-teal-500 to-cyan-500",
   native: "from-fuchsia-500 to-pink-600",
   react: "from-sky-500 to-blue-600",

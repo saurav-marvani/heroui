@@ -1,6 +1,6 @@
 "use client";
 
-import {ColorSwatch} from "@heroui/react";
+import {ColorSwatch} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

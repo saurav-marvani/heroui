@@ -14,7 +14,7 @@ github:
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/rc-1-light@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/rc-1-dark@2x.jpg"
-  alt="HeroUI v3 RC 1"
+  alt="Kinetic v3 RC 1"
   href="/docs/changelog/v3-0-0-rc-1"
 />
 
@@ -25,28 +25,28 @@ github:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@rc @heroui/react@rc
+    npm i @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@rc @heroui/react@rc
+    pnpm add @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@rc @heroui/react@rc
+    yarn add @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@rc @heroui/react@rc
+    bun add @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
@@ -183,7 +183,7 @@ github:
 
 ### Table 与 ListBox 的虚拟化
 
-Table 与 ListBox 现在可以借助 React Aria 的 `Virtualizer` 来支持大数据集的虚拟化渲染。`Virtualizer`、`TableLayout` 和 `ListLayout` 都已从 `@heroui/react` 重新导出。
+Table 与 ListBox 现在可以借助 React Aria 的 `Virtualizer` 来支持大数据集的虚拟化渲染。`Virtualizer`、`TableLayout` 和 `ListLayout` 都已从 `@kinetic/react` 重新导出。
 
 <ComponentPreview
   name="table-virtualization"
@@ -203,14 +203,14 @@ Table 与 ListBox 现在可以借助 React Aria 的 `Virtualizer` 来支持大�
 
 ### 细粒度的组件引入
 
-`@heroui/react` 现在支持按组件的子路径入口，方便更明确地按需引入（[#6301](https://github.com/heroui-inc/heroui/pull/6301)）：
+`@kinetic/react` 现在支持按组件的子路径入口，方便更明确地按需引入（[#6301](https://github.com/heroui-inc/heroui/pull/6301)）：
 
 ```tsx
 // Before — root entrypoint
-import { Button } from "@heroui/react";
+import { Button } from "@kinetic/react";
 
 // After — granular subpath import
-import { Button } from "@heroui/react/button";
+import { Button } from "@kinetic/react/button";
 ```
 
 ## 依赖更新

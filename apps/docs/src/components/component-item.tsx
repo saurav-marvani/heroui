@@ -3,7 +3,7 @@
 import type {ComponentInfo} from "../components-registry";
 import type {StatusChipStatus} from "./status-chip";
 
-import {Link} from "@heroui/react";
+import {Link} from "@kinetic/react";
 import LinkRoot from "fumadocs-core/link";
 import Image from "next/image";
 

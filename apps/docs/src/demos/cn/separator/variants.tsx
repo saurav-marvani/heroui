@@ -1,4 +1,4 @@
-import {Separator} from "@heroui/react";
+import {Separator} from "@kinetic/react";
 
 export function Variants() {
   return (

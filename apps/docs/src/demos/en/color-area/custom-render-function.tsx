@@ -1,6 +1,6 @@
 "use client";
 
-import {ColorArea} from "@heroui/react";
+import {ColorArea} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

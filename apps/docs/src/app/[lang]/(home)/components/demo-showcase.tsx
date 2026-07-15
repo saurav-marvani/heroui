@@ -5,13 +5,13 @@ import type {CSSProperties} from "react";
 import type {Color} from "react-aria-components";
 
 import {Palette} from "@gravity-ui/icons";
-import {ColorSwatchPicker, Spinner, Tabs, Tooltip, buttonVariants} from "@heroui/react";
+import {ColorSwatchPicker, Spinner, Tabs, Tooltip, buttonVariants} from "@kinetic/react";
 import {converter} from "culori";
 import LinkRoot from "fumadocs-core/link";
 import {useTheme} from "next-themes";
 import {useCallback, useEffect, useMemo, useRef, useState} from "react";
 
-import {HEROUI_PRO_URL, iframeTabs, themeValuesById} from "@/app/[lang]/themes/constants";
+import {KINETIC_PRO_URL, iframeTabs, themeValuesById} from "@/app/[lang]/themes/constants";
 import {computeThemeVars} from "@/app/[lang]/themes/hooks";
 import {
   calculateAccentForeground,
@@ -50,9 +50,9 @@ const colors = [
 const toOklch = converter("oklch");
 
 function getProUrl(utm: {campaign?: string; content?: string; medium: string}) {
-  const url = new URL(HEROUI_PRO_URL);
+  const url = new URL(KINETIC_PRO_URL);
 
-  url.searchParams.set("utm_source", "heroui.com");
+  url.searchParams.set("utm_source", "kinetic-ui.com");
   url.searchParams.set("utm_medium", utm.medium);
   if (utm.campaign) url.searchParams.set("utm_campaign", utm.campaign);
   if (utm.content) url.searchParams.set("utm_content", utm.content);
@@ -176,13 +176,13 @@ export function DemoShowcase() {
     const iframe = iframeRef.current;
 
     if (!iframe?.contentWindow) return;
-    iframe.contentWindow.postMessage({theme: resolvedTheme ?? "dark", type: "heroui-theme"}, "*");
-    iframe.contentWindow.postMessage({type: "heroui-accent", vars: iframeThemeVars}, "*");
+    iframe.contentWindow.postMessage({theme: resolvedTheme ?? "dark", type: "kinetic-theme"}, "*");
+    iframe.contentWindow.postMessage({type: "kinetic-accent", vars: iframeThemeVars}, "*");
     iframe.contentWindow.postMessage(
       {
         cdnUrl: computedDesignThemeVars.fontMeta.cdnUrl,
         family: computedDesignThemeVars.fontMeta.family,
-        type: "heroui-font",
+        type: "kinetic-font",
         variable: computedDesignThemeVars.fontMeta.variable,
       },
       "*",
@@ -197,7 +197,7 @@ export function DemoShowcase() {
   // Listen for iframe requesting initial state
   useEffect(() => {
     function handleMessage(event: MessageEvent) {
-      if (event.data?.type === "heroui-ready") {
+      if (event.data?.type === "kinetic-ready") {
         sendMessageToIframe();
       }
     }

@@ -12,7 +12,7 @@ import {
   VolumeFill,
   VolumeSlashFill,
 } from "@gravity-ui/icons";
-import {Switch} from "@heroui/react";
+import {Switch} from "@kinetic/react";
 
 export function WithIcons() {
   const icons = {

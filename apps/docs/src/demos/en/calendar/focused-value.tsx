@@ -2,7 +2,7 @@
 
 import type {DateValue} from "@internationalized/date";
 
-import {Button, Calendar, Description} from "@heroui/react";
+import {Button, Calendar, Description} from "@kinetic/react";
 import {parseDate} from "@internationalized/date";
 import {useState} from "react";
 

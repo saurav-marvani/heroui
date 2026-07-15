@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { ColorField, parseColor } from '@heroui/react';
+import { ColorField, parseColor } from '@kinetic/react';
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ import { ColorField, parseColor } from '@heroui/react';
 ### Anatomy
 
 ```tsx
-import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@heroui/react';
+import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@kinetic/react';
 
 export default () => (
   <ColorField>
@@ -108,7 +108,7 @@ Complete form example with validation and submission handling.
 ### Passing Tailwind CSS classes
 
 ```tsx
-import {ColorField, Label, ColorSwatch, Description} from '@heroui/react';
+import {ColorField, Label, ColorSwatch, Description} from '@kinetic/react';
 
 function CustomColorField() {
   return (
@@ -241,18 +241,18 @@ ColorField inherits all props from React Aria's [ColorField](https://react-aria.
 
 ColorField works with these separate components that should be imported and used directly:
 
-- **Label** - Field label component from `@heroui/react`
+- **Label** - Field label component from `@kinetic/react`
 - **ColorField.Group** - Color input group component (documented below)
 - **ColorField.Input** - Input element within ColorField.Group
 - **ColorField.Prefix** / **ColorField.Suffix** - Prefix and suffix slots for the input group
-- **ColorSwatch** - Color preview component from `@heroui/react`
-- **Description** - Helper text component from `@heroui/react`
-- **FieldError** - Validation error message from `@heroui/react`
+- **ColorSwatch** - Color preview component from `@kinetic/react`
+- **Description** - Helper text component from `@kinetic/react`
+- **FieldError** - Validation error message from `@kinetic/react`
 
 Each of these components has its own props API. Use them directly within ColorField for composition:
 
 ```tsx
-import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@heroui/react';
+import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@kinetic/react';
 
 <ColorField
   isRequired
@@ -277,7 +277,7 @@ import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} fro
 ColorField uses `Color` objects from React Aria Components:
 
 ```tsx
-import {parseColor} from '@heroui/react';
+import {parseColor} from '@kinetic/react';
 
 // Parse from hex string
 const color = parseColor('#3B82F6');

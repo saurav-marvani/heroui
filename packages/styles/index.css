@@ -1,6 +1,6 @@
 @layer theme, base, components, utilities;
 
-/* HeroUI v3 Styles - Layered Theme Architecture */
+/* Kinetic v3 Styles - Layered Theme Architecture */
 
 /* Base layer - Tailwind CSS v4 */
 @import "tailwindcss";

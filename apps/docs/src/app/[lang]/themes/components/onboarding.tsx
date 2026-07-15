@@ -2,7 +2,7 @@
 
 import type {MotionProps} from "motion/react";
 
-import {Button, Modal, cn, useOverlayState} from "@heroui/react";
+import {Button, Modal, cn, useOverlayState} from "@kinetic/react";
 import {motion} from "motion/react";
 import {useEffect} from "react";
 

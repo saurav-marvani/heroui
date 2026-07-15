@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { TimeField } from '@heroui/react';
+import { TimeField } from '@kinetic/react';
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ import { TimeField } from '@heroui/react';
 ### Anatomy
 
 ```tsx
-import {TimeField, Label, Description, FieldError} from '@heroui/react';
+import {TimeField, Label, Description, FieldError} from '@kinetic/react';
 
 export default () => (
   <TimeField>
@@ -108,7 +108,7 @@ Complete form example with validation and submission handling.
 ### Passing Tailwind CSS classes
 
 ```tsx
-import {TimeField, Label, Description} from '@heroui/react';
+import {TimeField, Label, Description} from '@kinetic/react';
 
 function CustomTimeField() {
   return (
@@ -244,19 +244,19 @@ TimeField inherits all props from React Aria's [TimeField](https://react-aria.ad
 
 TimeField works with these separate components that should be imported and used directly:
 
-- **Label** - Field label component from `@heroui/react`
+- **Label** - Field label component from `@kinetic/react`
 - **TimeField.Group** - Time input group component (documented below)
-- **TimeField.Input** - Input component with segmented editing from `@heroui/react`
+- **TimeField.Input** - Input component with segmented editing from `@kinetic/react`
 - **TimeField.Segment** - Individual time segment (hour, minute, second, etc.)
 - **TimeField.Prefix** / **TimeField.Suffix** - Prefix and suffix slots for the input group
-- **Description** - Helper text component from `@heroui/react`
-- **FieldError** - Validation error message from `@heroui/react`
+- **Description** - Helper text component from `@kinetic/react`
+- **FieldError** - Validation error message from `@kinetic/react`
 
 Each of these components has its own props API. Use them directly within TimeField for composition:
 
 ```tsx
 import {parseTime} from '@internationalized/date';
-import {TimeField, Label, Description, FieldError} from '@heroui/react';
+import {TimeField, Label, Description, FieldError} from '@kinetic/react';
 
 <TimeField
   isRequired

@@ -1,8 +1,8 @@
 "use client";
 
-import type {Color} from "@heroui/react";
+import type {Color} from "@kinetic/react";
 
-import {ColorField, ColorSwatch, Label, parseColor} from "@heroui/react";
+import {ColorField, ColorSwatch, Label, parseColor} from "@kinetic/react";
 import {useState} from "react";
 
 export function Basic() {

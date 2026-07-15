@@ -1,6 +1,6 @@
 "use client";
 
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 

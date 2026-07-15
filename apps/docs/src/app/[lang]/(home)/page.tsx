@@ -1,4 +1,4 @@
-import {buttonVariants} from "@heroui/react";
+import {buttonVariants} from "@kinetic/react";
 import LinkRoot from "fumadocs-core/link";
 import {notFound} from "next/navigation";
 
@@ -52,7 +52,7 @@ export default async function HomePage({params}: {params: Promise<{lang: string}
           </div>
           <a
             className="mt-2 flex items-center justify-around gap-2 text-xs text-muted transition-colors hover:text-foreground lg:mt-4"
-            href="https://github.com/heroui-inc/heroui"
+            href="https://github.com/kinetic-inc/kinetic"
             rel="noopener noreferrer"
             target="_blank"
           >

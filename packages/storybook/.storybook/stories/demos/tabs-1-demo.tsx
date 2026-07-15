@@ -1,4 +1,4 @@
-import {Tabs} from "@heroui/react";
+import {Tabs} from "@kinetic/react";
 import React from "react";
 
 export function TabsDemo1() {

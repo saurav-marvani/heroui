@@ -1,6 +1,6 @@
 "use client";
 
-import {Switch} from "@heroui/react";
+import {Switch} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import {Tabs} from "@heroui/react";
+import {Tabs} from "@kinetic/react";
 
 import {Iconify} from "@/components/iconify";
 import {useDictionary} from "@/hooks/use-dictionary";

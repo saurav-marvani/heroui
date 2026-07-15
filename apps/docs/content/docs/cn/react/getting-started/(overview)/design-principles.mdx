@@ -1,10 +1,10 @@
 ---
 title: 设计原则
-description: 指导 HeroUI v3 设计和开发的核心原则
+description: 指导 Kinetic v3 设计和开发的核心原则
 icon: book
 ---
 
-HeroUI v3 遵循 10 项核心原则，注重清晰度、无障碍、可定制性以及开发者体验。
+Kinetic v3 遵循 10 项核心原则，注重清晰度、无障碍、可定制性以及开发者体验。
 
 ## 核心原则
 
@@ -39,7 +39,7 @@ HeroUI v3 遵循 10 项核心原则，注重清晰度、无障碍、可定制性
 基于 [React Aria Components](https://react-spectrum.adobe.com/react-aria/) 构建，符合 WCAG 2.1 AA 标准。内置自动 ARIA 属性、键盘导航与屏幕阅读器支持。
 
 ```tsx
-import { Tabs, TabList, Tab, TabPanel } from '@heroui/react';
+import { Tabs, TabList, Tab, TabPanel } from '@kinetic/react';
 
 <Tabs defaultSelectedKey="profile">
   <TabList aria-label="Settings">
@@ -65,7 +65,7 @@ import {
   AccordionIndicator,
   AccordionPanel,
   AccordionBody
-} from '@heroui/react';
+} from '@kinetic/react';
 
 <Accordion>
   <AccordionItem id="1">
@@ -113,7 +113,7 @@ import {
 <Avatar size="lg" className="custom" />
 
 // Compound components support both named exports and dot notation
-import { Alert, AlertIcon, CardHeader, AccordionTrigger } from '@heroui/react';
+import { Alert, AlertIcon, CardHeader, AccordionTrigger } from '@kinetic/react';
 
 // Named exports
 <Alert>
@@ -131,7 +131,7 @@ import { Alert, AlertIcon, CardHeader, AccordionTrigger } from '@heroui/react';
 完整的 TypeScript 支持，包括 IntelliSense、自动补全与编译时错误检测。可为自定义组件扩展类型。
 
 ```tsx
-import type { ButtonProps } from '@heroui/react';
+import type { ButtonProps } from '@kinetic/react';
 
 // Type-safe props and event handlers
 <Button
@@ -150,7 +150,7 @@ interface CustomButtonProps extends Omit<ButtonProps, 'variant'> {
 
 ### 7. 样式与逻辑分离
 
-样式（`@heroui/styles`）与逻辑（`@heroui/react`）相互分离，可与任何框架或纯 HTML 一同使用。参见 [Tailwind Play 示例](https://play.tailwindcss.com/vMYXzKPyUx)。
+样式（`@kinetic/styles`）与逻辑（`@kinetic/react`）相互分离，可与任何框架或纯 HTML 一同使用。参见 [Tailwind Play 示例](https://play.tailwindcss.com/vMYXzKPyUx)。
 
 ```html
 <!-- Use with plain HTML -->
@@ -161,7 +161,7 @@ interface CustomButtonProps extends Omit<ButtonProps, 'variant'> {
 
 ```tsx
 // Apply styles to any component
-import { buttonVariants } from '@heroui/styles';
+import { buttonVariants } from '@kinetic/styles';
 
 <Link className={buttonVariants({ variant: "primary" })} href="/home">
   Home
@@ -202,8 +202,8 @@ import { buttonVariants } from '@heroui/styles';
 **使用变体函数应用样式：**
 
 ```tsx
-import { Link } from '@heroui/react';
-import { linkVariants } from '@heroui/styles';
+import { Link } from '@kinetic/react';
+import { linkVariants } from '@kinetic/styles';
 import NextLink from 'next/link';
 
 // Use variant functions to style framework-specific components
@@ -220,7 +220,7 @@ const slots = linkVariants({ underline: "hover" });
 ```tsx
 import Link from 'next/link';
 
-// Apply HeroUI's BEM classes directly to any element
+// Apply Kinetic's BEM classes directly to any element
 <Link className="button button--primary" href="/dashboard">
   Dashboard
 </Link>
@@ -253,8 +253,8 @@ const CTAButton = ({
 **使用 Tailwind Variants 扩展：**
 
 ```tsx
-import { Button } from '@heroui/react';
-import { buttonVariants, tv } from '@heroui/styles';
+import { Button } from '@kinetic/react';
+import { buttonVariants, tv } from '@kinetic/styles';
 
 // Extend button styles with custom variants
 const myButtonVariants = tv({
@@ -277,9 +277,9 @@ function CustomButton({ variant, className, ...props }) {
 <CustomButton variant="secondary-cta">Learn More</CustomButton>
 ```
 
-## 与 HeroUI v2 的对比
+## 与 Kinetic v2 的对比
 
-| 维度 | HeroUI v2 | HeroUI v3 |
+| 维度 | Kinetic v2 | Kinetic v3 |
 |--------|-----------|-----------|
 | **动画** | Framer Motion | CSS + GPU 加速 |
 | **组件模式** | 带有大量 props 的单一组件 | 复合组件 |

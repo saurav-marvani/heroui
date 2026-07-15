@@ -15,7 +15,7 @@ github:
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-2-light@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-2-dark@2x.jpg"
-  alt="HeroUI v3 Beta 2"
+  alt="Kinetic v3 Beta 2"
 />
 
 
@@ -26,28 +26,28 @@ github:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@beta @heroui/react@beta
+    npm i @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@beta @heroui/react@beta
+    pnpm add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@beta @heroui/react@beta
+    yarn add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@beta @heroui/react@beta
+    bun add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
@@ -218,20 +218,20 @@ Separator 组件现在能自动检测是否被放置在 surface 组件中（使�
 
 ```tsx
 // Before
-import type { SelectContentProps } from "@heroui/react"
+import type { SelectContentProps } from "@kinetic/react"
 
 // After
-import type { SelectPopoverProps } from "@heroui/react"
+import type { SelectPopoverProps } from "@kinetic/react"
 ```
 
 **命名导出：**
 
 ```tsx
 // Before
-import { SelectContent } from "@heroui/react"
+import { SelectContent } from "@kinetic/react"
 
 // After
-import { SelectPopover } from "@heroui/react"
+import { SelectPopover } from "@kinetic/react"
 ```
 
 ### CSS 变量与工具类：divider → separator

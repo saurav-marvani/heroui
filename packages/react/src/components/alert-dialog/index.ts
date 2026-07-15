@@ -81,6 +81,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {alertDialogVariants} from "@heroui/styles";
+export {alertDialogVariants} from "@kinetic/styles";
 
-export type {AlertDialogVariants} from "@heroui/styles";
+export type {AlertDialogVariants} from "@kinetic/styles";

@@ -81,6 +81,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {modalVariants} from "@heroui/styles";
+export {modalVariants} from "@kinetic/styles";
 
-export type {ModalVariants} from "@heroui/styles";
+export type {ModalVariants} from "@kinetic/styles";

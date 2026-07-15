@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {SpinnerVariants} from "@heroui/styles";
+import type {SpinnerVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {spinnerVariants} from "@heroui/styles";
+import {spinnerVariants} from "@kinetic/styles";
 import React, {useId} from "react";
 
 import {dom} from "../../utils/dom";

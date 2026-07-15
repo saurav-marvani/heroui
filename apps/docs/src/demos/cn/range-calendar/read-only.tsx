@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, RangeCalendar} from "@heroui/react";
+import {Description, RangeCalendar} from "@kinetic/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 
 export function ReadOnly() {

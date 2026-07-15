@@ -80,11 +80,11 @@ export function generateIndexHeader(): string[] {
   const nativeAbsoluteUrl = formatAbsoluteUrl(nativeUrl);
 
   return [
-    "# HeroUI v3 Documentation",
+    "# Kinetic v3 Documentation",
     "",
     "> A set of beautiful, customizable React and React Native components that stay maintained and up to date.",
     "",
-    "HeroUI v3 is an open-source UI component library for building modern web and mobile applications. Built on [Tailwind CSS v4](https://tailwindcss.com/) and [React Aria Components](https://react-spectrum.adobe.com/react-aria/), HeroUI provides accessible, customizable components with smooth animations and polished details.",
+    "Kinetic v3 is an open-source UI component library for building modern web and mobile applications. Built on [Tailwind CSS v4](https://tailwindcss.com/) and [React Aria Components](https://react-spectrum.adobe.com/react-aria/), Kinetic provides accessible, customizable components with smooth animations and polished details.",
     "",
     "**Key Features:**",
     "",
@@ -119,11 +119,11 @@ export function generatePlatformIndexHeader(platform: Platform): string[] {
     : "[Tailwind v4](https://tailwindcss.com/) via [Uniwind](https://uniwind.dev/) and modern mobile development technologies";
 
   return [
-    `# HeroUI v3 ${platformName} Documentation`,
+    `# Kinetic v3 ${platformName} Documentation`,
     "",
-    `> Documentation for HeroUI ${platformName} component library.`,
+    `> Documentation for Kinetic ${platformName} component library.`,
     "",
-    `HeroUI ${platformName} is a component library built on ${techStack}. Every component comes with smooth animations, polished details, and built-in accessibility—ready to use, fully customizable.`,
+    `Kinetic ${platformName} is a component library built on ${techStack}. Every component comes with smooth animations, polished details, and built-in accessibility—ready to use, fully customizable.`,
     "",
     "**Key Features:**",
     "",

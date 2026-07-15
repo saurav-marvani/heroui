@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, Label, Radio, RadioGroup} from "@heroui/react";
+import {Description, Label, Radio, RadioGroup} from "@kinetic/react";
 import React from "react";
 
 export function Controlled() {

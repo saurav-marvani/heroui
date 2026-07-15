@@ -1,6 +1,6 @@
 "use client";
 
-import {Calendar} from "@heroui/react";
+import {Calendar} from "@kinetic/react";
 import {getLocalTimeZone, isToday} from "@internationalized/date";
 
 const datesWithEvents = [3, 7, 12, 15, 21, 28];

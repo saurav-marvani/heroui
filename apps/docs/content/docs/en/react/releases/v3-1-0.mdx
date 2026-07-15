@@ -11,7 +11,7 @@ import {HandPointUp} from "@gravity-ui/icons";
   <span className="text-sm text-muted">May 25, 2026</span>
 </div>
 
-Minor release: HeroUI React docs now ship with Chinese pages and localized demos, soft color tokens were expanded for better readability, scroll containers share a single themeable scrollbar system, and several runtime and layout fixes landed for `useTheme`, Toast, Link, Fieldset, overlays, and RTL layouts.
+Minor release: Kinetic React docs now ship with Chinese pages and localized demos, soft color tokens were expanded for better readability, scroll containers share a single themeable scrollbar system, and several runtime and layout fixes landed for `useTheme`, Toast, Link, Fieldset, overlays, and RTL layouts.
 
 ## Installation
 
@@ -20,28 +20,28 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@latest @heroui/react@latest
+    npm i @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@latest @heroui/react@latest
+    pnpm add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@latest @heroui/react@latest
+    yarn add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@latest @heroui/react@latest
+    bun add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI MCP Server](/docs/ui-for-agents/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic MCP Server](/docs/ui-for-agents/mcp-server).
 </Callout>
 
 ## What's New
@@ -52,7 +52,7 @@ The documentation site now supports localized React docs, migration guides, rele
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/oss-releases/cn-docs-showcase.png"
-  alt="Chinese React documentation pages in HeroUI"
+  alt="Chinese React documentation pages in Kinetic"
   wrapperClassName="aspect-[1922/1323]"
 />
 
@@ -77,14 +77,14 @@ Scroll containers now use a shared, standards-based scrollbar system with theme 
 
 Supported modes:
 
-- HeroUI thin: leave `data-scrollbar` unset, or set `data-scrollbar="thin"` to force the themed thin scrollbar inside a subtree.
+- Kinetic thin: leave `data-scrollbar` unset, or set `data-scrollbar="thin"` to force the themed thin scrollbar inside a subtree.
 - Browser default: set `data-scrollbar="default"` to use the OS/browser scrollbar.
 - Hidden: set `data-scrollbar="none"` to hide the visible scrollbar while keeping the content scrollable.
 
 ```html
-<div data-scrollbar="thin">Uses the HeroUI themed scrollbar</div>
+<div data-scrollbar="thin">Uses the Kinetic themed scrollbar</div>
 <div data-scrollbar="default">Uses the browser scrollbar</div>
-<div data-scrollbar="none">Hides descendant HeroUI scrollbars</div>
+<div data-scrollbar="none">Hides descendant Kinetic scrollbars</div>
 ```
 
 <div className="not-prose mt-6 mb-4 flex items-center gap-2 text-sm font-medium text-muted">
@@ -96,7 +96,7 @@ Supported modes:
 
 Components such as Select, ComboBox, Autocomplete, Dropdown, DatePicker, DateRangePicker, ColorPicker, Table, Tabs, Modal, Drawer, and ScrollShadow now share the same scrollbar utilities instead of maintaining one-off scrollbar CSS.
 
-Use the `scrollbar` utility on any scrollable slot that should follow the active `data-scrollbar` mode. It reads `--scrollbar-width`, `--scrollbar-color`, and `--scrollbar-gutter`, so the same slot can render as HeroUI thin, browser default, or hidden depending on the nearest `data-scrollbar` ancestor.
+Use the `scrollbar` utility on any scrollable slot that should follow the active `data-scrollbar` mode. It reads `--scrollbar-width`, `--scrollbar-color`, and `--scrollbar-gutter`, so the same slot can render as Kinetic thin, browser default, or hidden depending on the nearest `data-scrollbar` ancestor.
 
 ```css
 .alert-dialog__body {
@@ -121,13 +121,13 @@ The theme variables also moved from a single fixed `--scrollbar` color to a smal
 
 `--scrollbar` now stays as a compatibility alias, while the new thumb, track, gutter, width, and color tokens control the rendered scrollbar.
 
-To return to normal browser scrollbars, set `data-scrollbar="default"` on the root `<html>`, your app `<main>`, or any nested container. The mode cascades through descendant HeroUI scroll slots and custom elements using the scrollbar utilities. If you set the root to browser defaults but want one area to use HeroUI styling again, add `data-scrollbar="thin"` on that nested element.
+To return to normal browser scrollbars, set `data-scrollbar="default"` on the root `<html>`, your app `<main>`, or any nested container. The mode cascades through descendant Kinetic scroll slots and custom elements using the scrollbar utilities. If you set the root to browser defaults but want one area to use Kinetic styling again, add `data-scrollbar="thin"` on that nested element.
 
 ```html
 <html data-scrollbar="default">
   <main>
     <section data-scrollbar="thin">
-      <!-- HeroUI themed scrollbars here -->
+      <!-- Kinetic themed scrollbars here -->
     </section>
   </main>
 </html>

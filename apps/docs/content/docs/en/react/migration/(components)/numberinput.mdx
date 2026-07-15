@@ -1,10 +1,10 @@
 ---
 title: NumberInput
-description: Migration guide for NumberInput to NumberField from HeroUI v2 to v3
+description: Migration guide for NumberInput to NumberField from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 NumberField documentation](/docs/react/components/numberfield) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 NumberField documentation](/docs/react/components/numberfield) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for NumberInput to NumberField from HeroUI v2 to v3
 In v2, NumberInput was a single component with props:
 
 ```tsx
-import { NumberInput } from "@heroui/react";
+import { NumberInput } from "@kinetic/react";
 
 export default function App() {
   return <NumberInput label="Amount" defaultValue={1024} />;
@@ -22,7 +22,7 @@ export default function App() {
 In v3, NumberField requires compound components:
 
 ```tsx
-import { NumberField, Label } from "@heroui/react";
+import { NumberField, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -96,7 +96,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Description, FieldError, Label } from "@heroui/react";
+    import { Description, FieldError, Label } from "@kinetic/react";
 
     {/* With description */}
     <NumberField>

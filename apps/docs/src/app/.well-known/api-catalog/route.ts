@@ -22,7 +22,7 @@ export async function GET(request: Request) {
             anchor: agentApi,
             "service-desc": [
               {
-                href: absoluteUrl(origin, "/.well-known/openapi/heroui-agent-api.json"),
+                href: absoluteUrl(origin, "/.well-known/openapi/kinetic-agent-api.json"),
                 type: "application/vnd.oai.openapi+json",
               },
             ],
@@ -47,7 +47,7 @@ export async function GET(request: Request) {
             anchor: REACT_MCP_API_URL,
             "service-desc": [
               {
-                href: absoluteUrl(origin, "/.well-known/openapi/heroui-react-mcp-api.json"),
+                href: absoluteUrl(origin, "/.well-known/openapi/kinetic-react-mcp-api.json"),
                 type: "application/vnd.oai.openapi+json",
               },
             ],
@@ -68,7 +68,7 @@ export async function GET(request: Request) {
             anchor: NATIVE_MCP_API_URL,
             "service-desc": [
               {
-                href: absoluteUrl(origin, "/.well-known/openapi/heroui-native-mcp-api.json"),
+                href: absoluteUrl(origin, "/.well-known/openapi/kinetic-native-mcp-api.json"),
                 type: "application/vnd.oai.openapi+json",
               },
             ],

@@ -1,4 +1,4 @@
-@import "@heroui/styles";
+@import "@kinetic/styles";
 
 @source "../../react/src/components/**/*.{ts,tsx,js,jsx}";
 

@@ -1,9 +1,9 @@
 "use client";
 
-import type {TextAreaVariants} from "@heroui/styles";
+import type {TextAreaVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {textAreaVariants} from "@heroui/styles";
+import {textAreaVariants} from "@kinetic/styles";
 import React, {use} from "react";
 import {TextArea as TextAreaPrimitive} from "react-aria-components/TextArea";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, CloseButton, buttonVariants} from "@heroui/react";
+import {Button, CloseButton, buttonVariants} from "@kinetic/react";
 import {Calligraph} from "calligraph";
 import {AnimatePresence, motion} from "motion/react";
 import {useEffect, useState, useSyncExternalStore} from "react";
@@ -23,22 +23,22 @@ const DISCOUNT_CAMPAIGN = "launch_discount";
 const DEFAULT_CAMPAIGN = "pro_default";
 
 const getProHref = (medium: string, campaign: string) =>
-  `${PRO_URL}?utm_source=heroui.com&utm_medium=${medium}&utm_campaign=${campaign}`;
+  `${PRO_URL}?utm_source=kinetic-ui.com&utm_medium=${medium}&utm_campaign=${campaign}`;
 
 const DEFAULT_PRO_COPY = {
   cardDescription:
     "Components, templates, and AI tooling for React and React Native. Made for teams that care about the details.",
-  cardTitle: "Build faster with HeroUI Pro",
+  cardTitle: "Build faster with Kinetic Pro",
   cta: "Explore Pro",
   headerDetail: "Components, templates & AI tooling",
-  headerTitle: "HeroUI Pro is live",
+  headerTitle: "Kinetic Pro is live",
   heroLabel: "Now available",
 };
 
 const DISCOUNT_PRO_COPY = {
   cardDescription:
     "More components, charts, advanced MCP & Skills, and a complete theme builder. Get your license now at a discounted price for a limited time.",
-  cardTitle: "HeroUI Pro launch discount is live!",
+  cardTitle: "Kinetic Pro launch discount is live!",
   cta: "Get Pro deal",
   headerTitle: "Launch discount is live!",
 };
@@ -179,7 +179,7 @@ export function HeaderBanner() {
   );
 }
 
-const PRO_BANNER_DISMISSED_KEY = "heroui-pro-banner-dismissed-session";
+const PRO_BANNER_DISMISSED_KEY = "kinetic-pro-banner-dismissed-session";
 
 const subscribeToDismissed = (callback: () => void) => {
   window.addEventListener("storage", callback);

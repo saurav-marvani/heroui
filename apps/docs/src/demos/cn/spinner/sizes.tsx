@@ -1,4 +1,4 @@
-import {Spinner} from "@heroui/react";
+import {Spinner} from "@kinetic/react";
 
 const SIZE_LABELS = {
   lg: "大",

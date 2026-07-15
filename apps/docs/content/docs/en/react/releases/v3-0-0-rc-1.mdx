@@ -14,7 +14,7 @@ Seven new components: [Drawer](/docs/components/drawer), [ToggleButton](/docs/co
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/rc-1-light@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/rc-1-dark@2x.jpg"
-  alt="HeroUI v3 RC 1"
+  alt="Kinetic v3 RC 1"
   href="/docs/changelog/v3-0-0-rc-1"
 />
 
@@ -25,28 +25,28 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@rc @heroui/react@rc
+    npm i @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@rc @heroui/react@rc
+    pnpm add @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@rc @heroui/react@rc
+    yarn add @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@rc @heroui/react@rc
+    bun add @kinetic/styles@rc @kinetic/react@rc
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI MCP Server](/docs/ui-for-agents/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic MCP Server](/docs/ui-for-agents/mcp-server).
 </Callout>
 
 ## What's New
@@ -183,7 +183,7 @@ New `ButtonGroup.Separator` sub-component adds an explicit visual divider betwee
 
 ### Table & ListBox Virtualization
 
-Table and ListBox now support virtualization via React Aria's `Virtualizer` for large datasets. `Virtualizer`, `TableLayout`, and `ListLayout` are re-exported from `@heroui/react`.
+Table and ListBox now support virtualization via React Aria's `Virtualizer` for large datasets. `Virtualizer`, `TableLayout`, and `ListLayout` are re-exported from `@kinetic/react`.
 
 <ComponentPreview
   name="table-virtualization"
@@ -203,14 +203,14 @@ Focus rings on grouped buttons now use `ring-inset` so they stay within button b
 
 ### Granular Component Imports
 
-`@heroui/react` now supports per-component subpath entrypoints for more explicit imports ([#6301](https://github.com/heroui-inc/heroui/pull/6301)):
+`@kinetic/react` now supports per-component subpath entrypoints for more explicit imports ([#6301](https://github.com/heroui-inc/heroui/pull/6301)):
 
 ```tsx
 // Before — root entrypoint
-import { Button } from "@heroui/react";
+import { Button } from "@kinetic/react";
 
 // After — granular subpath import
-import { Button } from "@heroui/react/button";
+import { Button } from "@kinetic/react/button";
 ```
 
 ## Dependencies

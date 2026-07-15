@@ -3,7 +3,7 @@
 import type {ShowcaseItem as ShowcaseItemType} from "@/showcases";
 import type {UrlObject} from "url";
 
-import {chipVariants} from "@heroui/react";
+import {chipVariants} from "@kinetic/react";
 import LinkRoot from "next/link";
 import {useParams, useSearchParams} from "next/navigation";
 import {Suspense} from "react";

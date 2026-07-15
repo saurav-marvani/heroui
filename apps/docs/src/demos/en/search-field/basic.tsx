@@ -1,4 +1,4 @@
-import {Label, SearchField} from "@heroui/react";
+import {Label, SearchField} from "@kinetic/react";
 
 export function Basic() {
   return (

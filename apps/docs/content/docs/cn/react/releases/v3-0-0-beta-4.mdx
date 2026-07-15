@@ -10,7 +10,7 @@ github:
 </div>
 
 <Callout type="warning">
-  **已修复关键构建问题**：此版本（beta.4）存在一个关键构建问题，已在 **beta.5** 中修复。请升级到 `@heroui/styles@3.0.0-beta.5` 与 `@heroui/react@3.0.0-beta.5`，以确保 TypeScript 声明文件能正确生成、导出能正确解析。
+  **已修复关键构建问题**：此版本（beta.4）存在一个关键构建问题，已在 **beta.5** 中修复。请升级到 `@kinetic/styles@3.0.0-beta.5` 与 `@kinetic/react@3.0.0-beta.5`，以确保 TypeScript 声明文件能正确生成、导出能正确解析。
 </Callout>
 
 此版本引入了用于可视化主题定制的全新 [主题构建器](/themes)，三个新组件（[Autocomplete](/docs/components/autocomplete)、[Breadcrumbs](/docs/components/breadcrumbs)、[Toast](/docs/components/toast)），为 [Tabs](/docs/components/tabs) 添加 secondary 变体，为 [Input](/docs/components/input) 与 [InputGroup](/docs/components/input-group) 添加 primary / secondary 变体，InputGroup 新增对 TextArea 的支持，以及 ⚠️ **破坏性变更**：移除 Link 的下划线变体，并从表单组件中移除 `isInSurface` prop。
@@ -18,7 +18,7 @@ github:
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-4-light@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-4-dark@2x.jpg"
-  alt="HeroUI v3 Beta 4"
+  alt="Kinetic v3 Beta 4"
   href="/docs/changelog/v3-0-0-beta-4"
 />
 
@@ -29,35 +29,35 @@ github:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@beta @heroui/react@beta
+    npm i @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@beta @heroui/react@beta
+    pnpm add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@beta @heroui/react@beta
+    yarn add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@beta @heroui/react@beta
+    bun add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
 
 ### 主题构建器
 
-我们很高兴推出 **[主题构建器](/themes)** —— 用于创建与定制 HeroUI 主题的强大可视化工具。可在实时预览中构建你专属的主题，并导出可直接使用的 CSS。
+我们很高兴推出 **[主题构建器](/themes)** —— 用于创建与定制 Kinetic 主题的强大可视化工具。可在实时预览中构建你专属的主题，并导出可直接使用的 CSS。
 
 **主要特性：**
 - **可视化颜色编辑**：通过 OKLCH 颜色选择器以及直观的亮度、色度、色相滑块来调整颜色
@@ -68,7 +68,7 @@ github:
 - **浅色与深色模式**：可联动也可独立地同时定制两套主题
 - **键盘快捷键**：支持撤销 / 重做以及快速操作，提升工作流效率
 
-立即在 [v3.heroui.com/themes](/themes) 上试用。
+立即在 [v3.kinetic-ui.com/themes](/themes) 上试用。
 
 ### 新组件
 
@@ -282,7 +282,7 @@ Link 组件内置的 `underline` 与 `underlineOffset` prop 已被移除。请�
 
 ### 直接从 React Aria Components 重新导出
 
-HeroUI 现在直接从 `react-aria-components` 重新导出了一系列基元与工具，方便你访问。这些导出对于 [React Aria 框架配置](https://react-aria.adobe.com/frameworks) 尤其有用。
+Kinetic 现在直接从 `react-aria-components` 重新导出了一系列基元与工具，方便你访问。这些导出对于 [React Aria 框架配置](https://react-aria.adobe.com/frameworks) 尤其有用。
 
 **Provider：**
 - `RouterProvider` —— 配置 React Aria 的 Link 使用客户端路由器
@@ -300,7 +300,7 @@ HeroUI 现在直接从 `react-aria-components` 重新导出了一系列基元与
 **国际化工具：**
 - `getLocalizationScript` —— 获取用于服务端渲染的本地化脚本（来自 `react-aria-components/i18n`）
 
-以上这些都可以直接从 `@heroui/react` 引入：
+以上这些都可以直接从 `@kinetic/react` 引入：
 
 ```tsx
 import {
@@ -310,7 +310,7 @@ import {
   useLocale,
   useFilter,
   getLocalizationScript
-} from "@heroui/react";
+} from "@kinetic/react";
 ```
 
 ## 链接

@@ -3,7 +3,7 @@
 import type {CustomFont} from "../hooks";
 
 import {Plus, TrashBin} from "@gravity-ui/icons";
-import {Button, ListBox, ScrollShadow, Tooltip} from "@heroui/react";
+import {Button, ListBox, ScrollShadow, Tooltip} from "@kinetic/react";
 import {useEffect} from "react";
 
 import {useDictionary} from "@/hooks/use-dictionary";

@@ -1,6 +1,6 @@
 "use client";
 
-import {Chip} from "@heroui/react";
+import {Chip} from "@kinetic/react";
 import * as React from "react";
 
 import {useDictionary} from "@/hooks/use-dictionary";

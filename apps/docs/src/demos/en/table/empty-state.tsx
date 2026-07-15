@@ -1,6 +1,6 @@
 "use client";
 
-import {EmptyState, Table} from "@heroui/react";
+import {EmptyState, Table} from "@kinetic/react";
 import {Icon} from "@iconify/react";
 
 export function EmptyStateDemo() {

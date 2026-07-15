@@ -1,7 +1,7 @@
 "use client";
 
 import {PlanetEarth, Rocket, ShoppingBag, SquareArticle} from "@gravity-ui/icons";
-import {Avatar, Description, Label, Tag, TagGroup} from "@heroui/react";
+import {Avatar, Description, Label, Tag, TagGroup} from "@kinetic/react";
 
 export function TagGroupWithPrefix() {
   return (
@@ -34,21 +34,21 @@ export function TagGroupWithPrefix() {
         <TagGroup.List>
           <Tag>
             <Avatar className="size-4">
-              <Avatar.Image src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg" />
+              <Avatar.Image src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg" />
               <Avatar.Fallback>F</Avatar.Fallback>
             </Avatar>
             Fred
           </Tag>
           <Tag>
             <Avatar className="size-4">
-              <Avatar.Image src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg" />
+              <Avatar.Image src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg" />
               <Avatar.Fallback>M</Avatar.Fallback>
             </Avatar>
             Michael
           </Tag>
           <Tag>
             <Avatar className="size-4">
-              <Avatar.Image src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg" />
+              <Avatar.Image src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg" />
               <Avatar.Fallback>J</Avatar.Fallback>
             </Avatar>
             Jane

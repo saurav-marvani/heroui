@@ -1,6 +1,6 @@
 # Tailwind CSS v4 Component CSS Writing Guide
 
-This guide explains how to write CSS files for components using Tailwind CSS v4 syntax, based on the patterns used in HeroUI v3 components.
+This guide explains how to write CSS files for components using Tailwind CSS v4 syntax, based on the patterns used in Kinetic UI v3 components.
 
 ## Table of Contents
 

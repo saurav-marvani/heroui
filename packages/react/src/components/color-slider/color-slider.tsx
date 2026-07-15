@@ -1,10 +1,10 @@
 "use client";
 
-import type {ColorSliderVariants} from "@heroui/styles";
+import type {ColorSliderVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {ColorSliderRenderProps, ColorSpace} from "react-aria-components/ColorSlider";
 
-import {colorSliderVariants} from "@heroui/styles";
+import {colorSliderVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {
   ColorSlider as ColorSliderPrimitive,
@@ -73,7 +73,7 @@ function getValidColorSpace(channel: string, colorSpace?: ColorSpace): ColorSpac
   if (requiredSpace && colorSpace && colorSpace !== requiredSpace) {
     // eslint-disable-next-line no-console
     console.warn(
-      `[HeroUI ColorSlider] Invalid combination: channel="${channel}" requires colorSpace="${requiredSpace}", ` +
+      `[Kinetic ColorSlider] Invalid combination: channel="${channel}" requires colorSpace="${requiredSpace}", ` +
         `but received colorSpace="${colorSpace}". Auto-correcting to "${requiredSpace}".`,
     );
 
@@ -84,7 +84,7 @@ function getValidColorSpace(channel: string, colorSpace?: ColorSpace): ColorSpac
   if (HSL_HSB_ONLY_CHANNELS.has(channel) && colorSpace === "rgb") {
     // eslint-disable-next-line no-console
     console.warn(
-      `[HeroUI ColorSlider] Invalid combination: channel="${channel}" is not available in RGB color space. ` +
+      `[Kinetic ColorSlider] Invalid combination: channel="${channel}" is not available in RGB color space. ` +
         `Use colorSpace="hsl" or colorSpace="hsb" instead. Auto-correcting to "hsl".`,
     );
 

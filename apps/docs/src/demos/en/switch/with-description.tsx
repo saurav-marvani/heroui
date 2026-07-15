@@ -1,4 +1,4 @@
-import {Description, Switch} from "@heroui/react";
+import {Description, Switch} from "@kinetic/react";
 
 export function WithDescription() {
   return (

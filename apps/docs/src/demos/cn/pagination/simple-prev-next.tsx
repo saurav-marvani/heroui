@@ -1,6 +1,6 @@
 "use client";
 
-import {Pagination} from "@heroui/react";
+import {Pagination} from "@kinetic/react";
 import {useState} from "react";
 
 export function PaginationSimplePrevNext() {

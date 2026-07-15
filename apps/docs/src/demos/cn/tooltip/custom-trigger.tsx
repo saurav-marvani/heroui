@@ -1,5 +1,5 @@
 import {CircleCheckFill, CircleQuestion} from "@gravity-ui/icons";
-import {Avatar, Chip, Tooltip} from "@heroui/react";
+import {Avatar, Chip, Tooltip} from "@kinetic/react";
 
 export function TooltipCustomTrigger() {
   return (
@@ -9,7 +9,7 @@ export function TooltipCustomTrigger() {
           <Avatar size="sm">
             <Avatar.Image
               alt="Jane Doe"
-              src="https://img.heroui.chat/image/avatar?w=400&h=400&u=4"
+              src="https://img.kinetic.chat/image/avatar?w=400&h=400&u=4"
             />
             <Avatar.Fallback>JD</Avatar.Fallback>
           </Avatar>

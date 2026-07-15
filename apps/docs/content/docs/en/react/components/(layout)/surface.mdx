@@ -10,7 +10,7 @@ links:
 ## Import
 
 ```tsx
-import { Surface } from '@heroui/react';
+import { Surface } from '@kinetic/react';
 ```
 
 ### Usage
@@ -36,7 +36,7 @@ Surface comes in semantic variants that describe their prominence level:
 When using form components inside a Surface, use the `variant="secondary"` prop to apply the lower emphasis variant suitable for surface backgrounds.
 
 ```tsx
-import { Surface, Input, TextArea } from '@heroui/react';
+import { Surface, Input, TextArea } from '@kinetic/react';
 
 function App() {
   return (
@@ -55,7 +55,7 @@ function App() {
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { Surface } from '@heroui/react';
+import { Surface } from '@kinetic/react';
 
 function CustomSurface() {
   return (
@@ -87,7 +87,7 @@ To customize the Surface component classes, you can use the `@layer components` 
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -119,7 +119,7 @@ Child components can access the Surface context to get the current variant:
 
 ```tsx
 import { useContext } from 'react';
-import { SurfaceContext } from '@heroui/react';
+import { SurfaceContext } from '@kinetic/react';
 
 function MyComponent() {
   const { variant } = useContext(SurfaceContext);

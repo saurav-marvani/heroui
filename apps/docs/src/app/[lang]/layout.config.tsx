@@ -1,6 +1,6 @@
 import type {BaseLayoutProps} from "fumadocs-ui/layouts/shared";
 
-import {HeroUILogo} from "@/components/heroui-logo";
+import {KineticLogo} from "@/components/kinetic-logo";
 
 export {getHomeLayoutLinks} from "./(home)/home-layout-links";
 
@@ -13,7 +13,7 @@ export {getHomeLayoutLinks} from "./(home)/home-layout-links";
  */
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: <HeroUILogo />,
+    title: <KineticLogo />,
     transparentMode: "always",
   },
 };

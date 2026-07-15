@@ -1,4 +1,4 @@
-import {Label, ProgressBar} from "@heroui/react";
+import {Label, ProgressBar} from "@kinetic/react";
 
 const colors = ["default", "accent", "success", "warning", "danger"] as const;
 

@@ -1,17 +1,17 @@
 ---
 title: Styling
-description: Style HeroUI components with CSS, Tailwind, or CSS-in-JS
+description: Style Kinetic components with CSS, Tailwind, or CSS-in-JS
 icon: brush
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI components provide flexible styling options: Tailwind CSS utilities, CSS with [BEM](https://getbem.com/) classes or data attributes, CSS-in-JS libraries, and render props for dynamic styling.
+Kinetic components provide flexible styling options: Tailwind CSS utilities, CSS with [BEM](https://getbem.com/) classes or data attributes, CSS-in-JS libraries, and render props for dynamic styling.
 
 ## Basic Styling
 
-**Using className:** All HeroUI components accept `className` props:
+**Using className:** All Kinetic components accept `className` props:
 
 ```tsx
 <Button className="bg-purple-500 hover:bg-purple-600">
@@ -33,7 +33,7 @@ HeroUI components provide flexible styling options: Tailwind CSS utilities, CSS 
 
 ## Scrollbars
 
-HeroUI scroll slots use `@apply scrollbar` in component CSS. For your own overflow containers, use the utilities from `@heroui/styles`:
+Kinetic scroll slots use `@apply scrollbar` in component CSS. For your own overflow containers, use the utilities from `@kinetic/styles`:
 
 ```tsx
 <div className="scrollbar h-64 overflow-y-auto">
@@ -43,8 +43,8 @@ HeroUI scroll slots use `@apply scrollbar` in component CSS. For your own overfl
 
 | Utility | Effect |
 |---------|--------|
-| `scrollbar` | HeroUI thumb (reads theme `--scrollbar-*` variables) |
-| `scrollbar-thin` | HeroUI themed thin scrollbar |
+| `scrollbar` | Kinetic thumb (reads theme `--scrollbar-*` variables) |
+| `scrollbar-thin` | Kinetic themed thin scrollbar |
 | `scrollbar-default` | OS / browser scrollbars |
 | `scrollbar-none` | Hidden scrollbar |
 
@@ -52,7 +52,7 @@ Global and per-subtree control uses `data-scrollbar` on an ancestor. See [Themin
 
 ## State-Based Styling
 
-HeroUI components expose their state through data attributes, similar to CSS pseudo-classes:
+Kinetic components expose their state through data attributes, similar to CSS pseudo-classes:
 
 ```css
 /* Target different states */
@@ -101,7 +101,7 @@ Apply dynamic styling based on component state:
 
 ## BEM Classes
 
-HeroUI uses [BEM methodology](https://getbem.com/) for consistent class naming:
+Kinetic uses [BEM methodology](https://getbem.com/) for consistent class naming:
 
 ```css
 /* Block */
@@ -145,8 +145,8 @@ HeroUI uses [BEM methodology](https://getbem.com/) for consistent class naming:
 Create reusable custom components using [tailwind-variants](https://tailwind-variants.org/)—a Tailwind CSS first-class variant API:
 
 ```tsx
-import { Button as HeroButton, type ButtonProps } from '@heroui/react';
-import { buttonVariants, tv, type VariantProps } from '@heroui/styles';
+import { Button as HeroButton, type ButtonProps } from '@kinetic/react';
+import { buttonVariants, tv, type VariantProps } from '@kinetic/styles';
 
 const customButtonVariants = tv({
   extend: buttonVariants,
@@ -192,7 +192,7 @@ export function CustomButton({ intent, size, className, ...props }: CustomButton
 
 ```tsx
 import styled from 'styled-components';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 const StyledButton = styled(Button)`
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
@@ -210,7 +210,7 @@ const StyledButton = styled(Button)`
 
 ```tsx
 import { css } from '@emotion/css';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 const buttonStyles = css`
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
@@ -281,7 +281,7 @@ For scoped styles, use CSS Modules:
 
 ```tsx
 import styles from './Button.module.css';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 <Button className={styles.button}>
   Scoped Button
@@ -295,7 +295,7 @@ import { Button } from '@heroui/react';
 
 > **Note:** See component docs for complete class references: [Button](/docs/components/button#css-classes), [Accordion](/docs/components/accordion#css-classes)
 
-View all component classes in [@heroui/styles/components](https://github.com/heroui-inc/heroui/tree/main/packages/styles/components).
+View all component classes in [@kinetic/styles/components](https://github.com/heroui-inc/heroui/tree/main/packages/styles/components).
 
 ## Next Steps
 

@@ -30,6 +30,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {breadcrumbsVariants} from "@heroui/styles";
+export {breadcrumbsVariants} from "@kinetic/styles";
 
-export type {BreadcrumbsVariants} from "@heroui/styles";
+export type {BreadcrumbsVariants} from "@kinetic/styles";

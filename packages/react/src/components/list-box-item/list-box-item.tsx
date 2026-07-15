@@ -1,11 +1,11 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {ListBoxItemVariants} from "@heroui/styles";
+import type {ListBoxItemVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {ListBoxItemRenderProps} from "react-aria-components/ListBox";
 
-import {listboxItemVariants} from "@heroui/styles";
+import {listboxItemVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {ListBoxItem as ListBoxItemPrimitive} from "react-aria-components/ListBox";
 

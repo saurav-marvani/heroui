@@ -1,9 +1,9 @@
 "use client";
 
-import type {ButtonProps} from "@heroui/react";
+import type {ButtonProps} from "@kinetic/react";
 import type {SVGProps} from "react";
 
-import {Button, Disclosure, DisclosureGroup, useDisclosureGroupNavigation} from "@heroui/react";
+import {Button, Disclosure, DisclosureGroup, useDisclosureGroupNavigation} from "@kinetic/react";
 import React from "react";
 import {cn} from "tailwind-variants";
 

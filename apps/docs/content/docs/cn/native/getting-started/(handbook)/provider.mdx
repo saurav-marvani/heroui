@@ -1,18 +1,18 @@
 ---
 title: Provider
-description: 配置 HeroUI Native provider 的文本、文本输入、动画和 toast 设置
+description: 配置 Kinetic Native provider 的文本、文本输入、动画和 toast 设置
 icon: chevrons-expand-horizontal
 ---
 
-`HeroUINativeProvider` 是根 provider 组件，用于在你的 React Native 应用中配置和初始化 HeroUI Native。它为你的应用提供全局配置和 portal 管理。
+`KineticNativeProvider` 是根 provider 组件，用于在你的 React Native 应用中配置和初始化 Kinetic Native。它为你的应用提供全局配置和 portal 管理。
 
 ## 概述
 
-该 provider 是 HeroUI Native 的主要入口点，为你的应用包裹必要的上下文和配置：
+该 provider 是 Kinetic Native 的主要入口点，为你的应用包裹必要的上下文和配置：
 
 - **安全区域内边距（Safe Area Insets）**：通过 `SafeAreaListener` 自动处理安全区域内边距的更新，并将其与 Uniwind 同步，以便在 Tailwind class 中使用（例如 `pb-safe-offset-3`）
-- **文本配置**：全局 Text 组件设置，确保所有 HeroUI 组件保持一致
-- **文本输入配置**：全局文本输入设置，确保所有 HeroUI 输入组件保持一致
+- **文本配置**：全局 Text 组件设置，确保所有 Kinetic 组件保持一致
+- **文本输入配置**：全局文本输入设置，确保所有 Kinetic 输入组件保持一致
 - **动画配置**：全局动画控制，可禁用整个应用中的所有动画
 - **Toast 配置**：全局 toast 系统配置，包括内边距、默认 props 和包裹组件
 - **Portal 管理**：处理渲染在应用层级之上的浮层、模态框及其他组件
@@ -22,13 +22,13 @@ icon: chevrons-expand-horizontal
 用该 provider 包裹你的应用根节点：
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProvider>{/* 你的应用内容 */}</HeroUINativeProvider>
+      <KineticNativeProvider>{/* 你的应用内容 */}</KineticNativeProvider>
     </GestureHandlerRootView>
   );
 }
@@ -40,13 +40,13 @@ export default function App() {
 
 ### Text 组件配置
 
-HeroUI Native 内所有 Text 组件的全局设置。这些 props 经过精心挑选，仅包含那些适合在应用中所有 Text 组件上进行全局配置的选项：
+Kinetic Native 内所有 Text 组件的全局设置。这些 props 经过精心挑选，仅包含那些适合在应用中所有 Text 组件上进行全局配置的选项：
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     // 为无障碍禁用字体缩放
     allowFontScaling: false,
@@ -64,22 +64,22 @@ const config: HeroUINativeConfig = {
 
 export default function App() {
   return (
-    <HeroUINativeProvider config={config}>
+    <KineticNativeProvider config={config}>
       {/* 你的应用内容 */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
 
 ### TextInput 组件配置
 
-HeroUI Native 内所有基于 TextInput 的组件的全局设置（例如 Input、TextArea、SearchField、InputGroup、InputOTP）。这些 props 经过精心挑选，仅包含那些适合在应用中所有输入组件上进行全局配置的选项：
+Kinetic Native 内所有基于 TextInput 的组件的全局设置（例如 Input、TextArea、SearchField、InputGroup、InputOTP）。这些 props 经过精心挑选，仅包含那些适合在应用中所有输入组件上进行全局配置的选项：
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textInputProps: {
     // 遵循 Text Size 无障碍设置
     allowFontScaling: false,
@@ -91,9 +91,9 @@ const config: HeroUINativeConfig = {
 
 export default function App() {
   return (
-    <HeroUINativeProvider config={config}>
+    <KineticNativeProvider config={config}>
       {/* 你的应用内容 */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
@@ -107,7 +107,7 @@ export default function App() {
 整个应用的全局动画配置：
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // 禁用应用中的所有动画（级联到所有子组件）
   animation: 'disable-all',
 };
@@ -122,7 +122,7 @@ const config: HeroUINativeConfig = {
 控制在控制台中显示的面向开发者的提示信息：
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   devInfo: {
     // 禁用样式原则提示信息
     stylingPrinciples: false,
@@ -141,7 +141,7 @@ const config: HeroUINativeConfig = {
 **选项 1：禁用 Toast Provider**
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // 完全禁用 toast provider
   toast: false,
   // 或
@@ -158,7 +158,7 @@ const config: HeroUINativeConfig = {
 ```tsx
 import { KeyboardAvoidingView } from 'react-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   toast: {
     // 全局 toast 配置（作为所有 toast 的默认值）
     defaultProps: {
@@ -195,11 +195,11 @@ const config: HeroUINativeConfig = {
 以下是展示所有配置选项的完整示例：
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // 全局文本配置
   textProps: {
     minimumFontScale: 0.5,
@@ -242,9 +242,9 @@ const config: HeroUINativeConfig = {
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProvider config={config}>
+      <KineticNativeProvider config={config}>
         <YourApp />
-      </HeroUINativeProvider>
+      </KineticNativeProvider>
     </GestureHandlerRootView>
   );
 }
@@ -256,11 +256,11 @@ export default function App() {
 
 ```tsx
 // app/_layout.tsx
-import { HeroUINativeProvider } from 'heroui-native';
-import type { HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
+import type { KineticNativeConfig } from 'heroui-native';
 import { Stack } from 'expo-router';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     minimumFontScale: 0.5,
     maxFontSizeMultiplier: 1.5,
@@ -269,9 +269,9 @@ const config: HeroUINativeConfig = {
 
 export default function RootLayout() {
   return (
-    <HeroUINativeProvider config={config}>
+    <KineticNativeProvider config={config}>
       <Stack />
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
@@ -280,10 +280,10 @@ export default function RootLayout() {
 
 ### Provider 层级
 
-`HeroUINativeProvider` 内部组合了多个 provider：
+`KineticNativeProvider` 内部组合了多个 provider：
 
 ```
-HeroUINativeProvider
+KineticNativeProvider
 ├── SafeAreaListener（处理安全区域内边距更新）
 │   └── GlobalAnimationSettingsProvider（动画配置）
 │       └── TextComponentProvider（文本配置）
@@ -303,11 +303,11 @@ HeroUINativeProvider
 
 ## Raw Provider
 
-`HeroUINativeProviderRaw` 是 `HeroUINativeProvider` 的轻量级变体，为打包体积优化而设计。它不包含 `ToastProvider` 和 `PortalHost`，为你提供一个最精简的起点，让你只安装和添加真正需要的内容。
+`KineticNativeProviderRaw` 是 `KineticNativeProvider` 的轻量级变体，为打包体积优化而设计。它不包含 `ToastProvider` 和 `PortalHost`，为你提供一个最精简的起点，让你只安装和添加真正需要的内容。
 
 ### 何时使用
 
-当你想完全掌控打包体积中包含哪些依赖时，使用 `HeroUINativeProviderRaw`。使用从 `heroui-native/provider-raw` 导入的 raw provider 时，以下依赖是可选的，仅在你使用对应组件时才需要：
+当你想完全掌控打包体积中包含哪些依赖时，使用 `KineticNativeProviderRaw`。使用从 `heroui-native/provider-raw` 导入的 raw provider 时，以下依赖是可选的，仅在你使用对应组件时才需要：
 
 - **react-native-screens** —— 浮层组件（Popover、Dialog）所需
 - **@gorhom/bottom-sheet** —— BottomSheet 组件所需
@@ -317,12 +317,12 @@ HeroUINativeProvider
 
 ```tsx
 import {
-  HeroUINativeProviderRaw,
-  type HeroUINativeConfigRaw,
+  KineticNativeProviderRaw,
+  type KineticNativeConfigRaw,
 } from 'heroui-native/provider-raw';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const config: HeroUINativeConfigRaw = {
+const config: KineticNativeConfigRaw = {
   textProps: {
     maxFontSizeMultiplier: 1.5,
   },
@@ -331,9 +331,9 @@ const config: HeroUINativeConfigRaw = {
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProviderRaw config={config}>
+      <KineticNativeProviderRaw config={config}>
         {/* 你的应用内容 */}
-      </HeroUINativeProviderRaw>
+      </KineticNativeProviderRaw>
     </GestureHandlerRootView>
   );
 }
@@ -344,19 +344,19 @@ export default function App() {
 如果你在使用 raw provider 时需要 toast 或 portal 功能，请自行添加：
 
 ```tsx
-import { HeroUINativeProviderRaw } from 'heroui-native/provider-raw';
+import { KineticNativeProviderRaw } from 'heroui-native/provider-raw';
 import { PortalHost } from 'heroui-native/portal';
 import { ToastProvider } from 'heroui-native/toast';
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProviderRaw>
+      <KineticNativeProviderRaw>
         <ToastProvider>
           {/* 你的应用内容 */}
           <PortalHost />
         </ToastProvider>
-      </HeroUINativeProviderRaw>
+      </KineticNativeProviderRaw>
     </GestureHandlerRootView>
   );
 }
@@ -365,7 +365,7 @@ export default function App() {
 ### Provider 层级
 
 ```
-HeroUINativeProviderRaw
+KineticNativeProviderRaw
 ├── SafeAreaListener（处理安全区域内边距更新）
 │   └── GlobalAnimationSettingsProvider（动画配置）
 │       └── TextComponentProvider（文本配置）
@@ -377,24 +377,24 @@ HeroUINativeProviderRaw
 
 ### 1. 单一 Provider 实例
 
-始终在应用根部使用单个 `HeroUINativeProvider`。不要嵌套多个 provider：
+始终在应用根部使用单个 `KineticNativeProvider`。不要嵌套多个 provider：
 
 ```tsx
 // ❌ 不推荐
-<HeroUINativeProvider>
+<KineticNativeProvider>
   <SomeComponent>
-    <HeroUINativeProvider> {/* 不要这样做 */}
+    <KineticNativeProvider> {/* 不要这样做 */}
       <AnotherComponent />
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   </SomeComponent>
-</HeroUINativeProvider>
+</KineticNativeProvider>
 
 // ✅ 推荐
-<HeroUINativeProvider>
+<KineticNativeProvider>
   <SomeComponent>
     <AnotherComponent />
   </SomeComponent>
-</HeroUINativeProvider>
+</KineticNativeProvider>
 ```
 
 ### 2. 配置对象
@@ -405,7 +405,7 @@ HeroUINativeProviderRaw
 // ❌ 不推荐
 function App() {
   return (
-    <HeroUINativeProvider
+    <KineticNativeProvider
       config={{
         textProps: {
           /* 内联配置 */
@@ -413,12 +413,12 @@ function App() {
       }}
     >
       {/* ... */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 
 // ✅ 推荐
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     maxFontSizeMultiplier: 1.5,
   },
@@ -426,7 +426,7 @@ const config: HeroUINativeConfig = {
 
 function App() {
   return (
-    <HeroUINativeProvider config={config}>{/* ... */}</HeroUINativeProvider>
+    <KineticNativeProvider config={config}>{/* ... */}</KineticNativeProvider>
   );
 }
 ```
@@ -436,7 +436,7 @@ function App() {
 配置文本 props 时请考虑无障碍：
 
 ```tsx
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   textProps: {
     // 为无障碍允许字体缩放
     allowFontScaling: true,
@@ -451,9 +451,9 @@ const config: HeroUINativeConfig = {
 该 provider 具有完整的类型定义。导入类型以获得更好的 IDE 支持：
 
 ```tsx
-import { HeroUINativeProvider, type HeroUINativeConfig } from 'heroui-native';
+import { KineticNativeProvider, type KineticNativeConfig } from 'heroui-native';
 
-const config: HeroUINativeConfig = {
+const config: KineticNativeConfig = {
   // 完整的类型安全和自动补全
   textProps: {
     allowFontScaling: true,

@@ -1,10 +1,10 @@
 ---
 title: Popover
-description: Migration guide for Popover from HeroUI v2 to v3
+description: Migration guide for Popover from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Popover documentation](/docs/react/components/popover) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Popover documentation](/docs/react/components/popover) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Popover from HeroUI v2 to v3
 In v2, Popover used separate components:
 
 ```tsx
-import { Popover, PopoverTrigger, PopoverContent, Button } from "@heroui/react";
+import { Popover, PopoverTrigger, PopoverContent, Button } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -31,7 +31,7 @@ export default function App() {
 In v3, Popover uses compound components:
 
 ```tsx
-import { Popover, Button } from "@heroui/react";
+import { Popover, Button } from "@kinetic/react";
 
 export default function App() {
   return (

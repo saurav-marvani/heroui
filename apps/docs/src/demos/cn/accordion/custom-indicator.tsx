@@ -1,9 +1,9 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
 import {ChevronsDown, CircleChevronDown, Minus, Plus} from "@gravity-ui/icons";
-import {Accordion} from "@heroui/react";
+import {Accordion} from "@kinetic/react";
 import React from "react";
 
 export function CustomIndicator() {

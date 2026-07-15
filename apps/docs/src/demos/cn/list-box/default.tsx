@@ -1,4 +1,4 @@
-import {Avatar, Description, Label, ListBox} from "@heroui/react";
+import {Avatar, Description, Label, ListBox} from "@kinetic/react";
 
 export function Default() {
   return (
@@ -7,13 +7,13 @@ export function Default() {
         <Avatar size="sm">
           <Avatar.Image
             alt="Bob"
-            src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
+            src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
           />
           <Avatar.Fallback>B</Avatar.Fallback>
         </Avatar>
         <div className="flex flex-col">
           <Label>Bob</Label>
-          <Description>bob@heroui.com</Description>
+          <Description>bob@kinetic-ui.com</Description>
         </div>
         <ListBox.ItemIndicator />
       </ListBox.Item>
@@ -21,13 +21,13 @@ export function Default() {
         <Avatar size="sm">
           <Avatar.Image
             alt="Fred"
-            src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg"
+            src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg"
           />
           <Avatar.Fallback>F</Avatar.Fallback>
         </Avatar>
         <div className="flex flex-col">
           <Label>Fred</Label>
-          <Description>fred@heroui.com</Description>
+          <Description>fred@kinetic-ui.com</Description>
         </div>
         <ListBox.ItemIndicator />
       </ListBox.Item>
@@ -35,13 +35,13 @@ export function Default() {
         <Avatar size="sm">
           <Avatar.Image
             alt="Martha"
-            src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg"
+            src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg"
           />
           <Avatar.Fallback>M</Avatar.Fallback>
         </Avatar>
         <div className="flex flex-col">
           <Label>Martha</Label>
-          <Description>martha@heroui.com</Description>
+          <Description>martha@kinetic-ui.com</Description>
         </div>
         <ListBox.ItemIndicator />
       </ListBox.Item>

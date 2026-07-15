@@ -6,9 +6,9 @@ export const GITHUB_API_URL = "https://api.github.com";
 
 export const RAW_GITHUB_URL = "https://raw.githubusercontent.com";
 
-export const REPO_NAME = "heroui-inc/heroui";
+export const REPO_NAME = "kinetic-inc/kinetic";
 
-export const REPO_NAME_NATIVE = "heroui-inc/heroui-native";
+export const REPO_NAME_NATIVE = "kinetic-inc/kinetic-native";
 
 export const ISSUE_REPORT_URL = `${GITHUB_URL}/${REPO_NAME}/issues/new?assignees=&labels=bug&template=bug_report.yml&title=%5BBUG%5D+-+`;
 
@@ -44,7 +44,7 @@ export const THEMES_PATH =
 export const STORYBOOK_URL = __DEV__
   ? "http://localhost:6006"
   : __IS_PRE_RELEASE__ || __PREVIEW__
-    ? "https://storybook-v3.heroui.com"
-    : "https://storybook.heroui.com";
+    ? "https://storybook-v3.kinetic-ui.com"
+    : "https://storybook.kinetic-ui.com";
 
-export const CDN_URL = "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com";
+export const CDN_URL = "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com";

@@ -26,6 +26,6 @@ export type {ChipRootProps, ChipRootProps as ChipProps, ChipLabelProps} from "./
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {chipVariants} from "@heroui/styles";
+export {chipVariants} from "@kinetic/styles";
 
-export type {ChipVariants} from "@heroui/styles";
+export type {ChipVariants} from "@kinetic/styles";

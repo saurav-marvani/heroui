@@ -1,10 +1,10 @@
 ---
 title: Breadcrumbs
-description: Breadcrumbs 从 HeroUI v2 到 v3 的迁移指南。
+description: Breadcrumbs 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Breadcrumbs 文档](/docs/react/components/breadcrumbs)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Breadcrumbs 文档](/docs/react/components/breadcrumbs)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Breadcrumbs 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，`Breadcrumbs` 接受 `items` prop 或子节点：
 
 ```tsx
-import { Breadcrumbs, BreadcrumbItem } from "@heroui/react";
+import { Breadcrumbs, BreadcrumbItem } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
 在 v3 中，Breadcrumbs 改为复合组件模式，由 `Breadcrumbs` 与 `BreadcrumbsItem` 组成：
 
 ```tsx
-import { Breadcrumbs, BreadcrumbsItem } from "@heroui/react";
+import { Breadcrumbs, BreadcrumbsItem } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -98,7 +98,7 @@ export default function App() {
   <Tab value="v3">
     ```tsx
     import { Icon } from "@iconify/react";
-    import { Breadcrumbs, BreadcrumbsItem } from "@heroui/react";
+    import { Breadcrumbs, BreadcrumbsItem } from "@kinetic/react";
 
     <Breadcrumbs separator={<Icon icon="gravity-ui:caret-right" />}>
       <BreadcrumbsItem href="#">Home</BreadcrumbsItem>

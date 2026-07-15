@@ -103,6 +103,6 @@ export type {YearPickerContextValue} from "../calendar-year-picker";
 /* -------------------------------------------------------------------------------------------------
 | * Variants
 | * -----------------------------------------------------------------------------------------------*/
-export {rangeCalendarVariants} from "@heroui/styles";
+export {rangeCalendarVariants} from "@kinetic/styles";
 
-export type {RangeCalendarVariants} from "@heroui/styles";
+export type {RangeCalendarVariants} from "@kinetic/styles";

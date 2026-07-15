@@ -58,7 +58,7 @@ export function getHomeLayoutLinks(dict: Dictionary, lang: string = "en"): LinkI
           external: true,
           icon: <Iconify icon="route" />,
           text: nav.roadmap,
-          url: "https://herouiv3.featurebase.app/roadmap",
+          url: "https://kineticv3.featurebase.app/roadmap",
         },
       ],
       on: "menu",
@@ -102,7 +102,7 @@ export function getHomeLayoutLinks(dict: Dictionary, lang: string = "en"): LinkI
     },
     {
       children: (
-        <ExternalLink href="https://herouiv3.featurebase.app/roadmap">{nav.roadmap}</ExternalLink>
+        <ExternalLink href="https://kineticv3.featurebase.app/roadmap">{nav.roadmap}</ExternalLink>
       ),
       on: "nav",
       type: "custom",

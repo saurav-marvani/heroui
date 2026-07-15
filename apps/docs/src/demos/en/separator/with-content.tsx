@@ -1,19 +1,19 @@
-import {Separator} from "@heroui/react";
+import {Separator} from "@kinetic/react";
 
 const items = [
   {
-    iconUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/bell-small.png",
+    iconUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/bell-small.png",
     subtitle: "Receive account activity updates",
     title: "Set Up Notifications",
   },
   {
-    iconUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/compass-small.png",
+    iconUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/compass-small.png",
     subtitle: "Connect your browser to your account",
     title: "Set up Browser Extension",
   },
   {
     iconUrl:
-      "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/mint-collective-small.png",
+      "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/mint-collective-small.png",
     subtitle: "Create your first collectible",
     title: "Mint Collectible",
   },

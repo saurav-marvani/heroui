@@ -4,7 +4,7 @@ import {CORE_TEAM_AUTHORS} from "../authors";
 import AppleIPhoneCameraZoom from "../navigation/apple-iphone-camera-zoom";
 import AppleIPhoneDisclosure from "../navigation/apple-iphone-disclosure";
 
-const SHOWCASE_CDN_URL = "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/showcases";
+const SHOWCASE_CDN_URL = "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/showcases";
 
 export const navigationShowcases: ShowcaseItem[] = [
   {

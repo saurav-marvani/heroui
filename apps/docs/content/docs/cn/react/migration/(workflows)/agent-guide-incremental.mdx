@@ -1,12 +1,12 @@
 ---
 title: 代理迁移指南 - 共存增量迁移
-description: AI 助手增量共存迁移指南，帮助将 HeroUI v2 迁移到 v3
+description: AI 助手增量共存迁移指南，帮助将 Kinetic v2 迁移到 v3
 index: false
 ---
 
 ## 概述
 
-本指南专为人工智能助手（代理）设计，帮助用户使用**增量共存迁移**从 HeroUI v2 迁移到 v3。这种方法允许 v2 和 v3 组件并行工作，从而实现逐个组件迁移，同时保持项目正常运行。
+本指南专为人工智能助手（代理）设计，帮助用户使用**增量共存迁移**从 Kinetic v2 迁移到 v3。这种方法允许 v2 和 v3 组件并行工作，从而实现逐个组件迁移，同时保持项目正常运行。
 
 <Callout type="info">
   **主要区别**：与完全迁移不同，增量共存迁移允许项目在迁移期间保持功能。 v2 和 v3 组件可以暂时共存。
@@ -41,12 +41,12 @@ index: false
 对于使用增量共存策略的项目，代理应该：
 
 1. **确定策略**：检查项目是否使用pnpm别名（策略A）或组件包（策略B）
-   - **策略 A**：寻找别名，例如`"@heroui-v3/react": "npm:@heroui/react@latest"`在 package.json 中
-   - **策略 B**：寻找特定于组件的包，例如`@heroui/button`, `@heroui/card`旁边`@heroui/react`
+   - **策略 A**：寻找别名，例如`"@kinetic-v3/react": "npm:@kinetic/react@latest"`在 package.json 中
+   - **策略 B**：寻找特定于组件的包，例如`@kinetic/button`, `@kinetic/card`旁边`@kinetic/react`
 
 2. **验证设置**：确保共存设置正确：
-   - 策略A：两者兼而有之`@heroui/react`（v2）和`@heroui-v3/react`（v3 别名）已安装
-   - 策略B：`@heroui/react`(v3) 和组件包，例如`@heroui/button`(v2) 已安装
+   - 策略A：两者兼而有之`@kinetic/react`（v2）和`@kinetic-v3/react`（v3 别名）已安装
+   - 策略B：`@kinetic/react`(v3) 和组件包，例如`@kinetic/button`(v2) 已安装
    - CSS 已针对两个版本进行配置（请参阅 CSS 配置部分）
 
 ## 逐个组件的迁移指南
@@ -58,8 +58,8 @@ index: false
    - 使用`get_component_migration_guides`用于获取特定于组件的指南的 MCP 工具
 
 2. **更新导入**
-   - 将导入从 `@heroui/react` 改为 `@heroui-v3/react`
-   - 例子：`import {Button} from "@heroui/react"` → `import {Button} from "@heroui-v3/react"`
+   - 将导入从 `@kinetic/react` 改为 `@kinetic-v3/react`
+   - 例子：`import {Button} from "@kinetic/react"` → `import {Button} from "@kinetic-v3/react"`
 
 3. **更新组件代码**
    - 遵循组件迁移指南`get_component_migration_guides`工具
@@ -82,12 +82,12 @@ index: false
    - 使用`get_component_migration_guides`用于获取特定于组件的指南的 MCP 工具
 
 2. **移除组件包**
-   - 从依赖项中删除 v2 组件包（例如，`@heroui/button`)
+   - 从依赖项中删除 v2 组件包（例如，`@kinetic/button`)
    - 更新package.json
 
 3. **更新导入**
-   - 将组件包中的导入更改为`@heroui/react`(v3)
-   - 例子：`import {Card} from "@heroui/card"` → `import {Card} from "@heroui/react"`
+   - 将组件包中的导入更改为`@kinetic/react`(v3)
+   - 例子：`import {Card} from "@kinetic/card"` → `import {Card} from "@kinetic/react"`
 
 4. **更新组件代码**
    - 遵循组件迁移指南`get_component_migration_guides`工具
@@ -120,7 +120,7 @@ index: false
    - 验证两个 CSS 导入均存在且顺序正确
 
 2. **指导冲突解决**
-   - 确保 CSS 导入顺序：`tailwindcss`首先，然后`@heroui/styles`
+   - 确保 CSS 导入顺序：`tailwindcss`首先，然后`@kinetic/styles`
    - 检查 Tailwind 配置是否配置了 v2 插件
    - 验证 v3 CSS 是否正确导入
 
@@ -144,17 +144,17 @@ index: false
 迁移所有组件后：
 
 1. **删除 v2 依赖项**
-   - 策略A：删除`@heroui/react`, `@heroui/theme`和别名
-   - 策略B：删除所有剩余的`@heroui/*`组件包
+   - 策略A：删除`@kinetic/react`, `@kinetic/theme`和别名
+   - 策略B：删除所有剩余的`@kinetic/*`组件包
    - 如果项目仍包含上述已移除 v2 组件（**Code**、**Image**、**Navbar**、**Ripple**、**Snippet**、**Spacer**、**User**），请告知用户：他们可稍后在代理协助下按指南移除或替换。
 
 2. **更新所有导入**
-   - 策略A：改变`@heroui-v3/react` → `@heroui/react`
-   - 策略 B：所有导入应已指向 `@heroui/react`（v3）
+   - 策略A：改变`@kinetic-v3/react` → `@kinetic/react`
+   - 策略 B：所有导入应已指向 `@kinetic/react`（v3）
 
 3. **更新CSS配置**
    - 从配置中删除 v2 Tailwind 插件
-   - 仅保留`@import "@heroui/styles";`
+   - 仅保留`@import "@kinetic/styles";`
    - 删除 v2 CSS 导入
 
 4. **完成样式迁移**
@@ -185,7 +185,7 @@ index: false
 - 可以快速迁移的较小项目
 - 可以接受临时破坏状态的项目
 - 喜欢一次性迁移的团队
-- 项目使用统一`@heroui/react`包（策略 A 可以工作，但完全迁移可能更简单）
+- 项目使用统一`@kinetic/react`包（策略 A 可以工作，但完全迁移可能更简单）
 
 ## 代理最佳实践
 

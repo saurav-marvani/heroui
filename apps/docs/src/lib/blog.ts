@@ -36,7 +36,7 @@ function parsePost(slug: string, locale: string, rawContent: string): BlogPost {
   const {content, data} = matter(rawContent);
 
   return {
-    author: data["author"] || "HeroUI Team",
+    author: data["author"] || "Kinetic Team",
     authorAvatar: data["authorAvatar"],
     authorHandle: data["authorHandle"],
     authorUrl: data["authorUrl"],

@@ -1,7 +1,7 @@
 "use client";
 
 import {Rocket} from "@gravity-ui/icons";
-import {Button, Modal} from "@heroui/react";
+import {Button, Modal} from "@kinetic/react";
 
 export function Default() {
   return (
@@ -15,7 +15,7 @@ export function Default() {
               <Modal.Icon className="bg-default text-foreground">
                 <Rocket className="size-5" />
               </Modal.Icon>
-              <Modal.Heading>Welcome to HeroUI</Modal.Heading>
+              <Modal.Heading>Welcome to Kinetic</Modal.Heading>
             </Modal.Header>
             <Modal.Body>
               <p>

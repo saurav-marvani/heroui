@@ -2,7 +2,7 @@
 
 import type {DateValue} from "@internationalized/date";
 
-import {Calendar, Description} from "@heroui/react";
+import {Calendar, Description} from "@kinetic/react";
 import {useState} from "react";
 
 export function MultipleSelection() {

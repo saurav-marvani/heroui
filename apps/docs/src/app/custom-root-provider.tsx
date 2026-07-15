@@ -3,7 +3,7 @@
 import type {Dictionary} from "@/lib/dictionaries";
 import type {ReactNode} from "react";
 
-import {Toast} from "@heroui/react";
+import {Toast} from "@kinetic/react";
 import {i18nProvider} from "fumadocs-ui/i18n";
 import {RootProvider} from "fumadocs-ui/provider/next";
 import dynamic from "next/dynamic";

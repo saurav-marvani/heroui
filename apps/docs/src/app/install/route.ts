@@ -11,7 +11,7 @@ export const revalidate = false;
 
 export async function GET(request: NextRequest) {
   await captureEvent({
-    event: "heroui_skill_installed",
+    event: "kinetic_skill_installed",
     properties: {
       city: request.headers.get("x-vercel-ip-city"),
       country: request.headers.get("x-vercel-ip-country"),
@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
     },
   });
 
-  const host = request.headers.get("host") || "v3.heroui.com";
+  const host = request.headers.get("host") || "v3.kinetic-ui.com";
   const protocol = host.includes("localhost") ? "http" : "https";
   const baseUrl = `${protocol}://${host}`;
 

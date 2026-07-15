@@ -2,11 +2,11 @@
 
 import type {Booleanish} from "../../utils/assertion";
 import type {DOMRenderProps} from "../../utils/dom";
-import type {DisclosureVariants} from "@heroui/styles";
+import type {DisclosureVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 import type {ButtonProps} from "react-aria-components/Button";
 
-import {disclosureVariants} from "@heroui/styles";
+import {disclosureVariants} from "@kinetic/styles";
 import React, {createContext, use, useRef} from "react";
 import {Button} from "react-aria-components/Button";
 import {

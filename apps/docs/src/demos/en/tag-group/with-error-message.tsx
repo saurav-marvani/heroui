@@ -1,8 +1,8 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
-import {Description, ErrorMessage, Label, Tag, TagGroup} from "@heroui/react";
+import {Description, ErrorMessage, Label, Tag, TagGroup} from "@kinetic/react";
 import {useMemo, useState} from "react";
 
 export function TagGroupWithErrorMessage() {

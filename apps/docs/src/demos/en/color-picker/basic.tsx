@@ -1,4 +1,4 @@
-import {ColorArea, ColorPicker, ColorSlider, ColorSwatch, Label} from "@heroui/react";
+import {ColorArea, ColorPicker, ColorSlider, ColorSwatch, Label} from "@kinetic/react";
 
 export function Basic() {
   return (

@@ -16,7 +16,7 @@ github:
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-7-light@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-7-dark@2x.jpg"
-  alt="HeroUI v3 Beta 7"
+  alt="Kinetic v3 Beta 7"
   href="/docs/changelog/v3-0-0-beta-7"
 />
 
@@ -27,28 +27,28 @@ github:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@beta @heroui/react@beta
+    npm i @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@beta @heroui/react@beta
+    pnpm add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@beta @heroui/react@beta
+    yarn add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@beta @heroui/react@beta
+    bun add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
@@ -138,7 +138,7 @@ github:
 
 **之前：**
 ```tsx
-import { Switch, Label, Description } from '@heroui/react';
+import { Switch, Label, Description } from '@kinetic/react';
 
 <Switch>
   <Switch.Control>
@@ -218,13 +218,13 @@ import { Switch, Label, Description } from '@heroui/react';
 
 ### Field 子组件 API 变更
 
-`DateInputGroup` 与 `ColorInputGroup` 不再从 `@heroui/react` 直接导出。它们的子组件已分别合并到对应的 Field 组件之下（`DateField`、`TimeField`、`ColorField`）。
+`DateInputGroup` 与 `ColorInputGroup` 不再从 `@kinetic/react` 直接导出。它们的子组件已分别合并到对应的 Field 组件之下（`DateField`、`TimeField`、`ColorField`）。
 
 #### DateField 变更
 
 **之前：**
 ```tsx
-import {DateField, Label, DateInputGroup, Description} from '@heroui/react';
+import {DateField, Label, DateInputGroup, Description} from '@kinetic/react';
 
 <DateField>
   <Label>Date</Label>
@@ -241,7 +241,7 @@ import {DateField, Label, DateInputGroup, Description} from '@heroui/react';
 
 **之后：**
 ```tsx
-import {DateField, Label, Description} from '@heroui/react';
+import {DateField, Label, Description} from '@kinetic/react';
 
 <DateField>
   <Label>Date</Label>
@@ -280,7 +280,7 @@ import {DateField, Label, Description} from '@heroui/react';
 **用法：**
 
 ```tsx
-import {ColorField, Label, ColorInputGroup, ColorSwatch} from '@heroui/react';
+import {ColorField, Label, ColorInputGroup, ColorSwatch} from '@kinetic/react';
 
 <ColorField>
   <Label>Color</Label>
@@ -295,7 +295,7 @@ import {ColorField, Label, ColorInputGroup, ColorSwatch} from '@heroui/react';
 
 **之后：**
 ```tsx
-import {ColorField, Label, ColorSwatch} from '@heroui/react';
+import {ColorField, Label, ColorSwatch} from '@kinetic/react';
 
 <ColorField>
   <Label>Color</Label>

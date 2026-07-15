@@ -39,7 +39,7 @@ Update to the latest version:
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server).
 </Callout>
 
 ## Try It on Your Device
@@ -103,14 +103,14 @@ The `PortalHost` component is now exported from the main provider module, enabli
 **New Capability:**
 
 ```tsx
-import { HeroUINativeProvider, PortalHost } from "@heroui/native";
+import { KineticNativeProvider, PortalHost } from "@kinetic/native";
 
 export function CustomLayout() {
   return (
     <>
-      <HeroUINativeProvider>
+      <KineticNativeProvider>
         {/* Your app content */}
-      </HeroUINativeProvider>
+      </KineticNativeProvider>
 
       {/* Manually mount PortalHost in a custom location */}
       <PortalHost name="custom-host" />
@@ -119,7 +119,7 @@ export function CustomLayout() {
 }
 ```
 
-This enhancement allows developers to manually mount portal hosts in custom layouts, which is particularly useful for scenarios where you need portals to render in specific locations (e.g., within BottomSheet, Modal, or other overlay components). By default, `HeroUINativeProvider` includes a `PortalHost` for standard use cases, but now you can create additional hosts with custom names for advanced scenarios.
+This enhancement allows developers to manually mount portal hosts in custom layouts, which is particularly useful for scenarios where you need portals to render in specific locations (e.g., within BottomSheet, Modal, or other overlay components). By default, `KineticNativeProvider` includes a `PortalHost` for standard use cases, but now you can create additional hosts with custom names for advanced scenarios.
 
 **Use Cases:**
 

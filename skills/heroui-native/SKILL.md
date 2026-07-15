@@ -1,14 +1,14 @@
 ---
 name: heroui-native
-description: "HeroUI Native component library for React Native (Tailwind v4 via Uniwind). Use when building mobile UIs with HeroUI Native — creating Buttons, Cards, TextFields, Dialogs; installing heroui-native; configuring dark/light themes; or fetching component docs. Keywords: HeroUI Native, heroui-native, React Native UI, Uniwind, mobile components."
+description: "Kinetic UI Native component library for React Native (Tailwind v4 via Uniwind). Use when building mobile UIs with Kinetic UI Native — creating Buttons, Cards, TextFields, Dialogs; installing heroui-native; configuring dark/light themes; or fetching component docs. Keywords: Kinetic UI Native, heroui-native, React Native UI, Uniwind, mobile components."
 metadata:
   author: heroui
   version: "2.0.1"
 ---
 
-# HeroUI Native Development Guide
+# Kinetic UI Native Development Guide
 
-HeroUI Native is a component library built on **Uniwind (Tailwind CSS for React Native)** and **React Native**, providing accessible, customizable UI components for mobile applications.
+Kinetic UI Native is a component library built on **Uniwind (Tailwind CSS for React Native)** and **React Native**, providing accessible, customizable UI components for mobile applications.
 
 ---
 
@@ -22,13 +22,13 @@ curl -fsSL https://heroui.com/install | bash -s heroui-native
 
 ## CRITICAL: Native Only - Do Not Use Web Patterns
 
-**This guide is for HeroUI Native ONLY.** Do NOT apply HeroUI React (web) patterns — the package, styling engine, and color format all differ:
+**This guide is for Kinetic UI Native ONLY.** Do NOT apply Kinetic UI React (web) patterns — the package, styling engine, and color format all differ:
 
 | Feature      | React (Web)          | Native (Mobile)                     |
 | ------------ | -------------------- | ----------------------------------- |
 | **Styling**  | Tailwind CSS v4      | Uniwind (Tailwind for React Native) |
 | **Colors**   | oklch format         | HSL format                          |
-| **Package**  | `@heroui/react` 	  | `heroui-native`                     |
+| **Package**  | `@kinetic/react` 	  | `heroui-native`                     |
 | **Platform** | Web browsers         | iOS & Android                       |
 
 ```tsx
@@ -123,15 +123,15 @@ npm i react-native-reanimated react-native-gesture-handler react-native-safe-are
 
 ```tsx
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { HeroUINativeProvider } from "heroui-native";
+import { Kinetic UINativeProvider } from "heroui-native";
 import "./global.css";
 
 export default function Layout() {
 	return (
 		<GestureHandlerRootView style={{ flex: 1 }}>
-			<HeroUINativeProvider>
+			<Kinetic UINativeProvider>
 				<App />
-			</HeroUINativeProvider>
+			</Kinetic UINativeProvider>
 		</GestureHandlerRootView>
 	);
 }
@@ -139,8 +139,8 @@ export default function Layout() {
 
 ### Critical Setup Requirements
 
-1. **Uniwind is Required** - HeroUI Native uses Uniwind (Tailwind CSS for React Native)
-2. **HeroUINativeProvider Required** - Wrap your app with `HeroUINativeProvider`
+1. **Uniwind is Required** - Kinetic UI Native uses Uniwind (Tailwind CSS for React Native)
+2. **Kinetic UINativeProvider Required** - Wrap your app with `Kinetic UINativeProvider`
 3. **GestureHandlerRootView Required** - Wrap with `GestureHandlerRootView` from react-native-gesture-handler
 4. **Use Compound Components** - Components use compound structure (e.g., `Card.Header`, `Card.Body`)
 5. **Use onPress, not onClick** - React Native uses `onPress` event handlers
@@ -150,7 +150,7 @@ export default function Layout() {
 
 ## Component Patterns
 
-HeroUI Native uses **compound component patterns**. Each component has subcomponents accessed via dot notation.
+Kinetic UI Native uses **compound component patterns**. Each component has subcomponents accessed via dot notation.
 
 **Example - Card:**
 
@@ -176,7 +176,7 @@ HeroUI Native uses **compound component patterns**. Each component has subcompon
 
 ## Semantic Variants
 
-HeroUI uses semantic naming to communicate functional intent:
+Kinetic UI uses semantic naming to communicate functional intent:
 
 | Variant       | Purpose                           | Usage          |
 | ------------- | --------------------------------- | -------------- |
@@ -194,7 +194,7 @@ HeroUI uses semantic naming to communicate functional intent:
 
 ## Theming
 
-HeroUI Native uses CSS variables via Tailwind/Uniwind for theming. Theme colors are defined in `global.css`:
+Kinetic UI Native uses CSS variables via Tailwind/Uniwind for theming. Theme colors are defined in `global.css`:
 
 ```css
 @theme {

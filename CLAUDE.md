@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-HeroUI v3 is a modern React UI library built with Tailwind CSS v4, using a pnpm monorepo structure managed by Turborepo.
+Kinetic v3 is a modern React UI library built with Tailwind CSS v4, using a pnpm monorepo structure managed by Turborepo.
 
 ### Key Technical Stack
 
@@ -35,7 +35,7 @@ pnpm dev:docs
 pnpm build
 
 # Build specific package
-pnpm build --filter=@heroui/react
+pnpm build --filter=@kinetic/react
 
 # Run linting
 pnpm lint
@@ -55,8 +55,8 @@ pnpm typecheck
 
 ### Package-Specific Commands
 
-- Use `--filter` flag with package name: `pnpm build --filter=@heroui/react`
-- Main packages: `@heroui/react`, `@heroui/docs`, `@heroui/storybook`
+- Use `--filter` flag with package name: `pnpm build --filter=@kinetic/react`
+- Main packages: `@kinetic/react`, `@kinetic/docs`, `@kinetic/storybook`
 
 ## Git Commit Convention
 
@@ -121,7 +121,7 @@ component-name/
 
 ### CSS Class Naming Convention
 
-**IMPORTANT**: HeroUI v3 uses BEM (Block Element Modifier) style for CSS classes to ensure predictable and maintainable styling:
+**IMPORTANT**: Kinetic v3 uses BEM (Block Element Modifier) style for CSS classes to ensure predictable and maintainable styling:
 
 - **Block**: The main component class (e.g., `button`, `card`, `alert`)
 - **Modifier**: Variations of the component using double dashes (e.g., `button--primary`, `button--lg`, `button--icon-only`)
@@ -129,7 +129,7 @@ component-name/
 
 **Migration to CSS-based Styling**:
 
-- The `button` component has been migrated to use CSS styles from `@heroui/styles/src/components/button.css`
+- The `button` component has been migrated to use CSS styles from `@kinetic/styles/src/components/button.css`
 - This approach allows for better customization through CSS utilities and `@utility` directives
 - Other components will gradually be migrated to follow this CSS-based pattern
 - Components use `tv()` from `tailwind-variants` to map variant props to BEM class names
@@ -172,7 +172,7 @@ This ensures components work properly without explicit size classes:
 
 ### Core Component Design Principles
 
-**IMPORTANT**: HeroUI v3 follows a compound component pattern similar to Radix UI, built on top of React Aria Components primitives. This enables maximum flexibility and customization for users.
+**IMPORTANT**: Kinetic v3 follows a compound component pattern similar to Radix UI, built on top of React Aria Components primitives. This enables maximum flexibility and customization for users.
 
 ### React Aria Components Integration
 
@@ -243,7 +243,7 @@ export {ComponentRoot as Root, ComponentItem as Item, ...};
 
 1. **Styling with Tailwind Variants**:
    - Styles defined in `.styles.ts` files using `tv()` function from `tailwind-variants`
-   - **IMPORTANT**: Always import from `tailwind-variants`, never from `@heroui/standard` (which doesn't exist)
+   - **IMPORTANT**: Always import from `tailwind-variants`, never from `@kinetic/standard` (which doesn't exist)
    - **CRITICAL**: tailwind-variants already includes `twMerge` functionality, so NEVER manually use `twMerge`
    - **RULE**: All component styles MUST be defined in separate `.styles.ts` files, NOT in the component implementation files
    - Component implementation files (`.tsx`) should only contain logic and React Aria primitives
@@ -259,7 +259,7 @@ export {ComponentRoot as Root, ComponentItem as Item, ...};
 2. **Component Features**:
    - Built on React Aria Components for accessibility
    - Use `forwardRef` for all components
-   - Display names follow: `HeroUI.ComponentName` or `HeroUI.Component.SubPart`
+   - Display names follow: `Kinetic.ComponentName` or `Kinetic.Component.SubPart`
    - Support render props from React Aria when available
 
 3. **Type Exports**:
@@ -313,7 +313,7 @@ export {ComponentRoot as Root, ComponentItem as Item, ...};
 
 6. **Composition Pattern with Existing Components**:
 
-   **CRITICAL**: HeroUI follows a composition-based approach. Components should reuse existing primitives rather than creating component-specific versions.
+   **CRITICAL**: Kinetic follows a composition-based approach. Components should reuse existing primitives rather than creating component-specific versions.
 
    **Key Principles**:
    - **DO NOT** create component-specific Label, Description, or FieldError components
@@ -402,7 +402,7 @@ export {ComponentRoot as Root, ComponentItem as Item, ...};
    - Review the plan for completeness and accuracy
    - Make necessary corrections or adjustments
    - Ensure all edge cases are considered
-   - Confirm the plan aligns with HeroUI patterns and conventions
+   - Confirm the plan aligns with Kinetic patterns and conventions
 
 4. **Execution Phase**:
    - Start executing the plan step by step
@@ -463,7 +463,7 @@ This workflow ensures thorough understanding, proper planning, and high-quality 
    This script will:
    - Create all necessary files with proper structure
    - Add the export to `src/components/index.ts`
-   - Generate boilerplate following HeroUI patterns
+   - Generate boilerplate following Kinetic patterns
    - Set up the component with TypeScript and proper exports
 
    After creating the component:
@@ -474,7 +474,7 @@ This workflow ensures thorough understanding, proper planning, and high-quality 
    ```
 
    **Implementation Steps**:
-   - Study existing HeroUI components (accordion, alert) to understand the compound pattern
+   - Study existing Kinetic components (accordion, alert) to understand the compound pattern
    - Use React Aria Components as the foundation for accessibility
    - Transform React Aria's API to match Radix UI patterns:
      - Single component → Multiple exported parts (Item, Trigger, Content, etc.)
@@ -495,7 +495,7 @@ This workflow ensures thorough understanding, proper planning, and high-quality 
      <Checkbox value="1">Option 1</Checkbox>
    </CheckboxGroup>
 
-   // HeroUI: Compound pattern
+   // Kinetic: Compound pattern
    <CheckboxGroup value={selected} onValueChange={setSelected}>
      <CheckboxGroup.Label>Options</CheckboxGroup.Label>
      <CheckboxGroup.Item value="1">
@@ -539,7 +539,7 @@ This workflow ensures thorough understanding, proper planning, and high-quality 
 3. **Documentation**:
    - Docs live in `apps/docs/content/`
    - Uses MDX format
-   - HeroUI components are pre-imported
+   - Kinetic components are pre-imported
 
 4. **Version Management**:
    - Uses [bumpp](https://github.com/antfu/bumpp) for version bumping
@@ -549,7 +549,7 @@ This workflow ensures thorough understanding, proper planning, and high-quality 
 
 ## Icon Library
 
-**IMPORTANT**: HeroUI uses Iconify with gravity-ui as the default icon set.
+**IMPORTANT**: Kinetic uses Iconify with gravity-ui as the default icon set.
 
 ## Important Notes
 
@@ -721,7 +721,7 @@ The Grep MCP searches for **literal code patterns**, not keywords. Use actual co
 
 3. **Monorepo Configurations**:
    - Search: `'pnpm-workspace.yaml'` with path='pnpm-workspace.yaml'
-   - Study monorepo setups similar to HeroUI
+   - Study monorepo setups similar to Kinetic
 
 4. **Tailwind CSS v4 Patterns**:
    - Search: `'@import "tailwindcss"'` with language=['CSS']
@@ -742,7 +742,7 @@ The Grep MCP searches for **literal code patterns**, not keywords. Use actual co
 
 ### For style-migrator and tailwind-v4-css-expert Agents
 
-When working with HeroUI CSS components, follow these critical patterns:
+When working with Kinetic CSS components, follow these critical patterns:
 
 #### Default Size Implementation
 

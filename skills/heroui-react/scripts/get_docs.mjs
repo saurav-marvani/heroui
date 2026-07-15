@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Get non-component HeroUI documentation (guides, theming, releases).
+ * Get non-component Kinetic UI documentation (guides, theming, releases).
  *
  * Usage:
  *   node get_docs.mjs /docs/react/getting-started/theming
@@ -17,7 +17,7 @@ const FALLBACK_BASE = "https://heroui.com";
 const APP_PARAM = "app=react-skills";
 
 /**
- * Fetch documentation from HeroUI API.
+ * Fetch documentation from Kinetic UI API.
  * Uses v1 endpoint pattern: /v1/docs/:path
  */
 async function fetchApi(path) {
@@ -35,7 +35,7 @@ async function fetchApi(path) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -68,7 +68,7 @@ async function fetchFallback(path) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 

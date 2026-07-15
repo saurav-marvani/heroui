@@ -1,4 +1,4 @@
-import {Typography} from "@heroui/react";
+import {Typography} from "@kinetic/react";
 
 export const Primitives = () => {
   return (

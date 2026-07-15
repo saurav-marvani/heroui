@@ -46,6 +46,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
 | * Variants
 | * -----------------------------------------------------------------------------------------------*/
-export {colorSwatchPickerVariants} from "@heroui/styles";
+export {colorSwatchPickerVariants} from "@kinetic/styles";
 
-export type {ColorSwatchPickerVariants} from "@heroui/styles";
+export type {ColorSwatchPickerVariants} from "@kinetic/styles";

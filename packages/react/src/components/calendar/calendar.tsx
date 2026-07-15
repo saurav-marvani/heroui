@@ -1,7 +1,7 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {CalendarVariants} from "@heroui/styles";
+import type {CalendarVariants} from "@kinetic/styles";
 import type {CalendarIdentifier} from "@internationalized/date";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 import type {
@@ -10,7 +10,7 @@ import type {
   CalendarProps as RACCalendarProps,
 } from "react-aria-components/Calendar";
 
-import {calendarVariants} from "@heroui/styles";
+import {calendarVariants} from "@kinetic/styles";
 import {CalendarDate, DateFormatter, createCalendar} from "@internationalized/date";
 import {useControlledState} from "@react-stately/utils";
 import React, {createContext, use} from "react";
@@ -152,7 +152,7 @@ function CalendarRoot<T extends DateValue = DateValue, M extends CalendarSelecti
   );
 }
 
-CalendarRoot.displayName = "HeroUI.Calendar";
+CalendarRoot.displayName = "Kinetic.Calendar";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Header
@@ -182,7 +182,7 @@ const CalendarHeader = <E extends keyof React.JSX.IntrinsicElements = "header">(
   );
 };
 
-CalendarHeader.displayName = "HeroUI.Calendar.Header";
+CalendarHeader.displayName = "Kinetic.Calendar.Header";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Heading
@@ -201,7 +201,7 @@ const CalendarHeading = ({className, ...props}: CalendarHeadingProps) => {
   );
 };
 
-CalendarHeading.displayName = "HeroUI.Calendar.Heading";
+CalendarHeading.displayName = "Kinetic.Calendar.Heading";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Nav Button
@@ -236,7 +236,7 @@ const CalendarNavButton = ({children, className, slot, ...props}: CalendarNavBut
   );
 };
 
-CalendarNavButton.displayName = "HeroUI.Calendar.NavButton";
+CalendarNavButton.displayName = "Kinetic.Calendar.NavButton";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Grid
@@ -273,7 +273,7 @@ const CalendarGrid = ({
   );
 };
 
-CalendarGrid.displayName = "HeroUI.Calendar.Grid";
+CalendarGrid.displayName = "Kinetic.Calendar.Grid";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Grid Header
@@ -311,7 +311,7 @@ const CalendarGridHeader = ({children, className, ...props}: CalendarGridHeaderP
   );
 };
 
-CalendarGridHeader.displayName = "HeroUI.Calendar.GridHeader";
+CalendarGridHeader.displayName = "Kinetic.Calendar.GridHeader";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Grid Body
@@ -345,7 +345,7 @@ const CalendarGridBody = ({children, className, ...props}: CalendarGridBodyProps
   );
 };
 
-CalendarGridBody.displayName = "HeroUI.Calendar.GridBody";
+CalendarGridBody.displayName = "Kinetic.Calendar.GridBody";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Header Cell
@@ -366,7 +366,7 @@ const CalendarHeaderCell = ({className, ...props}: CalendarHeaderCellProps) => {
   );
 };
 
-CalendarHeaderCell.displayName = "HeroUI.Calendar.HeaderCell";
+CalendarHeaderCell.displayName = "Kinetic.Calendar.HeaderCell";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Cell
@@ -391,7 +391,7 @@ const CalendarCell = ({children, className, ...props}: CalendarCellProps) => {
   );
 };
 
-CalendarCell.displayName = "HeroUI.Calendar.Cell";
+CalendarCell.displayName = "Kinetic.Calendar.Cell";
 
 /* -------------------------------------------------------------------------------------------------
 | * Calendar Cell Indicator
@@ -420,7 +420,7 @@ const CalendarCellIndicator = <E extends keyof React.JSX.IntrinsicElements = "sp
   );
 };
 
-CalendarCellIndicator.displayName = "HeroUI.Calendar.CellIndicator";
+CalendarCellIndicator.displayName = "Kinetic.Calendar.CellIndicator";
 
 /* -------------------------------------------------------------------------------------------------
 | * Exports

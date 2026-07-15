@@ -1,4 +1,4 @@
-import {Surface} from "@heroui/react";
+import {Surface} from "@kinetic/react";
 
 export function Variants() {
   return (

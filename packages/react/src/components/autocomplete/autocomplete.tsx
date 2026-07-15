@@ -3,10 +3,10 @@
 import type {Booleanish} from "../../utils/assertion";
 import type {DOMRenderProps} from "../../utils/dom";
 import type {SurfaceVariants} from "../surface";
-import type {AutocompleteVariants} from "@heroui/styles";
+import type {AutocompleteVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode, RefObject} from "react";
 
-import {autocompleteVariants} from "@heroui/styles";
+import {autocompleteVariants} from "@kinetic/styles";
 import {mergeRefs, useResizeObserver} from "@react-aria/utils";
 import React, {createContext, use, useCallback, useRef, useState} from "react";
 import {Autocomplete as AutocompletePrimitive} from "react-aria-components/Autocomplete";

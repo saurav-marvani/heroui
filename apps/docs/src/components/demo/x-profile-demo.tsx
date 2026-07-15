@@ -1,6 +1,6 @@
 "use client";
 
-import {Avatar, Card} from "@heroui/react";
+import {Avatar, Card} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 import {VerifiedBadgeIcon} from "@/icons/verified-badge";
@@ -15,14 +15,14 @@ export function XProfileDemo() {
         <div className="flex items-center gap-3">
           <Avatar size="sm">
             <Avatar.Image
-              alt="HeroUI"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/heroui_isotipo.png"
+              alt="Kinetic"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/kinetic_isotipo.png"
             />
             <Avatar.Fallback>H</Avatar.Fallback>
           </Avatar>
           <div className="flex h-full flex-col items-start justify-center">
             <div className="flex items-center gap-0.5">
-              <span className="text-sm leading-4 font-semibold">HeroUI</span>
+              <span className="text-sm leading-4 font-semibold">Kinetic</span>
               <VerifiedBadgeIcon height={18} width={18} />
             </div>
             <span className="text-sm tracking-tight text-muted">@hero_ui</span>

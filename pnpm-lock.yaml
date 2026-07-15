@@ -33,7 +33,7 @@ importers:
       '@eslint/js':
         specifier: 9.39.2
         version: 9.39.2
-      '@heroui/standard':
+      '@kinetic/standard':
         specifier: workspace:*
         version: link:packages/standard
       '@next/eslint-plugin-next':
@@ -180,9 +180,6 @@ importers:
       '@gravity-ui/icons':
         specifier: 2.16.0
         version: 2.16.0(react@19.2.6)
-      '@heroui/react':
-        specifier: workspace:*
-        version: link:../../packages/react
       '@iconify-json/gravity-ui':
         specifier: 1.2.10
         version: 1.2.10
@@ -192,6 +189,9 @@ importers:
       '@internationalized/date':
         specifier: 3.12.2
         version: 3.12.2
+      '@kinetic/react':
+        specifier: workspace:*
+        version: link:../../packages/react
       '@lglab/react-qr-code':
         specifier: 1.7.0
         version: 1.7.0(react@19.2.6)
@@ -313,10 +313,10 @@ importers:
         specifier: 4.2.1
         version: 4.2.1
     devDependencies:
-      '@heroui/standard':
+      '@kinetic/standard':
         specifier: workspace:*
         version: link:../../packages/standard
-      '@heroui/styles':
+      '@kinetic/styles':
         specifier: workspace:*
         version: link:../../packages/styles
       '@tailwindcss/postcss':
@@ -355,7 +355,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@heroui/styles':
+      '@kinetic/styles':
         specifier: workspace:*
         version: link:../styles
       '@radix-ui/react-avatar':
@@ -395,15 +395,15 @@ importers:
         specifier: 3.2.2
         version: 3.2.2(tailwind-merge@3.4.0)(tailwindcss@4.1.18)
     devDependencies:
-      '@heroui/standard':
-        specifier: workspace:*
-        version: link:../standard
       '@iconify/react':
         specifier: 6.0.2
         version: 6.0.2(react@19.2.6)
       '@internationalized/date':
         specifier: 3.12.2
         version: 3.12.2
+      '@kinetic/standard':
+        specifier: workspace:*
+        version: link:../standard
       '@react-stately/data':
         specifier: 3.16.1
         version: 3.16.1(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -439,15 +439,15 @@ importers:
       '@gravity-ui/icons':
         specifier: 2.16.0
         version: 2.16.0(react@19.2.6)
-      '@heroui/react':
-        specifier: workspace:*
-        version: link:../react
-      '@heroui/styles':
-        specifier: workspace:*
-        version: link:../styles
       '@iconify/react':
         specifier: 6.0.2
         version: 6.0.2(react@19.2.6)
+      '@kinetic/react':
+        specifier: workspace:*
+        version: link:../react
+      '@kinetic/styles':
+        specifier: workspace:*
+        version: link:../styles
       apcach:
         specifier: 0.6.4
         version: 0.6.4
@@ -470,7 +470,7 @@ importers:
         specifier: ^3.2.2
         version: 3.2.2(tailwind-merge@3.6.0)(tailwindcss@4.3.0)
     devDependencies:
-      '@heroui/standard':
+      '@kinetic/standard':
         specifier: workspace:*
         version: link:../standard
       '@storybook/addon-a11y':
@@ -528,7 +528,7 @@ importers:
         specifier: 1.4.0
         version: 1.4.0
     devDependencies:
-      '@heroui/standard':
+      '@kinetic/standard':
         specifier: workspace:*
         version: link:../standard
       '@tailwindcss/cli':
@@ -555,7 +555,7 @@ importers:
 
   packages/vitest:
     devDependencies:
-      '@heroui/standard':
+      '@kinetic/standard':
         specifier: workspace:*
         version: link:../standard
       '@testing-library/jest-dom':
@@ -4830,6 +4830,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-slugger@2.0.0:

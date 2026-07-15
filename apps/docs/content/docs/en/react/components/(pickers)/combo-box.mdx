@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { ComboBox } from '@heroui/react';
+import { ComboBox } from '@kinetic/react';
 ```
 
 ### Usage
@@ -25,7 +25,7 @@ import { ComboBox } from '@heroui/react';
 Import the ComboBox component and access all parts using dot notation.
 
 ```tsx
-import { ComboBox, Input, Label, Description, Header, ListBox, Separator } from '@heroui/react';
+import { ComboBox, Input, Label, Description, Header, ListBox, Separator } from '@kinetic/react';
 
 export default () => (
   <ComboBox>
@@ -171,7 +171,7 @@ Use the `menuTrigger` prop to control when the popover opens:
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { ComboBox, Input } from '@heroui/react';
+import { ComboBox, Input } from '@kinetic/react';
 
 function CustomComboBox() {
   return (
@@ -218,7 +218,7 @@ To customize the ComboBox component classes, you can use the `@layer components`
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -319,7 +319,7 @@ When using render functions with ComboBox, these values are provided:
 ### Basic Usage
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 
 <ComboBox className="w-[256px]">
   <Label>Favorite Animal</Label>
@@ -345,7 +345,7 @@ import { ComboBox, Input, Label, ListBox } from '@heroui/react';
 ### With Sections
 
 ```tsx
-import { ComboBox, Input, Label, ListBox, Header, Separator } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox, Header, Separator } from '@kinetic/react';
 
 <ComboBox className="w-[256px]">
   <Label>Country</Label>
@@ -378,9 +378,9 @@ import { ComboBox, Input, Label, ListBox, Header, Separator } from '@heroui/reac
 ### Controlled Selection
 
 ```tsx
-import type { Key } from '@heroui/react';
+import type { Key } from '@kinetic/react';
 
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledComboBox() {
@@ -417,7 +417,7 @@ function ControlledComboBox() {
 ### Controlled Input Value
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledInputComboBox() {
@@ -454,7 +454,7 @@ function ControlledInputComboBox() {
 ### Asynchronous Loading
 
 ```tsx
-import { Collection, ComboBox, EmptyState, Input, Label, ListBox, ListBoxLoadMoreItem, Spinner } from '@heroui/react';
+import { Collection, ComboBox, EmptyState, Input, Label, ListBox, ListBoxLoadMoreItem, Spinner } from '@kinetic/react';
 import { useAsyncList } from '@react-stately/data';
 
 interface Character {
@@ -518,7 +518,7 @@ function AsyncComboBox() {
 ### Custom Filtering
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 
 <ComboBox
   className="w-[256px]"
@@ -552,7 +552,7 @@ import { ComboBox, Input, Label, ListBox } from '@heroui/react';
 Control when the popover opens using the `menuTrigger` prop:
 
 ```tsx
-import { ComboBox, Description, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Description, Input, Label, ListBox } from '@kinetic/react';
 
 // Opens on focus (default)
 <ComboBox className="w-[256px]" menuTrigger="focus">
@@ -614,7 +614,7 @@ import { ComboBox, Description, Input, Label, ListBox } from '@heroui/react';
 Use the `formValue` prop to control whether the selected item's key or text is submitted in forms:
 
 ```tsx
-import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@heroui/react';
+import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@kinetic/react';
 
 function FormValueExample() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -680,7 +680,7 @@ function FormValueExample() {
 Control how validation is displayed using the `validationBehavior` prop:
 
 ```tsx
-import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@heroui/react';
+import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@kinetic/react';
 
 function ValidationExample() {
   return (
@@ -736,7 +736,7 @@ function ValidationExample() {
 Use the `validate` prop to add custom validation logic:
 
 ```tsx
-import { ComboBox, FieldError, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, FieldError, Input, Label, ListBox } from '@kinetic/react';
 
 function CustomValidationExample() {
   return (
@@ -785,7 +785,7 @@ function CustomValidationExample() {
 Use the `isReadOnly` prop to make the comboBox read-only:
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 
 <ComboBox className="w-[256px]" isReadOnly defaultSelectedKey="cat">
   <Label>Favorite Animal</Label>

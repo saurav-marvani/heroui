@@ -28,7 +28,7 @@ const DefaultTemplate = (_props: Link["RootProps"]) => (
       <Link.Icon />
     </Link>
     <Link
-      href="https://heroui.com"
+      href="https://kinetic-ui.com"
       rel="noopener noreferrer"
       target="_blank"
       className={buttonVariants({
@@ -37,7 +37,7 @@ const DefaultTemplate = (_props: Link["RootProps"]) => (
         variant: "tertiary",
       })}
     >
-      HeroUI
+      Kinetic
       <Link.Icon className="h-2 w-2" />
     </Link>
   </div>

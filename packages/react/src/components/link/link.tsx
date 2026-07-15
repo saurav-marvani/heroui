@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {LinkVariants} from "@heroui/styles";
+import type {LinkVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 
-import {linkVariants} from "@heroui/styles";
+import {linkVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Link as LinkPrimitive} from "react-aria-components/Link";
 

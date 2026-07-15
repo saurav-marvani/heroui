@@ -2,7 +2,7 @@
 
 import type {ComponentPropsWithRef} from "react";
 
-import {headerVariants} from "@heroui/styles";
+import {headerVariants} from "@kinetic/styles";
 import {Header as HeaderPrimitive} from "react-aria-components/Header";
 
 /* -------------------------------------------------------------------------------------------------

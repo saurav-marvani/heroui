@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, Label, Radio, RadioGroup} from "@heroui/react";
+import {Description, Label, Radio, RadioGroup} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

@@ -1,9 +1,9 @@
 "use client";
 
-import type {NumberFieldVariants} from "@heroui/styles";
+import type {NumberFieldVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {numberFieldVariants} from "@heroui/styles";
+import {numberFieldVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
 import {Group as GroupPrimitive} from "react-aria-components/Group";

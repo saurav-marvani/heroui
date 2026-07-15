@@ -1,6 +1,6 @@
 "use client";
 
-import {Checkbox, CheckboxGroup, Label} from "@heroui/react";
+import {Checkbox, CheckboxGroup, Label} from "@kinetic/react";
 import {useState} from "react";
 
 export function Controlled() {

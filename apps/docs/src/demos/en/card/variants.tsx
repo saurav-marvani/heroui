@@ -1,4 +1,4 @@
-import {Card} from "@heroui/react";
+import {Card} from "@kinetic/react";
 
 export function Variants() {
   return (

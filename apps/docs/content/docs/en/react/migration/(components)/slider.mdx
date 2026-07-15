@@ -1,10 +1,10 @@
 ---
 title: Slider
-description: Migration guide for Slider from HeroUI v2 to v3
+description: Migration guide for Slider from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Slider documentation](/docs/react/components/slider) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Slider documentation](/docs/react/components/slider) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Slider from HeroUI v2 to v3
 In v2, Slider used a simple structure with props:
 
 ```tsx
-import { Slider } from "@heroui/react";
+import { Slider } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -29,7 +29,7 @@ export default function App() {
 In v3, Slider requires compound components:
 
 ```tsx
-import { Slider, Label } from "@heroui/react";
+import { Slider, Label } from "@kinetic/react";
 
 export default function App() {
   return (

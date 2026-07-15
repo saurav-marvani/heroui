@@ -1,8 +1,8 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
-import {Description, Label, Tag, TagGroup} from "@heroui/react";
+import {Description, Label, Tag, TagGroup} from "@kinetic/react";
 import {useState} from "react";
 
 export function TagGroupSelectionModes() {

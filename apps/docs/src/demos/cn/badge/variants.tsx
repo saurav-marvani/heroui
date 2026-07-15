@@ -1,7 +1,7 @@
-import {Avatar, Badge, Separator} from "@heroui/react";
+import {Avatar, Badge, Separator} from "@kinetic/react";
 import React from "react";
 
-const AVATAR_URL = "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg";
+const AVATAR_URL = "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg";
 
 const variants = ["primary", "secondary", "soft"] as const;
 

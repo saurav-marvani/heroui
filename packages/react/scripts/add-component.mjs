@@ -52,7 +52,7 @@ export const ${componentName} = React.forwardRef<HTMLDivElement, ${componentName
   }
 );
 
-${componentName}.displayName = "HeroUI.${componentName}";
+${componentName}.displayName = "Kinetic UI.${componentName}";
 `;
 
   const stylesContent = `import type {VariantProps} from "tailwind-variants";
@@ -171,8 +171,8 @@ export {${componentName}Variants, type ${componentName}VariantProps} from "./${k
   console.log("\n🎯 Next steps:");
   console.log("   1. Run 'pnpm build' to generate the export in package.json");
   console.log("   2. The component will be available as:");
-  console.log(`      - import { ${componentName} } from "@heroui/react"`);
-  console.log(`      - import { ${componentName} } from "@heroui/react/${kebabName}"`);
+  console.log(`      - import { ${componentName} } from "@kinetic/react"`);
+  console.log(`      - import { ${componentName} } from "@kinetic/react/${kebabName}"`);
 }
 
 // Get component name from command line

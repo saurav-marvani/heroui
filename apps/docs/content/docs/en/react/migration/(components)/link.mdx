@@ -1,10 +1,10 @@
 ---
 title: Link
-description: Migration guide for Link from HeroUI v2 to v3
+description: Migration guide for Link from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Link documentation](/docs/react/components/link) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Link documentation](/docs/react/components/link) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Key Changes
@@ -33,7 +33,7 @@ description: Migration guide for Link from HeroUI v2 to v3
 In v2, Link component usage:
 
 ```tsx
-import { Link } from "@heroui/react";
+import { Link } from "@kinetic/react";
 
 export default function App() {
   return <Link href="#">Default Link</Link>;
@@ -43,7 +43,7 @@ export default function App() {
 In v3, Link component usage remains the same for basic cases:
 
 ```tsx
-import { Link } from "@heroui/react";
+import { Link } from "@kinetic/react";
 
 export default function App() {
   return <Link href="#">Default Link</Link>;
@@ -143,7 +143,7 @@ export default function App() {
   <Tab value="v2">
     ```tsx
     import NextLink from "next/link";
-    import { Link } from "@heroui/react";
+    import { Link } from "@kinetic/react";
 
     <Link as={NextLink} href="/about">
       About
@@ -153,7 +153,7 @@ export default function App() {
   <Tab value="v3">
     ```tsx
     import NextLink from "next/link";
-    import { Link } from "@heroui/react";
+    import { Link } from "@kinetic/react";
 
     {/* Style your router link with the same classes as Link; add an icon if needed */}
     <NextLink href="/about" className="link">

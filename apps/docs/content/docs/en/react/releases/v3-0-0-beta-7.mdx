@@ -16,7 +16,7 @@ This release adds 4 new components: [Calendar](/docs/components/calendar), [Rang
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-7-light@2x.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/versions/beta-7-dark@2x.jpg"
-  alt="HeroUI v3 Beta 7"
+  alt="Kinetic v3 Beta 7"
   href="/docs/changelog/v3-0-0-beta-7"
 />
 
@@ -27,28 +27,28 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@beta @heroui/react@beta
+    npm i @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@beta @heroui/react@beta
+    pnpm add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@beta @heroui/react@beta
+    yarn add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@beta @heroui/react@beta
+    bun add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI MCP Server](/docs/ui-for-agents/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic MCP Server](/docs/ui-for-agents/mcp-server).
 </Callout>
 
 ## What's New
@@ -138,7 +138,7 @@ Two date fields + popover range calendar.
 
 **Before:**
 ```tsx
-import { Switch, Label, Description } from '@heroui/react';
+import { Switch, Label, Description } from '@kinetic/react';
 
 <Switch>
   <Switch.Control>
@@ -218,13 +218,13 @@ The `hideSeparator` prop has been removed from the Tabs component. Separators ar
 
 ### Field Sub-Component API Changes
 
-`DateInputGroup` and `ColorInputGroup` are no longer exported directly from `@heroui/react`. Their sub-components have been consolidated under their respective field components (`DateField`, `TimeField`, `ColorField`).
+`DateInputGroup` and `ColorInputGroup` are no longer exported directly from `@kinetic/react`. Their sub-components have been consolidated under their respective field components (`DateField`, `TimeField`, `ColorField`).
 
 #### DateField Changes
 
 **Before:**
 ```tsx
-import {DateField, Label, DateInputGroup, Description} from '@heroui/react';
+import {DateField, Label, DateInputGroup, Description} from '@kinetic/react';
 
 <DateField>
   <Label>Date</Label>
@@ -241,7 +241,7 @@ import {DateField, Label, DateInputGroup, Description} from '@heroui/react';
 
 **After:**
 ```tsx
-import {DateField, Label, Description} from '@heroui/react';
+import {DateField, Label, Description} from '@kinetic/react';
 
 <DateField>
   <Label>Date</Label>
@@ -280,7 +280,7 @@ Same pattern as DateField:
 **Usage:**
 
 ```tsx
-import {ColorField, Label, ColorInputGroup, ColorSwatch} from '@heroui/react';
+import {ColorField, Label, ColorInputGroup, ColorSwatch} from '@kinetic/react';
 
 <ColorField>
   <Label>Color</Label>
@@ -295,7 +295,7 @@ import {ColorField, Label, ColorInputGroup, ColorSwatch} from '@heroui/react';
 
 **After:**
 ```tsx
-import {ColorField, Label, ColorSwatch} from '@heroui/react';
+import {ColorField, Label, ColorSwatch} from '@kinetic/react';
 
 <ColorField>
   <Label>Color</Label>

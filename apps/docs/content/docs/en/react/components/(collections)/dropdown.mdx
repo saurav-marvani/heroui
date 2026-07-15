@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { Dropdown } from '@heroui/react';
+import { Dropdown } from '@kinetic/react';
 ```
 
 ### Usage
@@ -25,7 +25,7 @@ import { Dropdown } from '@heroui/react';
 Import the Dropdown component and access all parts using dot notation.
 
 ```tsx
-import { Dropdown, Button, Label, Description, Header, Kbd, Separator } from '@heroui/react';
+import { Dropdown, Button, Label, Description, Header, Kbd, Separator } from '@kinetic/react';
 
 export default () => (
   <Dropdown>
@@ -159,7 +159,7 @@ export default () => (
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { Dropdown, Button } from '@heroui/react';
+import { Dropdown, Button } from '@kinetic/react';
 
 function CustomDropdown() {
   return (
@@ -204,7 +204,7 @@ To customize the Dropdown component classes, you can use the `@layer components`
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -388,7 +388,7 @@ When using render functions with Dropdown.Item, these values are provided:
 ### Basic Usage
 
 ```tsx
-import { Dropdown, Button, Label } from '@heroui/react';
+import { Dropdown, Button, Label } from '@kinetic/react';
 
 <Dropdown>
   <Button aria-label="Menu" variant="secondary">
@@ -413,7 +413,7 @@ import { Dropdown, Button, Label } from '@heroui/react';
 ### With Sections
 
 ```tsx
-import { Dropdown, Button, Label, Header, Separator } from '@heroui/react';
+import { Dropdown, Button, Label, Header, Separator } from '@kinetic/react';
 
 <Dropdown>
   <Button aria-label="Menu" variant="secondary">
@@ -445,9 +445,9 @@ import { Dropdown, Button, Label, Header, Separator } from '@heroui/react';
 ### Controlled Selection
 
 ```tsx
-import type { Selection } from '@heroui/react';
+import type { Selection } from '@kinetic/react';
 
-import { Dropdown, Button, Label } from '@heroui/react';
+import { Dropdown, Button, Label } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledDropdown() {
@@ -482,7 +482,7 @@ function ControlledDropdown() {
 ### With Submenus
 
 ```tsx
-import { Dropdown, Button, Label } from '@heroui/react';
+import { Dropdown, Button, Label } from '@kinetic/react';
 
 <Dropdown>
   <Button aria-label="Menu" variant="secondary">

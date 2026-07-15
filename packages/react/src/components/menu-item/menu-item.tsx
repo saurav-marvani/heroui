@@ -1,11 +1,11 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {MenuItemVariants} from "@heroui/styles";
+import type {MenuItemVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {MenuItemRenderProps} from "react-aria-components/Menu";
 
-import {menuItemVariants} from "@heroui/styles";
+import {menuItemVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {MenuItem as MenuItemPrimitive} from "react-aria-components/Menu";
 

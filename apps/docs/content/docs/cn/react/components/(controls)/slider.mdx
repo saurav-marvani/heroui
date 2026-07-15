@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { Slider } from '@heroui/react';
+import { Slider } from '@kinetic/react';
 ```
 
 ### 用法
@@ -25,7 +25,7 @@ import { Slider } from '@heroui/react';
 引入 Slider 组件，并通过点语法访问各部分。
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 export default () => (
   <Slider>
@@ -42,7 +42,7 @@ export default () => (
 ### 范围滑块组件结构
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 export default () => (
   <Slider defaultValue={[25, 75]}>
@@ -93,7 +93,7 @@ export default () => (
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 function CustomSlider() {
   return (
@@ -138,7 +138,7 @@ function CustomSlider() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
 
 ### CSS 类
 
@@ -242,7 +242,7 @@ Slider 组件使用以下 CSS 类（[查看源码样式](https://github.com/hero
 ### 基础用法
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider defaultValue={30}>
   <Label>Volume</Label>
@@ -257,7 +257,7 @@ import { Slider, Label } from '@heroui/react';
 ### 范围滑块
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider
   defaultValue={[100, 500]}
@@ -284,7 +284,7 @@ import { Slider, Label } from '@heroui/react';
 ### 受控值
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledSlider() {
@@ -309,7 +309,7 @@ function ControlledSlider() {
 ### 自定义数值格式
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider
   defaultValue={60}
@@ -327,7 +327,7 @@ import { Slider, Label } from '@heroui/react';
 ### 纵向方向
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider defaultValue={30} orientation="vertical" aria-label="Volume">
   <Label>Volume</Label>
@@ -342,7 +342,7 @@ import { Slider, Label } from '@heroui/react';
 ### 自定义输出展示
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider defaultValue={[25, 75]}>
   <Label>Range</Label>

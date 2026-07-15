@@ -1,10 +1,10 @@
 ---
 title: Button
-description: Button 从 HeroUI v2 到 v3 的迁移指南。
+description: Button 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Button 文档](/docs/react/components/button)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Button 文档](/docs/react/components/button)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Button 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，`Button` 通过 `color` 与 `variant` 组合使用：
 
 ```tsx
-import { Button } from "@heroui/react";
+import { Button } from "@kinetic/react";
 
 export default function App() {
   return <Button color="primary" variant="solid">Button</Button>;
@@ -22,7 +22,7 @@ export default function App() {
 在 v3 中，`Button` 仅使用 `variant` prop（不再有独立的 `color` prop）：
 
 ```tsx
-import { Button } from "@heroui/react";
+import { Button } from "@kinetic/react";
 
 export default function App() {
   return <Button variant="primary">Button</Button>;
@@ -176,7 +176,7 @@ export default function App() {
   <Tab value="v3">
     ```tsx
     import { useState } from "react";
-    import { Spinner } from "@heroui/react";
+    import { Spinner } from "@kinetic/react";
     import { Icon } from "@iconify/react";
 
     const [isLoading, setIsLoading] = useState(false);
@@ -275,7 +275,7 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Button, ButtonGroup } from "@heroui/react";
+    import { Button, ButtonGroup } from "@kinetic/react";
 
     <ButtonGroup size="sm" color="primary" variant="solid">
       <Button>One</Button>
@@ -286,7 +286,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Button, ButtonGroup } from "@heroui/react";
+    import { Button, ButtonGroup } from "@kinetic/react";
 
     <ButtonGroup size="sm" variant="primary">
       <Button>One</Button>

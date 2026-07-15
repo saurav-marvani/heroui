@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, Label, TimeField} from "@heroui/react";
+import {Description, Label, TimeField} from "@kinetic/react";
 import {Time, getLocalTimeZone, now} from "@internationalized/date";
 
 export function Disabled() {

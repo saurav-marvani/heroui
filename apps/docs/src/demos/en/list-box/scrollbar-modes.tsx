@@ -1,4 +1,4 @@
-import {ListBox, Surface} from "@heroui/react";
+import {ListBox, Surface} from "@kinetic/react";
 
 type ScrollbarMode = {
   id: string;
@@ -8,8 +8,8 @@ type ScrollbarMode = {
 
 const modes: ScrollbarMode[] = [
   {
-    id: "heroui",
-    label: "HeroUI thin",
+    id: "kinetic",
+    label: "Kinetic thin",
     scrollbar: "thin",
   },
   {

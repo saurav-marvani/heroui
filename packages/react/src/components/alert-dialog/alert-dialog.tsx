@@ -1,12 +1,12 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {AlertDialogVariants} from "@heroui/styles";
+import type {AlertDialogVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, HTMLAttributes, ReactNode} from "react";
 import type {ButtonProps as ButtonPrimitiveProps} from "react-aria-components/Button";
 import type {DialogProps as DialogPrimitiveProps} from "react-aria-components/Dialog";
 
-import {alertDialogVariants} from "@heroui/styles";
+import {alertDialogVariants} from "@kinetic/styles";
 import {createContext, use, useMemo} from "react";
 import {
   DialogTrigger as AlertDialogTriggerPrimitive,

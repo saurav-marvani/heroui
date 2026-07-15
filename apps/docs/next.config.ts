@@ -14,7 +14,7 @@ const config: NextConfig = {
   compress: true,
   experimental: {
     optimizePackageImports: [
-      "@heroui/react",
+      "@kinetic/react",
       "@gravity-ui/icons",
       "@iconify/react",
       "lucide-react",
@@ -54,12 +54,12 @@ const config: NextConfig = {
     dangerouslyAllowLocalIP: true,
     remotePatterns: [
       {
-        hostname: "heroui-assets.nyc3.cdn.digitaloceanspaces.com",
+        hostname: "kinetic-assets.nyc3.cdn.digitaloceanspaces.com",
         pathname: "/**",
         protocol: "https",
       },
       {
-        hostname: "img.heroui.chat",
+        hostname: "img.kinetic.chat",
         pathname: "/**",
         protocol: "https",
       },
@@ -93,7 +93,7 @@ const config: NextConfig = {
     ];
   },
   trailingSlash: false,
-  transpilePackages: ["@heroui/react", "@heroui/styles"],
+  transpilePackages: ["@kinetic/react", "@kinetic/styles"],
   typedRoutes: true,
   typescript: {
     ignoreBuildErrors: true,

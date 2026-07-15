@@ -1,9 +1,9 @@
 "use client";
 
-import type {ColorAreaVariants} from "@heroui/styles";
+import type {ColorAreaVariants} from "@kinetic/styles";
 import type {CSSProperties, ComponentPropsWithRef} from "react";
 
-import {colorAreaVariants} from "@heroui/styles";
+import {colorAreaVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {
   ColorArea as ColorAreaPrimitive,

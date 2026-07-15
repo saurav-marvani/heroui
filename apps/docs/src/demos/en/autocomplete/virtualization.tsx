@@ -1,6 +1,6 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
 import {
   Autocomplete,
@@ -12,7 +12,7 @@ import {
   SearchField,
   Virtualizer,
   useFilter,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {useMemo, useState} from "react";
 
 interface User {

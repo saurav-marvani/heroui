@@ -1,10 +1,10 @@
 ---
 title: ButtonGroup
-description: ButtonGroup 从 HeroUI v2 到 v3 的迁移指南。
+description: ButtonGroup 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 ButtonGroup 文档](/docs/react/components/button-group)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 ButtonGroup 文档](/docs/react/components/button-group)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: ButtonGroup 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，`ButtonGroup` 用于将按钮分组：
 
 ```tsx
-import { ButtonGroup, Button } from "@heroui/react";
+import { ButtonGroup, Button } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
 在 v3 中，`ButtonGroup` 的基本结构相同，但加强了 prop 继承：
 
 ```tsx
-import { ButtonGroup, Button } from "@heroui/react";
+import { ButtonGroup, Button } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -45,8 +45,8 @@ export default function App() {
 
 ### 1. 导入路径
 
-**v2：** 从 `@heroui/react` 导入  
-**v3：** 从 `@heroui/react` 导入（同一个包，但导入方式已统一）
+**v2：** 从 `@kinetic/react` 导入  
+**v3：** 从 `@kinetic/react` 导入（同一个包，但导入方式已统一）
 
 ### 2. Prop 继承
 

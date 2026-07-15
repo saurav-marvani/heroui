@@ -3,7 +3,7 @@
 import type {TagVariants} from "../tag";
 import type {ComponentPropsWithRef} from "react";
 
-import {tagGroupVariants} from "@heroui/styles";
+import {tagGroupVariants} from "@kinetic/styles";
 import React, {createContext, use, useMemo} from "react";
 import {
   TagGroup as TagGroupPrimitive,

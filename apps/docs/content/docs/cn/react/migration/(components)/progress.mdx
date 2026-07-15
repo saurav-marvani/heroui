@@ -1,10 +1,10 @@
 ---
 title: Progress
-description: Progress 从 HeroUI v2 到 v3（现在称为 ProgressBar）的迁移指南。
+description: Progress 从 Kinetic v2 到 v3（现在称为 ProgressBar）的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 ProgressBar 文档](/docs/react/components/progress-bar)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 ProgressBar 文档](/docs/react/components/progress-bar)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 <Callout type="warning">
@@ -20,7 +20,7 @@ description: Progress 从 HeroUI v2 到 v3（现在称为 ProgressBar）的迁�
 在 v2 中，`Progress` 是单个组件，通过 prop 进行配置：
 
 ```tsx
-import { Progress } from "@heroui/react";
+import { Progress } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
 在 v3 中，`ProgressBar` 改为复合组件模式：
 
 ```tsx
-import { ProgressBar, Label } from "@heroui/react";
+import { ProgressBar, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -86,14 +86,14 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Progress } from "@heroui/react";
+    import { Progress } from "@kinetic/react";
 
     <Progress label="Loading..." value={60} color="primary" />
     ```
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { ProgressBar, Label } from "@heroui/react";
+    import { ProgressBar, Label } from "@kinetic/react";
 
     <ProgressBar value={60} color="accent">
       <Label>Loading...</Label>

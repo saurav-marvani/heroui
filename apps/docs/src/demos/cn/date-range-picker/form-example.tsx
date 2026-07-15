@@ -11,7 +11,7 @@ import {
   Form,
   Label,
   RangeCalendar,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 import {useState} from "react";
 

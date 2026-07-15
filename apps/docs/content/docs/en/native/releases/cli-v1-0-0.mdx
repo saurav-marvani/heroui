@@ -1,7 +1,7 @@
 ---
 title: CLI v1.0.0
 description:
-  New CLI for scaffolding a preconfigured HeroUI Native + Expo Router project — Expo SDK 56, React Native 0.85, Uniwind, all peer dependencies wired up, two starter templates (single-screen and tabs).
+  New CLI for scaffolding a preconfigured Kinetic Native + Expo Router project — Expo SDK 56, React Native 0.85, Uniwind, all peer dependencies wired up, two starter templates (single-screen and tabs).
 ---
 
 <div className="flex items-center gap-3 mb-6">
@@ -14,7 +14,7 @@ description:
   muted
 />
 
-🎉 A new CLI — [`create-heroui-native-app`](https://www.npmjs.com/package/create-heroui-native-app) — is now the fastest way to start a HeroUI Native project. One command scaffolds a complete Expo Router app with HeroUI Native, Uniwind, Tailwind CSS, every required peer dependency, and the provider wiring already in place. No manual setup of `global.css`, `metro.config.js`, or `app/_layout.tsx`.
+🎉 A new CLI — [`create-heroui-native-app`](https://www.npmjs.com/package/create-heroui-native-app) — is now the fastest way to start a Kinetic Native project. One command scaffolds a complete Expo Router app with Kinetic Native, Uniwind, Tailwind CSS, every required peer dependency, and the provider wiring already in place. No manual setup of `global.css`, `metro.config.js`, or `app/_layout.tsx`.
 
 ## Quick Start
 
@@ -56,7 +56,7 @@ The CLI ships with two templates. Pick one in the interactive picker, or pass a 
 
 | Flag | Template | Description |
 | --- | --- | --- |
-| `--expo` | `expo` | Single-screen Expo Router app with a HeroUI `Button` demo. |
+| `--expo` | `expo` | Single-screen Expo Router app with a Kinetic `Button` demo. |
 | `--expo-tabs` | `expo-tabs` | Expo Router tabs layout with two tabs (`Button` + `Card` demos). |
 
 ```bash
@@ -70,10 +70,10 @@ Every scaffolded project ships preconfigured with:
 
 - **Expo SDK 56** + **Expo Router** with typed routes enabled
 - **React 19.2** + **React Native 0.85.2** + Hermes v1 (default in SDK 56)
-- **HeroUI Native** wrapped in `HeroUINativeProvider` and `GestureHandlerRootView` inside `app/_layout.tsx`
+- **Kinetic Native** wrapped in `KineticNativeProvider` and `GestureHandlerRootView` inside `app/_layout.tsx`
 - **Uniwind** + **Tailwind CSS** wired through `metro.config.js` and `global.css`
-- All HeroUI Native **mandatory peer dependencies** pinned to compatible versions: `react-native-reanimated`, `react-native-gesture-handler`, `react-native-worklets`, `react-native-safe-area-context`, `react-native-svg`, `tailwind-variants`, `tailwind-merge`
-- `react-native-screens` so HeroUI overlay components (`Dialog`, `Menu`, `Popover`, `Select`, `BottomSheet`, `Toast`) work out of the box
+- All Kinetic Native **mandatory peer dependencies** pinned to compatible versions: `react-native-reanimated`, `react-native-gesture-handler`, `react-native-worklets`, `react-native-safe-area-context`, `react-native-svg`, `tailwind-variants`, `tailwind-merge`
+- `react-native-screens` so Kinetic overlay components (`Dialog`, `Menu`, `Popover`, `Select`, `BottomSheet`, `Toast`) work out of the box
 - `@expo/metro-runtime` (required peer for Expo Router on SDK 56)
 - A `babel.config.js` using just `babel-preset-expo` (worklets handled by the preset)
 - **TypeScript** with `strict: true` and the `@/*` path alias
@@ -121,10 +121,10 @@ npx create-heroui-native-app@latest my-app --expo --skip-install --skip-git
 - macOS, Linux, or Windows
 
 <Callout type="info">
-  **Already have an app?** The CLI is for new projects. To add HeroUI Native to an existing React Native or Expo app, follow [Option 2 in the Quick Start](/docs/native/getting-started/quick-start#option-2-add-to-an-existing-project).
+  **Already have an app?** The CLI is for new projects. To add Kinetic Native to an existing React Native or Expo app, follow [Option 2 in the Quick Start](/docs/native/getting-started/quick-start#option-2-add-to-an-existing-project).
 </Callout>
 
 ## Links
 
 - [Quick Start guide](/docs/native/getting-started/quick-start)
-- [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server)
+- [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server)

@@ -2,7 +2,7 @@
 
 import type {ThemeId} from "../constants";
 
-import {ListBox, ScrollShadow} from "@heroui/react";
+import {ListBox, ScrollShadow} from "@kinetic/react";
 import Image from "next/image";
 
 import {useDictionary} from "@/hooks/use-dictionary";

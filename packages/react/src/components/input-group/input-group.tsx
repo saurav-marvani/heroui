@@ -1,9 +1,9 @@
 "use client";
 
-import type {InputGroupVariants} from "@heroui/styles";
+import type {InputGroupVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {inputGroupVariants} from "@heroui/styles";
+import {inputGroupVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Group as GroupPrimitive} from "react-aria-components/Group";
 import {Input as InputPrimitive} from "react-aria-components/Input";

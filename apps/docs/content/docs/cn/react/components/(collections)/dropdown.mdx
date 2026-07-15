@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { Dropdown } from '@heroui/react';
+import { Dropdown } from '@kinetic/react';
 ```
 
 ### 用法
@@ -25,7 +25,7 @@ import { Dropdown } from '@heroui/react';
 引入 Dropdown 组件并通过点语法访问所有子部分。
 
 ```tsx
-import { Dropdown, Button, Label, Description, Header, Kbd, Separator } from '@heroui/react';
+import { Dropdown, Button, Label, Description, Header, Kbd, Separator } from '@kinetic/react';
 
 export default () => (
   <Dropdown>
@@ -159,7 +159,7 @@ export default () => (
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import { Dropdown, Button } from '@heroui/react';
+import { Dropdown, Button } from '@kinetic/react';
 
 function CustomDropdown() {
   return (
@@ -204,7 +204,7 @@ function CustomDropdown() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体和状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体和状态可复用且易于自定义。
 
 ### CSS 类
 
@@ -388,7 +388,7 @@ Dropdown 使用 Menu、MenuItem 与 MenuSection 作为底层组件。以下类�
 ### 基础用法
 
 ```tsx
-import { Dropdown, Button, Label } from '@heroui/react';
+import { Dropdown, Button, Label } from '@kinetic/react';
 
 <Dropdown>
   <Button aria-label="Menu" variant="secondary">
@@ -413,7 +413,7 @@ import { Dropdown, Button, Label } from '@heroui/react';
 ### 带分组
 
 ```tsx
-import { Dropdown, Button, Label, Header, Separator } from '@heroui/react';
+import { Dropdown, Button, Label, Header, Separator } from '@kinetic/react';
 
 <Dropdown>
   <Button aria-label="Menu" variant="secondary">
@@ -445,9 +445,9 @@ import { Dropdown, Button, Label, Header, Separator } from '@heroui/react';
 ### 受控选择
 
 ```tsx
-import type { Selection } from '@heroui/react';
+import type { Selection } from '@kinetic/react';
 
-import { Dropdown, Button, Label } from '@heroui/react';
+import { Dropdown, Button, Label } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledDropdown() {
@@ -482,7 +482,7 @@ function ControlledDropdown() {
 ### 带子菜单
 
 ```tsx
-import { Dropdown, Button, Label } from '@heroui/react';
+import { Dropdown, Button, Label } from '@kinetic/react';
 
 <Dropdown>
   <Button aria-label="Menu" variant="secondary">

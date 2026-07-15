@@ -1,4 +1,4 @@
-import {Accordion} from "@heroui/react";
+import {Accordion} from "@kinetic/react";
 
 export function Disabled() {
   return (

@@ -1,4 +1,4 @@
-import {buttonVariants} from "@heroui/react";
+import {buttonVariants} from "@kinetic/react";
 import {tv} from "tailwind-variants";
 
 export const docsButtonVariants = tv({

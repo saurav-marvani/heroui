@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { ColorField, parseColor } from '@heroui/react';
+import { ColorField, parseColor } from '@kinetic/react';
 ```
 
 ### 用法
@@ -21,7 +21,7 @@ import { ColorField, parseColor } from '@heroui/react';
 ### 组件结构
 
 ```tsx
-import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@heroui/react';
+import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@kinetic/react';
 
 export default () => (
   <ColorField>
@@ -108,7 +108,7 @@ ColorField.Group 支持两种视觉变体：
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import {ColorField, Label, ColorSwatch, Description} from '@heroui/react';
+import {ColorField, Label, ColorSwatch, Description} from '@kinetic/react';
 
 function CustomColorField() {
   return (
@@ -241,18 +241,18 @@ ColorField 继承 React Aria [ColorField](https://react-aria.adobe.com/ColorFiel
 
 ColorField 需要与以下独立组件组合使用，请分别导入并直接使用：
 
-- **Label** – 字段标签组件（`@heroui/react`）
+- **Label** – 字段标签组件（`@kinetic/react`）
 - **ColorField.Group** – 颜色输入分组组件（见下文）
 - **ColorField.Input** – ColorField.Group 内的输入元素
 - **ColorField.Prefix** / **ColorField.Suffix** – 输入组的前缀与后缀插槽
-- **ColorSwatch** – 颜色预览组件（`@heroui/react`）
-- **Description** – 辅助说明文本组件（`@heroui/react`）
-- **FieldError** – 校验错误信息组件（`@heroui/react`）
+- **ColorSwatch** – 颜色预览组件（`@kinetic/react`）
+- **Description** – 辅助说明文本组件（`@kinetic/react`）
+- **FieldError** – 校验错误信息组件（`@kinetic/react`）
 
 这些组件各自拥有 props API。请直接在 ColorField 内组合使用：
 
 ```tsx
-import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@heroui/react';
+import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} from '@kinetic/react';
 
 <ColorField
   isRequired
@@ -277,7 +277,7 @@ import {ColorField, Label, ColorSwatch, Description, FieldError, parseColor} fro
 ColorField 使用来自 React Aria Components 的 `Color` 对象：
 
 ```tsx
-import {parseColor} from '@heroui/react';
+import {parseColor} from '@kinetic/react';
 
 // Parse from hex string
 const color = parseColor('#3B82F6');

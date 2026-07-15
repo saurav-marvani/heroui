@@ -1,7 +1,7 @@
 "use client";
 
 import {Pencil, SquarePlus, TrashBin} from "@gravity-ui/icons";
-import {Description, Header, Kbd, Label, ListBox, Separator, Surface} from "@heroui/react";
+import {Description, Header, Kbd, Label, ListBox, Separator, Surface} from "@kinetic/react";
 
 export function WithSections() {
   return (

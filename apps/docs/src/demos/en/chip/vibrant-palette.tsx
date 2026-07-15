@@ -1,4 +1,4 @@
-import {Chip, Separator} from "@heroui/react";
+import {Chip, Separator} from "@kinetic/react";
 
 const variants = ["primary", "secondary", "tertiary", "soft"] as const;
 const colors = ["accent", "default", "success", "warning", "danger"] as const;

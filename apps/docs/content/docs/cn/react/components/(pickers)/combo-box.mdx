@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { ComboBox } from '@heroui/react';
+import { ComboBox } from '@kinetic/react';
 ```
 
 ### 用法
@@ -25,7 +25,7 @@ import { ComboBox } from '@heroui/react';
 引入 ComboBox 组件并通过点语法访问所有子部分。
 
 ```tsx
-import { ComboBox, Input, Label, Description, Header, ListBox, Separator } from '@heroui/react';
+import { ComboBox, Input, Label, Description, Header, ListBox, Separator } from '@kinetic/react';
 
 export default () => (
   <ComboBox>
@@ -171,7 +171,7 @@ export default () => (
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import { ComboBox, Input } from '@heroui/react';
+import { ComboBox, Input } from '@kinetic/react';
 
 function CustomComboBox() {
   return (
@@ -218,7 +218,7 @@ function CustomComboBox() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
 
 ### CSS 类
 
@@ -319,7 +319,7 @@ ComboBox 组件使用以下 CSS 类（[查看源码样式](https://github.com/he
 ### 基础用法
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 
 <ComboBox className="w-[256px]">
   <Label>Favorite Animal</Label>
@@ -345,7 +345,7 @@ import { ComboBox, Input, Label, ListBox } from '@heroui/react';
 ### 带分组
 
 ```tsx
-import { ComboBox, Input, Label, ListBox, Header, Separator } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox, Header, Separator } from '@kinetic/react';
 
 <ComboBox className="w-[256px]">
   <Label>Country</Label>
@@ -378,9 +378,9 @@ import { ComboBox, Input, Label, ListBox, Header, Separator } from '@heroui/reac
 ### 受控选中
 
 ```tsx
-import type { Key } from '@heroui/react';
+import type { Key } from '@kinetic/react';
 
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledComboBox() {
@@ -417,7 +417,7 @@ function ControlledComboBox() {
 ### 受控输入值
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledInputComboBox() {
@@ -454,7 +454,7 @@ function ControlledInputComboBox() {
 ### 异步加载
 
 ```tsx
-import { Collection, ComboBox, EmptyState, Input, Label, ListBox, ListBoxLoadMoreItem, Spinner } from '@heroui/react';
+import { Collection, ComboBox, EmptyState, Input, Label, ListBox, ListBoxLoadMoreItem, Spinner } from '@kinetic/react';
 import { useAsyncList } from '@react-stately/data';
 
 interface Character {
@@ -518,7 +518,7 @@ function AsyncComboBox() {
 ### 自定义过滤
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 
 <ComboBox
   className="w-[256px]"
@@ -552,7 +552,7 @@ import { ComboBox, Input, Label, ListBox } from '@heroui/react';
 使用 `menuTrigger` prop 控制 Popover 何时打开：
 
 ```tsx
-import { ComboBox, Description, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Description, Input, Label, ListBox } from '@kinetic/react';
 
 // 在聚焦时打开（默认）
 <ComboBox className="w-[256px]" menuTrigger="focus">
@@ -614,7 +614,7 @@ import { ComboBox, Description, Input, Label, ListBox } from '@heroui/react';
 使用 `formValue` prop 控制提交表单时提交选中项的 key 还是文本：
 
 ```tsx
-import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@heroui/react';
+import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@kinetic/react';
 
 function FormValueExample() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -680,7 +680,7 @@ function FormValueExample() {
 使用 `validationBehavior` prop 控制校验信息的展示方式：
 
 ```tsx
-import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@heroui/react';
+import { Button, ComboBox, FieldError, Form, Input, Label, ListBox } from '@kinetic/react';
 
 function ValidationExample() {
   return (
@@ -736,7 +736,7 @@ function ValidationExample() {
 使用 `validate` prop 添加自定义校验逻辑：
 
 ```tsx
-import { ComboBox, FieldError, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, FieldError, Input, Label, ListBox } from '@kinetic/react';
 
 function CustomValidationExample() {
   return (
@@ -785,7 +785,7 @@ function CustomValidationExample() {
 使用 `isReadOnly` 将 ComboBox 设为只读：
 
 ```tsx
-import { ComboBox, Input, Label, ListBox } from '@heroui/react';
+import { ComboBox, Input, Label, ListBox } from '@kinetic/react';
 
 <ComboBox className="w-[256px]" isReadOnly defaultSelectedKey="cat">
   <Label>Favorite Animal</Label>

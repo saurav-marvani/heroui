@@ -1,6 +1,6 @@
 ---
 title: 框架集成
-description: 将 HeroUI 集成到你的框架中
+description: 将 Kinetic 集成到你的框架中
 icon: layers
 ---
 
@@ -16,19 +16,19 @@ npx heroui-cli@latest init
   当出现提示时，选择 **App** 或 **Pages** 模板。然后进入新创建的文件夹并安装依赖（例如 `pnpm install`）。
 </Callout>
 
-### 2. 使用你的第一个 HeroUI 组件
+### 2. 使用你的第一个 Kinetic 组件
 
 <Tabs items={["App Router", "Pages Router"]}>
   <Tab value="App Router">
     示例：`app/page.tsx`
 
     ```tsx
-    import {Button} from "@heroui/react";
+    import {Button} from "@kinetic/react";
 
     export default function HomePage() {
       return (
         <main className="flex min-h-screen items-center justify-center">
-          <Button variant="tertiary">Hello HeroUI</Button>
+          <Button variant="tertiary">Hello Kinetic</Button>
         </main>
       );
     }
@@ -38,12 +38,12 @@ npx heroui-cli@latest init
     示例：`pages/index.tsx`
 
     ```tsx
-    import {Button} from "@heroui/react";
+    import {Button} from "@kinetic/react";
 
     export default function HomePage() {
       return (
         <main className="flex min-h-screen items-center justify-center">
-          <Button variant="tertiary">Hello HeroUI</Button>
+          <Button variant="tertiary">Hello Kinetic</Button>
         </main>
       );
     }
@@ -52,7 +52,7 @@ npx heroui-cli@latest init
 </Tabs>
 
 <Callout>
-  HeroUI v3 无需 Provider。安装并导入样式后，组件即可直接使用。
+  Kinetic v3 无需 Provider。安装并导入样式后，组件即可直接使用。
 </Callout>
 
 ### 3. 区域设置（可选）
@@ -64,7 +64,7 @@ npx heroui-cli@latest init
 ```tsx
 // app/layout.tsx
 import {headers} from 'next/headers';
-import {isRTL} from '@heroui/react';
+import {isRTL} from '@kinetic/react';
 import {ClientProviders} from './provider';
 
 export default async function RootLayout({children}) {
@@ -91,7 +91,7 @@ export default async function RootLayout({children}) {
 // app/provider.tsx
 "use client";
 
-import {I18nProvider} from '@heroui/react';
+import {I18nProvider} from '@kinetic/react';
 
 export function ClientProviders({lang, children}) {
   return (
@@ -116,17 +116,17 @@ npx heroui-cli@latest init
   当出现提示时，选择 **Vite** 模板。然后进入新创建的文件夹并安装依赖（例如 `pnpm install`）。
 </Callout>
 
-### 2. 使用你的第一个 HeroUI 组件
+### 2. 使用你的第一个 Kinetic 组件
 
 示例：`src/App.tsx`
 
 ```tsx
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 
 function App() {
   return (
     <main className="flex min-h-screen items-center justify-center">
-      <Button variant="tertiary">Hello HeroUI</Button>
+      <Button variant="tertiary">Hello Kinetic</Button>
     </main>
   );
 }
@@ -135,7 +135,7 @@ export default App;
 ```
 
 <Callout>
-  HeroUI v3 无需 Provider。安装并导入样式后，组件即可直接使用。
+  Kinetic v3 无需 Provider。安装并导入样式后，组件即可直接使用。
 </Callout>
 
 ## 下一步

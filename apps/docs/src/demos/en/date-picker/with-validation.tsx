@@ -2,7 +2,7 @@
 
 import type {DateValue} from "@internationalized/date";
 
-import {Calendar, DateField, DatePicker, FieldError, Label} from "@heroui/react";
+import {Calendar, DateField, DatePicker, FieldError, Label} from "@kinetic/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 import {useState} from "react";
 

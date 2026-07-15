@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "HeroUI Typography",
+    children: "Kinetic Typography",
     type: "body",
   },
 };
@@ -92,7 +92,7 @@ export const InlineCode: Story = {
   render: () => (
     <div className="flex max-w-2xl flex-col gap-4">
       <Typography.Paragraph>
-        Install the package with <Typography.Code>pnpm add @heroui/react</Typography.Code> and
+        Install the package with <Typography.Code>pnpm add @kinetic/react</Typography.Code> and
         import <Typography.Code>{"<Typography>"}</Typography.Code> from the library.
       </Typography.Paragraph>
       <Typography.Paragraph size="sm">
@@ -221,7 +221,7 @@ export const ArticleExample: Story = {
       <Typography.Heading level={3}>Building the Scale</Typography.Heading>
       <Typography.Paragraph>
         Start with a base size — <Typography.Code>16px</Typography.Code> (1rem) is the industry
-        standard — and derive heading sizes using a consistent ratio. HeroUI uses a tracking-tight
+        standard — and derive heading sizes using a consistent ratio. Kinetic uses a tracking-tight
         heading stack from <Typography.Code>text-base</Typography.Code> through{" "}
         <Typography.Code>text-4xl</Typography.Code>, giving six levels of hierarchy.
       </Typography.Paragraph>
@@ -233,7 +233,7 @@ export const ArticleExample: Story = {
       </Typography.Paragraph>
       <Typography.Paragraph color="muted" size="sm">
         Shorter paragraphs, generous whitespace, and intentional weight contrast all contribute to
-        readability. These defaults work out of the box with HeroUI's Typography primitive.
+        readability. These defaults work out of the box with Kinetic's Typography primitive.
       </Typography.Paragraph>
     </article>
   ),
@@ -242,9 +242,9 @@ export const ArticleExample: Story = {
 export const ProseBlock: Story = {
   render: () => (
     <Typography.Prose className="max-w-2xl">
-      <h1>Getting Started with HeroUI</h1>
+      <h1>Getting Started with Kinetic</h1>
       <p>
-        HeroUI is a modern React component library built on top of <strong>Tailwind CSS v4</strong>{" "}
+        Kinetic is a modern React component library built on top of <strong>Tailwind CSS v4</strong>{" "}
         and <strong>React Aria</strong>. It provides accessible, customizable primitives that you
         can compose into complex interfaces.
       </p>
@@ -252,10 +252,10 @@ export const ProseBlock: Story = {
       <h2>Installation</h2>
       <p>
         Add the library to your project using your preferred package manager. The{" "}
-        <code>@heroui/react</code> package includes every component:
+        <code>@kinetic/react</code> package includes every component:
       </p>
       <pre>
-        <code>pnpm add @heroui/react</code>
+        <code>pnpm add @kinetic/react</code>
       </pre>
 
       <h3>Quick Setup</h3>
@@ -300,7 +300,7 @@ export const ProseBlock: Story = {
 
       <h2>Next Steps</h2>
       <p>
-        Explore the <a href="https://heroui.com">component stories</a> in Storybook to see every
+        Explore the <a href="https://kinetic-ui.com">component stories</a> in Storybook to see every
         variant and composition in action. Each component ships with comprehensive documentation and
         live examples.
       </p>

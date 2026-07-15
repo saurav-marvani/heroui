@@ -20,28 +20,28 @@ v3.1.0 是小版本发布：新增中文 React 文档与本地化示例，soft f
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@latest @heroui/react@latest
+    npm i @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@latest @heroui/react@latest
+    pnpm add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@latest @heroui/react@latest
+    yarn add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@latest @heroui/react@latest
+    bun add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 对它说「Hey Cursor，把 HeroUI 升级到最新版本」。它会对比版本并应用必要变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 对它说「Hey Cursor，把 Kinetic 升级到最新版本」。它会对比版本并应用必要变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增内容
@@ -52,7 +52,7 @@ React 文档、迁移指南、发布说明和示例现在都有中文版本 ([#6
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/oss-releases/cn-docs-showcase.png"
-  alt="HeroUI 中文 React 文档页面"
+  alt="Kinetic 中文 React 文档页面"
   wrapperClassName="aspect-[1922/1323]"
 />
 
@@ -86,14 +86,14 @@ Soft 状态不再直接套语义色，而是使用专门的 foreground token，�
 
 三种模式：
 
-- HeroUI 纤细：不设置 `data-scrollbar`，或设置 `data-scrollbar="thin"`。
+- Kinetic 纤细：不设置 `data-scrollbar`，或设置 `data-scrollbar="thin"`。
 - 浏览器默认：设置 `data-scrollbar="default"`，使用操作系统 / 浏览器滚动条。
 - 隐藏：设置 `data-scrollbar="none"`，隐藏滚动条但保留滚动。
 
 ```html
-<div data-scrollbar="thin">使用 HeroUI 主题滚动条</div>
+<div data-scrollbar="thin">使用 Kinetic 主题滚动条</div>
 <div data-scrollbar="default">使用浏览器默认滚动条</div>
-<div data-scrollbar="none">隐藏后代 HeroUI 滚动条</div>
+<div data-scrollbar="none">隐藏后代 Kinetic 滚动条</div>
 ```
 
 <div className="not-prose mt-6 mb-4 flex items-center gap-2 text-sm font-medium text-muted">
@@ -130,13 +130,13 @@ Select、ComboBox、Autocomplete、Dropdown、DatePicker、DateRangePicker、Col
 
 `--scrollbar` 保留为兼容别名；新的 thumb、track、gutter、width 和 color token 控制最终滚动条。
 
-恢复浏览器默认滚动条：在 `<html>`、`<main>` 或任意嵌套容器上设置 `data-scrollbar="default"`。如果全局已设为默认，但某个局部仍要 HeroUI 样式，在该容器上加 `data-scrollbar="thin"`。
+恢复浏览器默认滚动条：在 `<html>`、`<main>` 或任意嵌套容器上设置 `data-scrollbar="default"`。如果全局已设为默认，但某个局部仍要 Kinetic 样式，在该容器上加 `data-scrollbar="thin"`。
 
 ```html
 <html data-scrollbar="default">
   <main>
     <section data-scrollbar="thin">
-      <!-- 这里使用 HeroUI 主题滚动条 -->
+      <!-- 这里使用 Kinetic 主题滚动条 -->
     </section>
   </main>
 </html>

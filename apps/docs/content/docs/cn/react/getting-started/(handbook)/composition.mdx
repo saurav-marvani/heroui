@@ -4,32 +4,32 @@ description: 使用组件组合模式构建灵活的 UI
 icon: layers
 ---
 
-HeroUI 使用组合模式来创建灵活、可定制的组件。你可以更换渲染的元素、把组件组合在一起，并完全掌控最终的标记结构。
+Kinetic 使用组合模式来创建灵活、可定制的组件。你可以更换渲染的元素、把组件组合在一起，并完全掌控最终的标记结构。
 
 ## 与框架无关的样式
 
-HeroUI 的变体函数位于 `@heroui/styles` 包中，可以独立于 React 使用。这使得 Vue、Svelte 等其他框架也能使用 HeroUI 的设计系统：
+Kinetic 的变体函数位于 `@kinetic/styles` 包中，可以独立于 React 使用。这使得 Vue、Svelte 等其他框架也能使用 Kinetic 的设计系统：
 
 ```tsx
-// Import directly from @heroui/styles (framework-agnostic)
-import { buttonVariants } from '@heroui/styles';
+// Import directly from @kinetic/styles (framework-agnostic)
+import { buttonVariants } from '@kinetic/styles';
 
-// Or import from @heroui/react (re-exports the same functions)
-import { buttonVariants } from '@heroui/react';
+// Or import from @kinetic/react (re-exports the same functions)
+import { buttonVariants } from '@kinetic/react';
 ```
 
-两种导入方式的工作原理完全相同。在为非 React 框架构建，或希望避免引入 React 依赖时，请使用 `@heroui/styles`。
+两种导入方式的工作原理完全相同。在为非 React 框架构建，或希望避免引入 React 依赖时，请使用 `@kinetic/styles`。
 
 ## 多态样式
 
-使用变体函数或 BEM 类，将 HeroUI 样式应用到任何元素上。可以把组件样式扩展到框架组件、原生 HTML 元素或自定义组件，并保持完整的类型安全。
+使用变体函数或 BEM 类，将 Kinetic 样式应用到任何元素上。可以把组件样式扩展到框架组件、原生 HTML 元素或自定义组件，并保持完整的类型安全。
 
 **示例：将 Link 设置为按钮样式**
 
 你可以使用 `buttonVariants` 为 Link 组件应用按钮样式：
 
 ```tsx
-import { buttonVariants } from '@heroui/styles';
+import { buttonVariants } from '@kinetic/styles';
 import Link from 'next/link';
 
 // Style a Next.js Link as a primary button
@@ -62,11 +62,11 @@ import Link from 'next/link';
 
 **配合复合组件使用**
 
-当使用自定义根元素而非 HeroUI 的 Root 组件时，子组件无法访问 context slot。你可以使用变体函数或 BEM 类，手动将 `className` 传递给子组件：
+当使用自定义根元素而非 Kinetic 的 Root 组件时，子组件无法访问 context slot。你可以使用变体函数或 BEM 类，手动将 `className` 传递给子组件：
 
 ```tsx
-import { Link } from '@heroui/react';
-import { linkVariants } from '@heroui/styles';
+import { Link } from '@kinetic/react';
+import { linkVariants } from '@kinetic/styles';
 import NextLink from 'next/link';
 
 // With custom root - pass className manually
@@ -83,11 +83,11 @@ const slots = linkVariants();
 </NextLink>
 ```
 
-这种方法之所以可行，是因为 HeroUI 的变体函数和 BEM 类可以应用到任何元素上，让你能够灵活地用 HeroUI 的设计系统为框架组件、原生元素或自定义组件设置样式。
+这种方法之所以可行，是因为 Kinetic 的变体函数和 BEM 类可以应用到任何元素上，让你能够灵活地用 Kinetic 的设计系统为框架组件、原生元素或自定义组件设置样式。
 
 ## 直接应用类名
 
-为链接或其他元素设置样式最简单的方法，就是直接使用 HeroUI 的 [BEM](https://getbem.com/) 类。这种方法简单直接，适用于任何框架或纯 HTML。
+为链接或其他元素设置样式最简单的方法，就是直接使用 Kinetic 的 [BEM](https://getbem.com/) 类。这种方法简单直接，适用于任何框架或纯 HTML。
 
 **配合 Next.js Link 使用：**
 ```tsx
@@ -111,17 +111,17 @@ import Link from 'next/link';
 - `.button--sm`、`.button--md`、`.button--lg` — 尺寸
 - `.button--icon-only` — 仅图标按钮
 
-这种方法之所以可行，是因为 HeroUI 使用了 [BEM](https://getbem.com/) 类，可以应用到任何元素上。当你不需要组件的交互功能（例如 `onPress` 事件处理器）、只想要视觉样式时，这种方式非常合适。
+这种方法之所以可行，是因为 Kinetic 使用了 [BEM](https://getbem.com/) 类，可以应用到任何元素上。当你不需要组件的交互功能（例如 `onPress` 事件处理器）、只想要视觉样式时，这种方式非常合适。
 
 ## 使用变体函数
 
-如需更多控制和类型安全，可以使用变体函数将 HeroUI 样式应用到特定框架的组件或自定义元素上。`@heroui/styles`（与框架无关）和 `@heroui/react`（重新导出）都提供了变体函数。
+如需更多控制和类型安全，可以使用变体函数将 Kinetic 样式应用到特定框架的组件或自定义元素上。`@kinetic/styles`（与框架无关）和 `@kinetic/react`（重新导出）都提供了变体函数。
 
 **配合 Next.js Link 使用：**
 
 ```tsx
-import { Link } from '@heroui/react';
-import { linkVariants } from '@heroui/styles';
+import { Link } from '@kinetic/react';
+import { linkVariants } from '@kinetic/styles';
 import NextLink from 'next/link';
 
 const slots = linkVariants();
@@ -135,7 +135,7 @@ const slots = linkVariants();
 **配合 Button 样式：**
 
 ```tsx
-import { buttonVariants } from '@heroui/styles';
+import { buttonVariants } from '@kinetic/styles';
 import Link from 'next/link';
 
 <Link
@@ -146,16 +146,16 @@ import Link from 'next/link';
 </Link>
 ```
 
-**可用的变体函数：** 每个组件都从 `@heroui/styles` 导出其变体函数（`buttonVariants`、`chipVariants`、`linkVariants`、`spinnerVariants` 等）。使用它们可以在保持类型安全的同时，将 HeroUI 的设计系统应用到任何元素上。
+**可用的变体函数：** 每个组件都从 `@kinetic/styles` 导出其变体函数（`buttonVariants`、`chipVariants`、`linkVariants`、`spinnerVariants` 等）。使用它们可以在保持类型安全的同时，将 Kinetic 的设计系统应用到任何元素上。
 
 ## 复合组件
 
-HeroUI 组件以复合组件的方式构建 —— 它们会导出多个协同工作的子部件。你可以通过三种灵活的方式来使用它们：
+Kinetic 组件以复合组件的方式构建 —— 它们会导出多个协同工作的子部件。你可以通过三种灵活的方式来使用它们：
 
 **选项 1：复合模式（推荐）** — 直接使用主组件，无需 `.Root` 后缀：
 
 ```tsx
-import { Alert } from '@heroui/react';
+import { Alert } from '@kinetic/react';
 
 <Alert>
   <Alert.Icon />
@@ -170,7 +170,7 @@ import { Alert } from '@heroui/react';
 **选项 2：使用 .Root 的复合模式** — 如果你喜欢显式命名，可以添加 `.Root` 后缀：
 
 ```tsx
-import { Alert } from '@heroui/react';
+import { Alert } from '@kinetic/react';
 
 <Alert.Root>
   <Alert.Icon />
@@ -192,7 +192,7 @@ import {
   AlertTitle,
   AlertDescription,
   AlertClose
-} from '@heroui/react';
+} from '@kinetic/react';
 
 <AlertRoot>
   <AlertIcon />
@@ -207,7 +207,7 @@ import {
 **混合语法：** 在同一组件中混合复合和命名导出：
 
 ```tsx
-import { Alert, AlertTitle, AlertDescription } from '@heroui/react';
+import { Alert, AlertTitle, AlertDescription } from '@kinetic/react';
 
 <Alert>
   <Alert.Icon />
@@ -222,7 +222,7 @@ import { Alert, AlertTitle, AlertDescription } from '@heroui/react';
 **简单组件：** 像 `Button` 这样的简单组件以同样的方式工作 —— 无需 `.Root`：
 
 ```tsx
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 // Recommended - no .Root needed
 <Button>Click me</Button>
@@ -231,7 +231,7 @@ import { Button } from '@heroui/react';
 <Button.Root>Click me</Button.Root>
 
 // Or named export
-import { ButtonRoot } from '@heroui/react';
+import { ButtonRoot } from '@kinetic/react';
 <ButtonRoot>Click me</ButtonRoot>
 ```
 
@@ -242,27 +242,27 @@ import { ButtonRoot } from '@heroui/react';
 你可以组合来自不同组件的变体函数，以创建独特的样式：
 
 ```tsx
-import { Link } from '@heroui/react';
-import { linkVariants, buttonVariants } from '@heroui/styles';
+import { Link } from '@kinetic/react';
+import { linkVariants, buttonVariants } from '@kinetic/styles';
 
 // Link styled with button variants
 const buttonStyles = buttonVariants({ variant: "tertiary", size: "md" });
 
 <Link
   className={buttonStyles}
-  href="https://heroui.com"
+  href="https://kinetic-ui.com"
 >
-  HeroUI
+  Kinetic
 </Link>
 ```
 
 ## 自定义组件
 
-通过组合 HeroUI 原语，创建你自己的组件：
+通过组合 Kinetic 原语，创建你自己的组件：
 
 ```tsx
-import { Button, Tooltip } from '@heroui/react';
-import { buttonVariants } from '@heroui/styles';
+import { Button, Tooltip } from '@kinetic/react';
+import { buttonVariants } from '@kinetic/styles';
 
 // Link button component using variant functions
 function LinkButton({ href, children, variant = "primary", ...props }) {
@@ -297,11 +297,11 @@ function IconButton({ icon, label, ...props }) {
 通过扩展组件的变体函数来创建自定义变体：
 
 ```tsx
-import type { ButtonRootProps } from "@heroui/react";
+import type { ButtonRootProps } from "@kinetic/react";
 import type { VariantProps } from "tailwind-variants";
 
-import { Button } from "@heroui/react";
-import { buttonVariants, tv } from "@heroui/styles";
+import { Button } from "@kinetic/react";
+import { buttonVariants, tv } from "@kinetic/styles";
 
 const myButtonVariants = tv({
   extend: buttonVariants,
@@ -346,7 +346,7 @@ export function CustomVariants() {
 
 **推荐 — 命名类型导入：**
 ```tsx
-import type { ButtonRootProps, AvatarRootProps } from "@heroui/react";
+import type { ButtonRootProps, AvatarRootProps } from "@kinetic/react";
 
 type MyButtonProps = ButtonRootProps;
 type MyAvatarProps = AvatarRootProps;
@@ -354,7 +354,7 @@ type MyAvatarProps = AvatarRootProps;
 
 **替代方案 — 对象样式语法：**
 ```tsx
-import { Button, Avatar } from "@heroui/react";
+import { Button, Avatar } from "@kinetic/react";
 
 type MyButtonProps = Button["RootProps"];
 type MyAvatarProps = Avatar["RootProps"];
@@ -369,7 +369,7 @@ type MyAvatarProps = Avatar["RootProps"];
 例如，你可以渲染一个 [Motion](https://motion.dev/) 按钮，并利用其状态来驱动动画。
 
 ```tsx
-import {Button} from '@heroui/react';
+import {Button} from '@kinetic/react';
 import {motion} from 'motion/react';
 
 <Button
@@ -385,7 +385,7 @@ import {motion} from 'motion/react';
 `render` prop 对于从客户端路由库渲染链接组件，或复用已有的展示型组件也很有用。
 
 ```tsx
-import {Link} from '@heroui/react';
+import {Link} from '@kinetic/react';
 import NextLink from 'next/link';
 
 <Link
@@ -409,7 +409,7 @@ import NextLink from 'next/link';
 
 使用变体函数获得类型安全的样式：
 ```tsx
-import { buttonVariants } from '@heroui/styles';
+import { buttonVariants } from '@kinetic/styles';
 import Link from 'next/link';
 
 <Link
@@ -433,7 +433,7 @@ import Link from 'next/link';
 
 使用变体函数：
 ```tsx
-import { buttonVariants } from '@heroui/styles';
+import { buttonVariants } from '@kinetic/styles';
 import { Link } from 'react-router-dom';
 
 <Link
@@ -455,10 +455,10 @@ import { Link } from 'react-router-dom';
 
 **配合 Vue、Svelte 或其他框架使用：**
 
-由于 `@heroui/styles` 没有 React 依赖，你可以直接在任何框架中使用它：
+由于 `@kinetic/styles` 没有 React 依赖，你可以直接在任何框架中使用它：
 ```vue
 <script setup>
-import { buttonVariants } from '@heroui/styles';
+import { buttonVariants } from '@kinetic/styles';
 
 const primaryButton = buttonVariants({ variant: "primary" });
 </script>

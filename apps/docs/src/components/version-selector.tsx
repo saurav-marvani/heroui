@@ -1,6 +1,6 @@
 "use client";
 
-import {Popover, Separator} from "@heroui/react";
+import {Popover, Separator} from "@kinetic/react";
 import Link from "next/link";
 import {useState} from "react";
 
@@ -43,7 +43,7 @@ export function VersionSelector({className}: {className?: string}) {
             </div>
             <Link
               className="flex items-center justify-between rounded-3xl px-3 py-2 text-sm text-muted hover:bg-default-hover hover:text-foreground"
-              href="https://v2.heroui.com?utm_source=v3.heroui.com"
+              href="https://v2.kinetic-ui.com?utm_source=v3.kinetic-ui.com"
               rel="noopener noreferrer"
               target="_blank"
             >

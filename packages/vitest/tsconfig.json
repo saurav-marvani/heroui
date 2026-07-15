@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@heroui/standard/tsconfig/base.json",
+  "extends": "@kinetic/standard/tsconfig/base.json",
   "compilerOptions": {
     "baseUrl": "."
   },

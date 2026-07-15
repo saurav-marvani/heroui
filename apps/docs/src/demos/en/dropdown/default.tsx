@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, Dropdown, Label} from "@heroui/react";
+import {Button, Dropdown, Label} from "@kinetic/react";
 
 export function Default() {
   return (

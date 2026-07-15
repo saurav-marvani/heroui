@@ -1,10 +1,10 @@
 ---
 title: InputOTP
-description: InputOTP 从 HeroUI v2 到 v3 的迁移指南。
+description: InputOTP 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 InputOTP 文档](/docs/react/components/input-otp)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 InputOTP 文档](/docs/react/components/input-otp)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: InputOTP 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，InputOtp 根据 `length` prop 自动渲染插槽：
 
 ```tsx
-import { InputOtp } from "@heroui/react";
+import { InputOtp } from "@kinetic/react";
 
 export default function App() {
   return <InputOtp length={4} />;
@@ -22,7 +22,7 @@ export default function App() {
 在 v3 中，InputOTP 改为复合组件，需要手动声明插槽：
 
 ```tsx
-import { InputOTP } from "@heroui/react";
+import { InputOTP } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -103,7 +103,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { REGEXP_ONLY_CHARS } from "@heroui/react";
+    import { REGEXP_ONLY_CHARS } from "@kinetic/react";
 
     <InputOTP maxLength={4} pattern={REGEXP_ONLY_CHARS}>
       <InputOTP.Group>
@@ -131,7 +131,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Description, FieldError } from "@heroui/react";
+    import { Description, FieldError } from "@kinetic/react";
 
     {/* With description */}
     <div className="flex flex-col gap-2">
@@ -243,10 +243,10 @@ v3 引入了几个 v2 中没有的 prop：
 
 ## 导出的正则表达式模式
 
-为方便使用，HeroUI 从 input-otp 库再导出了几个常用的正则模式：
+为方便使用，Kinetic 从 input-otp 库再导出了几个常用的正则模式：
 
 ```tsx
-import { REGEXP_ONLY_DIGITS, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS_AND_CHARS } from "@heroui/react";
+import { REGEXP_ONLY_DIGITS, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS_AND_CHARS } from "@kinetic/react";
 
 // Use with the pattern prop
 <InputOTP pattern={REGEXP_ONLY_DIGITS} maxLength={6}>

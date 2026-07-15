@@ -1,9 +1,9 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
 import {Bold, Italic, Strikethrough, Underline} from "@gravity-ui/icons";
-import {ToggleButton, ToggleButtonGroup} from "@heroui/react";
+import {ToggleButton, ToggleButtonGroup} from "@kinetic/react";
 import {useState} from "react";
 
 export function Controlled() {

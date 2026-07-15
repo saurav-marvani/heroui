@@ -1,4 +1,4 @@
-import {Description, Radio, RadioGroup} from "@heroui/react";
+import {Description, Radio, RadioGroup} from "@kinetic/react";
 
 export function Variants() {
   return (

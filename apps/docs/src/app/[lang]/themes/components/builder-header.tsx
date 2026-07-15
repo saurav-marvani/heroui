@@ -9,11 +9,11 @@ import {
   Link as LinkIcon,
   NodesRight,
 } from "@gravity-ui/icons";
-import {Button, Kbd, Separator, Tabs, Tooltip, toast} from "@heroui/react";
+import {Button, Kbd, Separator, Tabs, Tooltip, toast} from "@kinetic/react";
 import Link from "next/link";
 import {useParams} from "next/navigation";
 
-import {HeroUILogo} from "@/components/heroui-logo";
+import {KineticLogo} from "@/components/kinetic-logo";
 import {useCodePanel} from "@/hooks/use-code-panel";
 import {useDictionary} from "@/hooks/use-dictionary";
 import useKeyPress from "@/hooks/use-key-press";
@@ -56,7 +56,7 @@ export function BuilderHeader() {
       <div className="flex h-14 w-full max-w-[1400px] items-center justify-between min-[1200px]:h-14">
         <div className="flex items-center gap-4">
           <Link href={`/${lang}`}>
-            <HeroUILogo />
+            <KineticLogo />
           </Link>
           <div className="flex items-center gap-3">
             <Tooltip closeDelay={0} delay={100}>

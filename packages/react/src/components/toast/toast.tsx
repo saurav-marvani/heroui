@@ -2,11 +2,11 @@
 
 import type {StatelyToastQueue, ToastContentValue} from "./toast-queue";
 import type {DOMRenderProps} from "../../utils/dom";
-import type {ToastVariants} from "@heroui/styles";
+import type {ToastVariants} from "@kinetic/styles";
 import type {CSSProperties, ComponentPropsWithRef, ReactNode} from "react";
 import type {QueuedToast, ToastProps as ToastPrimitiveProps} from "react-aria-components/Toast";
 
-import {toastVariants} from "@heroui/styles";
+import {toastVariants} from "@kinetic/styles";
 import React, {
   createContext,
   use,
@@ -185,7 +185,7 @@ const Toast = <T extends object = ToastContentValue>({
   );
 };
 
-Toast.displayName = "HeroUI.Toast";
+Toast.displayName = "Kinetic.Toast";
 
 /* ------------------------------------------------------------------------------------------------
  * Toast Content
@@ -251,7 +251,7 @@ const ToastIndicator = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-ToastIndicator.displayName = "HeroUI.ToastIndicator";
+ToastIndicator.displayName = "Kinetic.ToastIndicator";
 
 /* ------------------------------------------------------------------------------------------------
  * Toast Title
@@ -273,7 +273,7 @@ const ToastTitle = ({children, className, ...rest}: ToastTitleProps) => {
   );
 };
 
-ToastTitle.displayName = "HeroUI.ToastTitle";
+ToastTitle.displayName = "Kinetic.ToastTitle";
 
 /* ------------------------------------------------------------------------------------------------
  * Toast Description
@@ -295,7 +295,7 @@ const ToastDescription = ({children, className, ...rest}: ToastDescriptionProps)
   );
 };
 
-ToastDescription.displayName = "HeroUI.ToastDescription";
+ToastDescription.displayName = "Kinetic.ToastDescription";
 
 /* ------------------------------------------------------------------------------------------------
  * Toast Close Button
@@ -315,7 +315,7 @@ const ToastCloseButton = ({className, ...rest}: ToastCloseButtonProps) => {
   );
 };
 
-ToastCloseButton.displayName = "HeroUI.ToastCloseButton";
+ToastCloseButton.displayName = "Kinetic.ToastCloseButton";
 
 /* ------------------------------------------------------------------------------------------------
  * Toast Action Button
@@ -336,7 +336,7 @@ const ToastActionButton = ({children, className, ...rest}: ToastActionButtonProp
   );
 };
 
-ToastActionButton.displayName = "HeroUI.ToastActionButton";
+ToastActionButton.displayName = "Kinetic.ToastActionButton";
 
 /* ------------------------------------------------------------------------------------------------
  * Toast Region
@@ -379,7 +379,7 @@ const ToastProvider = <T extends object = ToastContentValue>({
 
   const toastQueue = useMemo((): StatelyToastQueue<T> => {
     if (queueProp) {
-      // Region consumes the underlying react-stately queue, not the HeroUI wrapper.
+      // Region consumes the underlying react-stately queue, not the Kinetic wrapper.
       return queueProp.getQueue();
     }
 
@@ -505,7 +505,7 @@ const ToastProvider = <T extends object = ToastContentValue>({
   );
 };
 
-ToastProvider.displayName = "HeroUI.ToastProvider";
+ToastProvider.displayName = "Kinetic.ToastProvider";
 
 /* ------------------------------------------------------------------------------------------------
  * Exports

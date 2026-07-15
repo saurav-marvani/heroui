@@ -1,10 +1,10 @@
 ---
 title: CLI
-description: Use the CLI to manage HeroUI dependencies and initialize projects.
+description: Use the CLI to manage Kinetic dependencies and initialize projects.
 icon: terminal
 ---
 
-The CLI offers a comprehensive suite of commands to initialize, manage, and improve your HeroUI projects. It enables you to `install`, `uninstall`, or `upgrade` individual components, assess the health of your project, download documentation for AI coding agents, and more.
+The CLI offers a comprehensive suite of commands to initialize, manage, and improve your Kinetic projects. It enables you to `install`, `uninstall`, or `upgrade` individual components, assess the health of your project, download documentation for AI coding agents, and more.
 
 ## Installation
 
@@ -70,19 +70,19 @@ Options:
 
 Commands:
   init [options] [projectName]   Initializes a new project
-  install [options]              Installs @heroui/react and @heroui/styles to your project
-  upgrade [options]              Upgrades @heroui/react and @heroui/styles to the latest versions
-  uninstall [options]            Uninstall @heroui/react and @heroui/styles from the project
-  list [options]                 Lists installed HeroUI packages (@heroui/react, @heroui/styles)
+  install [options]              Installs @kinetic/react and @kinetic/styles to your project
+  upgrade [options]              Upgrades @kinetic/react and @kinetic/styles to the latest versions
+  uninstall [options]            Uninstall @kinetic/react and @kinetic/styles from the project
+  list [options]                 Lists installed Kinetic packages (@kinetic/react, @kinetic/styles)
   env [options]                  Displays debugging information for the local environment
   doctor [options]               Checks for issues in the project
-  agents-md [options]            Downloads HeroUI documentation for AI coding agents
+  agents-md [options]            Downloads Kinetic documentation for AI coding agents
   help [command]                 Display help for command
 ```
 
 ### init
 
-Initialize a new HeroUI project using the `init` command. This sets up your project with the necessary configurations.
+Initialize a new Kinetic project using the `init` command. This sets up your project with the necessary configurations.
 
 ```bash
 heroui init [options]
@@ -96,15 +96,15 @@ heroui init [options]
 output:
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ┌  Create a new project
 │
 ◇  Select a template (Enter to select)
-│  ● App (A Next.js 16 with app directory template pre-configured with HeroUI (v3) and Tailwind CSS.)
-│  ○ Pages (A Next.js 16 with pages directory template pre-configured with HeroUI (v3) and Tailwind CSS.)
-│  ○ Vite (A Vite template pre-configured with HeroUI (v3) and Tailwind CSS.)
-│  ○ React Router (A React Router template pre-configured with HeroUI (v3) and Tailwind CSS.)
+│  ● App (A Next.js 16 with app directory template pre-configured with Kinetic (v3) and Tailwind CSS.)
+│  ○ Pages (A Next.js 16 with pages directory template pre-configured with Kinetic (v3) and Tailwind CSS.)
+│  ○ Vite (A Vite template pre-configured with Kinetic (v3) and Tailwind CSS.)
+│  ○ React Router (A React Router template pre-configured with Kinetic (v3) and Tailwind CSS.)
 │
 ◇  New project name (Enter to skip with default name)
 │  my-heroui-app
@@ -161,7 +161,7 @@ npm run dev
 
 ### Install
 
-Install `@heroui/react` and `@heroui/styles` to your project, along with their peer dependencies. If they are already installed, the command does nothing.
+Install `@kinetic/react` and `@kinetic/styles` to your project, along with their peer dependencies. If they are already installed, the command does nothing.
 
 ```bash
 heroui install [options]
@@ -175,14 +175,14 @@ heroui install [options]
 **Output:**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 📦 Packages to be installed:
 ╭─────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version        │   Status   │   Docs                 │
 │─────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0          │   stable   │   https://heroui.com   │
-│   @heroui/styles   │   3.0.0          │   stable   │   https://heroui.com   │
+│   @kinetic/react    │   3.0.0          │   stable   │   https://kinetic-ui.com   │
+│   @kinetic/styles   │   3.0.0          │   stable   │   https://kinetic-ui.com   │
 ╰─────────────────────────────────────────────────────────────────────────────╯
 
 ╭─────────────── PeerDependencies ────────────────╮
@@ -194,13 +194,13 @@ HeroUI CLI <version>
 ❯   Yes
     No
 
-✅ @heroui/react and @heroui/styles installed successfully
+✅ @kinetic/react and @kinetic/styles installed successfully
 ```
 
 ### upgrade
 
 
-Upgrade `@heroui/react` and `@heroui/styles` with their peer dependencies to the latest versions.
+Upgrade `@kinetic/react` and `@kinetic/styles` with their peer dependencies to the latest versions.
 
 ```bash
 heroui upgrade [options]
@@ -213,11 +213,11 @@ heroui upgrade [options]
 **Output:**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ╭──────────────────────────── Upgrade ────────────────────────────╮
-│  @heroui/react               ^3.0.0  ->  ^3.1.0                │
-│  @heroui/styles              ^3.0.0  ->  ^3.1.0                │
+│  @kinetic/react               ^3.0.0  ->  ^3.1.0                │
+│  @kinetic/styles              ^3.0.0  ->  ^3.1.0                │
 ╰─────────────────────────────────────────────────────────────────╯
 
 ? Would you like to proceed with the upgrade? › - Use arrow-keys. Return to submit.
@@ -229,7 +229,7 @@ HeroUI CLI <version>
 
 ### uninstall
 
-Uninstall `@heroui/react` and `@heroui/styles` from your project. Peer dependencies will not be uninstalled.
+Uninstall `@kinetic/react` and `@kinetic/styles` from your project. Peer dependencies will not be uninstalled.
 
 ```bash
 heroui uninstall [options]
@@ -242,25 +242,25 @@ heroui uninstall [options]
 **Output:**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ❗️ Packages slated for uninstallation:
 ╭──────────────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version   │   Status   │   Docs                               │
 │──────────────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0     │   stable   │   https://heroui.com                 │
-│   @heroui/styles   │   3.0.0     │   stable   │   https://heroui.com                 │
+│   @kinetic/react    │   3.0.0     │   stable   │   https://kinetic-ui.com                 │
+│   @kinetic/styles   │   3.0.0     │   stable   │   https://kinetic-ui.com                 │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 ? Confirm uninstallation of these packages: › - Use arrow-keys. Return to submit.
 ❯   Yes
     No
 
-✅ Successfully uninstalled: @heroui/react, @heroui/styles
+✅ Successfully uninstalled: @kinetic/react, @kinetic/styles
 ```
 
 ### list
 
-List the installed HeroUI packages (`@heroui/react`, `@heroui/styles`).
+List the installed Kinetic packages (`@kinetic/react`, `@kinetic/styles`).
 
 ```bash
 heroui list [options]
@@ -273,22 +273,22 @@ heroui list [options]
 **Output:**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 Current installed packages:
 
 ╭──────────────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version          │   Status   │   Docs                        │
 │──────────────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
-│   @heroui/styles   │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
+│   @kinetic/react    │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
+│   @kinetic/styles   │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ### doctor
 
 Check for issues in your project.
-- Check whether `@heroui/react` and `@heroui/styles` are installed
+- Check whether `@kinetic/react` and `@kinetic/styles` are installed
 - Check whether `required peer dependencies` are installed and matched minimal requirements in the project
 
 
@@ -305,14 +305,14 @@ heroui doctor [options]
 If there is a problem in your project, the `doctor` command will display the problem information.
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
-HeroUI CLI: ❌ Your project has 1 issue that require attention
+Kinetic CLI: ❌ Your project has 1 issue that require attention
 
-❗️Issue 1: missingHeroUIPackages
+❗️Issue 1: missingKineticPackages
 
-The following HeroUI packages are not installed:
-- @heroui/styles
+The following Kinetic packages are not installed:
+- @kinetic/styles
 
 Run `heroui install` to install them.
 ```
@@ -320,7 +320,7 @@ Run `heroui install` to install them.
 Otherwise, the `doctor` command will display the following message.
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ✅ Your project has no detected issues.
 ```
@@ -340,15 +340,15 @@ heroui env [options]
 **Output:**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 Current installed packages:
 
 ╭──────────────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version          │   Status   │   Docs                        │
 │──────────────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
-│   @heroui/styles   │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
+│   @kinetic/react    │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
+│   @kinetic/styles   │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 
 Environment Info:
@@ -361,7 +361,7 @@ Environment Info:
 
 ### agents-md
 
-Download HeroUI documentation for AI coding agents (Claude, Cursor, etc.). The command clones the latest docs from the HeroUI repository and injects a compact index into `AGENTS.md` or `CLAUDE.md` so assistants can reference your project's HeroUI setup.
+Download Kinetic documentation for AI coding agents (Claude, Cursor, etc.). The command clones the latest docs from the Kinetic repository and injects a compact index into `AGENTS.md` or `CLAUDE.md` so assistants can reference your project's Kinetic setup.
 
 ```bash
 heroui agents-md [options]
@@ -371,7 +371,7 @@ heroui agents-md [options]
 
 - `--react` [boolean] Include React docs only (one library at a time)
 - `--native` [boolean] Include Native docs only
-- `--migration` [boolean] Include HeroUI v2 to v3 migration docs only
+- `--migration` [boolean] Include Kinetic v2 to v3 migration docs only
 - `--output <file>` [string] Target file path (e.g., `AGENTS.md`, `CLAUDE.md`)
 - `--ssh` [boolean] Use SSH instead of HTTPS for git clone
 
@@ -400,7 +400,7 @@ heroui agents-md --migration --output AGENTS.md
 
 1. Clones documentation from the `v3` branch using git sparse-checkout
 2. Generates a compact index of doc and demo files
-3. Injects the index into your markdown file between markers (`<!-- HEROUI-REACT-AGENTS-MD-START -->` / `<!-- HEROUI-REACT-AGENTS-MD-END -->`, and similar for Native and Migration)
+3. Injects the index into your markdown file between markers (`<!-- KINETIC-REACT-AGENTS-MD-START -->` / `<!-- KINETIC-REACT-AGENTS-MD-END -->`, and similar for Native and Migration)
 4. Adds `.heroui-docs/` to `.gitignore`
 
 Only one of `--react`, `--native`, or `--migration` can be selected at a time.
@@ -408,7 +408,7 @@ Only one of `--react`, `--native`, or `--migration` can be selected at a time.
 For more details, see [AGENTS.md](/docs/react/getting-started/agents-md).
 
 <Callout>
-  The `agents-md` command collects anonymous usage data (selection, output file names, duration, success or error). Set `HEROUI_ANALYTICS_DISABLED=1` to opt out.
+  The `agents-md` command collects anonymous usage data (selection, output file names, duration, success or error). Set `KINETIC_ANALYTICS_DISABLED=1` to opt out.
 </Callout>
 
 ## Reporting issues

@@ -1,7 +1,7 @@
 "use client";
 
 import {Sparkles} from "@gravity-ui/icons";
-import {Button, Modal} from "@heroui/react";
+import {Button, Modal} from "@kinetic/react";
 
 export function CustomBackdrop() {
   return (

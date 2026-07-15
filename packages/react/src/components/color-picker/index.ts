@@ -33,6 +33,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {colorPickerVariants} from "@heroui/styles";
+export {colorPickerVariants} from "@kinetic/styles";
 
-export type {ColorPickerVariants} from "@heroui/styles";
+export type {ColorPickerVariants} from "@kinetic/styles";

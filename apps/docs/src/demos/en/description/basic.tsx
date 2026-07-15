@@ -1,4 +1,4 @@
-import {Description, Input, Label} from "@heroui/react";
+import {Description, Input, Label} from "@kinetic/react";
 
 export function Basic() {
   return (

@@ -35,6 +35,6 @@ export {ToggleButtonGroupContext, TOGGLE_BUTTON_GROUP_CHILD} from "./toggle-butt
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {toggleButtonGroupVariants} from "@heroui/styles";
+export {toggleButtonGroupVariants} from "@kinetic/styles";
 
-export type {ToggleButtonGroupVariants} from "@heroui/styles";
+export type {ToggleButtonGroupVariants} from "@kinetic/styles";

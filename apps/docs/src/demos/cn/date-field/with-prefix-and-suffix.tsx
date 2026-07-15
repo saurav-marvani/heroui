@@ -1,7 +1,7 @@
 "use client";
 
 import {Calendar, ChevronDown} from "@gravity-ui/icons";
-import {DateField, Description, Label} from "@heroui/react";
+import {DateField, Description, Label} from "@kinetic/react";
 
 export function WithPrefixAndSuffix() {
   return (

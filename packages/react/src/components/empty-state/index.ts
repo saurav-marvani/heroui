@@ -24,6 +24,6 @@ export type {EmptyStateRootProps, EmptyStateRootProps as EmptyStateProps} from "
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {emptyStateVariants} from "@heroui/styles";
+export {emptyStateVariants} from "@kinetic/styles";
 
-export type {EmptyStateVariants} from "@heroui/styles";
+export type {EmptyStateVariants} from "@kinetic/styles";

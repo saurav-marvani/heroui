@@ -1,10 +1,10 @@
 "use client";
 
-import type {DescriptionVariants} from "@heroui/styles";
+import type {DescriptionVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {TextProps} from "react-aria-components/Text";
 
-import {descriptionVariants} from "@heroui/styles";
+import {descriptionVariants} from "@kinetic/styles";
 import {Text} from "react-aria-components/Text";
 
 /* -------------------------------------------------------------------------------------------------

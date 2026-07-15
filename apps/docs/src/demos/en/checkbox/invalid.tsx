@@ -1,4 +1,4 @@
-import {Checkbox, FieldError} from "@heroui/react";
+import {Checkbox, FieldError} from "@kinetic/react";
 
 export function Invalid() {
   return (

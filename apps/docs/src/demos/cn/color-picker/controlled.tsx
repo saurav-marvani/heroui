@@ -10,7 +10,7 @@ import {
   ColorSwatchPicker,
   Label,
   parseColor,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {Icon} from "@iconify/react";
 import {useState} from "react";
 

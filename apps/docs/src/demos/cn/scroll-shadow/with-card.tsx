@@ -1,4 +1,4 @@
-import {Button, Card, ScrollShadow} from "@heroui/react";
+import {Button, Card, ScrollShadow} from "@kinetic/react";
 
 export default function WithCard() {
   return (

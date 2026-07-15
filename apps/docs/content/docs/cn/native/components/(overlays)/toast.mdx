@@ -57,7 +57,7 @@ const { toast } = useToast();
 toast.show({
   variant: 'success',
   label: '套餐已升级',
-  description: '可继续使用 HeroUI Chat',
+  description: '可继续使用 Kinetic Chat',
   icon: <Icon name="check" />,
   actionLabel: '关闭',
   onActionPress: ({ hide }) => hide(),
@@ -134,7 +134,7 @@ export default function ToastExample() {
           toast.show({
             variant: 'success',
             label: '套餐已升级',
-            description: '可继续使用 HeroUI Chat',
+            description: '可继续使用 Kinetic Chat',
             actionLabel: '关闭',
             onActionPress: ({ hide }) => hide(),
           })
@@ -170,7 +170,7 @@ export default function ToastExample() {
 
 ## 全局配置
 
-通过 `HeroUINativeProvider` 的 `config` 全局配置 Toast；本地调用可覆盖默认值。
+通过 `KineticNativeProvider` 的 `config` 全局配置 Toast；本地调用可覆盖默认值。
 
 > **说明**：Provider 的完整配置见 [Provider 文档](/docs/native/getting-started/handbook/provider#toast-configuration)。
 
@@ -179,7 +179,7 @@ export default function ToastExample() {
 控制 Toast 与屏幕边缘的距离，会在安全区内边距基础上叠加。例如四边距屏幕 20px：
 
 ```tsx
-<HeroUINativeProvider
+<KineticNativeProvider
   config={{
     toast: {
       insets: {
@@ -192,7 +192,7 @@ export default function ToastExample() {
   }}
 >
   {children}
-</HeroUINativeProvider>
+</KineticNativeProvider>
 ```
 
 ### 使用 KeyboardAvoidingView 包裹内容
@@ -204,7 +204,7 @@ import {
   KeyboardAvoidingView,
   KeyboardProvider,
 } from 'react-native-keyboard-controller';
-import { HeroUINativeProvider } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
 import { useCallback } from 'react';
 
 function AppContent() {
@@ -224,7 +224,7 @@ function AppContent() {
 
   return (
     <KeyboardProvider>
-      <HeroUINativeProvider
+      <KineticNativeProvider
         config={{
           toast: {
             contentWrapper,
@@ -232,7 +232,7 @@ function AppContent() {
         }}
       >
         {children}
-      </HeroUINativeProvider>
+      </KineticNativeProvider>
     </KeyboardProvider>
   );
 }
@@ -243,7 +243,7 @@ function AppContent() {
 全局设置变体、位置、动画与滑动等默认值：
 
 ```tsx
-<HeroUINativeProvider
+<KineticNativeProvider
   config={{
     toast: {
       defaultProps: {
@@ -255,7 +255,7 @@ function AppContent() {
   }}
 >
   {children}
-</HeroUINativeProvider>
+</KineticNativeProvider>
 ```
 
 ## API 参考
@@ -340,7 +340,7 @@ Toast 根动画配置，可为：
 
 ### ToastProviderProps
 
-通过 `HeroUINativeProvider` 的 `config.toast` 进行全局配置时可用的属性。
+通过 `KineticNativeProvider` 的 `config.toast` 进行全局配置时可用的属性。
 
 | prop                                         | type                                                | default | description                                                                                                                                                                                                      |
 | -------------------------------------------- | --------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -378,7 +378,7 @@ Toast 根动画配置，可为：
 
 ### useToast
 
-访问 Toast 能力，必须在 `ToastProvider` 内使用（由 `HeroUINativeProvider` 提供）。
+访问 Toast 能力，必须在 `ToastProvider` 内使用（由 `KineticNativeProvider` 提供）。
 
 | 返回值           | type           | description                              |
 | ---------------- | -------------- | ---------------------------------------- |
@@ -428,4 +428,4 @@ Toast 根动画配置，可为：
 
 ### 元素检查器（iOS）
 
-Toast 在 iOS 上使用 `FullWindowOverlay`。开发时若需使用 React Native 元素检查器，可在 `HeroUINativeProvider` 的 `config.toast` 中设置 `disableFullWindowOverlay={true}`。代价：Toast 将无法叠在原生系统模态之上。
+Toast 在 iOS 上使用 `FullWindowOverlay`。开发时若需使用 React Native 元素检查器，可在 `KineticNativeProvider` 的 `config.toast` 中设置 `disableFullWindowOverlay={true}`。代价：Toast 将无法叠在原生系统模态之上。

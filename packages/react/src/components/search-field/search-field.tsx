@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {SearchFieldVariants} from "@heroui/styles";
+import type {SearchFieldVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {searchFieldVariants} from "@heroui/styles";
+import {searchFieldVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Group as GroupPrimitive} from "react-aria-components/Group";
 import {Input as InputPrimitive} from "react-aria-components/Input";

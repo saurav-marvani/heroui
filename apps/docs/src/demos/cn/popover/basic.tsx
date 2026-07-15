@@ -1,4 +1,4 @@
-import {Button, Popover} from "@heroui/react";
+import {Button, Popover} from "@kinetic/react";
 
 export function PopoverBasic() {
   return (

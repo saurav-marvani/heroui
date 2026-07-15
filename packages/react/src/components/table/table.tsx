@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {TableVariants} from "@heroui/styles";
+import type {TableVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 
-import {tableVariants} from "@heroui/styles";
+import {tableVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {
   Cell as CellPrimitive,
@@ -60,7 +60,7 @@ const TableRoot = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-TableRoot.displayName = "HeroUI.Table";
+TableRoot.displayName = "Kinetic.Table";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Scroll Container
@@ -88,7 +88,7 @@ const TableScrollContainer = <E extends keyof React.JSX.IntrinsicElements = "div
   );
 };
 
-TableScrollContainer.displayName = "HeroUI.Table.ScrollContainer";
+TableScrollContainer.displayName = "Kinetic.Table.ScrollContainer";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Content
@@ -112,7 +112,7 @@ function TableContent({className, ...props}: TableContentProps) {
   );
 }
 
-(TableContent as React.FC).displayName = "HeroUI.Table.Content";
+(TableContent as React.FC).displayName = "Kinetic.Table.Content";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Header
@@ -133,7 +133,7 @@ function TableHeader<T extends object>({className, ...props}: TableHeaderProps<T
   );
 }
 
-(TableHeader as React.FC).displayName = "HeroUI.Table.Header";
+(TableHeader as React.FC).displayName = "Kinetic.Table.Header";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Column
@@ -153,7 +153,7 @@ const TableColumn = ({className, ref, ...props}: TableColumnProps) => {
   );
 };
 
-TableColumn.displayName = "HeroUI.Table.Column";
+TableColumn.displayName = "Kinetic.Table.Column";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Body
@@ -174,7 +174,7 @@ function TableBody<T extends object>({className, ...props}: TableBodyProps<T>) {
   );
 }
 
-(TableBody as React.FC).displayName = "HeroUI.Table.Body";
+(TableBody as React.FC).displayName = "Kinetic.Table.Body";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Row
@@ -193,7 +193,7 @@ function TableRow<T extends object>({className, ...props}: TableRowProps<T>) {
   );
 }
 
-(TableRow as React.FC).displayName = "HeroUI.Table.Row";
+(TableRow as React.FC).displayName = "Kinetic.Table.Row";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Cell
@@ -213,7 +213,7 @@ const TableCell = ({className, ref, ...props}: TableCellProps) => {
   );
 };
 
-TableCell.displayName = "HeroUI.Table.Cell";
+TableCell.displayName = "Kinetic.Table.Cell";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Footer
@@ -240,7 +240,7 @@ const TableFooter = <E extends keyof React.JSX.IntrinsicElements = "div">({
   );
 };
 
-TableFooter.displayName = "HeroUI.Table.Footer";
+TableFooter.displayName = "Kinetic.Table.Footer";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Resizable Container
@@ -260,7 +260,7 @@ const TableResizableContainer = ({className, ref, ...props}: TableResizableConta
   );
 };
 
-TableResizableContainer.displayName = "HeroUI.Table.ResizableContainer";
+TableResizableContainer.displayName = "Kinetic.Table.ResizableContainer";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Column Resizer
@@ -280,7 +280,7 @@ const TableColumnResizer = ({className, ref, ...props}: TableColumnResizerProps)
   );
 };
 
-TableColumnResizer.displayName = "HeroUI.Table.ColumnResizer";
+TableColumnResizer.displayName = "Kinetic.Table.ColumnResizer";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Load More Item
@@ -300,7 +300,7 @@ const TableLoadMoreItem = ({className, ref, ...props}: TableLoadMoreItemProps) =
   );
 };
 
-TableLoadMoreItem.displayName = "HeroUI.Table.LoadMore";
+TableLoadMoreItem.displayName = "Kinetic.Table.LoadMore";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Load More Content
@@ -328,7 +328,7 @@ const TableLoadMoreContent = <E extends keyof React.JSX.IntrinsicElements = "div
   );
 };
 
-TableLoadMoreContent.displayName = "HeroUI.Table.LoadMoreContent";
+TableLoadMoreContent.displayName = "Kinetic.Table.LoadMoreContent";
 
 /* -------------------------------------------------------------------------------------------------
  * Table Sortable Column Header
@@ -414,7 +414,7 @@ const TableSortableColumnHeader = ({
   );
 };
 
-TableSortableColumnHeader.displayName = "HeroUI.Table.SortableColumnHeader";
+TableSortableColumnHeader.displayName = "Kinetic.Table.SortableColumnHeader";
 
 /* -------------------------------------------------------------------------------------------------
  * Exports

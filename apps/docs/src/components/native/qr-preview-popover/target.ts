@@ -1,6 +1,6 @@
 /**
  * Discriminated union describing which screen the QR code should deep-link
- * into when the native HeroUI app intercepts the URL.
+ * into when the native Kinetic app intercepts the URL.
  *
  * - `target: "auto"` derives the slug from `usePathname()` inside the
  *   popover. Only valid on pages whose URL matches `/native/components/{slug}`.

@@ -43,6 +43,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {switchVariants} from "@heroui/styles";
+export {switchVariants} from "@kinetic/styles";
 
-export type {SwitchVariants} from "@heroui/styles";
+export type {SwitchVariants} from "@kinetic/styles";

@@ -12,7 +12,7 @@ import {
   Surface,
   TextArea,
   TextField,
-} from "@heroui/react";
+} from "@kinetic/react";
 import React from "react";
 
 export function OnSurface() {

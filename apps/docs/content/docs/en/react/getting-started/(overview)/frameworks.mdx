@@ -1,6 +1,6 @@
 ---
 title: Frameworks
-description: Integrate HeroUI with your framework
+description: Integrate Kinetic with your framework
 icon: layers
 ---
 
@@ -16,19 +16,19 @@ npx heroui-cli@latest init
   When prompted, select the **App** or **Pages** template. Then open your new folder and install dependencies (for example `pnpm install`).
 </Callout>
 
-### 2. Use your first HeroUI component
+### 2. Use your first Kinetic component
 
 <Tabs items={["App Router", "Pages Router"]}>
   <Tab value="App Router">
     Example: `app/page.tsx`
 
     ```tsx
-    import {Button} from "@heroui/react";
+    import {Button} from "@kinetic/react";
 
     export default function HomePage() {
       return (
         <main className="flex min-h-screen items-center justify-center">
-          <Button variant="tertiary">Hello HeroUI</Button>
+          <Button variant="tertiary">Hello Kinetic</Button>
         </main>
       );
     }
@@ -38,12 +38,12 @@ npx heroui-cli@latest init
     Example: `pages/index.tsx`
 
     ```tsx
-    import {Button} from "@heroui/react";
+    import {Button} from "@kinetic/react";
 
     export default function HomePage() {
       return (
         <main className="flex min-h-screen items-center justify-center">
-          <Button variant="tertiary">Hello HeroUI</Button>
+          <Button variant="tertiary">Hello Kinetic</Button>
         </main>
       );
     }
@@ -52,7 +52,7 @@ npx heroui-cli@latest init
 </Tabs>
 
 <Callout>
-  HeroUI v3 does not require a provider. Components work directly after installation and style import.
+  Kinetic v3 does not require a provider. Components work directly after installation and style import.
 </Callout>
 
 ### 3 Locale Setup (Optional)
@@ -64,7 +64,7 @@ In your root layout, determine the user's preferred language and set the `lang` 
 ```tsx
 // app/layout.tsx
 import {headers} from 'next/headers';
-import {isRTL} from '@heroui/react';
+import {isRTL} from '@kinetic/react';
 import {ClientProviders} from './provider';
 
 export default async function RootLayout({children}) {
@@ -91,7 +91,7 @@ Create `app/provider.tsx`. This should render an `I18nProvider` to set the local
 // app/provider.tsx
 "use client";
 
-import {I18nProvider} from '@heroui/react';
+import {I18nProvider} from '@kinetic/react';
 
 export function ClientProviders({lang, children}) {
   return (
@@ -116,17 +116,17 @@ npx heroui-cli@latest init
   When prompted, select the **Vite** template. Then open your new folder and install dependencies (for example `pnpm install`).
 </Callout>
 
-### 2. Use your first HeroUI component
+### 2. Use your first Kinetic component
 
 Example: `src/App.tsx`
 
 ```tsx
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 
 function App() {
   return (
     <main className="flex min-h-screen items-center justify-center">
-      <Button variant="tertiary">Hello HeroUI</Button>
+      <Button variant="tertiary">Hello Kinetic</Button>
     </main>
   );
 }
@@ -135,7 +135,7 @@ export default App;
 ```
 
 <Callout>
-  HeroUI v3 does not require a provider. Components work directly after installation and style import.
+  Kinetic v3 does not require a provider. Components work directly after installation and style import.
 </Callout>
 
 ## Next steps

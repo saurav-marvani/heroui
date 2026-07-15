@@ -64,9 +64,9 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {toastVariants} from "@heroui/styles";
+export {toastVariants} from "@kinetic/styles";
 
-export type {ToastVariants} from "@heroui/styles";
+export type {ToastVariants} from "@kinetic/styles";
 
 /* -------------------------------------------------------------------------------------------------
  * Utilities

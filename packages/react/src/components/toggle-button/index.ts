@@ -27,6 +27,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {toggleButtonVariants} from "@heroui/styles";
+export {toggleButtonVariants} from "@kinetic/styles";
 
-export type {ToggleButtonVariants} from "@heroui/styles";
+export type {ToggleButtonVariants} from "@kinetic/styles";

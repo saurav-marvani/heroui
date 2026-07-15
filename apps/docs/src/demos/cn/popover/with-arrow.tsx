@@ -1,5 +1,5 @@
 import {Ellipsis} from "@gravity-ui/icons";
-import {Button, Popover} from "@heroui/react";
+import {Button, Popover} from "@kinetic/react";
 
 export function PopoverWithArrow() {
   return (

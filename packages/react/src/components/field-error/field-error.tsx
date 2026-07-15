@@ -1,9 +1,9 @@
 "use client";
 
-import type {FieldErrorVariants} from "@heroui/styles";
+import type {FieldErrorVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {fieldErrorVariants} from "@heroui/styles";
+import {fieldErrorVariants} from "@kinetic/styles";
 import {FieldError as FieldErrorPrimitive} from "react-aria-components/FieldError";
 
 import {composeTwRenderProps} from "../../utils/compose";

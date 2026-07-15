@@ -1,8 +1,8 @@
 "use client";
 
-import type {ToastVariants} from "@heroui/react";
+import type {ToastVariants} from "@kinetic/react";
 
-import {Button, Toast, ToastQueue} from "@heroui/react";
+import {Button, Toast, ToastQueue} from "@kinetic/react";
 
 type Placement = NonNullable<ToastVariants["placement"]>;
 

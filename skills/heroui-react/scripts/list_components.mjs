@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * List all available HeroUI v3 components.
+ * List all available Kinetic UI v3 components.
  *
  * Usage:
  *   node list_components.mjs
@@ -14,7 +14,7 @@ const APP_PARAM = "app=react-skills";
 const LLMS_TXT_URL = "https://heroui.com/react/llms.txt";
 
 /**
- * Fetch data from HeroUI API with app parameter for analytics.
+ * Fetch data from Kinetic UI API with app parameter for analytics.
  */
 async function fetchApi(endpoint) {
   const separator = endpoint.includes("?") ? "&" : "?";
@@ -22,7 +22,7 @@ async function fetchApi(endpoint) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -46,7 +46,7 @@ async function fetchApi(endpoint) {
 async function fetchFallback() {
   try {
     const response = await fetch(LLMS_TXT_URL, {
-      headers: {"User-Agent": "HeroUI-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -106,7 +106,7 @@ async function fetchFallback() {
 }
 
 /**
- * Main function to list all available HeroUI v3 components.
+ * Main function to list all available Kinetic UI v3 components.
  */
 async function main() {
   let data = await fetchApi("/v1/components");

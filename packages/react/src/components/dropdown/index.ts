@@ -71,6 +71,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {dropdownVariants} from "@heroui/styles";
+export {dropdownVariants} from "@kinetic/styles";
 
-export type {DropdownVariants} from "@heroui/styles";
+export type {DropdownVariants} from "@kinetic/styles";

@@ -1,11 +1,11 @@
 ---
 title: Full Migration
-description: Step-by-step guide for migrating HeroUI v2 to v3 using full migration approach
+description: Step-by-step guide for migrating Kinetic v2 to v3 using full migration approach
 ---
 
 ## Overview
 
-Full migration is a structured approach to migrating from HeroUI v2 to v3. This method involves migrating all component code first, then switching dependencies, ensuring a clean transition.
+Full migration is a structured approach to migrating from Kinetic v2 to v3. This method involves migrating all component code first, then switching dependencies, ensuring a clean transition.
 
 **Important:** Full migration means the project will be broken during migration (v2 and v3 cannot coexist). Work in a feature branch to maintain a working main branch.
 
@@ -60,35 +60,35 @@ v3 requires React 19+. Update your React version:
   </Tab>
 </Tabs>
 
-**Note**: These dependency updates can be done before switching HeroUI (won't break project). However, the HeroUI package switch should only happen AFTER all component code is migrated.
+**Note**: These dependency updates can be done before switching Kinetic (won't break project). However, the Kinetic package switch should only happen AFTER all component code is migrated.
 
-#### Update HeroUI Packages
+#### Update Kinetic Packages
 
 **Important**: Do this AFTER migrating all component code. Remove v2 packages and install v3:
 
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm uninstall @heroui/react @heroui/theme
-    npm install @heroui/styles @heroui/react
+    npm uninstall @kinetic/react @kinetic/theme
+    npm install @kinetic/styles @kinetic/react
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm remove @heroui/react @heroui/theme
-    pnpm add @heroui/styles @heroui/react
+    pnpm remove @kinetic/react @kinetic/theme
+    pnpm add @kinetic/styles @kinetic/react
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn remove @heroui/react @heroui/theme
-    yarn add @heroui/styles @heroui/react
+    yarn remove @kinetic/react @kinetic/theme
+    yarn add @kinetic/styles @kinetic/react
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun remove @heroui/react @heroui/theme
-    bun add @heroui/styles @heroui/react
+    bun remove @kinetic/react @kinetic/theme
+    bun add @kinetic/styles @kinetic/react
     ```
   </Tab>
 </Tabs>
@@ -159,12 +159,12 @@ Ensure you're using Tailwind CSS v4:
 
 ```js
 // tailwind.config.js
-const {heroui} = require("@heroui/react");
+const {heroui} = require("@kinetic/react");
 
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@kinetic/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [heroui()],
   // ... other config
@@ -173,7 +173,7 @@ module.exports = {
 
 **v3 Configuration:**
 
-Remove the `heroui()` plugin from your Tailwind config. If you only used Tailwind for HeroUI and have no other customizations, you can remove `tailwind.config.js` entirely. Otherwise, keep the file but remove the HeroUI plugin configuration.
+Remove the `heroui()` plugin from your Tailwind config. If you only used Tailwind for Kinetic and have no other customizations, you can remove `tailwind.config.js` entirely. Otherwise, keep the file but remove the Kinetic plugin configuration.
 
 #### Update CSS Imports
 
@@ -191,11 +191,11 @@ Remove the `heroui()` plugin from your Tailwind config. If you only used Tailwin
 ```css
 /* globals.css or main.css */
 @import "tailwindcss";
-@import "@heroui/styles"; /* [!code highlight]*/
+@import "@kinetic/styles"; /* [!code highlight]*/
 ```
 
 <Callout type="warning">
-  Import order matters! Always import `tailwindcss` before `@heroui/styles`.
+  Import order matters! Always import `tailwindcss` before `@kinetic/styles`.
 </Callout>
 
 #### Remove Theme Plugin File
@@ -210,7 +210,7 @@ rm hero.ts
 
 <section id="step-3-remove-herouiprovider">
 
-### Step 3: Remove HeroUIProvider
+### Step 3: Remove KineticProvider
 
 v3 does not require a Provider component. Remove it from your application root.
 
@@ -218,13 +218,13 @@ v3 does not require a Provider component. Remove it from your application root.
 
 ```tsx
 // app.tsx or App.tsx
-import {HeroUIProvider} from "@heroui/react";
+import {KineticProvider} from "@kinetic/react";
 
 function App() {
   return (
-    <HeroUIProvider>
+    <KineticProvider>
       <YourApplication />
-    </HeroUIProvider>
+    </KineticProvider>
   );
 }
 ```
@@ -262,7 +262,7 @@ v3 removes the Framer Motion dependency and handles animations differently:
 
 ### Step 4: Replace Removed Hooks
 
-HeroUI v2 provided component hooks (like `useSwitch`, `useInput`, `useCheckbox`, etc.) and utility hooks like `useDisclosure`. HeroUI v3 removes most component hooks in favor of compound components, and replaces `useDisclosure` with `useOverlayState`.
+Kinetic v2 provided component hooks (like `useSwitch`, `useInput`, `useCheckbox`, etc.) and utility hooks like `useDisclosure`. Kinetic v3 removes most component hooks in favor of compound components, and replaces `useDisclosure` with `useOverlayState`.
 
 See the comprehensive [Hooks Migration Guide](/docs/react/migration/hooks) for:
 - Component hooks removal and migration to compound components
@@ -281,18 +281,18 @@ All components are now imported from a single package:
 
 ```tsx
 // Individual packages (if used)
-import {Button} from "@heroui/button";
-import {Card} from "@heroui/card";
+import {Button} from "@kinetic/button";
+import {Card} from "@kinetic/card";
 
 // Or from main package
-import {Button, Card} from "@heroui/react";
+import {Button, Card} from "@kinetic/react";
 ```
 
 **v3 Imports:**
 
 ```tsx
 // All components from single package
-import {Button, Card} from "@heroui/react";
+import {Button, Card} from "@kinetic/react";
 ```
 
 #### TypeScript Considerations
@@ -301,10 +301,10 @@ If you're using TypeScript, be aware of type changes in v3:
 
 ```tsx
 // Import types alongside components
-import {Button, type ButtonProps} from "@heroui/react";
+import {Button, type ButtonProps} from "@kinetic/react";
 
 // Compound component types are properly exported
-import {Checkbox, type CheckboxProps} from "@heroui/react";
+import {Checkbox, type CheckboxProps} from "@kinetic/react";
 
 // Type names may have changed - check component documentation
 type MyButtonProps = ButtonProps & {
@@ -345,7 +345,7 @@ If you had custom theme overrides in v2, you'll need to update them for v3's CSS
 
 ```js
 // tailwind.config.js
-const {heroui} = require("@heroui/react");
+const {heroui} = require("@kinetic/react");
 
 module.exports = {
   plugins: [
@@ -371,7 +371,7 @@ v3 uses CSS variables. Override them in your CSS:
 ```css
 /* globals.css */
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 
 :root {
   --color-primary: /* your color */;
@@ -453,7 +453,7 @@ Use this checklist to track your full migration progress:
 
 ### Dependencies
 - Update React to v19+
-- Update HeroUI packages to v3 (after component migration)
+- Update Kinetic packages to v3 (after component migration)
 - Remove Framer Motion
 - Update Tailwind CSS to v4
 
@@ -463,9 +463,9 @@ Use this checklist to track your full migration progress:
 - Remove `hero.ts` file (if exists)
 
 ### Application Code - Component Migration
-- Remove `HeroUIProvider` wrapper
+- Remove `KineticProvider` wrapper
 - Handle Provider props migration (router, locale, animations)
-- Update all component imports to `@heroui/react`
+- Update all component imports to `@kinetic/react`
 - Migrate renamed components (Divider → Separator, Autocomplete → Combobox, NumberInput → NumberField)
 - Update compound component patterns (Checkbox, Radio, Switch, Card, Modal, etc.)
 - Update group components (ButtonGroup, CheckboxGroup, RadioGroup)

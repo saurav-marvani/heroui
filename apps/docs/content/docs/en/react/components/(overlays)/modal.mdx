@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { Modal } from "@heroui/react";
+import { Modal } from "@kinetic/react";
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ import { Modal } from "@heroui/react";
 Import the Modal component and access all parts using dot notation.
 
 ```tsx
-import {Modal, Button} from "@heroui/react";
+import {Modal, Button} from "@kinetic/react";
 
 export default () => (
   <Modal>
@@ -98,7 +98,7 @@ export default () => (
 ### Passing Tailwind CSS classes
 
 ```tsx
-import {Modal, Button} from "@heroui/react";
+import {Modal, Button} from "@kinetic/react";
 
 function CustomModal() {
   return (
@@ -152,7 +152,7 @@ To customize the Modal component classes, you can use the `@layer components` di
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -271,7 +271,7 @@ The component supports these interactive states:
 ### useOverlayState Hook
 
 ```tsx
-import {useOverlayState} from "@heroui/react";
+import {useOverlayState} from "@kinetic/react";
 
 const state = useOverlayState({
   defaultOpen: false,

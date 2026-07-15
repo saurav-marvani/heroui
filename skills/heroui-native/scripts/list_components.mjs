@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * List all available HeroUI Native components.
+ * List all available Kinetic UI Native components.
  *
  * Usage:
  *   node list_components.mjs
@@ -14,7 +14,7 @@ const APP_PARAM = "app=native-skills";
 const LLMS_TXT_URL = "https://heroui.com/native/llms.txt";
 
 /**
- * Fetch data from HeroUI Native API with app parameter for analytics.
+ * Fetch data from Kinetic UI Native API with app parameter for analytics.
  */
 async function fetchApi(endpoint) {
   const separator = endpoint.includes("?") ? "&" : "?";
@@ -22,7 +22,7 @@ async function fetchApi(endpoint) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Native-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Native-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -46,7 +46,7 @@ async function fetchApi(endpoint) {
 async function fetchFallback() {
   try {
     const response = await fetch(LLMS_TXT_URL, {
-      headers: {"User-Agent": "HeroUI-Native-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Native-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -106,7 +106,7 @@ async function fetchFallback() {
 }
 
 /**
- * Main function to list all available HeroUI Native components.
+ * Main function to list all available Kinetic UI Native components.
  */
 async function main() {
   let data = await fetchApi("/v1/components");

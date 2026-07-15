@@ -1,7 +1,7 @@
 "use client";
 
 import {ChevronDown, Clock} from "@gravity-ui/icons";
-import {Description, Label, TimeField} from "@heroui/react";
+import {Description, Label, TimeField} from "@kinetic/react";
 
 export function WithPrefixAndSuffix() {
   return (

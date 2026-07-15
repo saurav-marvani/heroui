@@ -1,10 +1,10 @@
 ---
 title: Table
-description: Table 从 HeroUI v2 到 v3 的迁移指南。
+description: Table 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Table 文档](/docs/react/components/table)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Table 文档](/docs/react/components/table)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Table 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Table 对每个部分使用独立的命名导入：
 
 ```tsx
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@heroui/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -35,7 +35,7 @@ export default function App() {
 在 v3 中，Table 使用点语法的复合组件，并新增 `Table.ScrollContainer` 与 `Table.Content`：
 
 ```tsx
-import { Table } from "@heroui/react";
+import { Table } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -139,7 +139,7 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@heroui/react";
+    import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@kinetic/react";
 
     <Table aria-label="Users">
       <TableHeader>
@@ -164,7 +164,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Table } from "@heroui/react";
+    import { Table } from "@kinetic/react";
 
     <Table>
       <Table.ScrollContainer>
@@ -285,7 +285,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Table, Checkbox } from "@heroui/react";
+    import { Table, Checkbox } from "@kinetic/react";
 
     const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
 

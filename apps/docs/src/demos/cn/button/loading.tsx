@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, Spinner} from "@heroui/react";
+import {Button, Spinner} from "@kinetic/react";
 import React from "react";
 
 export function Loading() {

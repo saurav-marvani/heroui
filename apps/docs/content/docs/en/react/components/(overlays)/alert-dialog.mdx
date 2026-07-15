@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { AlertDialog } from "@heroui/react";
+import { AlertDialog } from "@kinetic/react";
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ import { AlertDialog } from "@heroui/react";
 Import the AlertDialog component and access all parts using dot notation.
 
 ```tsx
-import {AlertDialog, Button} from "@heroui/react";
+import {AlertDialog, Button} from "@kinetic/react";
 
 export default () => (
   <AlertDialog>
@@ -100,7 +100,7 @@ export default () => (
 ### Passing Tailwind CSS classes
 
 ```tsx
-import {AlertDialog, Button} from "@heroui/react";
+import {AlertDialog, Button} from "@kinetic/react";
 
 function CustomAlertDialog() {
   return (
@@ -164,7 +164,7 @@ To customize the AlertDialog component classes, you can use the `@layer componen
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -300,7 +300,7 @@ The component supports these interactive states:
 ### useOverlayState Hook
 
 ```tsx
-import {useOverlayState} from "@heroui/react";
+import {useOverlayState} from "@kinetic/react";
 
 const state = useOverlayState({
   defaultOpen: false,

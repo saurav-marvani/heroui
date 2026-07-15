@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, Label, TimeField} from "@heroui/react";
+import {Description, Label, TimeField} from "@kinetic/react";
 
 export function Required() {
   return (

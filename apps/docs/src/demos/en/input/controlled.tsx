@@ -1,10 +1,10 @@
 "use client";
 
-import {Input} from "@heroui/react";
+import {Input} from "@kinetic/react";
 import React from "react";
 
 export function Controlled() {
-  const [value, setValue] = React.useState("heroui.com");
+  const [value, setValue] = React.useState("kinetic-ui.com");
 
   return (
     <div className="flex w-80 flex-col gap-2">

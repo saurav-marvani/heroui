@@ -1,5 +1,5 @@
 import {ChevronDown} from "@gravity-ui/icons";
-import {Accordion} from "@heroui/react";
+import {Accordion} from "@kinetic/react";
 
 export function FAQ() {
   const categories = [

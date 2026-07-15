@@ -1,6 +1,6 @@
 "use client";
 
-import {Label, ListBox, Select} from "@heroui/react";
+import {Label, ListBox, Select} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 

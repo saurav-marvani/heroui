@@ -1,6 +1,6 @@
 "use client";
 
-import {DateField, DateRangePicker, Description, Label, RangeCalendar} from "@heroui/react";
+import {DateField, DateRangePicker, Description, Label, RangeCalendar} from "@kinetic/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 
 export function Disabled() {

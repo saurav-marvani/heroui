@@ -1,4 +1,4 @@
-import {Label, NumberField} from "@heroui/react";
+import {Label, NumberField} from "@kinetic/react";
 
 export function Variants() {
   return (

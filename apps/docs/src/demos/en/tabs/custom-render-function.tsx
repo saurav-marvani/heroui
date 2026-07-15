@@ -1,6 +1,6 @@
 "use client";
 
-import {Tabs} from "@heroui/react";
+import {Tabs} from "@kinetic/react";
 import Link from "next/link";
 
 export function CustomRenderFunction() {

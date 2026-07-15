@@ -46,6 +46,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {progressCircleVariants} from "@heroui/styles";
+export {progressCircleVariants} from "@kinetic/styles";
 
-export type {ProgressCircleVariants} from "@heroui/styles";
+export type {ProgressCircleVariants} from "@kinetic/styles";

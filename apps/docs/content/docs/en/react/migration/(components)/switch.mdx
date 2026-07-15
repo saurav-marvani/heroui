@@ -1,10 +1,10 @@
 ---
 title: Switch
-description: Migration guide for Switch from HeroUI v2 to v3
+description: Migration guide for Switch from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Switch documentation](/docs/react/components/switch) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Switch documentation](/docs/react/components/switch) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Switch from HeroUI v2 to v3
 In v2, Switch used a simple structure with children as label:
 
 ```tsx
-import { Switch } from "@heroui/react";
+import { Switch } from "@kinetic/react";
 
 export default function App() {
   return <Switch>Enable notifications</Switch>;
@@ -22,7 +22,7 @@ export default function App() {
 In v3, Switch requires compound components:
 
 ```tsx
-import { Switch, Label } from "@heroui/react";
+import { Switch, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -187,7 +187,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Switch, Label, Description } from "@heroui/react";
+    import { Switch, Label, Description } from "@kinetic/react";
 
     <Switch>
       <Switch.Content>
@@ -293,7 +293,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { SwitchGroup } from "@heroui/react";
+    import { SwitchGroup } from "@kinetic/react";
 
     <SwitchGroup>
       <Switch name="notifications">

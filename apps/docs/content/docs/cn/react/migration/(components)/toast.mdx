@@ -1,10 +1,10 @@
 ---
 title: Toast
-description: Toast 从 HeroUI v2 到 v3 的迁移指南。
+description: Toast 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Toast 文档](/docs/react/components/toast)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Toast 文档](/docs/react/components/toast)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Toast 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Toast 采用 Provider + Hook 模式：
 
 ```tsx
-import { ToastProvider, useToast } from "@heroui/react";
+import { ToastProvider, useToast } from "@kinetic/react";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function MyComponent() {
 在 v3 中，Toast 改为 Provider 组件 + 全局 `toast()` 函数：
 
 ```tsx
-import { Toast } from "@heroui/react";
+import { Toast } from "@kinetic/react";
 
 function App() {
   return (
@@ -111,7 +111,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { toast } from "@heroui/react";
+    import { toast } from "@kinetic/react";
 
     toast.success("Success", {
       description: "Your changes have been saved"
@@ -135,7 +135,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { toast } from "@heroui/react";
+    import { toast } from "@kinetic/react";
 
     toast.success("Success");
     toast.danger("Error");
@@ -164,7 +164,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { toast } from "@heroui/react";
+    import { toast } from "@kinetic/react";
 
     const handleAsync = async () => {
       toast.promise(someAsyncOperation(), {
@@ -194,7 +194,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Toast, ToastContent, ToastTitle } from "@heroui/react";
+    import { Toast, ToastContent, ToastTitle } from "@kinetic/react";
 
     <Toast.Provider>
       {({ toast: toastItem }) => (

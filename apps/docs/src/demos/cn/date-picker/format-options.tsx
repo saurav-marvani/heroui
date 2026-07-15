@@ -1,6 +1,6 @@
 "use client";
 
-import type {TimeValue} from "@heroui/react";
+import type {TimeValue} from "@kinetic/react";
 import type {DateValue} from "@internationalized/date";
 
 import {
@@ -12,7 +12,7 @@ import {
   Select,
   Switch,
   TimeField,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {getLocalTimeZone, parseDate, parseZonedDateTime} from "@internationalized/date";
 import {useMemo, useState} from "react";
 

@@ -2,7 +2,7 @@
 
 import type {NativeQRPreviewTarget} from "./qr-preview-popover/target";
 
-import {cn} from "@heroui/react";
+import {cn} from "@kinetic/react";
 import {useTheme} from "next-themes";
 
 import {VideoPlayer} from "../video-player";

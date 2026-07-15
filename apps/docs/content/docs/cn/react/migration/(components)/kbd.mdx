@@ -1,10 +1,10 @@
 ---
 title: Kbd
-description: Kbd 从 HeroUI v2 到 v3 的迁移指南。
+description: Kbd 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Kbd 文档](/docs/react/components/kbd)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Kbd 文档](/docs/react/components/kbd)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Kbd 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Kbd 通过 `keys` prop 自动渲染键盘按键：
 
 ```tsx
-import { Kbd } from "@heroui/react";
+import { Kbd } from "@kinetic/react";
 
 export default function App() {
   return <Kbd keys={["command"]}>K</Kbd>;
@@ -22,7 +22,7 @@ export default function App() {
 在 v3 中，Kbd 改为复合组件，需要手动声明各个按键：
 
 ```tsx
-import { Kbd } from "@heroui/react";
+import { Kbd } from "@kinetic/react";
 
 export default function App() {
   return (

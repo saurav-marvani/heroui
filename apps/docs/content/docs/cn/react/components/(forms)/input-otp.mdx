@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { InputOTP } from '@heroui/react';
+import { InputOTP } from '@kinetic/react';
 ```
 
 ### 用法
@@ -23,7 +23,7 @@ import { InputOTP } from '@heroui/react';
 引入 InputOTP 后，可通过点语法访问各个部分。
 
 ```tsx
-import { InputOTP } from '@heroui/react';
+import { InputOTP } from '@kinetic/react';
 
 export default () => (
   <InputOTP maxLength={6}>
@@ -53,7 +53,7 @@ export default () => (
 
 ### 使用 pattern
 
-使用 `pattern` prop 限制可输入字符。HeroUI 会导出常用模式，例如 `REGEXP_ONLY_CHARS` 与 `REGEXP_ONLY_DIGITS`。
+使用 `pattern` prop 限制可输入字符。Kinetic 会导出常用模式，例如 `REGEXP_ONLY_CHARS` 与 `REGEXP_ONLY_DIGITS`。
 
 <ComponentPreview name="input-otp-with-pattern" />
 
@@ -103,7 +103,7 @@ InputOTP 支持两种视觉变体：
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import {InputOTP, Label} from '@heroui/react';
+import {InputOTP, Label} from '@kinetic/react';
 
 function CustomInputOTP() {
   return (
@@ -174,7 +174,7 @@ function CustomInputOTP() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于定制。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于定制。
 
 ### CSS 类
 
@@ -273,10 +273,10 @@ InputOTP 在 [input-otp](https://github.com/guilhermerodz/input-otp) 库之上�
 
 ### 导出的 pattern
 
-HeroUI 会为了方便而从 input-otp 再导出常用正则 pattern：
+Kinetic 会为了方便而从 input-otp 再导出常用正则 pattern：
 
 ```tsx
-import { REGEXP_ONLY_DIGITS, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS_AND_CHARS } from '@heroui/react';
+import { REGEXP_ONLY_DIGITS, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS_AND_CHARS } from '@kinetic/react';
 
 // Use with pattern prop
 <InputOTP pattern={REGEXP_ONLY_DIGITS} maxLength={6}>
