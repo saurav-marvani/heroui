@@ -11,7 +11,7 @@ export function XProfileDemo() {
           <Avatar size="sm">
             <Avatar.Image
               alt="Kinetic"
-              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/heroui_isotipo.png"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/kinetic_isotipo.png"
             />
             <Avatar.Fallback>H</Avatar.Fallback>
           </Avatar>

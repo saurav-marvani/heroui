@@ -11,7 +11,7 @@ export const revalidate = false;
 
 export async function GET(request: NextRequest) {
   await captureEvent({
-    event: "heroui_skill_installed",
+    event: "kinetic_skill_installed",
     properties: {
       city: request.headers.get("x-vercel-ip-city"),
       country: request.headers.get("x-vercel-ip-country"),

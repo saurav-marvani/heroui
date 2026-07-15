@@ -17,8 +17,8 @@ import {KineticPlainLogo} from "../kinetic-plain-logo";
  * coming via Universal Links / App Links). For our custom-scheme URLs it
  * returns the path unchanged and Expo Router routes it natively, which means
  * the URL must already encode the in-app route — i.e.
- * `herouinative://components/{slug}` becomes `/components/{slug}` and
- * `herouinative://` opens the initial route.
+ * `kineticnative://components/{slug}` becomes `/components/{slug}` and
+ * `kineticnative://` opens the initial route.
  */
 const IN_APP_COMPONENT_PATH = "components";
 
@@ -28,9 +28,9 @@ const IN_APP_COMPONENT_PATH = "components";
  *
  * Examples:
  *  - `https://kinetic-ui.com/docs/native-showcase/components/button` ->
- *    `herouinative://components/button`
+ *    `kineticnative://components/button`
  *  - `https://kinetic-ui.com/docs/native-showcase/components/`       ->
- *    `herouinative://`  (open at the app's initial route)
+ *    `kineticnative://`  (open at the app's initial route)
  *  - `""` (origin not yet resolved on the client) -> `""`
  */
 function toCustomSchemeUrl(universalLinkUrl: string): string {
@@ -81,7 +81,7 @@ export const DeepLinkQRCode = ({size = 160, url}: DeepLinkQRCodeProps) => {
     // trigger iOS's app handoff — Safari treats it as an in-page navigation.
     // So on mobile we fire the custom URL scheme directly, encoded in the
     // shape Expo Router's deep-link handler expects:
-    // `herouinative://components/{slug}` (or `herouinative://` for home).
+    // `kineticnative://components/{slug}` (or `kineticnative://` for home).
     // The native app's `+native-intent.ts` deliberately only rewrites
     // `https:` URLs and returns custom-scheme paths unchanged, so the URL
     // itself must already be in the in-app route format.

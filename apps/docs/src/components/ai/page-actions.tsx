@@ -72,7 +72,7 @@ export function ViewOptions({markdownUrl}: {markdownUrl: string}) {
       },
       {
         description: dict.items.vscode.description,
-        href: "vscode:mcp/install?%7B%22name%22%3A%22kinetic-react%22%2C%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40heroui%2Freact-mcp%40latest%22%5D%7D",
+        href: "vscode:mcp/install?%7B%22name%22%3A%22kinetic-react%22%2C%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40kinetic%2Freact-mcp%40latest%22%5D%7D",
         icon: <VSCodeIcon size={18} />,
         key: "vscode",
         title: dict.items.vscode.title,

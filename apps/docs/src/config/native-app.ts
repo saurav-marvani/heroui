@@ -29,7 +29,7 @@ export const NATIVE_APP = {
    * automatically when this is `null`. When the Play Store listing goes live,
    * paste its URL here and both surfaces re-enable with no other code changes.
    */
-  PLAY_STORE_URL: "https://play.google.com/store/apps/details?id=com.herouinative.android",
+  PLAY_STORE_URL: "https://play.google.com/store/apps/details?id=com.kineticnative.android",
   /**
    * Custom URL scheme registered by the native app. Used by the in-page
    * "Open in app" tap link on mobile to bypass iOS's same-domain Safari
@@ -39,7 +39,7 @@ export const NATIVE_APP = {
    * The scheme path mirrors the Universal Link path so the native app's
    * `+native-intent` handler can route both transparently.
    */
-  SCHEME: "herouinative",
+  SCHEME: "kineticnative",
   /**
    * URL path prefix used by the docs app to serve the web fallback for
    * `/docs/native-showcase/components/{slug}` Universal Links. The same prefix

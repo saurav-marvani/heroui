@@ -116,7 +116,7 @@ const tools: WebMCPTool[] = [
       required: ["query"],
       type: "object",
     },
-    name: "search_heroui_docs",
+    name: "search_kinetic_docs",
   },
   {
     description: "Retrieve a Kinetic documentation page as markdown by same-origin docs URL.",
@@ -139,7 +139,7 @@ const tools: WebMCPTool[] = [
       required: ["url"],
       type: "object",
     },
-    name: "get_heroui_doc",
+    name: "get_kinetic_doc",
   },
   {
     description:
@@ -165,7 +165,7 @@ const tools: WebMCPTool[] = [
       required: ["url"],
       type: "object",
     },
-    name: "navigate_heroui",
+    name: "navigate_kinetic",
   },
   {
     description: "List Kinetic component documentation pages for React or Native.",
