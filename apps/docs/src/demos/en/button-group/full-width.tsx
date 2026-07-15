@@ -1,5 +1,5 @@
 import {TextAlignCenter, TextAlignLeft, TextAlignRight} from "@gravity-ui/icons";
-import {Button, ButtonGroup} from "@heroui/react";
+import {Button, ButtonGroup} from "@kinetic/react";
 
 export function FullWidth() {
   return (

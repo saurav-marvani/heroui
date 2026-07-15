@@ -1,10 +1,10 @@
 ---
 title: Spinner
-description: Spinner 从 HeroUI v2 到 v3 的迁移指南。
+description: Spinner 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Spinner 文档](/docs/react/components/spinner)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Spinner 文档](/docs/react/components/spinner)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Spinner 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Spinner 支持多种变体与标签：
 
 ```tsx
-import { Spinner } from "@heroui/react";
+import { Spinner } from "@kinetic/react";
 
 export default function App() {
   return <Spinner variant="default" label="Loading..." color="primary" />;
@@ -22,7 +22,7 @@ export default function App() {
 在 v3 中，Spinner 已简化为单一圆形变体：
 
 ```tsx
-import { Spinner } from "@heroui/react";
+import { Spinner } from "@kinetic/react";
 
 export default function App() {
   return <Spinner color="accent" />;

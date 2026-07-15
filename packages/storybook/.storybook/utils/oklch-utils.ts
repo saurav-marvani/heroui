@@ -121,7 +121,7 @@ export function adjustGrayChroma(baseChroma: number, grayAmount: number): number
 }
 
 /**
- * List of CSS color variable names that use Oklch values in HeroUI
+ * List of CSS color variable names that use Oklch values in Kinetic
  */
 export const COLOR_VARIABLES = [
   // Primitive colors

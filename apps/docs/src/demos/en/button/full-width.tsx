@@ -1,5 +1,5 @@
 import {Plus} from "@gravity-ui/icons";
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 
 export function FullWidth() {
   return (

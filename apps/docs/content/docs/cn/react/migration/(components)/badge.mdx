@@ -1,10 +1,10 @@
 ---
 title: Badge
-description: Badge 从 HeroUI v2 到 v3 的迁移指南。
+description: Badge 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Badge 文档](/docs/react/components/badge)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Badge 文档](/docs/react/components/badge)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Badge 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，`Badge` 是一个包装组件，相对其子元素进行内容定位：
 
 ```tsx
-import { Badge, Avatar } from "@heroui/react";
+import { Badge, Avatar } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
 在 v3 中，Badge 改为复合组件模式，由 `Badge.Anchor` 负责定位：
 
 ```tsx
-import { Badge, Avatar } from "@heroui/react";
+import { Badge, Avatar } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -104,7 +104,7 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Badge, Avatar } from "@heroui/react";
+    import { Badge, Avatar } from "@kinetic/react";
 
     <Badge content="5" color="primary">
       <Avatar src="https://i.pravatar.cc/300" />
@@ -113,7 +113,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Badge, Avatar } from "@heroui/react";
+    import { Badge, Avatar } from "@kinetic/react";
 
     <Badge.Anchor>
       <Avatar>

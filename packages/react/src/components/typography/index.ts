@@ -30,6 +30,6 @@ export type {
   TypographyRootProps as TypographyProps,
 } from "./typography";
 
-export {typographyVariants} from "@heroui/styles";
+export {typographyVariants} from "@kinetic/styles";
 
-export type {TypographyVariants} from "@heroui/styles";
+export type {TypographyVariants} from "@kinetic/styles";

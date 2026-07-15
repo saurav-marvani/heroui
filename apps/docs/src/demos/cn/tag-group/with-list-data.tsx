@@ -1,8 +1,8 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
-import {Avatar, Description, EmptyState, Label, Tag, TagGroup, useListData} from "@heroui/react";
+import {Avatar, Description, EmptyState, Label, Tag, TagGroup, useListData} from "@kinetic/react";
 
 export function TagGroupWithListData() {
   type User = {
@@ -16,37 +16,37 @@ export function TagGroupWithListData() {
     getKey: (item) => item.id,
     initialItems: [
       {
-        avatar: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
+        avatar: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
         fallback: "F",
         id: "fred",
         name: "Fred",
       },
       {
-        avatar: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
+        avatar: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
         fallback: "M",
         id: "michael",
         name: "Michael",
       },
       {
-        avatar: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
+        avatar: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
         fallback: "J",
         id: "jane",
         name: "Jane",
       },
       {
-        avatar: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
+        avatar: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
         fallback: "A",
         id: "alice",
         name: "Alice",
       },
       {
-        avatar: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
+        avatar: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
         fallback: "B",
         id: "bob",
         name: "Bob",
       },
       {
-        avatar: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/black.jpg",
+        avatar: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/black.jpg",
         fallback: "C",
         id: "charlie",
         name: "Charlie",

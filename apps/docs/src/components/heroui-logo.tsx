@@ -1,11 +1,11 @@
-interface HeroUILogoProps {
+interface KineticLogoProps {
   className?: string;
   size?: number;
   height?: number;
   width?: number;
 }
 
-export function HeroUILogo({className, height, size = 26, width}: HeroUILogoProps) {
+export function KineticLogo({className, height, size = 26, width}: KineticLogoProps) {
   // Calculate dimensions based on original aspect ratio (140:44)
   const aspectRatio = 140 / 44;
   const svgHeight = height || size;
@@ -57,7 +57,7 @@ export function HeroUILogo({className, height, size = 26, width}: HeroUILogoProp
           width: "1px",
         }}
       >
-        HeroUI
+        Kinetic
       </span>
     </>
   );

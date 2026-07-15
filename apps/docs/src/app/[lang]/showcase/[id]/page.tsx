@@ -34,13 +34,13 @@ export async function generateMetadata({params}: ShowcasePageProps): Promise<Met
     alternates: {
       canonical: `/${lang}/showcase/${id}`,
     },
-    description: `Interactive demo of ${showcase.name} built with HeroUI components.`,
+    description: `Interactive demo of ${showcase.name} built with Kinetic components.`,
     openGraph: {
-      description: `Interactive demo of ${showcase.name} built with HeroUI components.`,
-      title: `${showcase.name} - HeroUI Showcase`,
+      description: `Interactive demo of ${showcase.name} built with Kinetic components.`,
+      title: `${showcase.name} - Kinetic Showcase`,
       url: `/${lang}/showcase/${id}`,
     },
-    title: `${showcase.name} - HeroUI Showcase`,
+    title: `${showcase.name} - Kinetic Showcase`,
   };
 }
 

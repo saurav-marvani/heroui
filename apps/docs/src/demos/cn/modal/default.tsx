@@ -1,7 +1,7 @@
 "use client";
 
 import {Rocket} from "@gravity-ui/icons";
-import {Button, Modal} from "@heroui/react";
+import {Button, Modal} from "@kinetic/react";
 
 export function Default() {
   return (
@@ -15,7 +15,7 @@ export function Default() {
               <Modal.Icon className="bg-default text-foreground">
                 <Rocket className="size-5" />
               </Modal.Icon>
-              <Modal.Heading>欢迎使用 HeroUI</Modal.Heading>
+              <Modal.Heading>欢迎使用 Kinetic</Modal.Heading>
             </Modal.Header>
             <Modal.Body>
               <p>一套美观、快速、现代的 React UI 库，可轻松构建无障碍且高度可定制的 Web 应用。</p>

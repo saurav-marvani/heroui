@@ -1,4 +1,4 @@
-import {Description, FieldError, Input, Label, TextField} from "@heroui/react";
+import {Description, FieldError, Input, Label, TextField} from "@kinetic/react";
 import React from "react";
 
 export function TextfieldDemo() {

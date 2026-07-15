@@ -1,14 +1,14 @@
 "use client";
 
-import type {ScrollShadowVisibility} from "@heroui/react";
+import type {ScrollShadowVisibility} from "@kinetic/react";
 
-import {Card, ScrollShadow} from "@heroui/react";
+import {Card, ScrollShadow} from "@kinetic/react";
 import {useState} from "react";
 
 const images = [
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/robot1.jpeg",
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/avocado.jpeg",
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/oranges.jpeg",
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/robot1.jpeg",
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/avocado.jpeg",
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/oranges.jpeg",
 ];
 
 const VISIBILITY_LABELS: Record<ScrollShadowVisibility, string> = {

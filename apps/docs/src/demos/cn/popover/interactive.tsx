@@ -1,6 +1,6 @@
 "use client";
 
-import {Avatar, Button, Popover} from "@heroui/react";
+import {Avatar, Button, Popover} from "@kinetic/react";
 import {useState} from "react";
 
 export function PopoverInteractive() {
@@ -14,7 +14,7 @@ export function PopoverInteractive() {
             <Avatar size="sm">
               <Avatar.Image
                 alt="Sarah Johnson"
-                src="https://img.heroui.chat/image/avatar?w=400&h=400&u=1"
+                src="https://img.kinetic.chat/image/avatar?w=400&h=400&u=1"
               />
               <Avatar.Fallback>SJ</Avatar.Fallback>
             </Avatar>
@@ -32,7 +32,7 @@ export function PopoverInteractive() {
                   <Avatar size="md">
                     <Avatar.Image
                       alt="Sarah Johnson"
-                      src="https://img.heroui.chat/image/avatar?w=400&h=400&u=1"
+                      src="https://img.kinetic.chat/image/avatar?w=400&h=400&u=1"
                     />
                     <Avatar.Fallback>SJ</Avatar.Fallback>
                   </Avatar>

@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, InputOTP, Label} from "@heroui/react";
+import {Description, InputOTP, Label} from "@kinetic/react";
 import React from "react";
 
 export function Controlled() {

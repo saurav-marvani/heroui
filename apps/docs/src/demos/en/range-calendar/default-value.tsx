@@ -1,6 +1,6 @@
 "use client";
 
-import {RangeCalendar} from "@heroui/react";
+import {RangeCalendar} from "@kinetic/react";
 import {parseDate} from "@internationalized/date";
 
 export function DefaultValue() {

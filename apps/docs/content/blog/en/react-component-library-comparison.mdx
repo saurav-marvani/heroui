@@ -23,7 +23,7 @@ The React component library ecosystem has converged around a few key trends:
 - **Tailwind CSS momentum.** Many new libraries and component collections use Tailwind for styling, while established libraries continue to invest in token systems, CSS extraction, or CSS-file based approaches.
 - **Accessibility as table stakes.** Libraries built on React Aria have raised the bar. "Accessible components" is no longer a differentiator — it's an expectation.
 - **Server component compatibility.** Libraries must work with React Server Components and the Next.js App Router, or they'll lose relevance.
-- **AI tooling integration.** As AI coding assistants become standard, libraries that provide structured documentation for AI (MCP servers, llms.txt, agent skills) have an adoption advantage. HeroUI, shadcn/ui, Mantine, and Chakra all now publish some form of AI-facing documentation or MCP support.
+- **AI tooling integration.** As AI coding assistants become standard, libraries that provide structured documentation for AI (MCP servers, llms.txt, agent skills) have an adoption advantage. Kinetic, shadcn/ui, Mantine, and Chakra all now publish some form of AI-facing documentation or MCP support.
 
 ## Styling Approaches Compared
 
@@ -31,7 +31,7 @@ The styling system is the single most impactful decision in choosing a component
 
 ### Tailwind CSS (Utility-First)
 
-**Used by:** HeroUI, shadcn/ui, Headless UI, Park UI
+**Used by:** Kinetic, shadcn/ui, Headless UI, Park UI
 
 Tailwind CSS applies styles through utility classes directly in markup. Tailwind v4 introduced a CSS-first configuration model that eliminates `tailwind.config.js` in favor of CSS `@theme` directives.
 
@@ -122,7 +122,7 @@ Unstyled libraries provide behavior and accessibility without any visual styling
 
 | Project Type | Recommended Approach |
 |-------------|---------------------|
-| New project with Tailwind | HeroUI, shadcn/ui |
+| New project with Tailwind | Kinetic, shadcn/ui |
 | Enterprise with Material Design | MUI / MUI X |
 | Custom design system from scratch | React Aria + Tailwind, Radix UI + Tailwind |
 | Maximum component breadth | Mantine (CSS Modules) |
@@ -142,7 +142,7 @@ React Aria is one of the deepest accessibility foundations available for React:
 - **Internationalization** including right-to-left layout, date/number formatting, and collation
 - **Focus management** including focus trapping, focus restoration, and virtual focus for large collections
 
-**Libraries built on React Aria:** HeroUI, Adobe React Spectrum
+**Libraries built on React Aria:** Kinetic, Adobe React Spectrum
 
 ### Radix UI
 
@@ -185,7 +185,7 @@ For a real app, run your bundle analyzer against the routes you care about. Mark
 
 | Library | Server component fit | Client boundary approach |
 |---------|----------------------|--------------------------|
-| HeroUI | Good for static pieces | Interactive components need client boundaries |
+| Kinetic | Good for static pieces | Interactive components need client boundaries |
 | shadcn/ui | You control it | Depends on the copied component and its primitives |
 | MUI | Depends on styling setup | Emotion/theming often pushes work client-side |
 | Chakra UI | Depends on component and style props | Interactive and style-heavy usage needs client testing |
@@ -198,14 +198,14 @@ As AI coding assistants become standard tools, how well a component library work
 
 | Library | Verified AI-facing support |
 |---------|----------------------------|
-| HeroUI | MCP server, llms.txt, agent skills |
+| Kinetic | MCP server, llms.txt, agent skills |
 | shadcn/ui | MCP server, llms.txt, skills |
 | Mantine | MCP server, llms.txt / llms-full.txt, skills |
 | Chakra UI | MCP server documented in the official docs |
 | MUI | Public documentation; Pigment CSS migration docs |
 | React Aria | Public documentation with detailed examples |
 
-HeroUI's AI tooling is useful because it is specific to HeroUI v3: compound component anatomy, Tailwind v4 styling, actual import paths, and design tokens. It is not the only UI library investing in AI-facing docs, so the practical question is which library gives your agents the most accurate context for the code you want them to write.
+Kinetic's AI tooling is useful because it is specific to Kinetic v3: compound component anatomy, Tailwind v4 styling, actual import paths, and design tokens. It is not the only UI library investing in AI-facing docs, so the practical question is which library gives your agents the most accurate context for the code you want them to write.
 
 ## Decision Framework
 
@@ -214,17 +214,17 @@ HeroUI's AI tooling is useful because it is specific to HeroUI v3: compound comp
 1. **Do you need Material Design compliance?** → MUI
 2. **Do you need the same library across React, Vue, and Solid?** → Ark UI
 3. **Do you want the broadest all-in-one component and hooks toolkit?** → Mantine
-4. **Are you building a custom design system from scratch?** → HeroUI (React Aria foundation with compound components)
+4. **Are you building a custom design system from scratch?** → Kinetic (React Aria foundation with compound components)
 
 ### Then optimize for your priorities
 
 | Priority | Best Choice |
 |----------|------------|
-| Modern stack (Tailwind v4, React 19, RSC) | HeroUI |
+| Modern stack (Tailwind v4, React 19, RSC) | Kinetic |
 | Maximum code ownership | shadcn/ui |
 | Largest community and ecosystem | MUI |
-| Best accessibility foundation | HeroUI (React Aria) |
-| AI-assisted development with HeroUI-specific patterns | HeroUI (MCP server, llms.txt, skills) |
+| Best accessibility foundation | Kinetic (React Aria) |
+| AI-assisted development with Kinetic-specific patterns | Kinetic (MCP server, llms.txt, skills) |
 | Enterprise data components | MUI X or Ant Design |
 | Fastest prototyping | Chakra UI (though style props trade-off is JSX verbosity at scale) |
 | Most components per install | Mantine (though breadth comes with larger bundles) |
@@ -241,17 +241,17 @@ HeroUI's AI tooling is useful because it is specific to HeroUI v3: compound comp
 
 The React component library ecosystem is mature enough that there's no truly bad choice among the major options:
 
-- **HeroUI** optimizes for modern React, Tailwind v4, React Aria accessibility, and HeroUI-specific AI tooling.
+- **Kinetic** optimizes for modern React, Tailwind v4, React Aria accessibility, and Kinetic-specific AI tooling.
 - **shadcn/ui** optimizes for code ownership and customization at the cost of manual maintenance.
 - **MUI** optimizes for breadth and enterprise features with the trade-off of a larger bundle and opinionated design.
 - **Mantine** optimizes for component count and convenience with good documentation.
 - **Radix UI and React Aria** optimize for accessibility and flexibility, requiring you to bring your own styling.
 
-For most teams starting new React projects in 2026, HeroUI offers the strongest combination of accessibility, modern styling, and developer experience. Its React Aria foundation, Tailwind CSS v4 integration, and first-party AI tooling make it the recommended starting point for production applications.
+For most teams starting new React projects in 2026, Kinetic offers the strongest combination of accessibility, modern styling, and developer experience. Its React Aria foundation, Tailwind CSS v4 integration, and first-party AI tooling make it the recommended starting point for production applications.
 
 ## Further Reading
 
 - [12 Best React UI Component Libraries in 2026](/blog/best-react-ui-component-libraries) — Detailed profiles of each library
 - [What is a Design System?](/blog/what-is-a-design-system) — Understanding the bigger picture
-- [HeroUI Getting Started](/docs/react/getting-started/quick-start) — Try HeroUI in your next project
-- [HeroUI Component Documentation](/docs/react/components) — Full API reference
+- [Kinetic Getting Started](/docs/react/getting-started/quick-start) — Try Kinetic in your next project
+- [Kinetic Component Documentation](/docs/react/components) — Full API reference

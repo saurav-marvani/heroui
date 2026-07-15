@@ -1,13 +1,13 @@
 ---
 title: 主题
-description: 使用 CSS 变量与全局样式定制 HeroUI Native 设计系统
+description: 使用 CSS 变量与全局样式定制 Kinetic Native 设计系统
 icon: palette
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI Native 使用 CSS 变量实现主题化，可用标准 CSS 覆盖从颜色到组件样式的一切。
+Kinetic Native 使用 CSS 变量实现主题化，可用标准 CSS 覆盖从颜色到组件样式的一切。
 
 ## 工作原理
 
@@ -32,7 +32,7 @@ import { View, Text } from 'react-native';
 
 **切换主题：**
 
-通过 [Uniwind](https://docs.uniwind.dev/theming/basics)，HeroUI Native 自动支持深色模式；可跟随系统，也可手动切换明暗变体：
+通过 [Uniwind](https://docs.uniwind.dev/theming/basics)，Kinetic Native 自动支持深色模式；可跟随系统，也可手动切换明暗变体：
 
 ```tsx
 import { Uniwind, useUniwind } from 'uniwind';
@@ -295,7 +295,7 @@ import { View, Text } from 'react-native';
 
 ```tsx
 import { useFonts } from 'expo-font';
-import { HeroUINativeProvider } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
 import {
   YourFont_400Regular,
   YourFont_500Medium,
@@ -313,7 +313,7 @@ export default function App() {
     return null; // Or return a loading screen
   }
 
-  return <HeroUINativeProvider>{/* Your app content */}</HeroUINativeProvider>;
+  return <KineticNativeProvider>{/* Your app content */}</KineticNativeProvider>;
 }
 ```
 
@@ -331,11 +331,11 @@ export default function App() {
 
 **说明：** CSS 变量中的字体名应与已加载字体的 PostScript 名称一致。请查阅字体包文档，或直接使用 `useFonts` 中出现的名称。
 
-所有 HeroUI Native 组件会自动使用这些字体变量，以保持排版一致。
+所有 Kinetic Native 组件会自动使用这些字体变量，以保持排版一致。
 
 ## 变量参考
 
-HeroUI 定义三类变量：
+Kinetic 定义三类变量：
 
 1. **基础变量** — 如 `--white`、`--black` 等不随主题切换的值
 2. **主题变量** — 随明暗主题切换的颜色
@@ -469,7 +469,7 @@ HeroUI 定义三类变量：
 
 ## 鲜亮配色
 
-默认情况下，HeroUI Native 使用可读性更好的柔和前景色，即将语义色与前景色按比例混合，以在 soft 背景上获得更佳对比度。如果你偏好饱和度更高、更鲜亮的柔和前景色，可以在引入基础样式之后，额外导入可选的 `heroui-native/styles/vibrant` 样式：
+默认情况下，Kinetic Native 使用可读性更好的柔和前景色，即将语义色与前景色按比例混合，以在 soft 背景上获得更佳对比度。如果你偏好饱和度更高、更鲜亮的柔和前景色，可以在引入基础样式之后，额外导入可选的 `heroui-native/styles/vibrant` 样式：
 
 ```css
 /* global.css */

@@ -2,11 +2,11 @@
 
 import type {DOMRenderProps} from "../../utils/dom";
 import type {SurfaceVariants} from "../surface";
-import type {DatePickerVariants} from "@heroui/styles";
+import type {DatePickerVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {DateValue} from "react-aria-components/Calendar";
 
-import {datePickerVariants} from "@heroui/styles";
+import {datePickerVariants} from "@kinetic/styles";
 import {mergeRefs} from "@react-aria/utils";
 import React, {createContext, use, useEffect, useRef} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
@@ -94,7 +94,7 @@ const DatePickerRoot = <T extends DateValue>({
   );
 };
 
-DatePickerRoot.displayName = "HeroUI.DatePicker";
+DatePickerRoot.displayName = "Kinetic.DatePicker";
 
 /* -------------------------------------------------------------------------------------------------
  * DatePicker Trigger
@@ -124,7 +124,7 @@ const DatePickerTrigger = ({children, className, ref, ...props}: DatePickerTrigg
   );
 };
 
-DatePickerTrigger.displayName = "HeroUI.DatePicker.Trigger";
+DatePickerTrigger.displayName = "Kinetic.DatePicker.Trigger";
 
 /* -------------------------------------------------------------------------------------------------
  * DatePicker Trigger Indicator
@@ -156,7 +156,7 @@ const DatePickerTriggerIndicator = <E extends keyof React.JSX.IntrinsicElements 
   );
 };
 
-DatePickerTriggerIndicator.displayName = "HeroUI.DatePicker.TriggerIndicator";
+DatePickerTriggerIndicator.displayName = "Kinetic.DatePicker.TriggerIndicator";
 
 /* -------------------------------------------------------------------------------------------------
  * DatePicker Popover
@@ -194,7 +194,7 @@ const DatePickerPopover = ({
   );
 };
 
-DatePickerPopover.displayName = "HeroUI.DatePicker.Popover";
+DatePickerPopover.displayName = "Kinetic.DatePicker.Popover";
 
 /* -------------------------------------------------------------------------------------------------
  * Exports

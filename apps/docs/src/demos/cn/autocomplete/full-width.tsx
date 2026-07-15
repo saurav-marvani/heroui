@@ -1,6 +1,6 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
 import {
   Autocomplete,
@@ -10,7 +10,7 @@ import {
   SearchField,
   Surface,
   useFilter,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {useState} from "react";
 
 export function FullWidth() {

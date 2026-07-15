@@ -5,7 +5,7 @@
 @import "tailwindcss";
 @import "fumadocs-ui/css/black.css";
 @import "fumadocs-ui/css/preset.css";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 @import "../styles/theme-presets.css";
 
 @keyframes float-stars {
@@ -89,10 +89,10 @@
 }
 
 /* ============================================================================
-   HEROUI COMPONENT OVERRIDES
+   KINETIC COMPONENT OVERRIDES
    ============================================================================ */
 
-/* HeroUI Component Style Overrides */
+/* Kinetic Component Style Overrides */
 /* @utility button {
   @apply rounded-sm;
 } */

@@ -1,6 +1,6 @@
 ---
-title: "HeroUI vs shadcn/ui: Which React UI Library Should You Choose in 2026?"
-description: "A comprehensive comparison of HeroUI and shadcn/ui — two popular React component libraries with very different approaches to styling, ownership, and developer experience."
+title: "Kinetic vs shadcn/ui: Which React UI Library Should You Choose in 2026?"
+description: "A comprehensive comparison of Kinetic and shadcn/ui — two popular React component libraries with very different approaches to styling, ownership, and developer experience."
 date: "2026-05-07"
 author: "Junior Garcia"
 authorHandle: "@jrgarciadev"
@@ -11,14 +11,14 @@ image: "/images/blog/heroui-vs-shadcn.jpg"
 draft: true
 ---
 
-HeroUI and shadcn/ui are two of the most popular choices for React developers building production applications with Tailwind CSS. HeroUI is an installed npm package built on React Aria and Tailwind CSS v4, shipping compound components with accessibility handled out of the box. shadcn/ui is a copy-paste component collection built on Radix UI. Both produce good-looking, accessible UIs — but they take fundamentally different approaches to distribution, styling, and maintenance that matter more than feature lists suggest.
+Kinetic and shadcn/ui are two of the most popular choices for React developers building production applications with Tailwind CSS. Kinetic is an installed npm package built on React Aria and Tailwind CSS v4, shipping compound components with accessibility handled out of the box. shadcn/ui is a copy-paste component collection built on Radix UI. Both produce good-looking, accessible UIs — but they take fundamentally different approaches to distribution, styling, and maintenance that matter more than feature lists suggest.
 
 This isn't a "which is better" article. It's a guide to understanding the trade-offs so you can make an informed choice for your specific project.
 
 
 ## The TL;DR
 
-| Feature | HeroUI | shadcn/ui |
+| Feature | Kinetic | shadcn/ui |
 |---------|--------|-----------|
 | **Model** | Installed npm package | Copy-paste source code |
 | **Styling** | Tailwind CSS v4 (static CSS) | Tailwind CSS + cva |
@@ -30,7 +30,7 @@ This isn't a "which is better" article. It's a guide to understanding the trade-
 
 ## The Fundamental Difference
 
-**HeroUI** is a traditional component library. You install `@heroui/react`, import components, and use them. Updates come through npm. The library team maintains the components, fixes bugs, and adds features. You customize through props, slots, and Tailwind classes.
+**Kinetic** is a traditional component library. You install `@kinetic/react`, import components, and use them. Updates come through npm. The library team maintains the components, fixes bugs, and adds features. You customize through props, slots, and Tailwind classes.
 
 **shadcn/ui** is a component collection. You run `npx shadcn@latest add button`, and the component source code is copied into your project. There's no runtime dependency on shadcn. You own the code completely. Updates require manually re-running the CLI or copying changes.
 
@@ -38,17 +38,17 @@ This distinction drives every other difference between the two.
 
 ## Architecture
 
-### HeroUI: Installed Package
+### Kinetic: Installed Package
 
 ```bash
-npm install @heroui/styles @heroui/react
+npm install @kinetic/styles @kinetic/react
 ```
 
 ```tsx
-import { Button, Card, Table } from "@heroui/react";
+import { Button, Card, Table } from "@kinetic/react";
 ```
 
-HeroUI components live in `node_modules`. You import and use them like any other package. The library handles:
+Kinetic components live in `node_modules`. You import and use them like any other package. The library handles:
 
 - Component implementation and behavior
 - Accessibility (built on React Aria)
@@ -72,9 +72,9 @@ This creates a file like `components/ui/button.tsx` in your project. The compone
 
 This is where the libraries diverge significantly.
 
-### HeroUI: React Aria Foundation
+### Kinetic: React Aria Foundation
 
-HeroUI is built on [React Aria](https://react-spectrum.adobe.com/react-aria/), Adobe's accessibility primitive library. React Aria is one of the deepest accessibility foundations available in the React ecosystem:
+Kinetic is built on [React Aria](https://react-spectrum.adobe.com/react-aria/), Adobe's accessibility primitive library. React Aria is one of the deepest accessibility foundations available in the React ecosystem:
 
 - **Platform-aware keyboard navigation.** Mac, Windows, and Linux have different conventions for keyboard shortcuts. React Aria handles these differences automatically — Home/End keys, option/alt+arrow navigation, and platform-specific focus behavior.
 - **Screen reader announcements.** Live regions, status messages, and announcements are handled correctly across JAWS, NVDA, and VoiceOver.
@@ -82,7 +82,7 @@ HeroUI is built on [React Aria](https://react-spectrum.adobe.com/react-aria/), A
 - **Internationalization.** Right-to-left layout support, locale-aware date/number formatting, and string collation.
 - **Virtual focus.** For large collections (thousands of items), React Aria uses virtual focus to maintain performance while keeping screen readers informed.
 
-This level of accessibility is baked into every HeroUI component. You don't configure it — it's just there.
+This level of accessibility is baked into every Kinetic component. You don't configure it — it's just there.
 
 ### shadcn/ui: Radix UI Foundation
 
@@ -101,15 +101,15 @@ Radix is well-tested and reliable. However, it doesn't go as deep as React Aria 
 
 ### Verdict
 
-If accessibility compliance is a hard requirement (government, healthcare, finance, education), HeroUI's React Aria foundation gives you stronger guarantees with less effort. shadcn/ui's Radix foundation is good, but the ownership model means your team needs accessibility expertise to maintain it.
+If accessibility compliance is a hard requirement (government, healthcare, finance, education), Kinetic's React Aria foundation gives you stronger guarantees with less effort. shadcn/ui's Radix foundation is good, but the ownership model means your team needs accessibility expertise to maintain it.
 
 ## Styling
 
 Both libraries use Tailwind CSS, but the styling architectures differ.
 
-### HeroUI: CSS Classes + Design Tokens
+### Kinetic: CSS Classes + Design Tokens
 
-HeroUI v3 ships CSS-based component styles with semantic variants and BEM-style class names. You use components through props like `variant`, then customize with Tailwind classes and CSS custom properties:
+Kinetic v3 ships CSS-based component styles with semantic variants and BEM-style class names. You use components through props like `variant`, then customize with Tailwind classes and CSS custom properties:
 
 ```tsx
 <Button variant="secondary" size="lg">
@@ -124,7 +124,7 @@ Customization happens at multiple levels:
 3. **Component CSS overrides:** Override BEM classes like `.button`, `.card__header`, or `.table__row` in your CSS layer
 4. **Theme-level changes:** Modify design tokens in your CSS to change the global look
 
-HeroUI uses CSS custom properties for its design tokens, which means theming works with standard CSS — no JavaScript runtime needed.
+Kinetic uses CSS custom properties for its design tokens, which means theming works with standard CSS — no JavaScript runtime needed.
 
 ### shadcn/ui: Direct Source Editing
 
@@ -154,13 +154,13 @@ This is maximally flexible — you can change anything. But it also means you ne
 
 ### Verdict
 
-HeroUI's approach is better for teams that want a consistent design system with minimal maintenance. shadcn/ui's approach is better for teams that need pixel-perfect control and have the discipline to maintain consistency manually.
+Kinetic's approach is better for teams that want a consistent design system with minimal maintenance. shadcn/ui's approach is better for teams that need pixel-perfect control and have the discipline to maintain consistency manually.
 
 ## Component Count and Breadth
 
-### HeroUI
+### Kinetic
 
-HeroUI includes a broad component set, including complex pieces that are easy to get wrong:
+Kinetic includes a broad component set, including complex pieces that are easy to get wrong:
 
 - Calendar, DatePicker, DateRangePicker
 - ComboBox, Autocomplete
@@ -189,15 +189,15 @@ For complex components like Calendar and DataTable, shadcn/ui wraps third-party 
 
 ### Verdict
 
-HeroUI has more complex, self-contained components (especially date/time, color, and number handling). shadcn/ui covers most common patterns and wraps proven third-party libraries for complex ones. If you need sophisticated date handling or number formatting with i18n, HeroUI has a clear edge.
+Kinetic has more complex, self-contained components (especially date/time, color, and number handling). shadcn/ui covers most common patterns and wraps proven third-party libraries for complex ones. If you need sophisticated date handling or number formatting with i18n, Kinetic has a clear edge.
 
 ## Developer Experience
 
 ### Installation and Setup
 
-**HeroUI:**
+**Kinetic:**
 ```bash
-npm install @heroui/styles @heroui/react
+npm install @kinetic/styles @kinetic/react
 ```
 
 Add the CSS import and you're ready. One package, one import path, one set of docs.
@@ -212,7 +212,7 @@ Each component is added individually. You choose which components to include. Th
 
 ### Updates
 
-**HeroUI:** Run `npm update @heroui/react`. All components update together. Breaking changes are documented in release notes.
+**Kinetic:** Run `npm update @kinetic/react`. All components update together. Breaking changes are documented in release notes.
 
 **shadcn/ui:** There's no automatic update mechanism. To get improvements, you either re-run `npx shadcn@latest add` (which may overwrite your changes) or manually compare and merge upstream changes.
 
@@ -220,28 +220,28 @@ This is shadcn/ui's biggest practical trade-off. Ownership means responsibility 
 
 ### AI Tooling
 
-**HeroUI** ships first-party AI tooling:
+**Kinetic** ships first-party AI tooling:
 - **MCP server** that lets AI assistants query component APIs, view source code, and access design tokens
 - **llms.txt** providing structured component documentation for AI models
-- **Agent skills** that teach AI assistants how to use HeroUI correctly
+- **Agent skills** that teach AI assistants how to use Kinetic correctly
 
-This means when you use HeroUI with Cursor, Claude, or other AI coding tools, the assistant can look up current component APIs instead of guessing props and imports from training data.
+This means when you use Kinetic with Cursor, Claude, or other AI coding tools, the assistant can look up current component APIs instead of guessing props and imports from training data.
 
-**shadcn/ui** also has a serious AI story. Its official docs publish `llms.txt`, skills, and an MCP server. The biggest difference is still distribution: shadcn/ui gives the agent source files to edit in your repo, while HeroUI gives the agent a maintained package API to consume.
+**shadcn/ui** also has a serious AI story. Its official docs publish `llms.txt`, skills, and an MCP server. The biggest difference is still distribution: shadcn/ui gives the agent source files to edit in your repo, while Kinetic gives the agent a maintained package API to consume.
 
 ### Verdict
 
-HeroUI has a smoother package/update story. shadcn/ui gives you more upfront control but more ongoing maintenance. Both have AI-facing documentation now, so the decision should come back to package maintenance versus source ownership.
+Kinetic has a smoother package/update story. shadcn/ui gives you more upfront control but more ongoing maintenance. Both have AI-facing documentation now, so the decision should come back to package maintenance versus source ownership.
 
-## When to Choose HeroUI
+## When to Choose Kinetic
 
-Choose HeroUI when:
+Choose Kinetic when:
 
 - **Accessibility is a priority.** React Aria provides the strongest accessibility foundation available, and you don't have to maintain it yourself.
-- **You want the latest stack.** HeroUI supports Tailwind CSS v4 and React 19, with static pieces that fit cleanly in server component trees.
-- **You use AI coding tools and want a maintained package API.** The MCP server, llms.txt, and agent skills give AI assistants current HeroUI context.
-- **You want a design system foundation.** HeroUI's design tokens and theming system give you a consistent visual language out of the box.
-- **Your team doesn't have time to maintain component code.** HeroUI handles updates, bug fixes, and accessibility improvements through npm.
+- **You want the latest stack.** Kinetic supports Tailwind CSS v4 and React 19, with static pieces that fit cleanly in server component trees.
+- **You use AI coding tools and want a maintained package API.** The MCP server, llms.txt, and agent skills give AI assistants current Kinetic context.
+- **You want a design system foundation.** Kinetic's design tokens and theming system give you a consistent visual language out of the box.
+- **Your team doesn't have time to maintain component code.** Kinetic handles updates, bug fixes, and accessibility improvements through npm.
 
 ### When shadcn/ui might work
 
@@ -249,17 +249,17 @@ shadcn/ui can make sense if your company policy requires all component code to l
 
 ## Can You Use Both?
 
-Yes. Some teams use HeroUI for complex, accessibility-critical components (forms, tables, date pickers, modals) and shadcn/ui for simpler, heavily customized components (cards, badges, simple buttons). Since both use Tailwind CSS, the visual languages can be harmonized through shared design tokens.
+Yes. Some teams use Kinetic for complex, accessibility-critical components (forms, tables, date pickers, modals) and shadcn/ui for simpler, heavily customized components (cards, badges, simple buttons). Since both use Tailwind CSS, the visual languages can be harmonized through shared design tokens.
 
 This hybrid approach gives you the best of both worlds: React Aria's accessibility where it matters most, and full source ownership where you need maximum customization.
 
 ## Conclusion
 
-For most teams building products — SaaS apps, internal tools, consumer applications — HeroUI's approach delivers better results: maintained accessibility through React Aria, consistent updates via npm, a cohesive design system, and AI tooling that works out of the box. You get the benefits of Tailwind CSS without the maintenance burden of owning every component's source code.
+For most teams building products — SaaS apps, internal tools, consumer applications — Kinetic's approach delivers better results: maintained accessibility through React Aria, consistent updates via npm, a cohesive design system, and AI tooling that works out of the box. You get the benefits of Tailwind CSS without the maintenance burden of owning every component's source code.
 
 ## Get Started
 
-- [HeroUI Quick Start Guide](/docs/react/getting-started/quick-start)
-- [HeroUI Component Documentation](/docs/react/components)
+- [Kinetic Quick Start Guide](/docs/react/getting-started/quick-start)
+- [Kinetic Component Documentation](/docs/react/components)
 - [React Component Libraries Compared](/blog/react-component-library-comparison)
 - [GitHub Repository](https://github.com/heroui-inc/heroui)

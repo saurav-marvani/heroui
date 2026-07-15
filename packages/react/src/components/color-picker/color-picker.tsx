@@ -1,11 +1,11 @@
 "use client";
 
 import type {SurfaceVariants} from "../surface";
-import type {ColorPickerVariants} from "@heroui/styles";
+import type {ColorPickerVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {ColorPickerProps as ColorPickerPrimitiveProps} from "react-aria-components/ColorPicker";
 
-import {colorPickerVariants} from "@heroui/styles";
+import {colorPickerVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
 import {ColorPicker as ColorPickerPrimitive} from "react-aria-components/ColorPicker";

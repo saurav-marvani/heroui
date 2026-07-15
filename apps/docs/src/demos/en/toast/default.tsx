@@ -1,7 +1,7 @@
 "use client";
 
 import {Persons} from "@gravity-ui/icons";
-import {Button, toast} from "@heroui/react";
+import {Button, toast} from "@kinetic/react";
 
 export function Default() {
   return (
@@ -16,7 +16,7 @@ export function Default() {
               onPress: () => toast.clear(),
               variant: "tertiary",
             },
-            description: "Bob sent you an invitation to join HeroUI team",
+            description: "Bob sent you an invitation to join Kinetic team",
             indicator: <Persons />,
             variant: "default",
           });

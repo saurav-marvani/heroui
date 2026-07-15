@@ -1,10 +1,10 @@
 ---
 title: Listbox
-description: Listbox 从 HeroUI v2 到 v3 的迁移指南。
+description: Listbox 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 ListBox 文档](/docs/react/components/listbox)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 ListBox 文档](/docs/react/components/listbox)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -14,7 +14,7 @@ description: Listbox 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Listbox 使用彼此独立的组件：
 
 ```tsx
-import { Listbox, ListboxItem, ListboxSection } from "@heroui/react";
+import { Listbox, ListboxItem, ListboxSection } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -30,7 +30,7 @@ export default function App() {
 在 v3 中，ListBox 使用复合组件：
 
 ```tsx
-import { ListBox, Label } from "@heroui/react";
+import { ListBox, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -111,7 +111,7 @@ export default function App() {
   <Tab value="v3">
     ```tsx
     import { useState } from "react";
-    import type { Selection } from "@heroui/react";
+    import type { Selection } from "@kinetic/react";
 
     {/* Single selection */}
     const [singleSelected, setSingleSelected] = useState<Selection>(new Set(["text"]));
@@ -167,7 +167,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Description, Label } from "@heroui/react";
+    import { Description, Label } from "@kinetic/react";
 
     <ListBox.Item id="new" textValue="New file">
       <Label>New file</Label>
@@ -218,7 +218,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Header, Label, Separator } from "@heroui/react";
+    import { Header, Label, Separator } from "@kinetic/react";
 
     <ListBox>
       <ListBox.Section>

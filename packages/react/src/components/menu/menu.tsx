@@ -1,9 +1,9 @@
 "use client";
 
-import type {MenuVariants} from "@heroui/styles";
+import type {MenuVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {menuVariants} from "@heroui/styles";
+import {menuVariants} from "@kinetic/styles";
 import React from "react";
 import {Menu as MenuPrimitive} from "react-aria-components/Menu";
 

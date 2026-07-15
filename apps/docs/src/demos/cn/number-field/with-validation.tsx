@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, FieldError, Label, NumberField} from "@heroui/react";
+import {Description, FieldError, Label, NumberField} from "@kinetic/react";
 import React from "react";
 
 export function WithValidation() {

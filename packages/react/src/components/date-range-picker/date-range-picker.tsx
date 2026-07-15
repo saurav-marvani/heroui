@@ -2,11 +2,11 @@
 
 import type {DOMRenderProps} from "../../utils/dom";
 import type {SurfaceVariants} from "../surface";
-import type {DateRangePickerVariants} from "@heroui/styles";
+import type {DateRangePickerVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 import type {DateValue} from "react-aria-components/Calendar";
 
-import {dateRangePickerVariants} from "@heroui/styles";
+import {dateRangePickerVariants} from "@kinetic/styles";
 import {mergeRefs} from "@react-aria/utils";
 import React, {createContext, use, useEffect, useRef} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
@@ -94,7 +94,7 @@ const DateRangePickerRoot = <T extends DateValue>({
   );
 };
 
-DateRangePickerRoot.displayName = "HeroUI.DateRangePicker";
+DateRangePickerRoot.displayName = "Kinetic.DateRangePicker";
 
 /* -------------------------------------------------------------------------------------------------
  * DateRangePicker Trigger
@@ -129,7 +129,7 @@ const DateRangePickerTrigger = ({
   );
 };
 
-DateRangePickerTrigger.displayName = "HeroUI.DateRangePicker.Trigger";
+DateRangePickerTrigger.displayName = "Kinetic.DateRangePicker.Trigger";
 
 /* -------------------------------------------------------------------------------------------------
  * DateRangePicker Trigger Indicator
@@ -161,7 +161,7 @@ const DateRangePickerTriggerIndicator = <E extends keyof React.JSX.IntrinsicElem
   );
 };
 
-DateRangePickerTriggerIndicator.displayName = "HeroUI.DateRangePicker.TriggerIndicator";
+DateRangePickerTriggerIndicator.displayName = "Kinetic.DateRangePicker.TriggerIndicator";
 
 /* -------------------------------------------------------------------------------------------------
  * DateRangePicker Range Separator
@@ -193,7 +193,7 @@ const DateRangePickerRangeSeparator = <E extends keyof React.JSX.IntrinsicElemen
   );
 };
 
-DateRangePickerRangeSeparator.displayName = "HeroUI.DateRangePicker.RangeSeparator";
+DateRangePickerRangeSeparator.displayName = "Kinetic.DateRangePicker.RangeSeparator";
 
 /* -------------------------------------------------------------------------------------------------
  * DateRangePicker Popover
@@ -231,7 +231,7 @@ const DateRangePickerPopover = ({
   );
 };
 
-DateRangePickerPopover.displayName = "HeroUI.DateRangePicker.Popover";
+DateRangePickerPopover.displayName = "Kinetic.DateRangePicker.Popover";
 
 /* -------------------------------------------------------------------------------------------------
  * Exports

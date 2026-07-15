@@ -1,8 +1,8 @@
 "use client";
 
-import type {ColorChannel, ColorSpace} from "@heroui/react";
+import type {ColorChannel, ColorSpace} from "@kinetic/react";
 
-import {ColorPicker, ColorSlider, ColorSwatch, Label, ListBox, Select} from "@heroui/react";
+import {ColorPicker, ColorSlider, ColorSwatch, Label, ListBox, Select} from "@kinetic/react";
 import {useState} from "react";
 
 const CHANNEL_LABELS: Record<ColorChannel, string> = {

@@ -9,7 +9,7 @@ github:
   <span className="text-sm text-muted">2025 年 11 月 6 日</span>
 </div>
 
-此版本对 HeroUI v3 进行了全面重新设计，将 v2 的美观与动效与 v3 的简洁性融为一体。所有组件均经过重新设计，新增 8 个组件，并对设计系统进行了改进，包括更完善的颜色 token、阴影体系与整体架构。
+此版本对 Kinetic v3 进行了全面重新设计，将 v2 的美观与动效与 v3 的简洁性融为一体。所有组件均经过重新设计，新增 8 个组件，并对设计系统进行了改进，包括更完善的颜色 token、阴影体系与整体架构。
 
 ## 安装
 
@@ -18,35 +18,35 @@ github:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@beta @heroui/react@beta
+    npm i @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@beta @heroui/react@beta
+    pnpm add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@beta @heroui/react@beta
+    yarn add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@beta @heroui/react@beta
+    bun add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
 
 ### 全新的设计系统
 
-我们花了数周时间打造一套全新的设计系统，将 HeroUI v2 的灵魂与 v3 的简洁性融合在一起。每一个组件都经过重新设计，注重细节、流畅的动效以及更佳的开发者体验。新的设计系统已发布在我们的 [Figma Kit v3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3)。
+我们花了数周时间打造一套全新的设计系统，将 Kinetic v2 的灵魂与 v3 的简洁性融合在一起。每一个组件都经过重新设计，注重细节、流畅的动效以及更佳的开发者体验。新的设计系统已发布在我们的 [Figma Kit v3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3)。
 
 <VideoPlayer
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/videos/v3-beta-1.mp4"
@@ -167,12 +167,12 @@ github:
 
 ### 灵活的组件模式
 
-HeroUI 现在支持更灵活的组件写法。复合组件可以带 `.Root` 也可以不带 `.Root`，也可以使用命名导出——三种写法表现完全一致。
+Kinetic 现在支持更灵活的组件写法。复合组件可以带 `.Root` 也可以不带 `.Root`，也可以使用命名导出——三种写法表现完全一致。
 
 **可用模式：**
 
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 // 1. Compound pattern (no .Root needed) - recommended
 <Avatar>
@@ -187,7 +187,7 @@ import { Avatar } from "@heroui/react"
 </Avatar.Root>
 
 // 3. Named exports
-import { AvatarRoot, AvatarImage, AvatarFallback } from "@heroui/react"
+import { AvatarRoot, AvatarImage, AvatarFallback } from "@kinetic/react"
 
 <AvatarRoot>
   <AvatarImage src="/avatar.jpg" alt="User" />
@@ -198,7 +198,7 @@ import { AvatarRoot, AvatarImage, AvatarFallback } from "@heroui/react"
 **简单组件**（如 Button）的写法也完全一致：
 
 ```tsx
-import { Button } from "@heroui/react"
+import { Button } from "@kinetic/react"
 
 // No .Root needed
 <Button>Label</Button>
@@ -207,14 +207,14 @@ import { Button } from "@heroui/react"
 <Button.Root>Label</Button.Root>
 
 // Or named export
-import { ButtonRoot } from "@heroui/react"
+import { ButtonRoot } from "@kinetic/react"
 <ButtonRoot>Label</ButtonRoot>
 ```
 
 **你也可以在同一个组件中混用复合写法与命名导出：**
 
 ```tsx
-import { Avatar, AvatarFallback } from "@heroui/react"
+import { Avatar, AvatarFallback } from "@kinetic/react"
 
 <Avatar>
   <Avatar.Image src="/avatar.jpg" alt="User" />
@@ -230,16 +230,16 @@ import { Avatar, AvatarFallback } from "@heroui/react"
 
 ### 全局动画控制
 
-HeroUI 现在通过 `data-reduce-motion` 属性提供了便捷的全局动画控制方式。只需在 `<html>` 或 `<body>` 标签上加上 `data-reduce-motion="true"`，即可禁用整个应用中的所有动画。
+Kinetic 现在通过 `data-reduce-motion` 属性提供了便捷的全局动画控制方式。只需在 `<html>` 或 `<body>` 标签上加上 `data-reduce-motion="true"`，即可禁用整个应用中的所有动画。
 
 ```html
 <!DOCTYPE html>
 <html data-reduce-motion="true">
-  <!-- All HeroUI animations will be disabled -->
+  <!-- All Kinetic animations will be disabled -->
 </html>
 ```
 
-HeroUI 会自动通过 `prefers-reduced-motion` 媒体查询尊重用户的动画偏好，并扩展了 Tailwind 的 `motion-reduce:` 变体，使其同时支持系统偏好与基于 data 属性的手动控制。这样既能灵活控制动画，也能符合无障碍最佳实践。
+Kinetic 会自动通过 `prefers-reduced-motion` 媒体查询尊重用户的动画偏好，并扩展了 Tailwind 的 `motion-reduce:` 变体，使其同时支持系统偏好与基于 data 属性的手动控制。这样既能灵活控制动画，也能符合无障碍最佳实践。
 
 了解更多关于动画与动效偏好的内容，请参阅 [动画文档](/docs/handbook/animation)。
 
@@ -291,7 +291,7 @@ HeroUI 会自动通过 `prefers-reduced-motion` 媒体查询尊重用户的动�
 --surface: var(--white);
 --surface-foreground: var(--foreground);
 
-/* HeroUI automatically calculates these using color-mix */
+/* Kinetic automatically calculates these using color-mix */
 --color-surface-secondary: color-mix(in oklab, var(--surface) 94%, var(--surface-foreground) 6%);
 --color-surface-tertiary: color-mix(in oklab, var(--surface) 92%, var(--surface-foreground) 8%);
 --color-surface-quaternary: color-mix(in oklab, var(--surface) 86%, var(--surface-foreground) 14%);
@@ -420,14 +420,14 @@ Chip 组件的 `type` prop 已重命名为 `color`，同时新增 `size` prop，
 
 **之前：**
 ```tsx
-import { Chip } from "@heroui/react";
+import { Chip } from "@kinetic/react";
 
 <Chip type="danger" variant="secondary">Label</Chip>
 ```
 
 **之后：**
 ```tsx
-import { Chip } from "@heroui/react";
+import { Chip } from "@kinetic/react";
 
 <Chip color="danger" variant="soft" size="md">Label</Chip>
 ```
@@ -443,14 +443,14 @@ Link 组件现在支持 `underline` 与 `underlineOffset` prop，并加入了对
 
 **之前：**
 ```tsx
-import { Link } from "@heroui/react";
+import { Link } from "@kinetic/react";
 
 <Link href="#">Link text</Link>
 ```
 
 **之后：**
 ```tsx
-import { Link } from "@heroui/react";
+import { Link } from "@kinetic/react";
 
 <Link href="#" underline="hover" underlineOffset={4}>Link text</Link>
 ```
@@ -475,7 +475,7 @@ type AvatarProps = Avatar["RootProps"]
 
 **之后（方式 2 —— 具名类型导入，推荐）：**
 ```tsx
-import type { AvatarRootProps } from "@heroui/react"
+import type { AvatarRootProps } from "@kinetic/react"
 
 type AvatarProps = AvatarRootProps
 ```
@@ -533,7 +533,7 @@ Tabs.ListWrapper → Tabs.ListContainer
 
 #### 自动计算的色彩系统
 
-HeroUI 现在使用 CSS `color-mix` 自动计算各种色阶以及柔和色变体。你只需声明基础颜色，剩下的交给 HeroUI 处理。
+Kinetic 现在使用 CSS `color-mix` 自动计算各种色阶以及柔和色变体。你只需声明基础颜色，剩下的交给 Kinetic 处理。
 
 **背景色阶**
 
@@ -544,7 +544,7 @@ HeroUI 现在使用 CSS `color-mix` 自动计算各种色阶以及柔和色变�
 --background: oklch(0.9702 0 0);
 --foreground: var(--eclipse);
 
-/* HeroUI automatically calculates these */
+/* Kinetic automatically calculates these */
 --color-background-secondary: color-mix(in oklab, var(--color-background) 96%, var(--color-foreground) 4%);
 --color-background-tertiary: color-mix(in oklab, var(--color-background) 92%, var(--color-foreground) 8%);
 --color-background-quaternary: color-mix(in oklab, var(--color-background) 86%, var(--color-foreground) 14%);
@@ -559,7 +559,7 @@ Surface 各层级会自动从 `--surface` 计算：
 --surface: var(--white);
 --surface-foreground: var(--foreground);
 
-/* HeroUI automatically calculates these */
+/* Kinetic automatically calculates these */
 --color-surface-secondary: color-mix(in oklab, var(--surface) 94%, var(--surface-foreground) 6%);
 --color-surface-tertiary: color-mix(in oklab, var(--surface) 92%, var(--surface-foreground) 8%);
 --color-surface-quaternary: color-mix(in oklab, var(--surface) 86%, var(--surface-foreground) 14%);
@@ -576,7 +576,7 @@ Surface 各层级会自动从 `--surface` 计算：
 --warning: oklch(0.7819 0.1585 72.33);
 --success: oklch(0.7329 0.1935 150.81);
 
-/* HeroUI automatically calculates these at 15% opacity */
+/* Kinetic automatically calculates these at 15% opacity */
 --color-accent-soft: color-mix(in oklab, var(--color-accent) 15%, transparent);
 --color-danger-soft: color-mix(in oklab, var(--color-danger) 15%, transparent);
 --color-warning-soft: color-mix(in oklab, var(--color-warning) 15%, transparent);
@@ -717,7 +717,7 @@ type ButtonProps = Button["RootProps"]
 
 **之后（方式 2 —— 具名导入，推荐）：**
 ```tsx
-import type { ButtonRootProps } from "@heroui/react"
+import type { ButtonRootProps } from "@kinetic/react"
 
 type ButtonProps = ButtonRootProps
 ```
@@ -728,7 +728,7 @@ type ButtonProps = ButtonRootProps
 
 **之前：**
 ```tsx
-import { Tabs } from "@heroui/react"
+import { Tabs } from "@kinetic/react"
 
 <Tabs.Root>
   <Tabs.ListWrapper>
@@ -742,7 +742,7 @@ import { Tabs } from "@heroui/react"
 
 **之后：**
 ```tsx
-import { Tabs } from "@heroui/react"
+import { Tabs } from "@kinetic/react"
 
 <Tabs>
   <Tabs.ListContainer>
@@ -831,10 +831,10 @@ Accordion 现在也使用 surface 系统，与其他组件在视觉上更加一�
 
 以上所有组件都可以使用三种写法中的任意一种：不带 `.Root` 的复合写法、带 `.Root` 的复合写法，或具名导出。
 
-## HeroUI Pro
+## Kinetic Pro
 
-HeroUI Pro 正基于全新的设计系统从零进行重塑。新版 Pro 将带来：
-- 基于 HeroUI v3 构建的新组件
+Kinetic Pro 正基于全新的设计系统从零进行重塑。新版 Pro 将带来：
+- 基于 Kinetic v3 构建的新组件
 - Tailwind CSS v4 原生支持
 - 基于 CSS 的原生动画
 - 更强的可定制能力
@@ -851,15 +851,15 @@ HeroUI Pro 正基于全新的设计系统从零进行重塑。新版 Pro 将带�
 
 ## 社区
 
-Native 端的反响非常热烈。感谢你在我们打造 HeroUI v3 的过程中给予的支持！你的反馈让我们每一天都在变得更好。
+Native 端的反响非常热烈。感谢你在我们打造 Kinetic v3 的过程中给予的支持！你的反馈让我们每一天都在变得更好。
 
-来看看社区的声音：[HeroUI Native 用户反响](https://x.com/hero_ui/status/1985721976220966926)
+来看看社区的声音：[Kinetic Native 用户反响](https://x.com/hero_ui/status/1985721976220966926)
 
 ## 链接
 
 - [组件文档](/docs/react/components)
 - [设计系统 - Figma Kit v3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3)
-- [HeroUI Native](https://link.heroui.com/native)
+- [Kinetic Native](https://link.kinetic-ui.com/native)
 - [GitHub 仓库](https://github.com/heroui-inc/heroui)
 - [GitHub PR #5872](https://github.com/heroui-inc/heroui/pull/5872)
 

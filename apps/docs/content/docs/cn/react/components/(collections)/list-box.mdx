@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { ListBox } from '@heroui/react';
+import { ListBox } from '@kinetic/react';
 ```
 
 ### 用法
@@ -25,7 +25,7 @@ import { ListBox } from '@heroui/react';
 引入 ListBox 组件并通过点语法访问所有子部分。
 
 ```tsx
-import { ListBox, Label, Description, Header } from '@heroui/react';
+import { ListBox, Label, Description, Header } from '@kinetic/react';
 
 export default () => (
   <ListBox>
@@ -95,7 +95,7 @@ ListBox 通过 [Virtualizer](https://react-aria.adobe.com/Virtualizer) 支持虚
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import { ListBox } from '@heroui/react';
+import { ListBox } from '@kinetic/react';
 
 function CustomListBox() {
   return (
@@ -133,7 +133,7 @@ function CustomListBox() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
 
 ### CSS 类
 
@@ -240,16 +240,16 @@ ListBox 组件使用以下 CSS 类（[查看源码样式](https://github.com/her
 ### 基础用法
 
 ```tsx
-import { ListBox, Label, Description } from '@heroui/react';
+import { ListBox, Label, Description } from '@kinetic/react';
 
 <ListBox aria-label="Users" selectionMode="single">
   <ListBox.Item id="1" textValue="Bob">
     <Label>Bob</Label>
-    <Description>bob@heroui.com</Description>
+    <Description>bob@kinetic-ui.com</Description>
   </ListBox.Item>
   <ListBox.Item id="2" textValue="Alice">
     <Label>Alice</Label>
-    <Description>alice@heroui.com</Description>
+    <Description>alice@kinetic-ui.com</Description>
   </ListBox.Item>
 </ListBox>
 ```
@@ -257,7 +257,7 @@ import { ListBox, Label, Description } from '@heroui/react';
 ### 带分组
 
 ```tsx
-import { ListBox, Header, Separator } from '@heroui/react';
+import { ListBox, Header, Separator } from '@kinetic/react';
 
 <ListBox aria-label="Actions" selectionMode="none" onAction={(key) => console.log(key)}>
   <ListBox.Section>
@@ -276,7 +276,7 @@ import { ListBox, Header, Separator } from '@heroui/react';
 ### 受控选择
 
 ```tsx
-import { ListBox, Selection } from '@heroui/react';
+import { ListBox, Selection } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledListBox() {
@@ -300,7 +300,7 @@ function ControlledListBox() {
 ### 自定义指示器
 
 ```tsx
-import { ListBox, ListBoxItemIndicator } from '@heroui/react';
+import { ListBox, ListBoxItemIndicator } from '@kinetic/react';
 import { Icon } from '@iconify/react';
 
 <ListBox aria-label="Options" selectionMode="multiple">

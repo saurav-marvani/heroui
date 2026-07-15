@@ -1,4 +1,4 @@
-import {Surface, TextArea} from "@heroui/react";
+import {Surface, TextArea} from "@kinetic/react";
 
 export function OnSurface() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import {Clock} from "@gravity-ui/icons";
-import {Label, TimeField} from "@heroui/react";
+import {Label, TimeField} from "@kinetic/react";
 
 export function WithPrefixIcon() {
   return (

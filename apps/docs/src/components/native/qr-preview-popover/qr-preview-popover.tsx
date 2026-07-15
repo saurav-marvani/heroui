@@ -2,7 +2,7 @@
 
 import type {NativeQRPreviewTarget} from "./target";
 
-import {Button, Popover} from "@heroui/react";
+import {Button, Popover} from "@kinetic/react";
 import {usePathname} from "next/navigation";
 import {useState} from "react";
 
@@ -89,7 +89,7 @@ function resolveSlug(target: NativeQRPreviewTarget, pathname: string): string {
 /**
  * Construct the Universal Link URL the QR code (or mobile tap link) encodes.
  * `origin` is supplied at runtime so the URL always reflects the current
- * environment (`localhost:3000` in dev, `heroui.com` in prod, preview URLs in
+ * environment (`localhost:3000` in dev, `kinetic-ui.com` in prod, preview URLs in
  * Vercel previews, etc.) without hard-coding the host.
  */
 function buildDeepLinkUrl(origin: string, slug: string): string {

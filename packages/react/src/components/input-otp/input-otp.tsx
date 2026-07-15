@@ -1,10 +1,10 @@
 "use client";
 
-import type {InputOTPVariants} from "@heroui/styles";
+import type {InputOTPVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {ValidationResult} from "react-aria-components/CheckboxGroup";
 
-import {inputOTPVariants} from "@heroui/styles";
+import {inputOTPVariants} from "@kinetic/styles";
 import {OTPInput, OTPInputContext} from "input-otp";
 import React, {createContext, use} from "react";
 import {FieldErrorContext} from "react-aria-components/FieldError";

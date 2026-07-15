@@ -1,5 +1,5 @@
 import type {ToastContentValue, ToastVariants} from "./index";
-import type {HeroUIToastOptions} from "./toast-queue";
+import type {KineticToastOptions} from "./toast-queue";
 import type {Meta} from "@storybook/react";
 
 import {Icon} from "@iconify/react";
@@ -19,7 +19,7 @@ import {
 
 type Placement = NonNullable<ToastVariants["placement"]>;
 
-interface ToastStoryProps extends Omit<HeroUIToastOptions, "variant"> {
+interface ToastStoryProps extends Omit<KineticToastOptions, "variant"> {
   placement?: Placement;
 }
 
@@ -63,7 +63,7 @@ const Template = () => {
                 onPress: () => toast.clear(),
                 variant: "tertiary",
               },
-              description: "Bob sent you an invitation to join HeroUI team",
+              description: "Bob sent you an invitation to join Kinetic team",
               indicator: <Icon icon="gravity-ui:persons" />,
               variant: "default",
             });
@@ -94,7 +94,7 @@ const Template = () => {
                 className: "bg-success text-success-foreground",
                 onPress: noop,
               },
-              description: "You can continue using HeroUI Chat",
+              description: "You can continue using Kinetic Chat",
             })
           }
         >

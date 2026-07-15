@@ -1,4 +1,4 @@
-import {Avatar} from "@heroui/react";
+import {Avatar} from "@kinetic/react";
 
 export function CustomStyles() {
   return (
@@ -7,7 +7,7 @@ export function CustomStyles() {
       <Avatar className="size-16">
         <Avatar.Image
           alt="Extra Large"
-          src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
+          src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
         />
         <Avatar.Fallback>XL</Avatar.Fallback>
       </Avatar>
@@ -16,7 +16,7 @@ export function CustomStyles() {
       <Avatar className="rounded-lg">
         <Avatar.Image
           alt="Square Avatar"
-          src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg"
+          src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg"
         />
         <Avatar.Fallback className="rounded-lg">SQ</Avatar.Fallback>
       </Avatar>
@@ -27,7 +27,7 @@ export function CustomStyles() {
           <Avatar.Image
             alt="Gradient Border"
             className="rounded-full"
-            src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
+            src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
           />
           <Avatar.Fallback className="border-none">GB</Avatar.Fallback>
         </div>
@@ -38,7 +38,7 @@ export function CustomStyles() {
         <Avatar>
           <Avatar.Image
             alt="Online User"
-            src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg"
+            src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg"
           />
           <Avatar.Fallback>ON</Avatar.Fallback>
         </Avatar>

@@ -1,6 +1,6 @@
 "use client";
 
-import {Checkbox, Description} from "@heroui/react";
+import {Checkbox, Description} from "@kinetic/react";
 import {useState} from "react";
 
 export function Indeterminate() {

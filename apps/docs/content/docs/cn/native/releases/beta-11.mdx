@@ -39,7 +39,7 @@ Beta 11 聚焦多块核心能力的可靠性与开发者体验：增强 Bottom S
 </Tabs>
 
 <Callout type="info">
-  **使用 AI 助手？** 直接提示「Hey Cursor，把 HeroUI Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [HeroUI Native MCP 服务器](/docs/native/getting-started/mcp-server)。
+  **使用 AI 助手？** 直接提示「Hey Cursor，把 Kinetic Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [Kinetic Native MCP 服务器](/docs/native/getting-started/mcp-server)。
 </Callout>
 
 ## 抢先体验
@@ -68,7 +68,7 @@ Beta 11 聚焦多块核心能力的可靠性与开发者体验：增强 Bottom S
 
 **方式二：点击链接**
 
-**[📱 在 Expo Go 中打开演示应用](https://link.heroui.com/native-demo)**
+**[📱 在 Expo Go 中打开演示应用](https://link.kinetic-ui.com/native-demo)**
 
 若设备已安装 Expo Go，将自动在其中打开应用。
 
@@ -129,14 +129,14 @@ Dialog 支持下滑关闭。本修复解决滑动过程中手势偶发无响应�
 **新能力：**
 
 ```tsx
-import { HeroUINativeProvider, PortalHost } from "heroui-native";
+import { KineticNativeProvider, PortalHost } from "heroui-native";
 
 export function CustomLayout() {
   return (
     <>
-      <HeroUINativeProvider>
+      <KineticNativeProvider>
         {/* 应用内容 */}
-      </HeroUINativeProvider>
+      </KineticNativeProvider>
 
       {/* 在自定义位置手动挂载 PortalHost */}
       <PortalHost name="custom-host" />
@@ -145,7 +145,7 @@ export function CustomLayout() {
 }
 ```
 
-便于在自定义布局中手动挂载 Portal 宿主，例如需在 BottomSheet、Modal 或其他遮罩内指定渲染位置时。默认 `HeroUINativeProvider` 已包含标准场景的 `PortalHost`；现可额外创建具名宿主以支持多宿主架构。
+便于在自定义布局中手动挂载 Portal 宿主，例如需在 BottomSheet、Modal 或其他遮罩内指定渲染位置时。默认 `KineticNativeProvider` 已包含标准场景的 `PortalHost`；现可额外创建具名宿主以支持多宿主架构。
 
 **适用场景：**
 

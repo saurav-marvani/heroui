@@ -12,7 +12,7 @@ links:
 ## 引入
 
 ```tsx
-import { Table } from '@heroui/react';
+import { Table } from '@kinetic/react';
 ```
 
 ### 用法
@@ -27,7 +27,7 @@ import { Table } from '@heroui/react';
 引入 Table 组件，并通过点语法访问各部分。
 
 ```tsx
-import { Table } from '@heroui/react';
+import { Table } from '@kinetic/react';
 
 export default () => (
   <Table>
@@ -144,8 +144,8 @@ Table 通过 [Virtualizer](https://react-aria.adobe.com/Virtualizer) 支持虚�
 
 ### TanStack Table
 
-HeroUI 的 Table 可作为无头表格库之上的渲染层。
-本示例使用 [TanStack Table](https://tanstack.com/table) 处理列定义、排序与分页，而样式与无障碍由 HeroUI 负责。
+Kinetic 的 Table 可作为无头表格库之上的渲染层。
+本示例使用 [TanStack Table](https://tanstack.com/table) 处理列定义、排序与分页，而样式与无障碍由 Kinetic 负责。
 
 <ComponentPreview
   name="table-tanstack-table"
@@ -161,7 +161,7 @@ HeroUI 的 Table 可作为无头表格库之上的渲染层。
 你可以为 Table 的各个部分分别传入类名：
 
 ```tsx
-import { Table } from '@heroui/react';
+import { Table } from '@kinetic/react';
 
 function CustomTable() {
   return (
@@ -216,7 +216,7 @@ function CustomTable() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
 
 ### CSS 类
 

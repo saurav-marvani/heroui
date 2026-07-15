@@ -16,28 +16,28 @@ description: 复合组件支持 React Server Components、面向 React 19 的改
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@alpha @heroui/react@alpha
+    npm i @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@alpha @heroui/react@alpha
+    pnpm add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@alpha @heroui/react@alpha
+    yarn add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@alpha @heroui/react@alpha
+    bun add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
@@ -87,7 +87,7 @@ Switch 组件已经过重构，遵循与 Radio / RadioGroup 相同的清晰拆�
 
 **之前：**
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 <Avatar>
   <Avatar.Image src="/images/avatar.jpeg" alt="Junior Garcia" />
@@ -97,7 +97,7 @@ import { Avatar } from "@heroui/react"
 
 **之后：**
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 <Avatar.Root>
   <Avatar.Image src="/images/avatar.jpeg" alt="Junior Garcia" />
@@ -113,7 +113,7 @@ Switch 组件的分组 API 已经过重构，与 Radio / RadioGroup 模式保持
 
 **之前：**
 ```tsx
-import { Switch } from "@heroui/react"
+import { Switch } from "@kinetic/react"
 
 <Switch.Group orientation="horizontal">
   <Switch.GroupItems>
@@ -135,7 +135,7 @@ import { Switch } from "@heroui/react"
 
 **之后：**
 ```tsx
-import { Switch, SwitchGroup } from "@heroui/react"
+import { Switch, SwitchGroup } from "@kinetic/react"
 
 <SwitchGroup orientation="horizontal">
   <Switch.Root name="notifications">
@@ -162,7 +162,7 @@ import { Switch, SwitchGroup } from "@heroui/react"
 
 
 **迁移步骤：**
-1. 单独导入 `SwitchGroup`：`import { Switch, SwitchGroup } from "@heroui/react"`
+1. 单独导入 `SwitchGroup`：`import { Switch, SwitchGroup } from "@kinetic/react"`
 2. 将 `<Switch.Group>` 替换为 `<SwitchGroup>`
 3. 移除嵌套的 `<Switch.GroupItems>` 包装
 4. 单个的 `Switch.Root` 组件保持不变
@@ -186,7 +186,7 @@ import { Switch, SwitchGroup } from "@heroui/react"
 
 ## 迁移指南
 
-使用 HeroUI 的复合组件有两种选择：
+使用 Kinetic 的复合组件有两种选择：
 
 ### 选项 1：改为使用 `.Root`（复合写法）
 
@@ -194,7 +194,7 @@ import { Switch, SwitchGroup } from "@heroui/react"
 
 **Card 示例：**
 ```tsx
-import { Card } from "@heroui/react"
+import { Card } from "@kinetic/react"
 
 <Card.Root>
   <Card.Header>
@@ -212,7 +212,7 @@ import { Card } from "@heroui/react"
 
 **Tabs 示例：**
 ```tsx
-import { Tabs } from "@heroui/react"
+import { Tabs } from "@kinetic/react"
 
 <Tabs.Root>
   <Tabs.ListWrapper>
@@ -230,7 +230,7 @@ import { Tabs } from "@heroui/react"
 
 **Avatar 示例：**
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 <Avatar.Root>
   <Avatar.Image alt="John Doe" src="..." />
@@ -253,7 +253,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@heroui/react"
+} from "@kinetic/react"
 
 <CardRoot>
   <CardHeader>
@@ -271,7 +271,7 @@ import {
 
 **Tabs 示例：**
 ```tsx
-import { TabsRoot, TabListContainer, TabList, Tab, TabIndicator, TabPanel } from "@heroui/react"
+import { TabsRoot, TabListContainer, TabList, Tab, TabIndicator, TabPanel } from "@kinetic/react"
 
 <TabsRoot>
   <TabListContainer>
@@ -287,7 +287,7 @@ import { TabsRoot, TabListContainer, TabList, Tab, TabIndicator, TabPanel } from
 
 **Avatar 示例：**
 ```tsx
-import { Avatar, AvatarImage, AvatarFallback } from "@heroui/react"
+import { Avatar, AvatarImage, AvatarFallback } from "@kinetic/react"
 
 <Avatar>
   <AvatarImage alt="John Doe" src="..." />
@@ -359,7 +359,7 @@ sed -i 's/<\/Switch\.GroupItems>//g' **/*.tsx
 
 **重要事项：**
 - 使用自动替换时务必小心，确保只替换复合写法的用法，而不要影响命名导出。
-- Switch 的迁移完成后，请确认 `SwitchGroup` 已被导入：`import { Switch, SwitchGroup } from "@heroui/react"`
+- Switch 的迁移完成后，请确认 `SwitchGroup` 已被导入：`import { Switch, SwitchGroup } from "@kinetic/react"`
 - 在执行完自动迁移后请测试代码，确认所有变更均符合预期。
 
 ## 为什么需要这次变更？

@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { Drawer, Button } from "@heroui/react";
+import { Drawer, Button } from "@kinetic/react";
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ import { Drawer, Button } from "@heroui/react";
 ### Anatomy
 
 ```tsx
-import { Drawer, Button } from "@heroui/react";
+import { Drawer, Button } from "@kinetic/react";
 
 export default () => (
   <Drawer>
@@ -82,7 +82,7 @@ The `Drawer.Body` automatically handles overflow with native scrolling. Drag-to-
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { Drawer, Button } from "@heroui/react";
+import { Drawer, Button } from "@kinetic/react";
 
 function CustomDrawer() {
   return (
@@ -136,7 +136,7 @@ To customize the Drawer component classes, you can use the `@layer components` d
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -274,7 +274,7 @@ The component supports these interactive states:
 ### useOverlayState Hook
 
 ```tsx
-import { useOverlayState } from "@heroui/react";
+import { useOverlayState } from "@kinetic/react";
 
 const state = useOverlayState({
   defaultOpen: false,

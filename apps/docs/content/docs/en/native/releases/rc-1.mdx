@@ -1,6 +1,6 @@
 ---
 title: RC 1
-description: Alert component, standalone Radio component, Select TriggerIndicator, HeroUINativeProviderRaw, disableFullWindowOverlay prop, styles prop expansion, theme surface refactor
+description: Alert component, standalone Radio component, Select TriggerIndicator, KineticNativeProviderRaw, disableFullWindowOverlay prop, styles prop expansion, theme surface refactor
 github:
   pull: 284
 ---
@@ -9,7 +9,7 @@ github:
   <span className="text-sm text-muted">February 12, 2026</span>
 </div>
 
-RC 1 marks the first Release Candidate for HeroUI Native, signaling that the library is approaching production readiness. This release introduces the Alert compound component with accessibility-first design and status variants, extracts Radio into a standalone component with dual-mode operation, and adds the animated Select.TriggerIndicator subcomponent. It also delivers a lightweight HeroUINativeProviderRaw for bundle optimization, a new `disableFullWindowOverlay` prop for iOS debugging, unified `styles` prop support across six components, and a theme refactor that replaces calculated surface colors with explicit theme-defined variables. Several critical bug fixes—including InputOTP in BottomSheet, toast text clipping, and element inspector compatibility—round out the release.
+RC 1 marks the first Release Candidate for Kinetic Native, signaling that the library is approaching production readiness. This release introduces the Alert compound component with accessibility-first design and status variants, extracts Radio into a standalone component with dual-mode operation, and adds the animated Select.TriggerIndicator subcomponent. It also delivers a lightweight KineticNativeProviderRaw for bundle optimization, a new `disableFullWindowOverlay` prop for iOS debugging, unified `styles` prop support across six components, and a theme refactor that replaces calculated surface colors with explicit theme-defined variables. Several critical bug fixes—including InputOTP in BottomSheet, toast text clipping, and element inspector compatibility—round out the release.
 
 ## Installation
 
@@ -39,7 +39,7 @@ Update to the latest version:
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server).
 </Callout>
 
 ## Try It on Your Device
@@ -248,25 +248,25 @@ import { Dialog } from "heroui-native";
 
 On iOS, `FullWindowOverlay` uses a separate native window that blocks the React Native element inspector. Setting `disableFullWindowOverlay` to `true` renders content in the main window instead, enabling the inspector during development. The tradeoff is that overlays will no longer appear above native modals or the keyboard. This prop has no effect on Android.
 
-For Toast, the prop is passed via `config.toast` when using `HeroUINativeProvider`.
+For Toast, the prop is passed via `config.toast` when using `KineticNativeProvider`.
 
 **Related PR:** [#283](https://github.com/heroui-inc/heroui-native/pull/283)
 
-### HeroUINativeProviderRaw
+### KineticNativeProviderRaw
 
-A new lightweight provider variant, `HeroUINativeProviderRaw`, excludes `ToastProvider` and `PortalHost` to give consumers full control over which dependencies are bundled.
+A new lightweight provider variant, `KineticNativeProviderRaw`, excludes `ToastProvider` and `PortalHost` to give consumers full control over which dependencies are bundled.
 
 **New Capability:**
 
 ```tsx
-import { HeroUINativeProviderRaw } from "heroui-native/provider-raw";
+import { KineticNativeProviderRaw } from "heroui-native/provider-raw";
 
 // Lightweight provider without Toast and Portal dependencies
 export function App() {
   return (
-    <HeroUINativeProviderRaw>
+    <KineticNativeProviderRaw>
       {/* Your app content */}
-    </HeroUINativeProviderRaw>
+    </KineticNativeProviderRaw>
   );
 }
 ```
@@ -456,7 +456,7 @@ The following documentation pages have been updated to reflect the changes in th
 - [Bottom Sheet](/docs/native/components/bottom-sheet) - Added disableFullWindowOverlay documentation
 - [Dialog](/docs/native/components/dialog) - Added disableFullWindowOverlay documentation
 - [Popover](/docs/native/components/popover) - Added disableFullWindowOverlay documentation
-- [Provider](/docs/native/getting-started/provider) - HeroUINativeProviderRaw documentation and provider hierarchy
+- [Provider](/docs/native/getting-started/provider) - KineticNativeProviderRaw documentation and provider hierarchy
 - [Theming](/docs/native/getting-started/theming) - Updated surface variable structure and examples
 - [Accordion](/docs/native/components/accordion) - Added styles prop documentation
 - [Avatar](/docs/native/components/avatar) - Added styles prop documentation

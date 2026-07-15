@@ -1,10 +1,10 @@
 ---
 title: Chip
-description: Chip 从 HeroUI v2 到 v3 的迁移指南。
+description: Chip 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Chip 文档](/docs/react/components/chip)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Chip 文档](/docs/react/components/chip)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 关键变化
@@ -97,7 +97,7 @@ v3 支持组合变体与颜色 class，以实现更精细的样式。下列复�
 在 v2 中，`Chip` 是一个通过大量 prop 控制样式的组件：
 
 ```tsx
-import { Chip } from "@heroui/react";
+import { Chip } from "@kinetic/react";
 
 export default function App() {
   return <Chip>Chip</Chip>;
@@ -107,7 +107,7 @@ export default function App() {
 在 v3 中，`Chip` 的 API 更精简，变体更少：
 
 ```tsx
-import { Chip } from "@heroui/react";
+import { Chip } from "@kinetic/react";
 
 export default function App() {
   return <Chip>Chip</Chip>;
@@ -187,7 +187,7 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Avatar } from "@heroui/react";
+    import { Avatar } from "@kinetic/react";
 
     <Chip
       avatar={<Avatar name="JW" src="https://example.com/avatar.jpg" />}
@@ -199,7 +199,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Avatar, Chip } from "@heroui/react";
+    import { Avatar, Chip } from "@kinetic/react";
 
     <Chip variant="tertiary">
       <Avatar size="sm">
@@ -224,7 +224,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { CloseButton } from "@heroui/react";
+    import { CloseButton } from "@kinetic/react";
 
     <Chip>
       Chip

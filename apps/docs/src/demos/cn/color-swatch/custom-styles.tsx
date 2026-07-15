@@ -1,6 +1,6 @@
 "use client";
 
-import {ColorSwatch} from "@heroui/react";
+import {ColorSwatch} from "@kinetic/react";
 
 export function ColorSwatchCustomStyles() {
   const colors = ["#0485F7", "#EF4444", "#F59E0B", "#10B981", "#D946EF"];

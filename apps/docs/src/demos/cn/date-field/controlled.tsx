@@ -2,7 +2,7 @@
 
 import type {DateValue} from "@internationalized/date";
 
-import {Button, DateField, Description, Label} from "@heroui/react";
+import {Button, DateField, Description, Label} from "@kinetic/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 import {useState} from "react";
 

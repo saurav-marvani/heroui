@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, Toast, ToastQueue} from "@heroui/react";
+import {Button, Toast, ToastQueue} from "@kinetic/react";
 
 export function CustomQueue() {
   const notificationQueue = new ToastQueue({maxVisibleToasts: 2});

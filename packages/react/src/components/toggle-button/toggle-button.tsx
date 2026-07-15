@@ -1,9 +1,9 @@
 "use client";
 
-import type {ToggleButtonVariants} from "@heroui/styles";
+import type {ToggleButtonVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {toggleButtonVariants} from "@heroui/styles";
+import {toggleButtonVariants} from "@kinetic/styles";
 import {use} from "react";
 import {ToggleButton as ToggleButtonPrimitive} from "react-aria-components/ToggleButton";
 

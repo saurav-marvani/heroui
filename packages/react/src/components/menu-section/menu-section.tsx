@@ -2,7 +2,7 @@
 
 import type {ComponentPropsWithRef} from "react";
 
-import {menuSectionVariants} from "@heroui/styles";
+import {menuSectionVariants} from "@kinetic/styles";
 import React from "react";
 import {MenuSection as MenuSectionPrimitive} from "react-aria-components/Menu";
 

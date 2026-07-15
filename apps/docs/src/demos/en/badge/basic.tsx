@@ -1,9 +1,9 @@
-import {Avatar, Badge} from "@heroui/react";
+import {Avatar, Badge} from "@kinetic/react";
 
-const GREEN_AVATAR_URL = "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg";
+const GREEN_AVATAR_URL = "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg";
 const ORANGE_AVATAR_URL =
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg";
-const BLUE_AVATAR_URL = "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg";
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg";
+const BLUE_AVATAR_URL = "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg";
 
 export function BadgeBasic() {
   return (

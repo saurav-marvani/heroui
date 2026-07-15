@@ -1,9 +1,9 @@
-import {Card, ScrollShadow} from "@heroui/react";
+import {Card, ScrollShadow} from "@kinetic/react";
 
 const images = [
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/robot1.jpeg",
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/avocado.jpeg",
-  "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/oranges.jpeg",
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/robot1.jpeg",
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/avocado.jpeg",
+  "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/oranges.jpeg",
 ];
 
 export default function Orientation() {

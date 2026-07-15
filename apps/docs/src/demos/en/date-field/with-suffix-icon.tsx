@@ -1,7 +1,7 @@
 "use client";
 
 import {Calendar} from "@gravity-ui/icons";
-import {DateField, Label} from "@heroui/react";
+import {DateField, Label} from "@kinetic/react";
 
 export function WithSuffixIcon() {
   return (

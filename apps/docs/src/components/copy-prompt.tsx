@@ -1,6 +1,6 @@
 "use client";
 
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 import {useCopyButton} from "fumadocs-ui/utils/use-copy-button";
 
 import {Iconify} from "@/components/iconify";

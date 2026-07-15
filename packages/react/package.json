@@ -1,5 +1,5 @@
 {
-  "name": "@heroui/react",
+  "name": "@kinetic/react",
   "version": "3.2.2",
   "description": "🚀 Beautiful and modern React UI library built with Tailwind CSS 4.0.",
   "license": "MIT",
@@ -8,8 +8,8 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "author": "HeroUI <support@heroui.com>",
-  "homepage": "https://heroui.com",
+  "author": "Kinetic <support@kinetic-ui.com>",
+  "homepage": "https://kinetic-ui.com",
   "keywords": [
     "next",
     "next ui",
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroui-inc/heroui.git",
+    "url": "https://github.com/heroui-inc/kinetic.git",
     "directory": "packages/react"
   },
   "bugs": {
@@ -55,7 +55,7 @@
   },
   "clean-package": "./clean-package.config.json",
   "dependencies": {
-    "@heroui/styles": "workspace:*",
+    "@kinetic/styles": "workspace:*",
     "@radix-ui/react-avatar": "1.1.11",
     "@react-aria/ssr": "3.10.1",
     "@react-aria/i18n": "3.13.1",
@@ -70,7 +70,7 @@
     "tailwind-variants": "3.2.2"
   },
   "devDependencies": {
-    "@heroui/standard": "workspace:*",
+    "@kinetic/standard": "workspace:*",
     "@iconify/react": "6.0.2",
     "@internationalized/date": "3.12.2",
     "@react-stately/data": "3.16.1",

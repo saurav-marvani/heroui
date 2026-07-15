@@ -1,17 +1,17 @@
 ---
 title: 快速开始
-description: 几分钟内上手 HeroUI Native
+description: 几分钟内上手 Kinetic Native
 icon: rocket
 ---
 
 请根据项目情况选择适合的方案：
 
 - **方案 1** —— 通过我们的 CLI 一键创建预先配置好的新项目，无需手动设置。
-- **方案 2** —— 将 HeroUI Native 添加到已有的 React Native 或 Expo 项目。
+- **方案 2** —— 将 Kinetic Native 添加到已有的 React Native 或 Expo 项目。
 
 ## 方案 1：创建新项目
 
-最快捷的启动方式。CLI 会生成一个 Expo 项目，内置 HeroUI Native、所有必需的 peer 依赖、Uniwind / Tailwind CSS、全局样式以及已配置好的 `HeroUINativeProvider`，让你可以直接进入开发。
+最快捷的启动方式。CLI 会生成一个 Expo 项目，内置 Kinetic Native、所有必需的 peer 依赖、Uniwind / Tailwind CSS、全局样式以及已配置好的 `KineticNativeProvider`，让你可以直接进入开发。
 
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
@@ -46,17 +46,17 @@ npm run start
 到此即可开始开发。可直接跳到[使用第一个组件](#use-your-first-component)，或[浏览组件](/docs/native/components)。
 
 <Callout type="info">
-  生成的项目自带 Expo + TypeScript、预配置的 Uniwind + Tailwind CSS、含必要导入的 `global.css`，并已在应用入口包裹 `GestureHandlerRootView` 与 `HeroUINativeProvider`。
+  生成的项目自带 Expo + TypeScript、预配置的 Uniwind + Tailwind CSS、含必要导入的 `global.css`，并已在应用入口包裹 `GestureHandlerRootView` 与 `KineticNativeProvider`。
 </Callout>
 
 ## 方案 2：添加到已有项目
 
-如果你已经有一个 React Native 或 Expo 应用，请按以下步骤手动安装与配置 HeroUI Native。
+如果你已经有一个 React Native 或 Expo 应用，请按以下步骤手动安装与配置 Kinetic Native。
 
 <CopyPrompt
-  prompt={`Set up HeroUI Native in this React Native project.
+  prompt={`Set up Kinetic Native in this React Native project.
 
-Use the HeroUI Native MCP server (@heroui/native-mcp) as the single source of truth for installation steps, peer dependencies, and component APIs. Start by retrieving the latest quick-start / installation guide from the MCP and follow it precisely — do not rely on memory for versions, package names, or setup steps.
+Use the Kinetic Native MCP server (@kinetic/native-mcp) as the single source of truth for installation steps, peer dependencies, and component APIs. Start by retrieving the latest quick-start / installation guide from the MCP and follow it precisely — do not rely on memory for versions, package names, or setup steps.
 
 Before making any changes:
 
@@ -67,16 +67,16 @@ Before making any changes:
 Then apply the setup:
 
 - Install heroui-native plus any missing mandatory+optional peer dependencies.
-- Set up Uniwind + Tailwind CSS (follow the Uniwind quickstart) and add the HeroUI Native imports plus the correct @source line to global.css.
+- Set up Uniwind + Tailwind CSS (follow the Uniwind quickstart) and add the Kinetic Native imports plus the correct @source line to global.css.
 - Make sure GestureHandlerRootView wraps the entire app — it must be the outermost wrapper with style { flex: 1 }.
-- Add HeroUINativeProvider as a direct child of GestureHandlerRootView, wrapping the rest of the app.
+- Add KineticNativeProvider as a direct child of GestureHandlerRootView, wrapping the rest of the app.
 
 When done, summarize the changes you made and tell me how to run the app on iOS / Android.`}
 >
-  **更喜欢让 AI 助手代劳？** 在编辑器中安装 [HeroUI Native MCP 服务器](/docs/native/getting-started/mcp-server)，将上方提示词粘贴给你的 AI 助手 —— 它会分析你的项目并完成整套配置。
+  **更喜欢让 AI 助手代劳？** 在编辑器中安装 [Kinetic Native MCP 服务器](/docs/native/getting-started/mcp-server)，将上方提示词粘贴给你的 AI 助手 —— 它会分析你的项目并完成整套配置。
 </CopyPrompt>
 
-### 1. 安装 HeroUI Native
+### 1. 安装 Kinetic Native
 
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
@@ -166,16 +166,16 @@ When done, summarize the changes you made and tell me how to run the app on iOS 
 
 ### 6. 使用 Provider 包裹应用
 
-使用 `HeroUINativeProvider` 包裹应用，并务必外层再包一层 `GestureHandlerRootView`：
+使用 `KineticNativeProvider` 包裹应用，并务必外层再包一层 `GestureHandlerRootView`：
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProvider>{/* Your app content */}</HeroUINativeProvider>
+      <KineticNativeProvider>{/* Your app content */}</KineticNativeProvider>
     </GestureHandlerRootView>
   );
 }
@@ -204,7 +204,7 @@ export default function MyComponent() {
 
 ```tsx
 // Granular imports - use when you need only a few components
-import { HeroUINativeProvider } from "heroui-native/provider";
+import { KineticNativeProvider } from "heroui-native/provider";
 import { Button } from "heroui-native/button";
 import { Card } from "heroui-native/card";
 
@@ -228,16 +228,16 @@ import { Button, Card } from "heroui-native";
   **重要：** 为控制包体，请**始终**坚持使用细粒度导入策略。只要存在一处从 `heroui-native` 的整体导入，就可能使上述优化失效。
 </Callout>
 
-> **提示：** 若需要更强控制，可使用 [`HeroUINativeProviderRaw`](/docs/native/getting-started/provider#raw-provider) — 轻量 Provider，不包含 `ToastProvider` 与 `PortalHost`。
+> **提示：** 若需要更强控制，可使用 [`KineticNativeProviderRaw`](/docs/native/getting-started/provider#raw-provider) — 轻量 Provider，不包含 `ToastProvider` 与 `PortalHost`。
 
 ## 接下来
 
-- [HeroUI Native Provider](/docs/native/getting-started/provider)
+- [Kinetic Native Provider](/docs/native/getting-started/provider)
 - [样式指南](/docs/native/getting-started/styling)
 - [主题文档](/docs/native/getting-started/theming)
 
 ## 在 Web（Expo）上运行
 
 <Callout type="warning">
-  HeroUI Native **目前不建议用于 Web**。我们优先聚焦 iOS 与 Android。Web 开发请使用 [HeroUI React](/docs/react/getting-started/quick-start)。
+  Kinetic Native **目前不建议用于 Web**。我们优先聚焦 iOS 与 Android。Web 开发请使用 [Kinetic React](/docs/react/getting-started/quick-start)。
 </Callout>

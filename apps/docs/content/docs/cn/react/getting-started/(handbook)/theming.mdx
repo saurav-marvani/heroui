@@ -1,13 +1,13 @@
 ---
 title: 主题
-description: 使用 CSS 变量和全局样式自定义 HeroUI 的设计系统
+description: 使用 CSS 变量和全局样式自定义 Kinetic 的设计系统
 icon: palette
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI 使用 CSS 变量和 [BEM](https://getbem.com/) 类来实现主题化。你可以使用标准 CSS 自定义从颜色到组件样式的所有内容。
+Kinetic 使用 CSS 变量和 [BEM](https://getbem.com/) 类来实现主题化。你可以使用标准 CSS 自定义从颜色到组件样式的所有内容。
 
 <Callout type="info">
   **想要创建你自己的主题？** 试试 [主题构建器](/themes)，以可视化方式自定义颜色、圆角、字体等，然后导出 CSS 用于你的项目。
@@ -15,7 +15,7 @@ HeroUI 使用 CSS 变量和 [BEM](https://getbem.com/) 类来实现主题化。�
 
 ## 工作原理
 
-HeroUI 的主题系统构建于 [Tailwind CSS v4](https://tailwindcss.com/docs/theme) 的主题之上。当你导入 `@heroui/styles` 时，它会使用 Tailwind 的内置调色板，将其映射到语义化变量，自动在浅色和深色主题之间切换，并使用 CSS 层和 `@theme` 指令进行组织。
+Kinetic 的主题系统构建于 [Tailwind CSS v4](https://tailwindcss.com/docs/theme) 的主题之上。当你导入 `@kinetic/styles` 时，它会使用 Tailwind 的内置调色板，将其映射到语义化变量，自动在浅色和深色主题之间切换，并使用 CSS 层和 `@theme` 指令进行组织。
 
 **命名规则：**
 - 不带后缀的颜色用作背景（例如 `--accent`）
@@ -99,7 +99,7 @@ export function ThemeSwitch() {
 ```css
 /* app/globals.css */
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 
 :root {
   /* Override any color variable */
@@ -110,7 +110,7 @@ export function ThemeSwitch() {
 
 > **注意**：完整的调色板和视觉参考请参见 [颜色](/docs/handbook/colors)。
 
-> **深色模式**：如需基于 `next-themes` 与 HeroUI `useTheme` 钩子的完整配置指南，请参见 [深色模式](/docs/handbook/dark-mode)。
+> **深色模式**：如需基于 `next-themes` 与 Kinetic `useTheme` 钩子的完整配置指南，请参见 [深色模式](/docs/handbook/dark-mode)。
 
 **创建你自己的主题：**
 
@@ -282,7 +282,7 @@ export function ThemeSwitch() {
 @layer theme, base, components, utilities;
 
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 
 @import "./src/themes/ocean.css" layer(theme); /* [!code highlight]*/
 ```
@@ -331,7 +331,7 @@ export function ThemeSwitch() {
 
 ```css
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 ```
 
 **按需导入：** 只导入你需要的内容：
@@ -342,38 +342,38 @@ export function ThemeSwitch() {
 
 /* Base requirements */
 @import "tailwindcss";
-@import "@heroui/styles/base" layer(base);
+@import "@kinetic/styles/base" layer(base);
 /* OR specific base file */
-@import "@heroui/styles/base/base.css" layer(base);
+@import "@kinetic/styles/base/base.css" layer(base);
 
 /* Theme variables */
-@import "@heroui/styles/themes/shared/theme.css" layer(theme);
-@import "@heroui/styles/themes/default" layer(theme);
+@import "@kinetic/styles/themes/shared/theme.css" layer(theme);
+@import "@kinetic/styles/themes/default" layer(theme);
 /* OR specific theme files */
-@import "@heroui/styles/themes/default/index.css" layer(theme);
-@import "@heroui/styles/themes/default/variables.css" layer(theme);
+@import "@kinetic/styles/themes/default/index.css" layer(theme);
+@import "@kinetic/styles/themes/default/variables.css" layer(theme);
 
 /* Components (all components) */
-@import "@heroui/styles/components" layer(components);
+@import "@kinetic/styles/components" layer(components);
 /* OR specific component files */
-@import "@heroui/styles/components/index.css" layer(components);
-@import "@heroui/styles/components/button.css" layer(components);
-@import "@heroui/styles/components/accordion.css" layer(components);
+@import "@kinetic/styles/components/index.css" layer(components);
+@import "@kinetic/styles/components/button.css" layer(components);
+@import "@kinetic/styles/components/accordion.css" layer(components);
 
 /* Utilities (optional) */
-@import "@heroui/styles/utilities" layer(utilities);
+@import "@kinetic/styles/utilities" layer(utilities);
 
 /* Variants (optional) */
-@import "@heroui/styles/variants" layer(utilities);
+@import "@kinetic/styles/variants" layer(utilities);
 ```
 
-> **注意**：目录导入（例如 `@heroui/styles/components`）会自动解析为其对应的 `index.css` 文件。使用显式文件路径（例如 `@heroui/styles/components/button.css`）来导入单个组件的样式。
+> **注意**：目录导入（例如 `@kinetic/styles/components`）会自动解析为其对应的 `index.css` 文件。使用显式文件路径（例如 `@kinetic/styles/components/button.css`）来导入单个组件的样式。
 
 **Headless 模式：** 从头开始构建你自己的样式：
 
 ```css
 @import "tailwindcss";
-@import "@heroui/styles/base/base.css";
+@import "@kinetic/styles/base/base.css";
 
 /* Your custom styles */
 .button {
@@ -414,7 +414,7 @@ export function ThemeSwitch() {
 
 ## 变量参考
 
-HeroUI 在 [`variables.css`](https://github.com/heroui-inc/heroui/blob/v3/packages/styles/themes/default/variables.css) 中定义了三种类型的变量：
+Kinetic 在 [`variables.css`](https://github.com/heroui-inc/heroui/blob/v3/packages/styles/themes/default/variables.css) 中定义了三种类型的变量：
 
 1. **基础变量（Base Variables）** — 不会变化的值，例如 `--white`、`--black`、间距以及排版
 2. **主题变量（Theme Variables）** — 在浅色 / 深色主题之间切换的颜色，以及滚动条令牌（`--scrollbar-thumb`、`--scrollbar-width` 等）
@@ -598,13 +598,13 @@ HeroUI 在 [`variables.css`](https://github.com/heroui-inc/heroui/blob/v3/packag
 
 ## 滚动条
 
-HeroUI 为组件中的滚动区域（表格、弹出框、抽屉等）应用统一的滚动条样式。滚动条使用标准 CSS 属性（`scrollbar-width`、`scrollbar-color`、`scrollbar-gutter`），不再依赖 `::-webkit-scrollbar` 覆盖。
+Kinetic 为组件中的滚动区域（表格、弹出框、抽屉等）应用统一的滚动条样式。滚动条使用标准 CSS 属性（`scrollbar-width`、`scrollbar-color`、`scrollbar-gutter`），不再依赖 `::-webkit-scrollbar` 覆盖。
 
 **模式** — 在 `<html>`、组件根元素或滚动插槽上设置 `data-scrollbar`：
 
 | 模式 | `data-scrollbar` | 行为 |
 |------|------------------|------|
-| HeroUI 纤细 | *（未设置）* 或 `thin` | 使用主题令牌呈现的纤细滑块 |
+| Kinetic 纤细 | *（未设置）* 或 `thin` | 使用主题令牌呈现的纤细滑块 |
 | 操作系统 / 浏览器 | `default` | 原生滚动条（`auto`） |
 | 隐藏 | `none` | 不显示滚动条（`scrollbar-width: none`） |
 
@@ -612,7 +612,7 @@ HeroUI 为组件中的滚动区域（表格、弹出框、抽屉等）应用统�
 <!-- 全局使用原生滚动条 -->
 <html data-scrollbar="default">
 
-<!-- 在某个子树中恢复 HeroUI 滚动条 -->
+<!-- 在某个子树中恢复 Kinetic 滚动条 -->
 <main data-scrollbar="thin">
   ...
 </main>
@@ -656,9 +656,9 @@ HeroUI 为组件中的滚动区域（表格、弹出框、抽屉等）应用统�
 <Calendar.YearPickerGrid data-scrollbar="none" />
 ```
 
-**自定义溢出区域** — 在自己的元素上使用 `@heroui/styles` 提供的 `scrollbar`、`scrollbar-thin`、`scrollbar-default` 或 `scrollbar-none` 工具类。基于类的覆盖方式详见 [样式](/docs/handbook/styling)。
+**自定义溢出区域** — 在自己的元素上使用 `@kinetic/styles` 提供的 `scrollbar`、`scrollbar-thin`、`scrollbar-default` 或 `scrollbar-none` 工具类。基于类的覆盖方式详见 [样式](/docs/handbook/styling)。
 
-> **注意**：部分组件默认隐藏滚动条（日期选择器弹出框、颜色选择器、次级标签页）。嵌套的滚动插槽（例如日期选择器内部的日历年份选择器）会保留 HeroUI 滚动条，因为 `scrollbar-none` 只作用于其所在的元素本身，不会影响使用 `@apply scrollbar` 的后代元素。
+> **注意**：部分组件默认隐藏滚动条（日期选择器弹出框、颜色选择器、次级标签页）。嵌套的滚动插槽（例如日期选择器内部的日历年份选择器）会保留 Kinetic 滚动条，因为 `scrollbar-none` 只作用于其所在的元素本身，不会影响使用 `@apply scrollbar` 的后代元素。
 
 ## 资源
 

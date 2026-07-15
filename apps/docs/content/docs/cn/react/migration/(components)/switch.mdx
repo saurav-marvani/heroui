@@ -1,10 +1,10 @@
 ---
 title: Switch
-description: Switch 从 HeroUI v2 到 v3 的迁移指南。
+description: Switch 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Switch 文档](/docs/react/components/switch)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Switch 文档](/docs/react/components/switch)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Switch 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，`Switch` 结构简单，children 作为标签：
 
 ```tsx
-import { Switch } from "@heroui/react";
+import { Switch } from "@kinetic/react";
 
 export default function App() {
   return <Switch>Enable notifications</Switch>;
@@ -22,7 +22,7 @@ export default function App() {
 在 v3 中，`Switch` 需要复合组件：
 
 ```tsx
-import { Switch, Label } from "@heroui/react";
+import { Switch, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -187,7 +187,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Switch, Label, Description } from "@heroui/react";
+    import { Switch, Label, Description } from "@kinetic/react";
 
     <Switch>
       <Switch.Content>
@@ -293,7 +293,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { SwitchGroup } from "@heroui/react";
+    import { SwitchGroup } from "@kinetic/react";
 
     <SwitchGroup>
       <Switch name="notifications">

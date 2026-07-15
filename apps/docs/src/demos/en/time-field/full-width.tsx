@@ -1,7 +1,7 @@
 "use client";
 
 import {ChevronDown, Clock} from "@gravity-ui/icons";
-import {Label, TimeField} from "@heroui/react";
+import {Label, TimeField} from "@kinetic/react";
 
 export function FullWidth() {
   return (

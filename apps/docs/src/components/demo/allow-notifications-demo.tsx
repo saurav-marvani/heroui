@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, Label, Switch} from "@heroui/react";
+import {Description, Label, Switch} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 

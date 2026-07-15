@@ -1,5 +1,5 @@
 {
-  "name": "@heroui/vitest",
+  "name": "@kinetic/vitest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "start": "storybook start"
   },
   "devDependencies": {
-    "@heroui/standard": "workspace:*",
+    "@kinetic/standard": "workspace:*",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.1",
     "@testing-library/user-event": "14.6.1",

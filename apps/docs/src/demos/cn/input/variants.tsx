@@ -1,4 +1,4 @@
-import {Input} from "@heroui/react";
+import {Input} from "@kinetic/react";
 
 export function Variants() {
   return (

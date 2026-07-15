@@ -45,6 +45,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {inputGroupVariants} from "@heroui/styles";
+export {inputGroupVariants} from "@kinetic/styles";
 
-export type {InputGroupVariants} from "@heroui/styles";
+export type {InputGroupVariants} from "@kinetic/styles";

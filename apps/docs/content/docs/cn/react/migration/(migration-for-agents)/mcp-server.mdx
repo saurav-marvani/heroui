@@ -1,14 +1,14 @@
 ---
 title: MCP服务器
-description: 在 AI 助手中访问 HeroUI v2 到 v3 的迁移指南
+description: 在 AI 助手中访问 Kinetic v2 到 v3 的迁移指南
 ---
 
-HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的迁移文档。
+Kinetic 迁移 MCP 服务器使 AI 助手可以直接访问 Kinetic v2 到 v3 的迁移文档。
 
-迁移 MCP 服务器使用 **Streamable HTTP 传输**（基于 URL）并部署在`https://migration-mcp.heroui.com`。查看源代码[GitHub](https://github.com/heroui-inc/heroui-mcp/tree/main/apps/migration-mcp).
+迁移 MCP 服务器使用 **Streamable HTTP 传输**（基于 URL）并部署在`https://migration-mcp.kinetic-ui.com`。查看源代码[GitHub](https://github.com/heroui-inc/heroui-mcp/tree/main/apps/migration-mcp).
 
 <Callout>
-  迁移 MCP 仅用于**迁移**。完成迁移后，切换到[HeroUI React MCP 服务器](/docs/react/getting-started/mcp-server)用于 v3 组件开发。
+  迁移 MCP 仅用于**迁移**。完成迁移后，切换到[Kinetic React MCP 服务器](/docs/react/getting-started/mcp-server)用于 v3 组件开发。
 </Callout>
 
 ## 快速设置
@@ -21,7 +21,7 @@ HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的�
 {
   "mcpServers": {
     "heroui-migration": {
-      "url": "https://migration-mcp.heroui.com"
+      "url": "https://migration-mcp.kinetic-ui.com"
     }
   }
 }
@@ -38,13 +38,13 @@ HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的�
   "mcpServers": {
     "heroui-migration": {
       "type": "http",
-      "url": "https://migration-mcp.heroui.com"
+      "url": "https://migration-mcp.kinetic-ui.com"
     }
   }
 }
 ```
 
-添加配置后，重启 Claude Code 并运行 `/mcp`，在列表中查看 HeroUI 迁移 MCP。若显示 **已连接**，即可开始使用。
+添加配置后，重启 Claude Code 并运行 `/mcp`，在列表中查看 Kinetic 迁移 MCP。若显示 **已连接**，即可开始使用。
 
 请参阅 [Claude Code MCP 文档](https://docs.claude.com/en/docs/claude-code/mcp)了解更多详情。
 
@@ -56,7 +56,7 @@ HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的�
 {
   "mcpServers": {
     "heroui-migration": {
-      "url": "https://migration-mcp.heroui.com"
+      "url": "https://migration-mcp.kinetic-ui.com"
     }
   }
 }
@@ -74,7 +74,7 @@ HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的�
 {
   "context_servers": {
     "heroui-migration": {
-      "url": "https://migration-mcp.heroui.com"
+      "url": "https://migration-mcp.kinetic-ui.com"
     }
   }
 }
@@ -91,7 +91,7 @@ HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的�
   "servers": {
     "heroui-migration": {
       "type": "http",
-      "url": "https://migration-mcp.heroui.com"
+      "url": "https://migration-mcp.kinetic-ui.com"
     }
   }
 }
@@ -107,7 +107,7 @@ HeroUI 迁移 MCP 服务器使 AI 助手可以直接访问 HeroUI v2 到 v3 的�
 
 ```toml title="config.toml"
 [mcp_servers.heroui-migration]
-url = "https://migration-mcp.heroui.com"
+url = "https://migration-mcp.kinetic-ui.com"
 ```
 
 添加配置后，重启 Codex 并在 TUI 中运行 `/mcp` 以确认服务器已激活。
@@ -124,7 +124,7 @@ url = "https://migration-mcp.heroui.com"
   "mcp": {
     "heroui-migration": {
       "type": "remote",
-      "url": "https://migration-mcp.heroui.com"
+      "url": "https://migration-mcp.kinetic-ui.com"
     }
   }
 }
@@ -138,7 +138,7 @@ url = "https://migration-mcp.heroui.com"
 
 配置完成后，向您的 AI 助手询问以下问题：
 
-- “帮我将 Button 从 HeroUI v2 迁移到 v3”
+- “帮我将 Button 从 Kinetic v2 迁移到 v3”
 - “获取我的项目的完整迁移工作流程”
 - “复选框迁移有何变化？”
 - “显示 Card 和 Modal 的迁移指南”
@@ -163,7 +163,7 @@ Migration MCP 服务器为 AI 助手提供以下工具：
 
 | 提示词 | 描述 |
 |--------|-------------|
-| `analyze-and-plan` | 分析项目以识别所有 HeroUI v2 组件并创建迁移计划。建议作为迁移第一步。可选：`migrationType: "full"`（默认）或 `"incremental"` |
+| `analyze-and-plan` | 分析项目以识别所有 Kinetic v2 组件并创建迁移计划。建议作为迁移第一步。可选：`migrationType: "full"`（默认）或 `"incremental"` |
 | `implement-migration` | 分阶段实施组件迁移，并设置检查点供用户确认。完成组件迁移与依赖切换后，继续指导 hooks 与样式迁移。可选：`migrationType: "full"`（默认）或 `"incremental"` |
 
 **工作流程：** 运行`analyze-and-plan`首先创建您的迁移计划，然后使用`implement-migration`一步步执行它。

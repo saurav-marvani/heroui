@@ -1,10 +1,10 @@
 ---
 title: Tabs
-description: Tabs 从 HeroUI v2 到 v3 的迁移指南。
+description: Tabs 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Tabs 文档](/docs/react/components/tabs)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Tabs 文档](/docs/react/components/tabs)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Tabs 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Tabs 使用 `Tab` 子组件，通过 `title` prop 设置标题，子节点作为面板内容：
 
 ```tsx
-import { Tabs, Tab } from "@heroui/react";
+import { Tabs, Tab } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
 在 v3 中，Tabs 改为复合组件，Tab 与 Panel 分别独立：
 
 ```tsx
-import { Tabs } from "@heroui/react";
+import { Tabs } from "@kinetic/react";
 
 export default function App() {
   return (

@@ -1,17 +1,17 @@
 ---
 title: Snippet
-description: Migration guide for Snippet from HeroUI v2 to v3
+description: Migration guide for Snippet from Kinetic v2 to v3
 ---
 
 <Callout type="warning">
-  The Snippet component has been **removed** in HeroUI v3. Use native HTML elements with Tailwind CSS classes and implement copy functionality manually using the Clipboard API.
+  The Snippet component has been **removed** in Kinetic v3. Use native HTML elements with Tailwind CSS classes and implement copy functionality manually using the Clipboard API.
 </Callout>
 
 ## Key Changes
 
 ### 1. Component Removal
 
-**v2:** `<Snippet>` component from `@heroui/react`  
+**v2:** `<Snippet>` component from `@kinetic/react`  
 **v3:** Native HTML elements (`<pre>`, `<code>`) with manual copy implementation
 
 ### 2. Features Mapping
@@ -34,12 +34,12 @@ The v2 Snippet component had the following features that need to be replaced:
 In v2, `Snippet` was a component wrapper with built-in copy functionality:
 
 ```tsx
-import { Snippet } from "@heroui/react";
+import { Snippet } from "@kinetic/react";
 
 export default function App() {
   return (
     <Snippet symbol="$">
-      npm install @heroui/react
+      npm install @kinetic/react
     </Snippet>
   );
 }
@@ -48,14 +48,14 @@ export default function App() {
 In v3, use native HTML elements with manual copy implementation:
 
 ```tsx
-import { Button, Tooltip } from "@heroui/react";
+import { Button, Tooltip } from "@kinetic/react";
 import { useState } from "react";
 
 export default function App() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText("npm install @heroui/react");
+    await navigator.clipboard.writeText("npm install @kinetic/react");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -64,7 +64,7 @@ export default function App() {
     <div className="flex items-center gap-2 rounded-lg bg-default-100 px-3 py-1.5">
       <pre className="text-sm font-mono">
         <span className="text-default-500">$ </span>
-        npm install @heroui/react
+        npm install @kinetic/react
       </pre>
       <Tooltip>
         <Button
@@ -92,24 +92,24 @@ export default function App() {
     ```tsx
     <Snippet symbol="$">
       {[
-        "npm install @heroui/react",
-        "yarn add @heroui/react",
-        "pnpm add @heroui/react"
+        "npm install @kinetic/react",
+        "yarn add @kinetic/react",
+        "pnpm add @kinetic/react"
       ]}
     </Snippet>
     ```
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Button, Tooltip } from "@heroui/react";
+    import { Button, Tooltip } from "@kinetic/react";
     import { useState } from "react";
 
     function MultiLineSnippet() {
       const [copied, setCopied] = useState(false);
       const lines = [
-        "npm install @heroui/react",
-        "yarn add @heroui/react",
-        "pnpm add @heroui/react"
+        "npm install @kinetic/react",
+        "yarn add @kinetic/react",
+        "pnpm add @kinetic/react"
       ];
       const codeString = lines.join("\n");
 
@@ -155,17 +155,17 @@ export default function App() {
     ```tsx
     {/* With variants */}
     <Snippet variant="bordered" color="primary">
-      npm install @heroui/react
+      npm install @kinetic/react
     </Snippet>
     
     {/* Without symbol */}
     <Snippet hideSymbol>
-      npm install @heroui/react
+      npm install @kinetic/react
     </Snippet>
     
     {/* Without copy button */}
     <Snippet hideCopyButton>
-      npm install @heroui/react
+      npm install @kinetic/react
     </Snippet>
     ```
   </Tab>
@@ -175,7 +175,7 @@ export default function App() {
     <div className="flex items-center gap-2 rounded-lg border border-accent bg-transparent px-3 py-1.5">
       <pre className="text-sm font-mono text-accent">
         <span className="text-accent/60">$ </span>
-        npm install @heroui/react
+        npm install @kinetic/react
       </pre>
       {/* Copy button */}
     </div>
@@ -183,7 +183,7 @@ export default function App() {
     {/* Without symbol */}
     <div className="flex items-center gap-2 rounded-lg bg-default-100 px-3 py-1.5">
       <pre className="text-sm font-mono">
-        npm install @heroui/react
+        npm install @kinetic/react
       </pre>
       {/* Copy button */}
     </div>
@@ -192,7 +192,7 @@ export default function App() {
     <div className="rounded-lg bg-default-100 px-3 py-1.5">
       <pre className="text-sm font-mono">
         <span className="text-default-500">$ </span>
-        npm install @heroui/react
+        npm install @kinetic/react
       </pre>
     </div>
     ```
@@ -206,7 +206,7 @@ Since Snippet functionality is commonly needed, here's a complete reusable compo
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Snippet } from "@heroui/react";
+    import { Snippet } from "@kinetic/react";
 
     <Snippet
       symbol="$"
@@ -214,13 +214,13 @@ Since Snippet functionality is commonly needed, here's a complete reusable compo
       color="primary"
       size="md"
     >
-      npm install @heroui/react
+      npm install @kinetic/react
     </Snippet>
     ```
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Button, Tooltip } from "@heroui/react";
+    import { Button, Tooltip } from "@kinetic/react";
     import { useState, ReactNode } from "react";
     import { cn } from "@/lib/utils"; // or your cn utility
 
@@ -369,7 +369,7 @@ Since Snippet functionality is commonly needed, here's a complete reusable compo
       color="primary"
       size="md"
     >
-      npm install @heroui/react
+      npm install @kinetic/react
     </Snippet>
     ```
   </Tab>
@@ -378,7 +378,7 @@ Since Snippet functionality is commonly needed, here's a complete reusable compo
 ## Summary
 
 1. **Component Removed**: `Snippet` component no longer exists in v3
-2. **Import Change**: Remove `import { Snippet } from "@heroui/react"`
+2. **Import Change**: Remove `import { Snippet } from "@kinetic/react"`
 3. **Use Native Elements**: Replace with native `<pre>` and `<code>` elements
 4. **Manual Copy**: Implement copy functionality using Clipboard API
 5. **Styling**: Apply Tailwind CSS classes directly for variants, colors, sizes
@@ -387,7 +387,7 @@ Since Snippet functionality is commonly needed, here's a complete reusable compo
 
 ## Migration Steps
 
-1. **Remove Import**: Remove `Snippet` from `@heroui/react` imports
+1. **Remove Import**: Remove `Snippet` from `@kinetic/react` imports
 2. **Replace Component**: Replace all `<Snippet>` instances with native HTML elements
 3. **Add Copy Functionality**: Implement copy using `navigator.clipboard.writeText()`
 4. **Add Copy Button**: Use v3 Button component with Tooltip

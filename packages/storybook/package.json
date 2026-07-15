@@ -1,5 +1,5 @@
 {
-  "name": "@heroui/storybook",
+  "name": "@kinetic/storybook",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@gravity-ui/icons": "2.16.0",
-    "@heroui/react": "workspace:*",
-    "@heroui/styles": "workspace:*",
+    "@kinetic/react": "workspace:*",
+    "@kinetic/styles": "workspace:*",
     "@iconify/react": "6.0.2",
     "apcach": "0.6.4",
     "culori": "4.0.2",
@@ -24,7 +24,7 @@
     "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
-    "@heroui/standard": "workspace:*",
+    "@kinetic/standard": "workspace:*",
     "@storybook/addon-a11y": "10.1.10",
     "@storybook/addon-docs": "10.1.10",
     "@storybook/icons": "2.0.1",

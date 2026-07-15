@@ -1,7 +1,7 @@
 "use client";
 
 import {HardDrive, Persons} from "@gravity-ui/icons";
-import {Button, toast} from "@heroui/react";
+import {Button, toast} from "@kinetic/react";
 
 const noop = () => {};
 
@@ -19,7 +19,7 @@ export function Variants() {
                 onPress: () => toast.clear(),
                 variant: "tertiary",
               },
-              description: "Bob sent you an invitation to join HeroUI team",
+              description: "Bob sent you an invitation to join Kinetic team",
               indicator: <Persons />,
               variant: "default",
             });
@@ -50,7 +50,7 @@ export function Variants() {
                 className: "bg-success text-success-foreground",
                 onPress: noop,
               },
-              description: "You can continue using HeroUI Chat",
+              description: "You can continue using Kinetic Chat",
             })
           }
         >

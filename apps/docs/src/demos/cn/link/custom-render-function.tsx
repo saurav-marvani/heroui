@@ -1,6 +1,6 @@
 "use client";
 
-import {Link} from "@heroui/react";
+import {Link} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

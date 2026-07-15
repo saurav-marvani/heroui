@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, toast} from "@heroui/react";
+import {Button, toast} from "@kinetic/react";
 
 export function Simple() {
   return (

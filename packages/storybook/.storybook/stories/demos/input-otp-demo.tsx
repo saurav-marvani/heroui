@@ -1,4 +1,4 @@
-import {InputOTP, Label, Link} from "@heroui/react";
+import {InputOTP, Label, Link} from "@kinetic/react";
 import React, {useState} from "react";
 
 export function InputOTPDemo() {

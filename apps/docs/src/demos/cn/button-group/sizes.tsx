@@ -1,4 +1,4 @@
-import {Button, ButtonGroup} from "@heroui/react";
+import {Button, ButtonGroup} from "@kinetic/react";
 
 export function Sizes() {
   return (

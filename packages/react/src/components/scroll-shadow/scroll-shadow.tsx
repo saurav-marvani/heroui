@@ -1,9 +1,9 @@
 "use client";
 
-import type {ScrollShadowVariants} from "@heroui/styles";
+import type {ScrollShadowVariants} from "@kinetic/styles";
 import type {RefObject} from "react";
 
-import {scrollShadowVariants} from "@heroui/styles";
+import {scrollShadowVariants} from "@kinetic/styles";
 import {mergeRefs} from "@react-aria/utils";
 import {useMemo, useRef} from "react";
 
@@ -122,4 +122,4 @@ export const ScrollShadowRoot = ({
   );
 };
 
-ScrollShadowRoot.displayName = "HeroUI.ScrollShadow";
+ScrollShadowRoot.displayName = "Kinetic.ScrollShadow";

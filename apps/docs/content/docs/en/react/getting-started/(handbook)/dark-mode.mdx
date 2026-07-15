@@ -1,13 +1,13 @@
 ---
 title: Dark Mode
-description: Add light, dark, and system theme switching to HeroUI v3
+description: Add light, dark, and system theme switching to Kinetic v3
 icon: moon
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI dark mode is CSS-driven. Components read theme variables from the root element, so you do not need a HeroUI provider. Add the `dark` class or `data-theme="dark"` to `<html>` and HeroUI will apply the dark theme.
+Kinetic dark mode is CSS-driven. Components read theme variables from the root element, so you do not need a Kinetic provider. Add the `dark` class or `data-theme="dark"` to `<html>` and Kinetic will apply the dark theme.
 
 ```html
 <html class="dark" data-theme="dark">
@@ -20,7 +20,7 @@ HeroUI dark mode is CSS-driven. Components read theme variables from the root el
 Keep the `bg-background` and `text-foreground` classes on your app shell so the page canvas changes with the active theme.
 
 <Callout type="info">
-  HeroUI's built-in light and dark themes respond to both `.light` / `.dark` classes and `data-theme="light"` / `data-theme="dark"` attributes. If you set both manually, keep the values in sync.
+  Kinetic's built-in light and dark themes respond to both `.light` / `.dark` classes and `data-theme="light"` / `data-theme="dark"` attributes. If you set both manually, keep the values in sync.
 </Callout>
 
 ## Next.js with next-themes
@@ -103,7 +103,7 @@ Use `useTheme` from `next-themes` inside a client component. Delay rendering unt
 // app/components/theme-switcher.tsx
 "use client";
 
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 import {useTheme} from "next-themes";
 import {useEffect, useState} from "react";
 
@@ -185,13 +185,13 @@ When you pass a custom `themes` list, include `"light"` and `"dark"` if you stil
 
 ## React with useTheme
 
-Use HeroUI's `useTheme` hook when you are building a plain React app, such as Vite or Create React App, and do not need `next-themes`.
+Use Kinetic's `useTheme` hook when you are building a plain React app, such as Vite or Create React App, and do not need `next-themes`.
 
-The hook is exported from `@heroui/react`. It stores the selected theme in `localStorage`, resolves `"system"` from the user's OS preference, and applies both the class and `data-theme` attribute to `<html>`.
+The hook is exported from `@kinetic/react`. It stores the selected theme in `localStorage`, resolves `"system"` from the user's OS preference, and applies both the class and `data-theme` attribute to `<html>`.
 
 ```tsx
 // src/components/theme-switcher.tsx
-import {Button, useTheme} from "@heroui/react";
+import {Button, useTheme} from "@kinetic/react";
 
 export function ThemeSwitcher() {
   const {resolvedTheme, setTheme, theme} = useTheme("system");
@@ -219,7 +219,7 @@ export function ThemeSwitcher() {
 ```
 
 <Callout type="warning">
-  Use one theme controller per app. In Next.js, prefer `next-themes` and its `useTheme` hook. In plain React apps, use `useTheme` from `@heroui/react`.
+  Use one theme controller per app. In Next.js, prefer `next-themes` and its `useTheme` hook. In plain React apps, use `useTheme` from `@kinetic/react`.
 </Callout>
 
 ## Styling for both themes

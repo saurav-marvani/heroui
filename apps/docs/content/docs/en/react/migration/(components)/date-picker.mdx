@@ -1,10 +1,10 @@
 ---
 title: DatePicker
-description: Migration guide for DatePicker from HeroUI v2 to v3
+description: Migration guide for DatePicker from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 DatePicker documentation](/docs/react/components/date-picker) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 DatePicker documentation](/docs/react/components/date-picker) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for DatePicker from HeroUI v2 to v3
 In v2, `DatePicker` was a single self-contained component with props for label, description, calendar, and time input:
 
 ```tsx
-import { DatePicker } from "@heroui/react";
+import { DatePicker } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
 In v3, DatePicker uses a composition-first API where you compose `DateField` and `Calendar` explicitly:
 
 ```tsx
-import { DatePicker, DateField, Calendar, Label } from "@heroui/react";
+import { DatePicker, DateField, Calendar, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -137,14 +137,14 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { DatePicker } from "@heroui/react";
+    import { DatePicker } from "@kinetic/react";
 
     <DatePicker label="Birth date" />
     ```
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { DatePicker, DateField, Calendar, Label } from "@heroui/react";
+    import { DatePicker, DateField, Calendar, Label } from "@kinetic/react";
 
     <DatePicker>
       <Label>Birth date</Label>
@@ -189,7 +189,7 @@ export default function App() {
   <Tab value="v2">
     ```tsx
     import { useState } from "react";
-    import { DatePicker } from "@heroui/react";
+    import { DatePicker } from "@kinetic/react";
     import { parseDate } from "@internationalized/date";
 
     const [value, setValue] = useState(parseDate("2024-03-07"));
@@ -204,7 +204,7 @@ export default function App() {
   <Tab value="v3">
     ```tsx
     import { useState } from "react";
-    import { DatePicker, DateField, Calendar, Label } from "@heroui/react";
+    import { DatePicker, DateField, Calendar, Label } from "@kinetic/react";
     import { parseDate } from "@internationalized/date";
 
     const [value, setValue] = useState(parseDate("2024-03-07"));
@@ -258,7 +258,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { DatePicker, DateField, Calendar, Label, Description, FieldError } from "@heroui/react";
+    import { DatePicker, DateField, Calendar, Label, Description, FieldError } from "@kinetic/react";
 
     <DatePicker isInvalid={isInvalid}>
       <Label>Event date</Label>

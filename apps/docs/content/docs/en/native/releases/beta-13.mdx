@@ -39,7 +39,7 @@ Update to the latest version:
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server).
 </Callout>
 
 ## Try It on Your Device
@@ -312,7 +312,7 @@ The library now provides granular exports for each component, allowing developer
 
 ```tsx
 // Granular imports - use when you need only a few components
-import { HeroUINativeProvider } from "heroui-native/provider";
+import { KineticNativeProvider } from "heroui-native/provider";
 import { Button } from "heroui-native/button";
 import { Card } from "heroui-native/card";
 
@@ -671,7 +671,7 @@ This release includes fixes for the following issues:
 
 - **[Issue #219](https://github.com/heroui-inc/heroui-native/issues/219)**: Fixed Button `childrenToString()` returning `"[object Object]"` for multiple children. The function now properly handles React elements and complex children structures, preventing stringification issues when rendering button content.
 
-- **[Issue #232](https://github.com/heroui-inc/heroui-native/issues/232)**: Fixed HeroUINativeProvider breaking with the recently released Uniwind Pro. The provider now properly handles Uniwind Pro compatibility, ensuring smooth integration with the latest Uniwind version.
+- **[Issue #232](https://github.com/heroui-inc/heroui-native/issues/232)**: Fixed KineticNativeProvider breaking with the recently released Uniwind Pro. The provider now properly handles Uniwind Pro compatibility, ensuring smooth integration with the latest Uniwind version.
 
 - **[Issue #259](https://github.com/heroui-inc/heroui-native/issues/259)**: Fixed BottomSheet issue where opening quickly and starting a meeting would prevent it from opening again. The refactored animation system resolves this issue by improving the entering/exiting animation logic.
 

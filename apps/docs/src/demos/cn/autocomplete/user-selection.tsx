@@ -1,6 +1,6 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
 import {
   Autocomplete,
@@ -13,42 +13,42 @@ import {
   ListBox,
   SearchField,
   useFilter,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {useState} from "react";
 
 export function UserSelection() {
   const users = [
     {
-      avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
-      email: "bob@heroui.com",
+      avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
+      email: "bob@kinetic-ui.com",
       fallback: "B",
       id: "1",
       name: "Bob",
     },
     {
-      avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
-      email: "fred@heroui.com",
+      avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
+      email: "fred@kinetic-ui.com",
       fallback: "F",
       id: "2",
       name: "Fred",
     },
     {
-      avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
-      email: "martha@heroui.com",
+      avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
+      email: "martha@kinetic-ui.com",
       fallback: "M",
       id: "3",
       name: "Martha",
     },
     {
-      avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
-      email: "john@heroui.com",
+      avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
+      email: "john@kinetic-ui.com",
       fallback: "J",
       id: "4",
       name: "John",
     },
     {
-      avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
-      email: "jane@heroui.com",
+      avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
+      email: "jane@kinetic-ui.com",
       fallback: "J",
       id: "5",
       name: "Jane",

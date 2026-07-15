@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {TabsVariants} from "@heroui/styles";
+import type {TabsVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 
-import {tabsVariants} from "@heroui/styles";
+import {tabsVariants} from "@kinetic/styles";
 import React, {createContext, use, useRef} from "react";
 import {SelectionIndicator as SelectionIndicatorPrimitive} from "react-aria-components/SelectionIndicator";
 import {

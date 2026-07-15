@@ -1,4 +1,4 @@
-import {Avatar} from "@heroui/react";
+import {Avatar} from "@kinetic/react";
 
 export function Colors() {
   return (

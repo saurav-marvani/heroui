@@ -1,10 +1,10 @@
 ---
 title: Radio
-description: Migration guide for Radio from HeroUI v2 to v3
+description: Migration guide for Radio from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Radio documentation](/docs/react/components/radio-group) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Radio documentation](/docs/react/components/radio-group) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Radio from HeroUI v2 to v3
 In v2, Radio used a simple structure with props:
 
 ```tsx
-import { RadioGroup, Radio } from "@heroui/react";
+import { RadioGroup, Radio } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -27,7 +27,7 @@ export default function App() {
 In v3, Radio requires compound components:
 
 ```tsx
-import { RadioGroup, Radio, Label, Description } from "@heroui/react";
+import { RadioGroup, Radio, Label, Description } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -102,7 +102,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Label, Description, FieldError } from "@heroui/react";
+    import { Label, Description, FieldError } from "@kinetic/react";
 
     {/* With description */}
     <RadioGroup>

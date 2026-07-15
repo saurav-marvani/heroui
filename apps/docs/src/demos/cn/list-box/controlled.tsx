@@ -1,9 +1,9 @@
 "use client";
 
-import type {Selection} from "@heroui/react";
+import type {Selection} from "@kinetic/react";
 
 import {Check} from "@gravity-ui/icons";
-import {Avatar, Description, Label, ListBox, Surface} from "@heroui/react";
+import {Avatar, Description, Label, ListBox, Surface} from "@kinetic/react";
 import {useState} from "react";
 
 export function Controlled() {
@@ -24,13 +24,13 @@ export function Controlled() {
             <Avatar size="sm">
               <Avatar.Image
                 alt="Bob"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
               />
               <Avatar.Fallback>B</Avatar.Fallback>
             </Avatar>
             <div className="flex flex-col">
               <Label>Bob</Label>
-              <Description>bob@heroui.com</Description>
+              <Description>bob@kinetic-ui.com</Description>
             </div>
             <ListBox.ItemIndicator>
               {({isSelected}) => (isSelected ? <Check className="size-4 text-accent" /> : null)}
@@ -40,13 +40,13 @@ export function Controlled() {
             <Avatar size="sm">
               <Avatar.Image
                 alt="Fred"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg"
               />
               <Avatar.Fallback>F</Avatar.Fallback>
             </Avatar>
             <div className="flex flex-col">
               <Label>Fred</Label>
-              <Description>fred@heroui.com</Description>
+              <Description>fred@kinetic-ui.com</Description>
             </div>
             <ListBox.ItemIndicator>
               {({isSelected}) => (isSelected ? <Check className="size-4 text-accent" /> : null)}
@@ -56,13 +56,13 @@ export function Controlled() {
             <Avatar size="sm">
               <Avatar.Image
                 alt="Martha"
-                src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg"
+                src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg"
               />
               <Avatar.Fallback>M</Avatar.Fallback>
             </Avatar>
             <div className="flex flex-col">
               <Label>Martha</Label>
-              <Description>martha@heroui.com</Description>
+              <Description>martha@kinetic-ui.com</Description>
             </div>
             <ListBox.ItemIndicator>
               {({isSelected}) => (isSelected ? <Check className="size-4 text-accent" /> : null)}

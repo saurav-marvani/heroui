@@ -1,8 +1,8 @@
 "use client";
 
-import type {SortDescriptor} from "@heroui/react";
+import type {SortDescriptor} from "@kinetic/react";
 
-import {Table} from "@heroui/react";
+import {Table} from "@kinetic/react";
 import {useMemo, useState} from "react";
 
 interface User {

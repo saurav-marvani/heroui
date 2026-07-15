@@ -1,4 +1,4 @@
-import {Input, Surface} from "@heroui/react";
+import {Input, Surface} from "@kinetic/react";
 
 export function OnSurface() {
   return (

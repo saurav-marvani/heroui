@@ -1,6 +1,6 @@
 "use client";
 
-import {CloseButton} from "@heroui/react";
+import {CloseButton} from "@kinetic/react";
 import {useState} from "react";
 
 export function Interactive() {

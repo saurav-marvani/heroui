@@ -1,6 +1,6 @@
 "use client";
 
-import {InputOTP, Label, Link} from "@heroui/react";
+import {InputOTP, Label, Link} from "@kinetic/react";
 import {useState} from "react";
 
 import {useDictionary} from "@/hooks/use-dictionary";

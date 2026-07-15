@@ -1,6 +1,6 @@
 "use client";
 
-import {buttonVariants} from "@heroui/react";
+import {buttonVariants} from "@kinetic/react";
 import {useEffect, useRef, useState} from "react";
 
 import {useCurrentFramework} from "@/hooks/use-current-framework";

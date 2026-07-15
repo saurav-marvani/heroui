@@ -6,7 +6,7 @@ import {
   ToggleButton,
   ToggleButtonGroup,
   Toolbar,
-} from "@heroui/react";
+} from "@kinetic/react";
 
 export function Attached() {
   return (

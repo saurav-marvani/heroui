@@ -25,16 +25,16 @@ export const OPENAPI_HEADERS = {
 export const AGENT_API_VERSION = "3.0.5";
 export const MCP_PACKAGE_VERSION = "1.1.0";
 
-export const REACT_MCP_API_URL = "https://mcp-api.heroui.com";
-export const NATIVE_MCP_API_URL = "https://native-mcp-api.heroui.com";
+export const REACT_MCP_API_URL = "https://mcp-api.kinetic-ui.com";
+export const NATIVE_MCP_API_URL = "https://native-mcp-api.kinetic-ui.com";
 
 export const AGENT_SKILL_DESCRIPTIONS: Record<string, string> = {
-  "heroui-migration":
-    "Migrate projects from HeroUI v2 and NextUI patterns to HeroUI v3 with current guides and examples.",
-  "heroui-native":
-    "Build React Native applications with HeroUI Native components, theme variables, and documentation lookup.",
-  "heroui-react":
-    "Build React applications with HeroUI v3 components, theming, styling, and documentation lookup.",
+  "kinetic-migration":
+    "Migrate projects from Kinetic v2 and NextUI patterns to Kinetic v3 with current guides and examples.",
+  "kinetic-native":
+    "Build React Native applications with Kinetic Native components, theme variables, and documentation lookup.",
+  "kinetic-react":
+    "Build React applications with Kinetic v3 components, theming, styling, and documentation lookup.",
 };
 
 export function normalizeOrigin(origin: string): string {

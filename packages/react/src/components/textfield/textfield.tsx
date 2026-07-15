@@ -1,9 +1,9 @@
 "use client";
 
-import type {TextFieldVariants} from "@heroui/styles";
+import type {TextFieldVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {textFieldVariants} from "@heroui/styles";
+import {textFieldVariants} from "@kinetic/styles";
 import React, {createContext} from "react";
 import {TextField as TextFieldPrimitive} from "react-aria-components/TextField";
 

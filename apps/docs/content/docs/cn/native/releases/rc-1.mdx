@@ -1,6 +1,6 @@
 ---
 title: RC 1
-description: Alert 组件、独立 Radio 组件、Select TriggerIndicator、HeroUINativeProviderRaw、disableFullWindowOverlay、styles 属性扩展、主题 surface 重构
+description: Alert 组件、独立 Radio 组件、Select TriggerIndicator、KineticNativeProviderRaw、disableFullWindowOverlay、styles 属性扩展、主题 surface 重构
 github:
   pull: 284
 ---
@@ -9,7 +9,7 @@ github:
   <span className="text-sm text-muted">2026 年 2 月 12 日</span>
 </div>
 
-RC 1 是 HeroUI Native 的首个候选发布（Release Candidate），表明库已接近生产可用。本版本引入以无障碍为先、带状态变体的 Alert 复合组件；将 Radio 抽为可双模式运行的独立组件；新增带动画的 Select.TriggerIndicator 子组件。还提供轻量 `HeroUINativeProviderRaw` 以优化包体、用于 iOS 调试的 `disableFullWindowOverlay`、六个组件统一的 `styles` 插槽式样式，以及用主题显式变量替代计算型 surface 色的主题重构。另含 BottomSheet 内 InputOTP、Toast 文字裁切与元素检查器兼容等关键修复。
+RC 1 是 Kinetic Native 的首个候选发布（Release Candidate），表明库已接近生产可用。本版本引入以无障碍为先、带状态变体的 Alert 复合组件；将 Radio 抽为可双模式运行的独立组件；新增带动画的 Select.TriggerIndicator 子组件。还提供轻量 `KineticNativeProviderRaw` 以优化包体、用于 iOS 调试的 `disableFullWindowOverlay`、六个组件统一的 `styles` 插槽式样式，以及用主题显式变量替代计算型 surface 色的主题重构。另含 BottomSheet 内 InputOTP、Toast 文字裁切与元素检查器兼容等关键修复。
 
 ## 安装
 
@@ -39,7 +39,7 @@ RC 1 是 HeroUI Native 的首个候选发布（Release Candidate），表明库�
 </Tabs>
 
 <Callout type="info">
-  **使用 AI 助手？** 直接提示「Hey Cursor，把 HeroUI Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [HeroUI Native MCP 服务器](/docs/native/getting-started/mcp-server)。
+  **使用 AI 助手？** 直接提示「Hey Cursor，把 Kinetic Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [Kinetic Native MCP 服务器](/docs/native/getting-started/mcp-server)。
 </Callout>
 
 ## 抢先体验
@@ -68,7 +68,7 @@ RC 1 是 HeroUI Native 的首个候选发布（Release Candidate），表明库�
 
 **方式二：点击链接**
 
-**[📱 在 Expo Go 中打开演示应用](https://link.heroui.com/native-demo)**
+**[📱 在 Expo Go 中打开演示应用](https://link.kinetic-ui.com/native-demo)**
 
 若设备已安装 Expo Go，将自动在其中打开应用。
 
@@ -274,25 +274,25 @@ import { Dialog } from "heroui-native";
 
 iOS 上 `FullWindowOverlay` 使用独立原生窗口，会阻挡元素检查器。将 `disableFullWindowOverlay` 设为 `true` 时内容绘于主窗口，开发期可检查元素；代价是遮罩不再叠在原生模态或键盘之上。Android 上该属性无效果。
 
-使用 `HeroUINativeProvider` 时，Toast 通过 `config.toast` 传入该属性。
+使用 `KineticNativeProvider` 时，Toast 通过 `config.toast` 传入该属性。
 
 **相关 PR：** [#283](https://github.com/heroui-inc/heroui-native/pull/283)
 
-### HeroUINativeProviderRaw
+### KineticNativeProviderRaw
 
-新增轻量提供者变体 `HeroUINativeProviderRaw`，不包含 `ToastProvider` 与 `PortalHost`，由使用方完全控制打包依赖。
+新增轻量提供者变体 `KineticNativeProviderRaw`，不包含 `ToastProvider` 与 `PortalHost`，由使用方完全控制打包依赖。
 
 **新能力：**
 
 ```tsx
-import { HeroUINativeProviderRaw } from "heroui-native/provider-raw";
+import { KineticNativeProviderRaw } from "heroui-native/provider-raw";
 
 // 无 Toast 与 Portal 的轻量提供者
 export function App() {
   return (
-    <HeroUINativeProviderRaw>
+    <KineticNativeProviderRaw>
       {/* Your app content */}
-    </HeroUINativeProviderRaw>
+    </KineticNativeProviderRaw>
   );
 }
 ```
@@ -482,7 +482,7 @@ import { Radio, RadioGroup } from "heroui-native";
 - [Bottom Sheet](/docs/native/components/bottom-sheet) — 补充 disableFullWindowOverlay
 - [Dialog](/docs/native/components/dialog) — 补充 disableFullWindowOverlay
 - [Popover](/docs/native/components/popover) — 补充 disableFullWindowOverlay
-- [Provider](/docs/native/getting-started/provider) — HeroUINativeProviderRaw 与提供者层级
+- [Provider](/docs/native/getting-started/provider) — KineticNativeProviderRaw 与提供者层级
 - [Theming](/docs/native/getting-started/theming) — 更新 surface 变量结构与示例
 - [Accordion](/docs/native/components/accordion) — 补充 styles 属性
 - [Avatar](/docs/native/components/avatar) — 补充 styles 属性

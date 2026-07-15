@@ -1,6 +1,6 @@
 "use client";
 
-import {Description, Header, Kbd, Label, ListBox, Separator, Surface} from "@heroui/react";
+import {Description, Header, Kbd, Label, ListBox, Separator, Surface} from "@kinetic/react";
 
 import {Iconify} from "@/components/iconify";
 import {useDictionary} from "@/hooks/use-dictionary";

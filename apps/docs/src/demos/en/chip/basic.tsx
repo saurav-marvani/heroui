@@ -1,4 +1,4 @@
-import {Chip} from "@heroui/react";
+import {Chip} from "@kinetic/react";
 
 export function ChipBasic() {
   return (

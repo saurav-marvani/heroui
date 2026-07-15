@@ -1,10 +1,10 @@
 "use client";
 
 import type {SurfaceVariants} from "../surface";
-import type {DropdownVariants} from "@heroui/styles";
+import type {DropdownVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {dropdownVariants} from "@heroui/styles";
+import {dropdownVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Button} from "react-aria-components/Button";
 import {

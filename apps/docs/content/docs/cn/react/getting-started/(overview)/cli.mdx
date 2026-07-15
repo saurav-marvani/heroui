@@ -1,10 +1,10 @@
 ---
 title: 命令行
-description: 使用命令行管理 HeroUI 依赖并初始化项目。
+description: 使用命令行管理 Kinetic 依赖并初始化项目。
 icon: terminal
 ---
 
-`heroui-cli`是官方命令行工具，提供了一整套命令，用于初始化、管理和优化你的 HeroUI 项目。你可以 `install`、`uninstall` 或 `upgrade` 单个组件，检查项目健康状况，下载用于 AI 编程助手的文档，等等。
+`heroui-cli`是官方命令行工具，提供了一整套命令，用于初始化、管理和优化你的 Kinetic 项目。你可以 `install`、`uninstall` 或 `upgrade` 单个组件，检查项目健康状况，下载用于 AI 编程助手的文档，等等。
 
 ## 安装
 
@@ -70,19 +70,19 @@ Options:
 
 Commands:
   init [options] [projectName]   Initializes a new project
-  install [options]              Installs @heroui/react and @heroui/styles to your project
-  upgrade [options]              Upgrades @heroui/react and @heroui/styles to the latest versions
-  uninstall [options]            Uninstall @heroui/react and @heroui/styles from the project
-  list [options]                 Lists installed HeroUI packages (@heroui/react, @heroui/styles)
+  install [options]              Installs @kinetic/react and @kinetic/styles to your project
+  upgrade [options]              Upgrades @kinetic/react and @kinetic/styles to the latest versions
+  uninstall [options]            Uninstall @kinetic/react and @kinetic/styles from the project
+  list [options]                 Lists installed Kinetic packages (@kinetic/react, @kinetic/styles)
   env [options]                  Displays debugging information for the local environment
   doctor [options]               Checks for issues in the project
-  agents-md [options]            Downloads HeroUI documentation for AI coding agents
+  agents-md [options]            Downloads Kinetic documentation for AI coding agents
   help [command]                 Display help for command
 ```
 
 ### init
 
-使用 `init` 命令初始化一个新的 HeroUI 项目。该命令会为你的项目完成必要的配置。
+使用 `init` 命令初始化一个新的 Kinetic 项目。该命令会为你的项目完成必要的配置。
 
 ```bash
 heroui init [options]
@@ -96,15 +96,15 @@ heroui init [options]
 输出：
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ┌  Create a new project
 │
 ◇  Select a template (Enter to select)
-│  ● App (A Next.js 16 with app directory template pre-configured with HeroUI (v3) and Tailwind CSS.)
-│  ○ Pages (A Next.js 16 with pages directory template pre-configured with HeroUI (v3) and Tailwind CSS.)
-│  ○ Vite (A Vite template pre-configured with HeroUI (v3) and Tailwind CSS.)
-│  ○ React Router (A React Router template pre-configured with HeroUI (v3) and Tailwind CSS.)
+│  ● App (A Next.js 16 with app directory template pre-configured with Kinetic (v3) and Tailwind CSS.)
+│  ○ Pages (A Next.js 16 with pages directory template pre-configured with Kinetic (v3) and Tailwind CSS.)
+│  ○ Vite (A Vite template pre-configured with Kinetic (v3) and Tailwind CSS.)
+│  ○ React Router (A React Router template pre-configured with Kinetic (v3) and Tailwind CSS.)
 │
 ◇  New project name (Enter to skip with default name)
 │  my-heroui-app
@@ -161,7 +161,7 @@ npm run dev
 
 ### Install
 
-将 `@heroui/react` 和 `@heroui/styles` 及其对等依赖安装到你的项目中。若它们已安装，则该命令不会执行任何操作。
+将 `@kinetic/react` 和 `@kinetic/styles` 及其对等依赖安装到你的项目中。若它们已安装，则该命令不会执行任何操作。
 
 ```bash
 heroui install [options]
@@ -175,14 +175,14 @@ heroui install [options]
 **输出：**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 📦 Packages to be installed:
 ╭─────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version        │   Status   │   Docs                 │
 │─────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0          │   stable   │   https://heroui.com   │
-│   @heroui/styles   │   3.0.0          │   stable   │   https://heroui.com   │
+│   @kinetic/react    │   3.0.0          │   stable   │   https://kinetic-ui.com   │
+│   @kinetic/styles   │   3.0.0          │   stable   │   https://kinetic-ui.com   │
 ╰─────────────────────────────────────────────────────────────────────────────╯
 
 ╭─────────────── PeerDependencies ────────────────╮
@@ -194,13 +194,13 @@ HeroUI CLI <version>
 ❯   Yes
     No
 
-✅ @heroui/react and @heroui/styles installed successfully
+✅ @kinetic/react and @kinetic/styles installed successfully
 ```
 
 ### upgrade
 
 
-将 `@heroui/react` 和 `@heroui/styles` 及其对等依赖升级到最新版本。
+将 `@kinetic/react` 和 `@kinetic/styles` 及其对等依赖升级到最新版本。
 
 ```bash
 heroui upgrade [options]
@@ -213,11 +213,11 @@ heroui upgrade [options]
 **输出：**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ╭──────────────────────────── Upgrade ────────────────────────────╮
-│  @heroui/react               ^3.0.0  ->  ^3.1.0                │
-│  @heroui/styles              ^3.0.0  ->  ^3.1.0                │
+│  @kinetic/react               ^3.0.0  ->  ^3.1.0                │
+│  @kinetic/styles              ^3.0.0  ->  ^3.1.0                │
 ╰─────────────────────────────────────────────────────────────────╯
 
 ? Would you like to proceed with the upgrade? › - Use arrow-keys. Return to submit.
@@ -229,7 +229,7 @@ HeroUI CLI <version>
 
 ### uninstall
 
-从你的项目中卸载 `@heroui/react` 和 `@heroui/styles`。对等依赖不会被卸载。
+从你的项目中卸载 `@kinetic/react` 和 `@kinetic/styles`。对等依赖不会被卸载。
 
 ```bash
 heroui uninstall [options]
@@ -242,25 +242,25 @@ heroui uninstall [options]
 **输出：**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ❗️ Packages slated for uninstallation:
 ╭──────────────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version   │   Status   │   Docs                               │
 │──────────────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0     │   stable   │   https://heroui.com                 │
-│   @heroui/styles   │   3.0.0     │   stable   │   https://heroui.com                 │
+│   @kinetic/react    │   3.0.0     │   stable   │   https://kinetic-ui.com                 │
+│   @kinetic/styles   │   3.0.0     │   stable   │   https://kinetic-ui.com                 │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 ? Confirm uninstallation of these packages: › - Use arrow-keys. Return to submit.
 ❯   Yes
     No
 
-✅ Successfully uninstalled: @heroui/react, @heroui/styles
+✅ Successfully uninstalled: @kinetic/react, @kinetic/styles
 ```
 
 ### list
 
-列出已安装的 HeroUI 包（`@heroui/react`、`@heroui/styles`）。
+列出已安装的 Kinetic 包（`@kinetic/react`、`@kinetic/styles`）。
 
 ```bash
 heroui list [options]
@@ -273,22 +273,22 @@ heroui list [options]
 **输出：**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 Current installed packages:
 
 ╭──────────────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version          │   Status   │   Docs                        │
 │──────────────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
-│   @heroui/styles   │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
+│   @kinetic/react    │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
+│   @kinetic/styles   │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ### doctor
 
 检查项目中存在的问题。
-- 检查 `@heroui/react` 和 `@heroui/styles` 是否已安装
+- 检查 `@kinetic/react` 和 `@kinetic/styles` 是否已安装
 - 检查项目中是否安装了所需的 `对等依赖` 并满足最低版本要求
 
 
@@ -305,14 +305,14 @@ heroui doctor [options]
 如果项目中存在问题，`doctor` 命令将显示问题信息。
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
-HeroUI CLI: ❌ Your project has 1 issue that require attention
+Kinetic CLI: ❌ Your project has 1 issue that require attention
 
-❗️Issue 1: missingHeroUIPackages
+❗️Issue 1: missingKineticPackages
 
-The following HeroUI packages are not installed:
-- @heroui/styles
+The following Kinetic packages are not installed:
+- @kinetic/styles
 
 Run `heroui install` to install them.
 ```
@@ -320,7 +320,7 @@ Run `heroui install` to install them.
 否则，`doctor` 命令将显示以下消息。
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 ✅ Your project has no detected issues.
 ```
@@ -340,15 +340,15 @@ heroui env [options]
 **输出：**
 
 ```bash
-HeroUI CLI <version>
+Kinetic CLI <version>
 
 Current installed packages:
 
 ╭──────────────────────────────────────────────────────────────────────────────────────╮
 │   Package          │   Version          │   Status   │   Docs                        │
 │──────────────────────────────────────────────────────────────────────────────────────│
-│   @heroui/react    │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
-│   @heroui/styles   │   3.0.0 🚀latest   │   stable   │   https://heroui.com          │
+│   @kinetic/react    │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
+│   @kinetic/styles   │   3.0.0 🚀latest   │   stable   │   https://kinetic-ui.com          │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 
 Environment Info:
@@ -361,7 +361,7 @@ Environment Info:
 
 ### agents-md
 
-下载用于 AI 编程助手（Claude、Cursor 等）的 HeroUI 文档。该命令会从 HeroUI 仓库克隆最新文档，并将一份精简索引注入到 `AGENTS.md` 或 `CLAUDE.md` 中，方便助手参考你项目中的 HeroUI 配置。
+下载用于 AI 编程助手（Claude、Cursor 等）的 Kinetic 文档。该命令会从 Kinetic 仓库克隆最新文档，并将一份精简索引注入到 `AGENTS.md` 或 `CLAUDE.md` 中，方便助手参考你项目中的 Kinetic 配置。
 
 ```bash
 heroui agents-md [options]
@@ -371,7 +371,7 @@ heroui agents-md [options]
 
 - `--react` [boolean] 仅包含 React 文档（一次只能选择一个文档库）
 - `--native` [boolean] 仅包含 Native 文档
-- `--migration` [boolean] 仅包含 HeroUI v2 到 v3 的迁移文档
+- `--migration` [boolean] 仅包含 Kinetic v2 到 v3 的迁移文档
 - `--output <file>` [string] 目标文件路径（例如 `AGENTS.md`、`CLAUDE.md`）
 - `--ssh` [boolean] 使用 SSH 而非 HTTPS 进行 git clone
 
@@ -400,7 +400,7 @@ heroui agents-md --migration --output AGENTS.md
 
 1. 使用 git sparse-checkout 从 `v3` 分支克隆文档
 2. 生成文档和示例文件的精简索引
-3. 将该索引注入到你的 markdown 文件中，置于标记之间（`<!-- HEROUI-REACT-AGENTS-MD-START -->` / `<!-- HEROUI-REACT-AGENTS-MD-END -->`，Native 和 Migration 也有类似的标记）
+3. 将该索引注入到你的 markdown 文件中，置于标记之间（`<!-- KINETIC-REACT-AGENTS-MD-START -->` / `<!-- KINETIC-REACT-AGENTS-MD-END -->`，Native 和 Migration 也有类似的标记）
 4. 将 `.heroui-docs/` 添加到 `.gitignore`
 
 `--react`、`--native` 和 `--migration` 一次只能选择其中一个。
@@ -408,7 +408,7 @@ heroui agents-md --migration --output AGENTS.md
 更多详情请参阅 [AGENTS.md](/docs/react/getting-started/agents-md)。
 
 <Callout>
-  `agents-md` 命令会收集匿名使用数据（所选项、输出文件名、耗时、成功或错误）。设置 `HEROUI_ANALYTICS_DISABLED=1` 可以选择不参与。
+  `agents-md` 命令会收集匿名使用数据（所选项、输出文件名、耗时、成功或错误）。设置 `KINETIC_ANALYTICS_DISABLED=1` 可以选择不参与。
 </Callout>
 
 ## 问题反馈

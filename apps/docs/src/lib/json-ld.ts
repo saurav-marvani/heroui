@@ -4,10 +4,10 @@ export function getOrganizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    logo: "https://heroui.com/icons/favicon.svg",
-    name: "HeroUI",
+    logo: "https://kinetic-ui.com/icons/favicon.svg",
+    name: "Kinetic",
     sameAs: [siteConfig.links.github, siteConfig.links.twitter, siteConfig.links.discord],
-    url: "https://heroui.com",
+    url: "https://kinetic-ui.com",
   };
 }
 
@@ -16,12 +16,12 @@ export function getWebSiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     description: siteConfig.description,
-    name: "HeroUI",
+    name: "Kinetic",
     publisher: {
       "@type": "Organization",
-      name: "HeroUI",
+      name: "Kinetic",
     },
-    url: "https://heroui.com",
+    url: "https://kinetic-ui.com",
   };
 }
 
@@ -31,15 +31,15 @@ export function getSoftwareApplicationJsonLd() {
     "@type": "SoftwareApplication",
     applicationCategory: "DeveloperApplication",
     description: siteConfig.description,
-    downloadUrl: "https://www.npmjs.com/package/@heroui/react",
-    name: "HeroUI",
+    downloadUrl: "https://www.npmjs.com/package/@kinetic/react",
+    name: "Kinetic",
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
     },
     operatingSystem: "Any",
-    url: "https://heroui.com",
+    url: "https://kinetic-ui.com",
   };
 }
 
@@ -77,7 +77,7 @@ export function getTechArticleJsonLd(params: {
         }
       : {
           "@type": "Organization",
-          name: "HeroUI",
+          name: "Kinetic",
         },
     description: params.description,
     headline: params.title,
@@ -89,9 +89,9 @@ export function getTechArticleJsonLd(params: {
       "@type": "Organization",
       logo: {
         "@type": "ImageObject",
-        url: "https://heroui.com/icons/favicon.svg",
+        url: "https://kinetic-ui.com/icons/favicon.svg",
       },
-      name: "HeroUI",
+      name: "Kinetic",
     },
     url: params.url,
     ...(params.datePublished && {datePublished: params.datePublished}),
@@ -118,15 +118,15 @@ export function getBlogJsonLd(params: {
     })),
     description:
       params.description ??
-      "Guides, tutorials, and resources for building modern React applications with HeroUI.",
-    name: params.name ?? "HeroUI Blog",
+      "Guides, tutorials, and resources for building modern React applications with Kinetic.",
+    name: params.name ?? "Kinetic Blog",
     publisher: {
       "@type": "Organization",
       logo: {
         "@type": "ImageObject",
-        url: "https://heroui.com/icons/favicon.svg",
+        url: "https://kinetic-ui.com/icons/favicon.svg",
       },
-      name: "HeroUI",
+      name: "Kinetic",
     },
     url: params.url,
   };

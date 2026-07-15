@@ -11,7 +11,7 @@ links:
 ## 引入
 
 ```tsx
-import { Autocomplete, useFilter } from "@heroui/react";
+import { Autocomplete, useFilter } from "@kinetic/react";
 ```
 
 ### 用法
@@ -23,7 +23,7 @@ import { Autocomplete, useFilter } from "@heroui/react";
 导入 Autocomplete 组件后，可通过点语法访问各个子部分。
 
 ```tsx
-import {Autocomplete, Label, Description, SearchField, ListBox} from "@heroui/react";
+import {Autocomplete, Label, Description, SearchField, ListBox} from "@kinetic/react";
 
 export default () => (
   <Autocomplete>
@@ -164,7 +164,7 @@ Autocomplete 通过 [Virtualizer](https://react-aria.adobe.com/Virtualizer) 支�
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import {Autocomplete, SearchField, ListBox} from "@heroui/react";
+import {Autocomplete, SearchField, ListBox} from "@kinetic/react";
 
 function CustomAutocomplete() {
   return (
@@ -234,7 +234,7 @@ function CustomAutocomplete() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
 
 ### CSS 类
 
@@ -350,7 +350,7 @@ Autocomplete 使用以下 CSS 类（[查看源码样式](https://github.com/hero
 React Aria 的 `useFilter` hook 为自动完成提供过滤函数。
 
 ```tsx
-import {useFilter} from "@heroui/react";
+import {useFilter} from "@kinetic/react";
 
 const {contains} = useFilter({sensitivity: "base"});
 

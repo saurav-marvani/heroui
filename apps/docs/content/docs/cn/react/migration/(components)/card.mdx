@@ -1,10 +1,10 @@
 ---
 title: Card
-description: Card 从 HeroUI v2 到 v3 的迁移指南。
+description: Card 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Card 文档](/docs/react/components/card)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Card 文档](/docs/react/components/card)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Card 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Card 使用独立导出的子组件：`CardHeader`、`CardBody`、`CardFooter`。
 
 ```tsx
-import { Card, CardHeader, CardBody, CardFooter } from "@heroui/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
 在 v3 中，Card 使用复合组件模式，子部件以 `Card.*` 形式显式组合：
 
 ```tsx
-import { Card } from "@heroui/react";
+import { Card } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -201,7 +201,7 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { Card, CardFooter, Image, Button } from "@heroui/react";
+    import { Card, CardFooter, Image, Button } from "@kinetic/react";
 
     <Card isFooterBlurred className="border-none" radius="lg">
       <Image
@@ -222,7 +222,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Card, Button } from "@heroui/react";
+    import { Card, Button } from "@kinetic/react";
 
     <Card className="border-none rounded-lg relative overflow-hidden">
       <img

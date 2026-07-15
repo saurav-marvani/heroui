@@ -2,10 +2,10 @@
 
 import type {KbdKey} from "./kbd.constants";
 import type {DOMRenderProps} from "../../utils/dom";
-import type {KbdVariants} from "@heroui/styles";
+import type {KbdVariants} from "@kinetic/styles";
 import type {ReactNode} from "react";
 
-import {kbdVariants} from "@heroui/styles";
+import {kbdVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 
 import {composeSlotClassName} from "../../utils/compose";

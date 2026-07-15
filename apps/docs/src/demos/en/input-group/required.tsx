@@ -1,7 +1,7 @@
 "use client";
 
 import {Envelope} from "@gravity-ui/icons";
-import {Description, InputGroup, Label, TextField} from "@heroui/react";
+import {Description, InputGroup, Label, TextField} from "@kinetic/react";
 
 export function Required() {
   return (

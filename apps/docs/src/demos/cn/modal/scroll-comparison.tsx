@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, Modal, Radio, RadioGroup} from "@heroui/react";
+import {Button, Modal, Radio, RadioGroup} from "@kinetic/react";
 import {useState} from "react";
 
 export function ScrollComparison() {

@@ -39,6 +39,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {selectVariants} from "@heroui/styles";
+export {selectVariants} from "@kinetic/styles";
 
-export type {SelectVariants} from "@heroui/styles";
+export type {SelectVariants} from "@kinetic/styles";

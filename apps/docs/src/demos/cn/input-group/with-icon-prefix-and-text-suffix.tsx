@@ -1,11 +1,11 @@
 "use client";
 
 import {Globe} from "@gravity-ui/icons";
-import {InputGroup, Label, TextField} from "@heroui/react";
+import {InputGroup, Label, TextField} from "@kinetic/react";
 
 export function WithIconPrefixAndTextSuffix() {
   return (
-    <TextField className="w-full max-w-[280px]" defaultValue="heroui" name="website">
+    <TextField className="w-full max-w-[280px]" defaultValue="kinetic" name="website">
       <Label>网站</Label>
       <InputGroup>
         <InputGroup.Prefix>

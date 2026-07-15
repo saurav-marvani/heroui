@@ -1,4 +1,4 @@
-import {Label, ProgressBar} from "@heroui/react";
+import {Label, ProgressBar} from "@kinetic/react";
 
 const SIZE_LABELS = {
   lg: "大",

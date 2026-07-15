@@ -16,28 +16,28 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@alpha @heroui/react@alpha
+    npm i @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@alpha @heroui/react@alpha
+    pnpm add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@alpha @heroui/react@alpha
+    yarn add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@alpha @heroui/react@alpha
+    bun add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI MCP Server](/docs/ui-for-agents/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic MCP Server](/docs/ui-for-agents/mcp-server).
 </Callout>
 
 ## What's New
@@ -87,7 +87,7 @@ To support React Server Components, the compound component pattern has been rest
 
 **Before:**
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 <Avatar>
   <Avatar.Image src="/images/avatar.jpeg" alt="Junior Garcia" />
@@ -97,7 +97,7 @@ import { Avatar } from "@heroui/react"
 
 **After:**
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 <Avatar.Root>
   <Avatar.Image src="/images/avatar.jpeg" alt="Junior Garcia" />
@@ -113,7 +113,7 @@ The Switch component grouping API has been restructured to match the Radio/Radio
 
 **Before:**
 ```tsx
-import { Switch } from "@heroui/react"
+import { Switch } from "@kinetic/react"
 
 <Switch.Group orientation="horizontal">
   <Switch.GroupItems>
@@ -135,7 +135,7 @@ import { Switch } from "@heroui/react"
 
 **After:**
 ```tsx
-import { Switch, SwitchGroup } from "@heroui/react"
+import { Switch, SwitchGroup } from "@kinetic/react"
 
 <SwitchGroup orientation="horizontal">
   <Switch.Root name="notifications">
@@ -162,7 +162,7 @@ This change helps to:
 
 
 **Migration Steps:**
-1. Import `SwitchGroup` separately: `import { Switch, SwitchGroup } from "@heroui/react"`
+1. Import `SwitchGroup` separately: `import { Switch, SwitchGroup } from "@kinetic/react"`
 2. Replace `<Switch.Group>` with `<SwitchGroup>`
 3. Remove the nested `<Switch.GroupItems>` wrapper
 4. Individual `Switch.Root` components remain unchanged
@@ -186,7 +186,7 @@ All compound components are affected:
 
 ## Migration Guide
 
-You have two options for using HeroUI compound components:
+You have two options for using Kinetic compound components:
 
 ### Option 1: Update to Use `.Root` (Compound Pattern)
 
@@ -194,7 +194,7 @@ If you're using the compound pattern (dot notation), update your code to use `.R
 
 **Card Example:**
 ```tsx
-import { Card } from "@heroui/react"
+import { Card } from "@kinetic/react"
 
 <Card.Root>
   <Card.Header>
@@ -212,7 +212,7 @@ import { Card } from "@heroui/react"
 
 **Tabs Example:**
 ```tsx
-import { Tabs } from "@heroui/react"
+import { Tabs } from "@kinetic/react"
 
 <Tabs.Root>
   <Tabs.ListWrapper>
@@ -230,7 +230,7 @@ import { Tabs } from "@heroui/react"
 
 **Avatar Example:**
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 <Avatar.Root>
   <Avatar.Image alt="John Doe" src="..." />
@@ -253,7 +253,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@heroui/react"
+} from "@kinetic/react"
 
 <CardRoot>
   <CardHeader>
@@ -271,7 +271,7 @@ import {
 
 **Tabs Example:**
 ```tsx
-import { TabsRoot, TabListContainer, TabList, Tab, TabIndicator, TabPanel } from "@heroui/react"
+import { TabsRoot, TabListContainer, TabList, Tab, TabIndicator, TabPanel } from "@kinetic/react"
 
 <TabsRoot>
   <TabListContainer>
@@ -287,7 +287,7 @@ import { TabsRoot, TabListContainer, TabList, Tab, TabIndicator, TabPanel } from
 
 **Avatar Example:**
 ```tsx
-import { Avatar, AvatarImage, AvatarFallback } from "@heroui/react"
+import { Avatar, AvatarImage, AvatarFallback } from "@kinetic/react"
 
 <Avatar>
   <AvatarImage alt="John Doe" src="..." />
@@ -359,7 +359,7 @@ sed -i 's/<\/Switch\.GroupItems>//g' **/*.tsx
 
 **Important:**
 - Be careful with automated replacements. Make sure you're only replacing compound pattern usage, not named exports.
-- For Switch migrations, verify that `SwitchGroup` is imported: `import { Switch, SwitchGroup } from "@heroui/react"`
+- For Switch migrations, verify that `SwitchGroup` is imported: `import { Switch, SwitchGroup } from "@kinetic/react"`
 - Test your code after running automated migrations to ensure all changes are correct.
 
 ## Why This Change?

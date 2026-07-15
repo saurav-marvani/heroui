@@ -1,11 +1,11 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {ProgressCircleVariants} from "@heroui/styles";
+import type {ProgressCircleVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef, ReactNode} from "react";
 import type {ProgressBarRenderProps} from "react-aria-components/ProgressBar";
 
-import {progressCircleVariants} from "@heroui/styles";
+import {progressCircleVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {ProgressBar as ProgressBarPrimitive} from "react-aria-components/ProgressBar";
 
@@ -60,7 +60,7 @@ const ProgressCircleRoot = ({
   );
 };
 
-ProgressCircleRoot.displayName = "HeroUI.ProgressCircle";
+ProgressCircleRoot.displayName = "Kinetic.ProgressCircle";
 
 /* -------------------------------------------------------------------------------------------------
  * ProgressCircle Track
@@ -93,7 +93,7 @@ const ProgressCircleTrack = <E extends keyof React.JSX.IntrinsicElements = "svg"
   );
 };
 
-ProgressCircleTrack.displayName = "HeroUI.ProgressCircle.Track";
+ProgressCircleTrack.displayName = "Kinetic.ProgressCircle.Track";
 
 /* -------------------------------------------------------------------------------------------------
  * ProgressCircle TrackCircle
@@ -125,7 +125,7 @@ const ProgressCircleTrackCircle = <E extends keyof React.JSX.IntrinsicElements =
   );
 };
 
-ProgressCircleTrackCircle.displayName = "HeroUI.ProgressCircle.TrackCircle";
+ProgressCircleTrackCircle.displayName = "Kinetic.ProgressCircle.TrackCircle";
 
 /* -------------------------------------------------------------------------------------------------
  * ProgressCircle FillCircle
@@ -164,7 +164,7 @@ const ProgressCircleFillCircle = <E extends keyof React.JSX.IntrinsicElements = 
   );
 };
 
-ProgressCircleFillCircle.displayName = "HeroUI.ProgressCircle.FillCircle";
+ProgressCircleFillCircle.displayName = "Kinetic.ProgressCircle.FillCircle";
 
 /* -------------------------------------------------------------------------------------------------
  * Exports

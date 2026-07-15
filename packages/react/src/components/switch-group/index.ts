@@ -24,6 +24,6 @@ export type {SwitchGroupRootProps, SwitchGroupRootProps as SwitchGroupProps} fro
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {switchGroupVariants} from "@heroui/styles";
+export {switchGroupVariants} from "@kinetic/styles";
 
-export type {SwitchGroupVariants} from "@heroui/styles";
+export type {SwitchGroupVariants} from "@kinetic/styles";

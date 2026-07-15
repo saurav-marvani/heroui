@@ -1,6 +1,6 @@
 ---
-title: "Design to Code with HeroUI Native"
-description: "How HeroUI Native connects Figma, code, and AI-assisted mobile development."
+title: "Design to Code with Kinetic Native"
+description: "How Kinetic Native connects Figma, code, and AI-assisted mobile development."
 date: "2026-05-13"
 author: "Junior Garcia"
 authorHandle: "@jrgarciadev"
@@ -13,7 +13,7 @@ draft: true
 
 The hardest part of a mobile design system is not drawing components. It is keeping design, code, documentation, and generated AI output aligned over time.
 
-HeroUI Native is built for that workflow. The library gives developers a maintained React Native component system, gives designers a shared HeroUI visual language through Figma, and gives AI assistants structured documentation through MCP, llms.txt, and skills.
+Kinetic Native is built for that workflow. The library gives developers a maintained React Native component system, gives designers a shared Kinetic visual language through Figma, and gives AI assistants structured documentation through MCP, llms.txt, and skills.
 
 ## The Problem
 
@@ -25,13 +25,13 @@ Most teams drift in predictable ways:
 - AI agents guess props from old examples.
 - Engineers copy a component once, customize it, and rarely bring upstream fixes back in.
 
-The result is subtle inconsistency. One screen has different spacing. Another uses the wrong disabled state. A generated component imports web HeroUI into a native app. The first version ships, but the system becomes harder to maintain.
+The result is subtle inconsistency. One screen has different spacing. Another uses the wrong disabled state. A generated component imports web Kinetic into a native app. The first version ships, but the system becomes harder to maintain.
 
-HeroUI Native is designed to reduce that drift.
+Kinetic Native is designed to reduce that drift.
 
 ## Shared Mental Model
 
-HeroUI Native uses the same product-level ideas as the rest of the HeroUI ecosystem:
+Kinetic Native uses the same product-level ideas as the rest of the Kinetic ecosystem:
 
 - Semantic variants like `primary`, `secondary`, and `tertiary`.
 - Compound components for flexible composition.
@@ -39,7 +39,7 @@ HeroUI Native uses the same product-level ideas as the rest of the HeroUI ecosys
 - Component documentation with anatomy, props, examples, and usage patterns.
 - AI-readable docs for agents.
 
-The implementation is native, not web. HeroUI Native uses React Native, Uniwind, `HeroUINativeProvider`, and mobile interaction patterns. But the design language stays familiar.
+The implementation is native, not web. Kinetic Native uses React Native, Uniwind, `KineticNativeProvider`, and mobile interaction patterns. But the design language stays familiar.
 
 ```tsx
 import {Button, Card} from "heroui-native";
@@ -60,14 +60,14 @@ import {Button, Card} from "heroui-native";
 
 ## Figma Kit V3
 
-The [HeroUI Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3) is the design-side entry point for the ecosystem. It is linked from the Native docs so teams can work from the same visual system while building mobile screens.
+The [Kinetic Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3) is the design-side entry point for the ecosystem. It is linked from the Native docs so teams can work from the same visual system while building mobile screens.
 
 Use it to:
 
-- Start from HeroUI's visual language instead of blank frames.
+- Start from Kinetic's visual language instead of blank frames.
 - Keep component names and variants close to the code model.
 - Align designers and developers on hierarchy, states, and spacing.
-- Create mobile product screens that feel connected to the rest of the HeroUI ecosystem.
+- Create mobile product screens that feel connected to the rest of the Kinetic ecosystem.
 
 Figma does not replace implementation details like keyboard handling, safe areas, bottom sheets, or screen reader behavior. But a shared kit reduces the translation cost between design and code.
 
@@ -75,20 +75,20 @@ Figma does not replace implementation details like keyboard handling, safe areas
 
 AI coding tools are useful only when they have current context. Without that, they often mix web and native APIs.
 
-HeroUI Native provides dedicated AI entry points:
+Kinetic Native provides dedicated AI entry points:
 
 - [/native/llms.txt](/native/llms.txt) for a quick Native documentation index.
 - [/native/llms-full.txt](/native/llms-full.txt) for complete Native documentation.
 - [/native/llms-components.txt](/native/llms-components.txt) for component docs only.
 - [/native/llms-patterns.txt](/native/llms-patterns.txt) for common patterns.
-- [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server), published as `@heroui/native-mcp`.
-- [HeroUI Native Agent Skills](/docs/native/getting-started/agent-skills).
+- [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server), published as `@kinetic/native-mcp`.
+- [Kinetic Native Agent Skills](/docs/native/getting-started/agent-skills).
 
 That matters because Native code has different rules:
 
 - Import from `heroui-native`.
 - Use React Native press handlers such as `onPress`.
-- Configure `HeroUINativeProvider`.
+- Configure `KineticNativeProvider`.
 - Wrap the app with `GestureHandlerRootView`.
 - Use Uniwind and `heroui-native/styles`.
 - Use Native component anatomy, not web component anatomy.
@@ -99,20 +99,20 @@ The MCP server and skills help agents follow those rules.
 
 Here is the workflow we recommend:
 
-1. **Design from the Figma kit.** Start from HeroUI's component language instead of one-off mobile components.
-2. **Install HeroUI Native correctly.** Follow the [Quick Start](/docs/native/getting-started/quick-start) so Uniwind, peer dependencies, styles, and providers are configured.
+1. **Design from the Figma kit.** Start from Kinetic's component language instead of one-off mobile components.
+2. **Install Kinetic Native correctly.** Follow the [Quick Start](/docs/native/getting-started/quick-start) so Uniwind, peer dependencies, styles, and providers are configured.
 3. **Give agents the docs.** Add the [MCP server](/docs/native/getting-started/mcp-server) or reference [/native/llms-full.txt](/native/llms-full.txt).
 4. **Build screens with compound components.** Compose components using dot notation and semantic variants.
 5. **Customize through theme variables.** Keep brand-level changes in the theming layer, not scattered across every screen.
-6. **Update through the package.** Treat HeroUI Native as a maintained dependency, not a copied snapshot.
+6. **Update through the package.** Treat Kinetic Native as a maintained dependency, not a copied snapshot.
 
 ## Why This Helps
 
 Design-to-code is not about removing engineers or designers. It is about reducing translation loss.
 
-HeroUI Native helps because:
+Kinetic Native helps because:
 
-- Designers start from the HeroUI visual system.
+- Designers start from the Kinetic visual system.
 - Developers get a maintained React Native package.
 - AI assistants get current component docs.
 - Teams keep a consistent vocabulary across web and mobile.
@@ -122,4 +122,4 @@ That is the long-term value: not just faster first screens, but fewer inconsiste
 
 ## Next Step
 
-Install the [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server) in your editor, then ask your assistant to build a screen using the [Quick Start](/docs/native/getting-started/quick-start) and the components in [All Components](/docs/native/components).
+Install the [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server) in your editor, then ask your assistant to build a screen using the [Quick Start](/docs/native/getting-started/quick-start) and the components in [All Components](/docs/native/components).

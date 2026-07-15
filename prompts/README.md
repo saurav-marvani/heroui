@@ -1,6 +1,6 @@
-# HeroUI v3 — AI Integration Prompt Packs
+# Kinetic v3 — AI Integration Prompt Packs
 
-System prompts that teach AI code-generation tools to produce correct, idiomatic HeroUI v3 code.
+System prompts that teach AI code-generation tools to produce correct, idiomatic Kinetic v3 code.
 
 ## What's in this directory
 
@@ -24,7 +24,7 @@ Paste the contents of `bolt-heroui.md` at the start of your prompt when creating
 
 ### Cursor / Claude / ChatGPT / Copilot
 
-Use `heroui-system-prompt.md` as a custom instruction, system prompt, or `.cursorrules` file. It gives the AI a complete reference of HeroUI v3 components and patterns.
+Use `heroui-system-prompt.md` as a custom instruction, system prompt, or `.cursorrules` file. It gives the AI a complete reference of Kinetic v3 components and patterns.
 
 ### Any other tool
 
@@ -34,8 +34,8 @@ The universal `heroui-system-prompt.md` works with any tool that accepts system-
 
 For deeper integration beyond system prompts:
 
-- **MCP Server** — The HeroUI MCP server provides real-time component docs, source code, and theme tokens to AI agents. See the [`@heroui/mcp`](https://www.npmjs.com/package/@heroui/mcp) package.
-- **llms.txt** — Full-context documentation following the llms.txt standard, available at [heroui.com/llms.txt](https://heroui.com/llms.txt).
+- **MCP Server** — The Kinetic MCP server provides real-time component docs, source code, and theme tokens to AI agents. See the [`@kinetic/mcp`](https://www.npmjs.com/package/@kinetic/mcp) package.
+- **llms.txt** — Full-context documentation following the llms.txt standard, available at [kinetic-ui.com/llms.txt](https://kinetic-ui.com/llms.txt).
 
 ## Contributing
 

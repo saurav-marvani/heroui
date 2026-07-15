@@ -1,15 +1,15 @@
 ---
 name: heroui-migration
-description: "HeroUI v2 to v3 migration guide for agents. Use when migrating HeroUI v2 apps to v3, upgrading components, or accessing migration documentation. Keywords: HeroUI migration, v2 to v3, migration guide, upgrade HeroUI."
+description: "Kinetic UI v2 to v3 migration guide for agents. Use when migrating Kinetic UI v2 apps to v3, upgrading components, or accessing migration documentation. Keywords: Kinetic UI migration, v2 to v3, migration guide, upgrade Kinetic UI."
 metadata:
   author: heroui
   version: "2.0.0"
   status: preview
 ---
 
-# HeroUI v2 to v3 Migration Guide
+# Kinetic UI v2 to v3 Migration Guide
 
-This skill helps agents migrate HeroUI v2 applications to v3. HeroUI v3 introduces breaking changes: compound components, no Provider, Tailwind v4, and removed hooks.
+This skill helps agents migrate Kinetic UI v2 applications to v3. Kinetic UI v3 introduces breaking changes: compound components, no Provider, Tailwind v4, and removed hooks.
 
 ---
 
@@ -29,12 +29,12 @@ curl -fsSL https://heroui.com/install | bash -s heroui-migration
 
 | Feature       | v2 (Migrate From)          | v3 (Migrate To)                        |
 | ------------- | -------------------------- | -------------------------------------- |
-| Provider      | `<HeroUIProvider>` required | **No Provider needed**                 |
+| Provider      | `<Kinetic UIProvider>` required | **No Provider needed**                 |
 | Component API | Flat props: `<Card title="x">` | Compound: `<Card><Card.Header>`      |
 | Event handlers | `onClick`                 | `onPress`                              |
 | Styling       | `classNames` prop         | `className` prop                       |
 | Hooks         | `useSwitch`, `useDisclosure`, etc. | Compound components, `useOverlayState` |
-| Packages      | `@heroui/system`, `@heroui/theme` | `@heroui/react`, `@heroui/styles` |
+| Packages      | `@kinetic/system`, `@kinetic/theme` | `@kinetic/react`, `@kinetic/styles` |
 
 ---
 
@@ -117,7 +117,7 @@ When using Cursor or other MCP clients, configure the Migration MCP server for t
 
 1. **Fetch first**: Use scripts to get migration guides before applying changes
 2. **Compound components**: v3 uses `Card.Header`, `Card.Title`, `Button` with children—not flat props
-3. **No Provider**: Remove `HeroUIProvider` when migrating
+3. **No Provider**: Remove `Kinetic UIProvider` when migrating
 4. **onPress not onClick**: All interactive components use `onPress`
 5. **Workflow**: Analyze → Migrate components → Switch deps → Styling migration
 
@@ -126,7 +126,7 @@ When using Cursor or other MCP clients, configure the Migration MCP server for t
 ## Migration Workflow Summary
 
 1. Create migration branch
-2. Analyze project (HeroUI imports, component usage)
+2. Analyze project (Kinetic UI imports, component usage)
 3. Fetch main guide: `node scripts/get_migration_guide.mjs full`
 4. Migrate components in batches (fetch component guides per batch)
 5. Switch dependencies to v3

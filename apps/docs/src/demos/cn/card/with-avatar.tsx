@@ -1,4 +1,4 @@
-import {Avatar, Card} from "@heroui/react";
+import {Avatar, Card} from "@kinetic/react";
 
 export function WithAvatar() {
   return (
@@ -8,7 +8,7 @@ export function WithAvatar() {
           alt="独立创客社区"
           className="pointer-events-none aspect-square w-14 rounded-2xl object-cover select-none"
           loading="lazy"
-          src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo1.jpg"
+          src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo1.jpg"
         />
         <Card.Header>
           <Card.Title>Indie Hackers</Card.Title>
@@ -18,7 +18,7 @@ export function WithAvatar() {
           <Avatar aria-label="玛莎的头像" className="size-5">
             <Avatar.Image
               alt="玛莎的头像"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg"
             />
             <Avatar.Fallback className="text-xs">IH</Avatar.Fallback>
           </Avatar>
@@ -31,7 +31,7 @@ export function WithAvatar() {
           alt="AI 开发者社区"
           className="pointer-events-none aspect-square w-14 rounded-2xl object-cover select-none"
           loading="lazy"
-          src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo2.jpg"
+          src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/demo2.jpg"
         />
         <Card.Header>
           <Card.Title>AI Builders</Card.Title>
@@ -41,7 +41,7 @@ export function WithAvatar() {
           <Avatar aria-label="约翰的头像" className="size-5">
             <Avatar.Image
               alt="约翰的头像"
-              src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
+              src="https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg"
             />
             <Avatar.Fallback className="text-xs">B</Avatar.Fallback>
           </Avatar>

@@ -56,6 +56,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {dateInputGroupVariants} from "@heroui/styles";
+export {dateInputGroupVariants} from "@kinetic/styles";
 
-export type {DateInputGroupVariants} from "@heroui/styles";
+export type {DateInputGroupVariants} from "@kinetic/styles";

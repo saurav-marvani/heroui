@@ -3,7 +3,7 @@
 import type {DOMRenderProps} from "../../utils/dom";
 import type {ReactNode} from "react";
 
-import {fieldsetVariants} from "@heroui/styles";
+import {fieldsetVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {
   ButtonContext,

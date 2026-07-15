@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Get the main migration workflow guide (full or incremental) for HeroUI v2 to v3.
+ * Get the main migration workflow guide (full or incremental) for Kinetic UI v2 to v3.
  *
  * Usage:
  *   node get_migration_guide.mjs [full|incremental]
@@ -21,7 +21,7 @@ async function fetchDoc(filename) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Migration-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Migration-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -47,8 +47,8 @@ async function main() {
     const content = await fetchDoc(filename);
     const title =
       migrationType === "incremental"
-        ? "HeroUI v2 to v3 Agent Migration Guide - Incremental Migration"
-        : "HeroUI v2 to v3 Agent Migration Guide - Full Migration";
+        ? "Kinetic UI v2 to v3 Agent Migration Guide - Incremental Migration"
+        : "Kinetic UI v2 to v3 Agent Migration Guide - Full Migration";
 
     console.log(`# ${title}\n\n**Source:** ${DOCS_BASE}/${filename}\n\n---\n\n${content}`);
   } catch (error) {

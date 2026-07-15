@@ -10,7 +10,7 @@ links:
 ## 引入
 
 ```tsx
-import { Surface } from '@heroui/react';
+import { Surface } from '@kinetic/react';
 ```
 
 ### 用法
@@ -36,7 +36,7 @@ Surface 提供描述视觉层次的语义化变体：
 在 Surface 内使用表单组件时，请为这些组件设置 `variant="secondary"`，以应用适合表面背景的低强调变体。
 
 ```tsx
-import { Surface, Input, TextArea } from '@heroui/react';
+import { Surface, Input, TextArea } from '@kinetic/react';
 
 function App() {
   return (
@@ -55,7 +55,7 @@ function App() {
 ### 传入 Tailwind CSS 类
 
 ```tsx
-import { Surface } from '@heroui/react';
+import { Surface } from '@kinetic/react';
 
 function CustomSurface() {
   return (
@@ -87,7 +87,7 @@ function CustomSurface() {
 }
 ```
 
-HeroUI 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
+Kinetic 遵循 [BEM](https://getbem.com/) 方法论，确保组件变体与状态可复用且易于自定义。
 
 ### CSS 类
 
@@ -119,7 +119,7 @@ Surface 组件使用以下 CSS 类（[查看源码样式](https://github.com/her
 
 ```tsx
 import { useContext } from 'react';
-import { SurfaceContext } from '@heroui/react';
+import { SurfaceContext } from '@kinetic/react';
 
 function MyComponent() {
   const { variant } = useContext(SurfaceContext);

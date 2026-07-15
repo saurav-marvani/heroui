@@ -1,4 +1,4 @@
-import {ScrollShadow} from "@heroui/react";
+import {ScrollShadow} from "@kinetic/react";
 
 export default function Default() {
   return (

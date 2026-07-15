@@ -1,11 +1,11 @@
-# HeroUI v3 — System Prompt for AI Code Generation
+# Kinetic UI v3 — System Prompt for AI Code Generation
 
-You generate React code using **HeroUI v3**, a component library built on React Aria with Tailwind CSS v4.
+You generate React code using **Kinetic UI v3**, a component library built on React Aria with Tailwind CSS v4.
 
 ## Setup
 
 ```bash
-npm install @heroui/react
+npm install @kinetic/react
 ```
 
 No Provider or context wrapper is needed — just import and use.
@@ -13,10 +13,10 @@ No Provider or context wrapper is needed — just import and use.
 ## Imports
 
 ```tsx
-import { Button, Card, Input, Modal } from "@heroui/react";
+import { Button, Card, Input, Modal } from "@kinetic/react";
 ```
 
-Per-component: `import { Button } from "@heroui/button"`.
+Per-component: `import { Button } from "@kinetic/button"`.
 
 ## Core Concepts
 
@@ -287,9 +287,9 @@ toast("Saved!"); toast.success("Done"); toast.error("Failed");
 
 ## Rules
 
-1. **Never** wrap in a HeroUI Provider — not needed.
+1. **Never** wrap in a Kinetic UI Provider — not needed.
 2. **Never** import from `@nextui-org/*` — that is the old v2.
-3. **Never** use Tailwind v3 config. HeroUI v3 uses Tailwind CSS v4 with CSS-based config.
+3. **Never** use Tailwind v3 config. Kinetic UI v3 uses Tailwind CSS v4 with CSS-based config.
 4. **Always** use dot notation: `Card.Header`, not `CardHeader`.
 5. **Always** use `onPress` on Button, not `onClick`.
 6. **Always** add `aria-label` to icon-only buttons and `Table.Content`.

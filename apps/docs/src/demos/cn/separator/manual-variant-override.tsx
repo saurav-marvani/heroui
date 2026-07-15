@@ -1,4 +1,4 @@
-import {Separator, Surface} from "@heroui/react";
+import {Separator, Surface} from "@kinetic/react";
 
 export function ManualVariantOverride() {
   return (

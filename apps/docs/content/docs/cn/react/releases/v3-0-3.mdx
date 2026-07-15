@@ -18,28 +18,28 @@ github:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@latest @heroui/react@latest
+    npm i @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@latest @heroui/react@latest
+    pnpm add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@latest @heroui/react@latest
+    yarn add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@latest @heroui/react@latest
+    bun add @kinetic/styles@latest @kinetic/react@latest
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 HeroUI 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [HeroUI MCP 服务器](/docs/ui-for-agents/mcp-server)。
+  **正在使用 AI 助手？** 只需对它说一句「Hey Cursor，把 Kinetic 升级到最新版本」，AI 助手就会自动对比版本并应用必要的变更。了解更多请参阅 [Kinetic MCP 服务器](/docs/ui-for-agents/mcp-server)。
 </Callout>
 
 ## 新增功能
@@ -58,12 +58,12 @@ Table 现在支持以可展开行的形式呈现树形数据。设置 `treeColum
 
 ### useTheme Hook
 
-对于使用 Vite 或 Create React App 搭建（没有 Next.js 主题 Provider）的纯 React 应用，可以从 `@heroui/react` 中引入 `useTheme`。它接受任意主题名（`"light"`、`"dark"`、`"brutalism-light"` 等），传入 `"system"` 则会跟随操作系统偏好。`useTheme` 会将主题值持久化到 `localStorage`，并在 `<html>` 元素上同步设置 `data-theme` 与 `class`，二者均为解析后的主题名。
+对于使用 Vite 或 Create React App 搭建（没有 Next.js 主题 Provider）的纯 React 应用，可以从 `@kinetic/react` 中引入 `useTheme`。它接受任意主题名（`"light"`、`"dark"`、`"brutalism-light"` 等），传入 `"system"` 则会跟随操作系统偏好。`useTheme` 会将主题值持久化到 `localStorage`，并在 `<html>` 元素上同步设置 `data-theme` 与 `class`，二者均为解析后的主题名。
 
 ```tsx
 "use client";
 
-import { Button, useTheme } from "@heroui/react";
+import { Button, useTheme } from "@kinetic/react";
 
 export function ThemeSwitch() {
   const { theme, setTheme } = useTheme("light");
@@ -100,7 +100,7 @@ DOM 多态辅助工具让那些没有基于 React Aria 基元构建的轻量级�
 
 ### 协议变更
 
-HeroUI 现已采用 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 协议，取代此前的 MIT 协议。Apache 2.0 同样提供宽松的使用自由，并在此基础上增加了显式的专利授权，提供更进一步的法律保护。现有用户无需进行任何操作。
+Kinetic 现已采用 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 协议，取代此前的 MIT 协议。Apache 2.0 同样提供宽松的使用自由，并在此基础上增加了显式的专利授权，提供更进一步的法律保护。现有用户无需进行任何操作。
 
 ## Bug 修复
 

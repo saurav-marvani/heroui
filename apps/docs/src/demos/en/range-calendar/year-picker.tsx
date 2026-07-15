@@ -1,6 +1,6 @@
 "use client";
 
-import {RangeCalendar} from "@heroui/react";
+import {RangeCalendar} from "@kinetic/react";
 
 export function YearPicker() {
   return (

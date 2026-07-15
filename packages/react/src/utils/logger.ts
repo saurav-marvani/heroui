@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /**
- * Logger utility for HeroUI Core
+ * Logger utility for Kinetic Core
  * Provides formatted console output with levels and prefixes
  */
 
@@ -43,7 +43,7 @@ export class Logger {
 
   constructor(options: LoggerOptions = {}) {
     this.enabled = options.enabled ?? true;
-    this.prefix = options.prefix ?? "HeroUI";
+    this.prefix = options.prefix ?? "Kinetic";
   }
 
   private formatMessage(level: LogLevel, message: string): string {

@@ -1,10 +1,10 @@
 ---
 title: Tooltip
-description: Migration guide for Tooltip from HeroUI v2 to v3
+description: Migration guide for Tooltip from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Tooltip documentation](/docs/react/components/tooltip) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Tooltip documentation](/docs/react/components/tooltip) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Tooltip from HeroUI v2 to v3
 In v2, Tooltip used a `content` prop:
 
 ```tsx
-import { Tooltip, Button } from "@heroui/react";
+import { Tooltip, Button } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
 In v3, Tooltip requires compound components:
 
 ```tsx
-import { Tooltip, Button } from "@heroui/react";
+import { Tooltip, Button } from "@kinetic/react";
 
 export default function App() {
   return (

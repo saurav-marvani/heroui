@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Test suite for HeroUI Skill scripts (JavaScript/Node.js).
+ * Test suite for Kinetic UI Skill scripts (JavaScript/Node.js).
  *
  * Usage:
  *     # Test against production (default)
@@ -385,7 +385,7 @@ async function runTests(env, scripts = null, verbose = false) {
   );
 
   console.log(`\n${"=".repeat(60)}`);
-  console.log(`HeroUI Skill Scripts Test Suite (JavaScript)`);
+  console.log(`Kinetic UI Skill Scripts Test Suite (JavaScript)`);
   console.log(`${"=".repeat(60)}`);
   console.log(`Environment: ${env} (${apiBase})`);
   console.log(`Tests to run: ${Object.keys(testsToRun).length}`);

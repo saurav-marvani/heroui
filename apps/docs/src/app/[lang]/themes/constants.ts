@@ -39,13 +39,13 @@ export type TabLabel = (typeof tabLabels)[number];
 
 export const tabs = tabLabels.map((label) => ({disabled: false, label}));
 
-export const HEROUI_PRO_URL = env.NEXT_PUBLIC_PRO_URL ?? "https://heroui.pro";
+export const KINETIC_PRO_URL = env.NEXT_PUBLIC_PRO_URL ?? "https://kinetic.pro";
 
 export const iframeTabs: Record<string, string> = {
-  chat: `${HEROUI_PRO_URL}/templates/chat`,
-  dashboard: `${HEROUI_PRO_URL}/templates/dashboard`,
-  finances: `${HEROUI_PRO_URL}/templates/finances`,
-  mail: `${HEROUI_PRO_URL}/templates/email`,
+  chat: `${KINETIC_PRO_URL}/templates/chat`,
+  dashboard: `${KINETIC_PRO_URL}/templates/dashboard`,
+  finances: `${KINETIC_PRO_URL}/templates/finances`,
+  mail: `${KINETIC_PRO_URL}/templates/email`,
 };
 
 /**

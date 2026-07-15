@@ -1,6 +1,6 @@
 "use client";
 
-import {Calendar, Description} from "@heroui/react";
+import {Calendar, Description} from "@kinetic/react";
 
 export function WeeksInMonth() {
   return (

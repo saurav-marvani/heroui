@@ -43,6 +43,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {colorFieldVariants} from "@heroui/styles";
+export {colorFieldVariants} from "@kinetic/styles";
 
-export type {ColorFieldVariants} from "@heroui/styles";
+export type {ColorFieldVariants} from "@kinetic/styles";

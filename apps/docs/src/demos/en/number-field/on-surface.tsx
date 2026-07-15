@@ -1,4 +1,4 @@
-import {Description, Label, NumberField, Surface} from "@heroui/react";
+import {Description, Label, NumberField, Surface} from "@kinetic/react";
 
 export function OnSurface() {
   return (

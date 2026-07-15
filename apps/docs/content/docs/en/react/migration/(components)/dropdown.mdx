@@ -1,10 +1,10 @@
 ---
 title: Dropdown
-description: Migration guide for Dropdown from HeroUI v2 to v3
+description: Migration guide for Dropdown from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Dropdown documentation](/docs/react/components/dropdown) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Dropdown documentation](/docs/react/components/dropdown) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Dropdown from HeroUI v2 to v3
 In v2, Dropdown used separate components: `DropdownTrigger`, `DropdownMenu`, `DropdownItem`, `DropdownSection`:
 
 ```tsx
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@heroui/react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
 In v3, Dropdown uses a compound component pattern with explicit subcomponents:
 
 ```tsx
-import { Dropdown, Button, Label } from "@heroui/react";
+import { Dropdown, Button, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -156,7 +156,7 @@ export default function App() {
   <Tab value="v3">
     ```tsx
     import { Icon } from "@iconify/react";
-    import { Label, Description, Kbd } from "@heroui/react";
+    import { Label, Description, Kbd } from "@kinetic/react";
 
     {/* With icon */}
     <Dropdown.Item id="new" textValue="New file">
@@ -223,7 +223,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Header, Separator } from "@heroui/react";
+    import { Header, Separator } from "@kinetic/react";
 
     <Dropdown.Menu>
       <Dropdown.Section>
@@ -330,7 +330,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Label, Kbd } from "@heroui/react";
+    import { Label, Kbd } from "@kinetic/react";
 
     <Dropdown.Item id="copy" textValue="Copy">
       <Label>Copy</Label>
@@ -355,7 +355,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Label } from "@heroui/react";
+    import { Label } from "@kinetic/react";
 
     <Dropdown.Menu>
       <Dropdown.Item id="copy-link" textValue="Copy Link">

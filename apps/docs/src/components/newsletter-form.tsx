@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, FieldError, Form, Input, Label, Spinner, TextField} from "@heroui/react";
+import {Button, FieldError, Form, Input, Label, Spinner, TextField} from "@kinetic/react";
 import {AnimatePresence, LazyMotion, domAnimation} from "motion/react";
 import * as m from "motion/react-m";
 import React from "react";
@@ -58,7 +58,7 @@ export function NewsletterForm() {
       const newsletterResponse = await fetch("/api/newsletter", {
         body: JSON.stringify({
           email: emailValue,
-          source: "Subscribe from HeroUI Docs",
+          source: "Subscribe from Kinetic Docs",
         }),
         headers: {
           "Content-Type": "application/json",

@@ -1,9 +1,9 @@
 "use client";
 
-import type {ButtonVariants} from "@heroui/styles";
+import type {ButtonVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {buttonVariants} from "@heroui/styles";
+import {buttonVariants} from "@kinetic/styles";
 import {use} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
 

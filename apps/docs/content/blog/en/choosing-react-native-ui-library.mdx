@@ -1,6 +1,6 @@
 ---
 title: "Choosing a React Native UI Library"
-description: "A practical framework for choosing a React Native UI library, and where HeroUI Native fits."
+description: "A practical framework for choosing a React Native UI library, and where Kinetic Native fits."
 date: "2026-05-12"
 author: "Junior Garcia"
 authorHandle: "@jrgarciadev"
@@ -15,7 +15,7 @@ Choosing a React Native UI library is not just a component-count decision. It is
 
 The library you choose becomes the vocabulary your team uses every day. It shapes how designers hand off screens, how engineers compose interfaces, how quickly you can fix accessibility issues, and how well AI agents generate code that actually compiles.
 
-This guide explains how we think about that decision, and why HeroUI Native is built the way it is.
+This guide explains how we think about that decision, and why Kinetic Native is built the way it is.
 
 ## What to Evaluate
 
@@ -33,7 +33,7 @@ Those questions matter more than a screenshot gallery.
 
 Copy-paste UI can be useful when you need total code ownership. The trade-off is maintenance. Once the code is in your app, your team owns the updates, accessibility fixes, dependency changes, and design consistency.
 
-HeroUI Native takes the package approach:
+Kinetic Native takes the package approach:
 
 - Install `heroui-native`.
 - Configure Uniwind and the provider once.
@@ -47,7 +47,7 @@ That does not mean a package is always better. If your team has a dedicated desi
 
 Mobile apps are judged in milliseconds. A button press, sheet transition, input focus state, disabled control, or empty state can make an app feel cared for or unfinished.
 
-HeroUI Native is intentionally opinionated about the baseline:
+Kinetic Native is intentionally opinionated about the baseline:
 
 - Semantic component variants create a clear visual hierarchy.
 - Components are designed to look complete before customization.
@@ -59,19 +59,19 @@ The goal is not to lock you into one visual identity. The goal is to start from 
 
 ## Ecosystem Fit
 
-HeroUI Native is strongest when you want one ecosystem across product surfaces:
+Kinetic Native is strongest when you want one ecosystem across product surfaces:
 
-- Web product: [HeroUI React](/docs/react/getting-started/quick-start)
-- Mobile product: [HeroUI Native](/docs/native/getting-started)
-- Premium app surfaces: [HeroUI Pro](https://heroui.com/pro)
-- Design handoff: [HeroUI Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3)
+- Web product: [Kinetic React](/docs/react/getting-started/quick-start)
+- Mobile product: [Kinetic Native](/docs/native/getting-started)
+- Premium app surfaces: [Kinetic Pro](https://kinetic-ui.com/pro)
+- Design handoff: [Kinetic Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3)
 - AI workflow: [Native MCP Server](/docs/native/getting-started/mcp-server), [llms.txt](/docs/native/getting-started/llms-txt), and [Agent Skills](/docs/native/getting-started/agent-skills)
 
 That ecosystem is the advantage. A component library by itself saves some time. A design system, docs, Figma kit, AI context, and maintained package save coordination cost.
 
-## Where HeroUI Native Is Different
+## Where Kinetic Native Is Different
 
-HeroUI Native is built specifically for React Native. It does not ask you to use web imports or CSS files that do not belong in mobile apps.
+Kinetic Native is built specifically for React Native. It does not ask you to use web imports or CSS files that do not belong in mobile apps.
 
 Use Native patterns:
 
@@ -85,12 +85,12 @@ import {Button} from "heroui-native";
 
 Avoid web patterns:
 
-Do not use the HeroUI web package or web-only event handlers in React Native screens.
+Do not use the Kinetic web package or web-only event handlers in React Native screens.
 
-HeroUI Native uses `onPress`, `HeroUINativeProvider`, `GestureHandlerRootView`, Uniwind, and native overlay/portal patterns because those are the right abstractions for mobile.
+Kinetic Native uses `onPress`, `KineticNativeProvider`, `GestureHandlerRootView`, Uniwind, and native overlay/portal patterns because those are the right abstractions for mobile.
 
 ## Recommendation
 
-Choose HeroUI Native when your team values design quality, maintainability, and ecosystem leverage. It is especially compelling if you already use HeroUI on the web, work from Figma, or build with AI coding assistants.
+Choose Kinetic Native when your team values design quality, maintainability, and ecosystem leverage. It is especially compelling if you already use Kinetic on the web, work from Figma, or build with AI coding assistants.
 
 Start with the [Quick Start](/docs/native/getting-started/quick-start), then read the [Design Principles](/docs/native/getting-started/design-principles) before building your first screen.

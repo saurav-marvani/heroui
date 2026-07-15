@@ -1,4 +1,4 @@
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 import type {Meta, StoryObj} from "@storybook/react";
 
 import {Icon} from "@iconify/react";
@@ -1377,36 +1377,36 @@ export const UserSelection: Story = {
       {
         id: "1",
         name: "Bob",
-        email: "bob@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
+        email: "bob@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
         fallback: "B",
       },
       {
         id: "2",
         name: "Fred",
-        email: "fred@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
+        email: "fred@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
         fallback: "F",
       },
       {
         id: "3",
         name: "Martha",
-        email: "martha@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
+        email: "martha@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
         fallback: "M",
       },
       {
         id: "4",
         name: "John",
-        email: "john@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
+        email: "john@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
         fallback: "J",
       },
       {
         id: "5",
         name: "Jane",
-        email: "jane@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
+        email: "jane@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
         fallback: "J",
       },
     ];
@@ -1493,36 +1493,36 @@ export const UserSelectionMultiple: Story = {
       {
         id: "1",
         name: "Bob",
-        email: "bob@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
+        email: "bob@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/blue.jpg",
         fallback: "B",
       },
       {
         id: "2",
         name: "Fred",
-        email: "fred@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
+        email: "fred@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg",
         fallback: "F",
       },
       {
         id: "3",
         name: "Martha",
-        email: "martha@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
+        email: "martha@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/purple.jpg",
         fallback: "M",
       },
       {
         id: "4",
         name: "John",
-        email: "john@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
+        email: "john@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/red.jpg",
         fallback: "J",
       },
       {
         id: "5",
         name: "Jane",
-        email: "jane@heroui.com",
-        avatarUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
+        email: "jane@kinetic-ui.com",
+        avatarUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/orange.jpg",
         fallback: "J",
       },
     ];

@@ -41,6 +41,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {progressBarVariants} from "@heroui/styles";
+export {progressBarVariants} from "@kinetic/styles";
 
-export type {ProgressBarVariants} from "@heroui/styles";
+export type {ProgressBarVariants} from "@kinetic/styles";

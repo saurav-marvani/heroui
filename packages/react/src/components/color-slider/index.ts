@@ -48,6 +48,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {colorSliderVariants} from "@heroui/styles";
+export {colorSliderVariants} from "@kinetic/styles";
 
-export type {ColorSliderVariants} from "@heroui/styles";
+export type {ColorSliderVariants} from "@kinetic/styles";

@@ -53,6 +53,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {tabsVariants} from "@heroui/styles";
+export {tabsVariants} from "@kinetic/styles";
 
-export type {TabsVariants} from "@heroui/styles";
+export type {TabsVariants} from "@kinetic/styles";

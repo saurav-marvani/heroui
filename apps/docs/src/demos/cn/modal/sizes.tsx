@@ -1,7 +1,7 @@
 "use client";
 
 import {Rocket} from "@gravity-ui/icons";
-import {Button, Modal} from "@heroui/react";
+import {Button, Modal} from "@kinetic/react";
 
 const SIZE_LABELS = {
   cover: "通栏",

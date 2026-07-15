@@ -1,6 +1,6 @@
 "use client";
 
-import {Calendar, DateField, DatePicker, Description, Label} from "@heroui/react";
+import {Calendar, DateField, DatePicker, Description, Label} from "@kinetic/react";
 import {Icon} from "@iconify/react";
 
 export function WithCustomIndicator() {

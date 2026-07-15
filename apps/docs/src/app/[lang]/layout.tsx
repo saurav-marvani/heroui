@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     types: {
       "application/rss+xml": [
         {
-          title: "HeroUI RSS Feed",
+          title: "Kinetic RSS Feed",
           url: "/rss.xml",
         },
       ],
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     "Next.js",
     "NextUI",
     "Tailwind CSS",
-    "HeroUI",
+    "Kinetic",
     "React Aria",
     "Server Components",
     "React Components",

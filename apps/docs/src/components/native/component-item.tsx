@@ -3,7 +3,7 @@
 import type {StatusChipStatus} from "../status-chip";
 
 import {Link as LocalLinkIcon} from "@gravity-ui/icons";
-import {Link} from "@heroui/react";
+import {Link} from "@kinetic/react";
 import LinkRoot from "fumadocs-core/link";
 
 import {useIsMobileDevice} from "@/hooks/use-is-mobile-device";
@@ -29,7 +29,7 @@ function ComponentTitleContent({status, title}: {status?: StatusChipStatus; titl
 
 /**
  * Helper that picks between Next.js client routing (`NextLink`) and the
- * HeroUI `<Link>` based on whether the destination should open in a new tab.
+ * Kinetic `<Link>` based on whether the destination should open in a new tab.
  */
 function ConditionalLink({
   children,

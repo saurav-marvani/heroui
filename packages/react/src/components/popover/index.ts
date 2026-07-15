@@ -49,6 +49,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {popoverVariants} from "@heroui/styles";
+export {popoverVariants} from "@kinetic/styles";
 
-export type {PopoverVariants} from "@heroui/styles";
+export type {PopoverVariants} from "@kinetic/styles";

@@ -1,4 +1,4 @@
-import {Label, Meter} from "@heroui/react";
+import {Label, Meter} from "@kinetic/react";
 
 const SIZE_LABELS = {
   lg: "大",

@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { Slider } from '@heroui/react';
+import { Slider } from '@kinetic/react';
 ```
 
 ### Usage
@@ -25,7 +25,7 @@ import { Slider } from '@heroui/react';
 Import the Slider component and access all parts using dot notation.
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 export default () => (
   <Slider>
@@ -42,7 +42,7 @@ export default () => (
 ### Range Slider Anatomy
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 export default () => (
   <Slider defaultValue={[25, 75]}>
@@ -93,7 +93,7 @@ export default () => (
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 function CustomSlider() {
   return (
@@ -138,7 +138,7 @@ To customize the Slider component classes, you can use the `@layer components` d
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -242,7 +242,7 @@ When using render functions with Slider.Output or Slider.Track, these values are
 ### Basic Usage
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider defaultValue={30}>
   <Label>Volume</Label>
@@ -257,7 +257,7 @@ import { Slider, Label } from '@heroui/react';
 ### Range Slider
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider
   defaultValue={[100, 500]}
@@ -284,7 +284,7 @@ import { Slider, Label } from '@heroui/react';
 ### Controlled Value
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledSlider() {
@@ -309,7 +309,7 @@ function ControlledSlider() {
 ### Custom Value Formatting
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider
   defaultValue={60}
@@ -327,7 +327,7 @@ import { Slider, Label } from '@heroui/react';
 ### Vertical Orientation
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider defaultValue={30} orientation="vertical" aria-label="Volume">
   <Label>Volume</Label>
@@ -342,7 +342,7 @@ import { Slider, Label } from '@heroui/react';
 ### Custom Output Display
 
 ```tsx
-import { Slider, Label } from '@heroui/react';
+import { Slider, Label } from '@kinetic/react';
 
 <Slider defaultValue={[25, 75]}>
   <Label>Range</Label>

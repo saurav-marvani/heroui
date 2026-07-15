@@ -25,7 +25,7 @@ export const Default: Story = {
   render: () => (
     <div className="max-w-md">
       <div className="space-y-1">
-        <h4 className="text-medium font-medium">HeroUI v3 Components</h4>
+        <h4 className="text-medium font-medium">Kinetic v3 Components</h4>
         <p className="text-small text-default-400">Beautiful, fast and modern React UI library.</p>
       </div>
       <Separator className="my-4" />
@@ -54,18 +54,18 @@ export const Vertical: Story = {
 
 const items = [
   {
-    iconUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/bell-small.png",
+    iconUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/bell-small.png",
     subtitle: "Receive account activity updates",
     title: "Set Up Notifications",
   },
   {
-    iconUrl: "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/compass-small.png",
+    iconUrl: "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/compass-small.png",
     subtitle: "Connect your browser to your account",
     title: "Set up Browser Extension",
   },
   {
     iconUrl:
-      "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/mint-collective-small.png",
+      "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/docs/3dicons/mint-collective-small.png",
     subtitle: "Create your first collectible",
     title: "Mint Collectible",
   },

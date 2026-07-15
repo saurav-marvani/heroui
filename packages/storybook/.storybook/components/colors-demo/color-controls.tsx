@@ -1,4 +1,4 @@
-import {Label} from "@heroui/react";
+import {Label} from "@kinetic/react";
 import React, {useCallback, useRef} from "react";
 import {tv} from "tailwind-variants";
 

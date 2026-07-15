@@ -5,7 +5,7 @@ import {
   ColorSwatch,
   ColorSwatchPicker,
   Label,
-} from "@heroui/react";
+} from "@kinetic/react";
 
 export function WithSwatches() {
   const presets = [

@@ -1,4 +1,4 @@
-import {Description, Label, Radio, RadioGroup} from "@heroui/react";
+import {Description, Label, Radio, RadioGroup} from "@kinetic/react";
 import {Icon} from "@iconify/react";
 import clsx from "clsx";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import {Calendar, DateField, DatePicker, Label} from "@heroui/react";
+import {Calendar, DateField, DatePicker, Label} from "@kinetic/react";
 
 export function Basic() {
   return (

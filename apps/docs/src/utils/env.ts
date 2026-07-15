@@ -10,10 +10,10 @@ const getBaseURL = (): URL => {
   let host = "localhost:3000";
 
   // preview
-  if (__PREVIEW__) host = "v3.heroui.com";
+  if (__PREVIEW__) host = "v3.kinetic-ui.com";
 
   // production
-  if (__PROD__) host = "www.heroui.com";
+  if (__PROD__) host = "www.kinetic-ui.com";
 
   // protocol
   const protocol = host.startsWith("localhost") ? "http" : "https";

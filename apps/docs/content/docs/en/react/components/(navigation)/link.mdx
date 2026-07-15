@@ -12,7 +12,7 @@ links:
 ## Import
 
 ```tsx
-import { Link } from '@heroui/react';
+import { Link } from '@kinetic/react';
 ```
 
 ### Usage
@@ -26,7 +26,7 @@ import { Link } from '@heroui/react';
 Import the Link component and access all parts using dot notation.
 
 ```tsx
-import { Link } from '@heroui/react';
+import { Link } from '@kinetic/react';
 
 export default () => (
   <Link href="#">
@@ -103,7 +103,7 @@ Available BEM classes:
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { Link } from '@heroui/react';
+import { Link } from '@kinetic/react';
 
 function CustomLink() {
   return (
@@ -130,7 +130,7 @@ To customize the Link component classes, you can use the `@layer components` dir
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -180,8 +180,8 @@ The component supports both CSS pseudo-classes and data attributes for flexibili
 Use variant functions to style framework-specific links like Next.js:
 
 ```tsx
-import { Link } from '@heroui/react';
-import { linkVariants } from '@heroui/styles';
+import { Link } from '@kinetic/react';
+import { linkVariants } from '@kinetic/styles';
 import NextLink from 'next/link';
 
 export default function Demo() {
@@ -198,7 +198,7 @@ export default function Demo() {
 
 ### Direct Class Application
 
-Since HeroUI uses [BEM](https://getbem.com/) classes, you can apply Link styles directly to any link element:
+Since Kinetic uses [BEM](https://getbem.com/) classes, you can apply Link styles directly to any link element:
 
 ```tsx
 import NextLink from 'next/link';

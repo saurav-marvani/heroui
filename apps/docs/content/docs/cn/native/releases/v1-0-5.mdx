@@ -10,7 +10,7 @@ github:
   <span className="text-sm text-muted">2026 年 7 月 2 日</span>
 </div>
 
-HeroUI Native v1.0.5 通过将字段边框拆分为独立的宽度与颜色令牌，并全局配置 `tailwind-variants`，解决了长期存在的 `border-field` 合并冲突，同时将 Input、InputOTP、Radio、Checkbox 迁移到基于 outline 的聚焦、激活与无效状态。本版本还为 Typography 带来 iOS Dynamic Type 支持，新增 Provider 级的文本输入配置，重构 Popover、Menu、Select 的进入动画以让内容仅挂载一次，将 Select 勾选图标与 `accent-soft-foreground` 令牌对齐，并将工具链升级至 Expo 57 / React Native 0.86。
+Kinetic Native v1.0.5 通过将字段边框拆分为独立的宽度与颜色令牌，并全局配置 `tailwind-variants`，解决了长期存在的 `border-field` 合并冲突，同时将 Input、InputOTP、Radio、Checkbox 迁移到基于 outline 的聚焦、激活与无效状态。本版本还为 Typography 带来 iOS Dynamic Type 支持，新增 Provider 级的文本输入配置，重构 Popover、Menu、Select 的进入动画以让内容仅挂载一次，将 Select 勾选图标与 `accent-soft-foreground` 令牌对齐，并将工具链升级至 Expo 57 / React Native 0.86。
 
 ## 安装
 
@@ -40,7 +40,7 @@ HeroUI Native v1.0.5 通过将字段边框拆分为独立的宽度与颜色令�
 </Tabs>
 
 <Callout type="info">
-  **使用 AI 助手？** 直接提示「Hey Cursor，把 HeroUI Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [HeroUI Native MCP 服务器](/docs/native/getting-started/mcp-server)。
+  **使用 AI 助手？** 直接提示「Hey Cursor，把 Kinetic Native 升级到最新版本」，助手会自动比对版本并完成必要修改。了解更多请参见 [Kinetic Native MCP 服务器](/docs/native/getting-started/mcp-server)。
 </Callout>
 
 ## 真机体验
@@ -97,16 +97,16 @@ HeroUI Native v1.0.5 通过将字段边框拆分为独立的宽度与颜色令�
 
 ### Provider 文本输入配置
 
-[HeroUINativeProvider](/docs/native/getting-started/provider)（以及 `HeroUINativeProviderRaw`）现可通过新的 `textInputProps` 配置在全局配置一部分 `TextInput` 属性，首批支持 `allowFontScaling` 与 `maxFontSizeMultiplier`。这与既有的全局 `textProps` 模式保持一致，使整个应用的输入字体缩放行为保持统一。
+[KineticNativeProvider](/docs/native/getting-started/provider)（以及 `KineticNativeProviderRaw`）现可通过新的 `textInputProps` 配置在全局配置一部分 `TextInput` 属性，首批支持 `allowFontScaling` 与 `maxFontSizeMultiplier`。这与既有的全局 `textProps` 模式保持一致，使整个应用的输入字体缩放行为保持统一。
 
 **新能力：**
 
 ```tsx
-import { HeroUINativeProvider } from "heroui-native";
+import { KineticNativeProvider } from "heroui-native";
 
 export function App() {
   return (
-    <HeroUINativeProvider
+    <KineticNativeProvider
       config={{
         textInputProps: {
           allowFontScaling: true,
@@ -115,14 +115,14 @@ export function App() {
       }}
     >
       {/* Your app */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
 
 **包含内容：**
 
-- 在 `HeroUINativeConfig` 与 `HeroUINativeConfigRaw` 上新增 `textInputProps` 配置（`allowFontScaling`、`maxFontSizeMultiplier`）
+- 在 `KineticNativeConfig` 与 `KineticNativeConfigRaw` 上新增 `textInputProps` 配置（`allowFontScaling`、`maxFontSizeMultiplier`）
 - 新增 `TextInputComponentProvider` / `useTextInputComponent` 以及一个 `HeroTextInput` 辅助组件，将全局属性作为可覆盖的默认值应用
 - 已应用于 `Input`（因此涵盖 `TextArea`、`SearchField`、`InputGroup`）以及 `InputOTP` 基元
 

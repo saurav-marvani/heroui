@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Get complete component documentation (MDX) for HeroUI v3 components.
+ * Get complete component documentation (MDX) for Kinetic UI v3 components.
  *
  * Usage:
  *   node get_component_docs.mjs Button
@@ -25,7 +25,7 @@ function toKebabCase(name) {
 }
 
 /**
- * Fetch data from HeroUI API with app parameter for analytics.
+ * Fetch data from Kinetic UI API with app parameter for analytics.
  */
 async function fetchApi(endpoint, method = "GET", body = null) {
   const separator = endpoint.includes("?") ? "&" : "?";
@@ -35,7 +35,7 @@ async function fetchApi(endpoint, method = "GET", body = null) {
     const options = {
       headers: {
         "Content-Type": "application/json",
-        "User-Agent": "HeroUI-Skill/1.0",
+        "User-Agent": "Kinetic UI-Skill/1.0",
       },
       method,
       signal: AbortSignal.timeout(30000),
@@ -66,7 +66,7 @@ async function fetchFallback(component) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 

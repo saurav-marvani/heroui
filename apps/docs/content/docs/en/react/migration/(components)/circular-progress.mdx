@@ -1,10 +1,10 @@
 ---
 title: CircularProgress
-description: Migration guide for CircularProgress from HeroUI v2 to v3 (now ProgressCircle)
+description: Migration guide for CircularProgress from Kinetic v2 to v3 (now ProgressCircle)
 ---
 
 <Callout type="info">
-  Refer to the [v3 ProgressCircle documentation](/docs/react/components/progress-circle) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 ProgressCircle documentation](/docs/react/components/progress-circle) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 <Callout type="warning">
@@ -20,7 +20,7 @@ description: Migration guide for CircularProgress from HeroUI v2 to v3 (now Prog
 In v2, `CircularProgress` was a single component configured with props:
 
 ```tsx
-import { CircularProgress } from "@heroui/react";
+import { CircularProgress } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
 In v3, `ProgressCircle` uses a compound component pattern:
 
 ```tsx
-import { ProgressCircle } from "@heroui/react";
+import { ProgressCircle } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -84,14 +84,14 @@ export default function App() {
 <Tabs items={["v2", "v3"]}>
   <Tab value="v2">
     ```tsx
-    import { CircularProgress } from "@heroui/react";
+    import { CircularProgress } from "@kinetic/react";
 
     <CircularProgress aria-label="Loading..." value={60} />
     ```
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { ProgressCircle } from "@heroui/react";
+    import { ProgressCircle } from "@kinetic/react";
 
     <ProgressCircle aria-label="Loading..." value={60}>
       <ProgressCircle.Track>
@@ -140,7 +140,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { ProgressCircle, Label } from "@heroui/react";
+    import { ProgressCircle, Label } from "@kinetic/react";
 
     <div className="flex flex-col items-center gap-2">
       <ProgressCircle aria-label="Loading" value={70} size="lg">

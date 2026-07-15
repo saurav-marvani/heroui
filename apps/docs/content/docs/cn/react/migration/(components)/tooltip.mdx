@@ -1,10 +1,10 @@
 ---
 title: Tooltip
-description: Tooltip 从 HeroUI v2 到 v3 的迁移指南。
+description: Tooltip 从 Kinetic v2 到 v3 的迁移指南。
 ---
 
 <Callout type="info">
-  完整的 API 参考、样式指南与高级示例请参阅 [v3 Tooltip 文档](/docs/react/components/tooltip)。本指南只关注从 HeroUI v2 的迁移。
+  完整的 API 参考、样式指南与高级示例请参阅 [v3 Tooltip 文档](/docs/react/components/tooltip)。本指南只关注从 Kinetic v2 的迁移。
 </Callout>
 
 ## 结构变化
@@ -12,7 +12,7 @@ description: Tooltip 从 HeroUI v2 到 v3 的迁移指南。
 在 v2 中，Tooltip 使用 `content` prop：
 
 ```tsx
-import { Tooltip, Button } from "@heroui/react";
+import { Tooltip, Button } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
 在 v3 中，Tooltip 需要复合组件：
 
 ```tsx
-import { Tooltip, Button } from "@heroui/react";
+import { Tooltip, Button } from "@kinetic/react";
 
 export default function App() {
   return (

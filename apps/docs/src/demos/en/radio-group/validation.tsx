@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, Description, FieldError, Form, Label, Radio, RadioGroup} from "@heroui/react";
+import {Button, Description, FieldError, Form, Label, Radio, RadioGroup} from "@kinetic/react";
 import React from "react";
 
 export function Validation() {

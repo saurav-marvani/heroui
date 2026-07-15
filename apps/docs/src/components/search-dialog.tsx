@@ -1,11 +1,11 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 import type {Item, Node} from "fumadocs-core/page-tree";
 import type {SearchItemType, SharedProps} from "fumadocs-ui/components/dialog/search";
 import type {ComponentProps} from "react";
 
-import {Chip, Kbd, Tag, TagGroup} from "@heroui/react";
+import {Chip, Kbd, Tag, TagGroup} from "@kinetic/react";
 import {useDocsSearch} from "fumadocs-core/search/client";
 import {
   SearchDialog,
@@ -44,7 +44,7 @@ const DEFAULT_SUGGESTIONS: Record<"native" | "web", string[]> = {
   ],
 };
 
-const PRO_URL = process.env["NEXT_PUBLIC_PRO_URL"] ?? "https://heroui.pro";
+const PRO_URL = process.env["NEXT_PUBLIC_PRO_URL"] ?? "https://kinetic.pro";
 const PRO_SEARCH_DEBOUNCE_MS = 150;
 
 interface ProComponent {

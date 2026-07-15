@@ -1,8 +1,8 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
-import {ComboBox, Input, Label, ListBox} from "@heroui/react";
+import {ComboBox, Input, Label, ListBox} from "@kinetic/react";
 import {useState} from "react";
 
 export function Controlled() {

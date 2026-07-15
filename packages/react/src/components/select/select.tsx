@@ -3,10 +3,10 @@
 import type {Booleanish} from "../../utils/assertion";
 import type {DOMRenderProps} from "../../utils/dom";
 import type {SurfaceVariants} from "../surface";
-import type {SelectVariants} from "@heroui/styles";
+import type {SelectVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {selectVariants} from "@heroui/styles";
+import {selectVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {Button as ButtonPrimitive} from "react-aria-components/Button";
 import {Popover as PopoverPrimitive} from "react-aria-components/Popover";

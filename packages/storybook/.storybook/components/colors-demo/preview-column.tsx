@@ -1,6 +1,6 @@
 import type {Theme} from "../../hooks/use-theme-toggle";
 
-import {Chip} from "@heroui/react";
+import {Chip} from "@kinetic/react";
 import React, {forwardRef, useEffect} from "react";
 
 import {ComponentShowcase} from "./component-showcase";

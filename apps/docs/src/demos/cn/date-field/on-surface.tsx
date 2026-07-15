@@ -1,7 +1,7 @@
 "use client";
 
 import {Calendar} from "@gravity-ui/icons";
-import {DateField, Description, Label, Surface} from "@heroui/react";
+import {DateField, Description, Label, Surface} from "@kinetic/react";
 
 export function OnSurface() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import {Label, ListBox, RangeCalendar, Select} from "@heroui/react";
+import {Label, ListBox, RangeCalendar, Select} from "@kinetic/react";
 import {useState} from "react";
 
 const weekOptions = [

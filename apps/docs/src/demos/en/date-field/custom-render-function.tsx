@@ -1,6 +1,6 @@
 "use client";
 
-import {DateField, Label} from "@heroui/react";
+import {DateField, Label} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

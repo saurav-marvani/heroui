@@ -1,4 +1,4 @@
-# @heroui/styles
+# @kinetic/styles
 
 ## 3.0.1
 

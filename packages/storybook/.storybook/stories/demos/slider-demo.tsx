@@ -1,4 +1,4 @@
-import {Label, Slider} from "@heroui/react";
+import {Label, Slider} from "@kinetic/react";
 import React from "react";
 
 export function SliderDemo() {

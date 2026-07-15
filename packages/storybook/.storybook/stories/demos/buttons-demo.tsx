@@ -1,4 +1,4 @@
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 import React from "react";
 
 export const ButtonsDemo = () => {

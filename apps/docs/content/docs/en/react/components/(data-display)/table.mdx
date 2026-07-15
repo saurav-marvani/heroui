@@ -12,7 +12,7 @@ links:
 ## Import
 
 ```tsx
-import { Table } from '@heroui/react';
+import { Table } from '@kinetic/react';
 ```
 
 ### Usage
@@ -27,7 +27,7 @@ import { Table } from '@heroui/react';
 Import the Table component and access all parts using dot notation.
 
 ```tsx
-import { Table } from '@heroui/react';
+import { Table } from '@kinetic/react';
 
 export default () => (
   <Table>
@@ -144,9 +144,9 @@ Table supports virtualization through [Virtualizer](https://react-aria.adobe.com
 
 ### TanStack Table
 
-HeroUI's Table works as a rendering layer on top of headless table libraries.
+Kinetic's Table works as a rendering layer on top of headless table libraries.
 This example uses [TanStack Table](https://tanstack.com/table) for column
-definitions, sorting, and pagination — while HeroUI handles styling and
+definitions, sorting, and pagination — while Kinetic handles styling and
 accessibility.
 
 <ComponentPreview
@@ -163,7 +163,7 @@ accessibility.
 You can customize individual Table parts:
 
 ```tsx
-import { Table } from '@heroui/react';
+import { Table } from '@kinetic/react';
 
 function CustomTable() {
   return (
@@ -218,7 +218,7 @@ To customize the Table component classes, you can use the `@layer components` di
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 

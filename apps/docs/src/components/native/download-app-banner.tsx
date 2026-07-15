@@ -2,14 +2,14 @@ import type {FC} from "react";
 
 import {NATIVE_APP} from "@/config/native-app";
 
-import {HeroUILogo} from "../heroui-logo";
+import {KineticLogo} from "../kinetic-logo";
 
 import {StoreButtons} from "./store-buttons";
 
 /**
  * Full-screen "Download the App" fallback rendered at
  * `/docs/native-showcase/components/{slug}` when the visitor doesn't have
- * the HeroUI Native app installed.
+ * the Kinetic Native app installed.
  *
  * The native app's Associated Domains + `+native-intent` redirect intercept
  * matching URLs before this page is ever loaded; this component is only what
@@ -23,7 +23,7 @@ import {StoreButtons} from "./store-buttons";
 export const DownloadAppBanner: FC = () => {
   return (
     <main className="flex min-h-svh flex-col items-center justify-center gap-8 p-6">
-      <HeroUILogo />
+      <KineticLogo />
       <div className="flex max-w-md flex-col items-center gap-4 text-center">
         <h1 className="font-heading text-3xl font-semibold tracking-tight">Download the App</h1>
         <p className="text-sm leading-relaxed text-muted">

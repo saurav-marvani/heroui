@@ -4,7 +4,7 @@ import {useCallback, useRef, useState, useSyncExternalStore} from "react";
 
 import {useIsomorphicLayoutEffect} from "./use-isomorphic-layout-effect";
 
-const THEME_STORAGE_KEY = "heroui-theme";
+const THEME_STORAGE_KEY = "kinetic-theme";
 const PREFERS_DARK_MEDIA = "(prefers-color-scheme: dark)";
 
 export type Theme = string;

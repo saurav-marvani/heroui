@@ -81,6 +81,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {drawerVariants} from "@heroui/styles";
+export {drawerVariants} from "@kinetic/styles";
 
-export type {DrawerVariants} from "@heroui/styles";
+export type {DrawerVariants} from "@kinetic/styles";

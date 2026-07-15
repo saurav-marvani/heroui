@@ -35,6 +35,6 @@ export {ButtonGroupContext, BUTTON_GROUP_CHILD} from "./button-group";
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {buttonGroupVariants} from "@heroui/styles";
+export {buttonGroupVariants} from "@kinetic/styles";
 
-export type {ButtonGroupVariants} from "@heroui/styles";
+export type {ButtonGroupVariants} from "@kinetic/styles";

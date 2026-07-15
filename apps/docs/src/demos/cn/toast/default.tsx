@@ -1,7 +1,7 @@
 "use client";
 
 import {Persons} from "@gravity-ui/icons";
-import {Button, toast} from "@heroui/react";
+import {Button, toast} from "@kinetic/react";
 
 export function Default() {
   return (
@@ -16,7 +16,7 @@ export function Default() {
               onPress: () => toast.clear(),
               variant: "tertiary",
             },
-            description: "Bob 邀请您加入 HeroUI 团队",
+            description: "Bob 邀请您加入 Kinetic 团队",
             indicator: <Persons />,
             variant: "default",
           });

@@ -1,21 +1,21 @@
 ---
 title: MCP 服务器
-description: 直接在你的 AI 助手中访问 HeroUI v3 文档
+description: 直接在你的 AI 助手中访问 Kinetic v3 文档
 ---
 
-HeroUI MCP 服务器让 AI 助手可以直接访问 HeroUI v3 组件文档，从而更轻松地在 AI 驱动的开发环境中使用 HeroUI 进行构建。
+Kinetic MCP 服务器让 AI 助手可以直接访问 Kinetic v3 组件文档，从而更轻松地在 AI 驱动的开发环境中使用 Kinetic 进行构建。
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/hero-react-mcp-light-new-2.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/hero-react-mcp-dark-new.jpg"
-  alt="HeroUI v3 MCP 服务器"
+  alt="Kinetic v3 MCP 服务器"
 />
 
 
-MCP 服务器目前仅支持 **@heroui/react v3**，并使用 [stdio 传输](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports#stdio)。已在 npm 上以 `@heroui/react-mcp` 发布。源代码请查看 [GitHub](https://github.com/heroui-inc/heroui-mcp)。
+MCP 服务器目前仅支持 **@kinetic/react v3**，并使用 [stdio 传输](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports#stdio)。已在 npm 上以 `@kinetic/react-mcp` 发布。源代码请查看 [GitHub](https://github.com/heroui-inc/heroui-mcp)。
 
 <Callout>
-  随着我们向 HeroUI v3 添加更多组件，它们也将在 MCP 服务器中可用。
+  随着我们向 Kinetic v3 添加更多组件，它们也将在 MCP 服务器中可用。
 </Callout>
 
 ## 快速设置
@@ -24,7 +24,7 @@ MCP 服务器目前仅支持 **@heroui/react v3**，并使用 [stdio 传输](htt
 
 <div className="flex items-center gap-3 mb-4">
   <a
-    href="https://link.heroui.com/mcp-cursor-install"
+    href="https://link.kinetic-ui.com/mcp-cursor-install"
     className="button button--tertiary button--sm no-underline"
   >
     <svg viewBox="0 0 466.73 532.09" className="w-5 h-5 fill-current">
@@ -41,7 +41,7 @@ MCP 服务器目前仅支持 **@heroui/react v3**，并使用 [stdio 传输](htt
   "mcpServers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
@@ -54,7 +54,7 @@ MCP 服务器目前仅支持 **@heroui/react v3**，并使用 [stdio 传输](htt
 在终端中运行此命令：
 
 ```bash
-claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
+claude mcp add heroui-react -- npx -y @kinetic/react-mcp@latest
 ```
 
 或者手动添加到你项目的 `.mcp.json` 文件：
@@ -64,26 +64,26 @@ claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
   "mcpServers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
 ```
 
-添加配置后，重启 Claude Code 并运行 `/mcp`，即可在列表中看到 HeroUI MCP 服务器。如果你看到 **Connected**，就可以开始使用了。
+添加配置后，重启 Claude Code 并运行 `/mcp`，即可在列表中看到 Kinetic MCP 服务器。如果你看到 **Connected**，就可以开始使用了。
 
 更多详情请参阅 [Claude Code MCP 文档](https://docs.claude.com/en/docs/claude-code/mcp)。
 
 ### Windsurf
 
-将 HeroUI 服务器添加到你项目的 `.windsurf/mcp.json` 配置文件：
+将 Kinetic 服务器添加到你项目的 `.windsurf/mcp.json` 配置文件：
 
 ```json title=".windsurf/mcp.json"
 {
   "mcpServers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
@@ -95,14 +95,14 @@ claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
 
 ### Zed
 
-将 HeroUI 服务器添加到你的 `settings.json` 配置文件。通过命令面板打开设置（`zed: open settings`），或使用 `Cmd-,`（Mac）/ `Ctrl-,`（Linux）：
+将 Kinetic 服务器添加到你的 `settings.json` 配置文件。通过命令面板打开设置（`zed: open settings`），或使用 `Cmd-,`（Mac）/ `Ctrl-,`（Linux）：
 
 ```json title="settings.json"
 {
   "context_servers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"],
+      "args": ["-y", "@kinetic/react-mcp@latest"],
       "env": {}
     }
   }
@@ -115,7 +115,7 @@ claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
 
 ### VS Code
 
-要在 VS Code 中通过 GitHub Copilot 配置 MCP，请将 HeroUI 服务器添加到项目的 `.vscode/mcp.json` 配置文件：
+要在 VS Code 中通过 GitHub Copilot 配置 MCP，请将 Kinetic 服务器添加到项目的 `.vscode/mcp.json` 配置文件：
 
 ```json title=".vscode/mcp.json"
 {
@@ -123,7 +123,7 @@ claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
     "heroui-react": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
@@ -135,12 +135,12 @@ claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
 
 ### Codex
 
-将 HeroUI 服务器添加到你的 `~/.codex/config.toml`（或项目级的 `.codex/config.toml`）：
+将 Kinetic 服务器添加到你的 `~/.codex/config.toml`（或项目级的 `.codex/config.toml`）：
 
 ```toml title="config.toml"
 [mcp_servers.heroui-react]
 command = "npx"
-args = ["-y", "@heroui/react-mcp@latest"]
+args = ["-y", "@kinetic/react-mcp@latest"]
 ```
 
 添加配置后，重启 Codex 并在 TUI 中运行 `/mcp`，以验证服务器是否处于活动状态。
@@ -149,7 +149,7 @@ args = ["-y", "@heroui/react-mcp@latest"]
 
 ### OpenCode
 
-将 HeroUI 服务器添加到你项目的 `opencode.json` 配置文件：
+将 Kinetic 服务器添加到你项目的 `opencode.json` 配置文件：
 
 ```json title="opencode.json"
 {
@@ -157,7 +157,7 @@ args = ["-y", "@heroui/react-mcp@latest"]
   "mcp": {
     "heroui-react": {
       "type": "local",
-      "command": ["npx", "-y", "@heroui/react-mcp@latest"]
+      "command": ["npx", "-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
@@ -171,8 +171,8 @@ args = ["-y", "@heroui/react-mcp@latest"]
 
 配置完成后，可以这样询问你的 AI 助手：
 
-- “帮我在 Next.js / Vite / Astro 应用中安装 HeroUI v3”
-- “显示所有 HeroUI 组件”
+- “帮我在 Next.js / Vite / Astro 应用中安装 Kinetic v3”
+- “显示所有 Kinetic 组件”
 - “Button 组件有哪些 props？”
 - “给我一个使用 Card 组件的示例”
 - “获取 Button 组件的源代码”
@@ -181,10 +181,10 @@ args = ["-y", "@heroui/react-mcp@latest"]
 
 ### 自动更新
 
-MCP 服务器可以帮助你升级到最新的 HeroUI 版本：
+MCP 服务器可以帮助你升级到最新的 Kinetic 版本：
 
 ```bash
-"Hey Cursor, update HeroUI to the latest version"
+"Hey Cursor, update Kinetic to the latest version"
 ```
 
 你的 AI 助手会自动完成以下事项：
@@ -200,12 +200,12 @@ MCP 服务器为 AI 助手提供以下工具：
 
 | 工具 | 描述 |
 |------|-------------|
-| `list_components` | 列出所有可用的 HeroUI v3 组件 |
+| `list_components` | 列出所有可用的 Kinetic v3 组件 |
 | `get_component_docs` | 获取一个或多个组件的完整文档，包括组件结构、props、示例和使用模式 |
 | `get_component_source_code` | 获取组件的 React/TypeScript 源代码（.tsx 文件） |
 | `get_component_source_styles` | 查看组件的 CSS 样式（.css 文件） |
 | `get_theme_variables` | 获取颜色、排版、间距相关的主题变量，支持浅色/深色模式 |
-| `get_docs` | 浏览完整的 HeroUI v3 文档，包括指南和设计原则（如需安装说明，请使用路径 `/docs/react/getting-started/quick-start`） |
+| `get_docs` | 浏览完整的 Kinetic v3 文档，包括指南和设计原则（如需安装说明，请使用路径 `/docs/react/getting-started/quick-start`） |
 
 
 ## 故障排查
@@ -216,6 +216,6 @@ MCP 服务器为 AI 助手提供以下工具：
 
 ## 链接
 
-- [npm 包](https://www.npmjs.com/package/@heroui/react-mcp)
+- [npm 包](https://www.npmjs.com/package/@kinetic/react-mcp)
 - [GitHub 仓库](https://github.com/heroui-inc/heroui-mcp)
 - [贡献指南](https://github.com/heroui-inc/heroui-mcp/blob/main/CONTRIBUTING.md)

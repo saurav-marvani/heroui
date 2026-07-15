@@ -9,7 +9,7 @@ github:
   <span className="text-sm text-muted">November 6, 2025</span>
 </div>
 
-This release introduces a comprehensive redesign of HeroUI v3, merging v2's beauty and animations with v3's simplicity. All components redesigned, 8 new components, and improved design system with better color tokens, shadows, and architecture.
+This release introduces a comprehensive redesign of Kinetic v3, merging v2's beauty and animations with v3's simplicity. All components redesigned, 8 new components, and improved design system with better color tokens, shadows, and architecture.
 
 ## Installation
 
@@ -18,35 +18,35 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@beta @heroui/react@beta
+    npm i @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@beta @heroui/react@beta
+    pnpm add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@beta @heroui/react@beta
+    yarn add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@beta @heroui/react@beta
+    bun add @kinetic/styles@beta @kinetic/react@beta
     ```
   </Tab>
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI MCP Server](/docs/ui-for-agents/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic MCP Server](/docs/ui-for-agents/mcp-server).
 </Callout>
 
 ## What's New
 
 ### New Design System
 
-We've spent weeks crafting a new design system that merges the soul of HeroUI v2 with the simplicity of v3. Every component has been redesigned with attention to detail, smooth animations, and improved developer experience. The new design system is available in our [Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3).
+We've spent weeks crafting a new design system that merges the soul of Kinetic v2 with the simplicity of v3. Every component has been redesigned with attention to detail, smooth animations, and improved developer experience. The new design system is available in our [Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3).
 
 <VideoPlayer
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/videos/v3-beta-1.mp4"
@@ -167,12 +167,12 @@ Several components have been refined with better APIs:
 
 ### Flexible Component Patterns
 
-HeroUI now supports flexible component syntax. Use compound patterns with or without `.Root`, or named exports - all three patterns work identically.
+Kinetic now supports flexible component syntax. Use compound patterns with or without `.Root`, or named exports - all three patterns work identically.
 
 **Available patterns:**
 
 ```tsx
-import { Avatar } from "@heroui/react"
+import { Avatar } from "@kinetic/react"
 
 // 1. Compound pattern (no .Root needed) - recommended
 <Avatar>
@@ -187,7 +187,7 @@ import { Avatar } from "@heroui/react"
 </Avatar.Root>
 
 // 3. Named exports
-import { AvatarRoot, AvatarImage, AvatarFallback } from "@heroui/react"
+import { AvatarRoot, AvatarImage, AvatarFallback } from "@kinetic/react"
 
 <AvatarRoot>
   <AvatarImage src="/avatar.jpg" alt="User" />
@@ -198,7 +198,7 @@ import { AvatarRoot, AvatarImage, AvatarFallback } from "@heroui/react"
 **Simple components** like Button work the same way:
 
 ```tsx
-import { Button } from "@heroui/react"
+import { Button } from "@kinetic/react"
 
 // No .Root needed
 <Button>Label</Button>
@@ -207,14 +207,14 @@ import { Button } from "@heroui/react"
 <Button.Root>Label</Button.Root>
 
 // Or named export
-import { ButtonRoot } from "@heroui/react"
+import { ButtonRoot } from "@kinetic/react"
 <ButtonRoot>Label</ButtonRoot>
 ```
 
 **You can mix compound and named exports** in the same component:
 
 ```tsx
-import { Avatar, AvatarFallback } from "@heroui/react"
+import { Avatar, AvatarFallback } from "@kinetic/react"
 
 <Avatar>
   <Avatar.Image src="/avatar.jpg" alt="User" />
@@ -230,16 +230,16 @@ This provides:
 
 ### Global Animation Control
 
-HeroUI now supports easy global animation control through the `data-reduce-motion` attribute. Simply add `data-reduce-motion="true"` to your `<html>` or `<body>` tag to disable all animations across your application.
+Kinetic now supports easy global animation control through the `data-reduce-motion` attribute. Simply add `data-reduce-motion="true"` to your `<html>` or `<body>` tag to disable all animations across your application.
 
 ```html
 <!DOCTYPE html>
 <html data-reduce-motion="true">
-  <!-- All HeroUI animations will be disabled -->
+  <!-- All Kinetic animations will be disabled -->
 </html>
 ```
 
-HeroUI automatically respects user motion preferences using the `prefers-reduced-motion` media query and extends Tailwind's `motion-reduce:` variant to support both system preferences and manual control via the data attribute. This provides flexible control over animations while maintaining accessibility best practices.
+Kinetic automatically respects user motion preferences using the `prefers-reduced-motion` media query and extends Tailwind's `motion-reduce:` variant to support both system preferences and manual control via the data attribute. This provides flexible control over animations while maintaining accessibility best practices.
 
 Learn more about animations and motion preferences in the [Animation documentation](/docs/handbook/animation).
 
@@ -291,7 +291,7 @@ The `--surface-1`, `--surface-2`, and `--surface-3` variables have been removed.
 --surface: var(--white);
 --surface-foreground: var(--foreground);
 
-/* HeroUI automatically calculates these using color-mix */
+/* Kinetic automatically calculates these using color-mix */
 --color-surface-secondary: color-mix(in oklab, var(--surface) 94%, var(--surface-foreground) 6%);
 --color-surface-tertiary: color-mix(in oklab, var(--surface) 92%, var(--surface-foreground) 8%);
 --color-surface-quaternary: color-mix(in oklab, var(--surface) 86%, var(--surface-foreground) 14%);
@@ -420,14 +420,14 @@ The Chip component's `type` prop has been renamed to `color`, and a new `size` p
 
 **Before:**
 ```tsx
-import { Chip } from "@heroui/react";
+import { Chip } from "@kinetic/react";
 
 <Chip type="danger" variant="secondary">Label</Chip>
 ```
 
 **After:**
 ```tsx
-import { Chip } from "@heroui/react";
+import { Chip } from "@kinetic/react";
 
 <Chip color="danger" variant="soft" size="md">Label</Chip>
 ```
@@ -443,14 +443,14 @@ The Link component now supports `underline` and `underlineOffset` props, and inc
 
 **Before:**
 ```tsx
-import { Link } from "@heroui/react";
+import { Link } from "@kinetic/react";
 
 <Link href="#">Link text</Link>
 ```
 
 **After:**
 ```tsx
-import { Link } from "@heroui/react";
+import { Link } from "@kinetic/react";
 
 <Link href="#" underline="hover" underlineOffset={4}>Link text</Link>
 ```
@@ -475,7 +475,7 @@ type AvatarProps = Avatar["RootProps"]
 
 **After (Option 2 - Named type imports, recommended):**
 ```tsx
-import type { AvatarRootProps } from "@heroui/react"
+import type { AvatarRootProps } from "@kinetic/react"
 
 type AvatarProps = AvatarRootProps
 ```
@@ -533,7 +533,7 @@ This distinction provides:
 
 #### Auto-Calculated Color System
 
-HeroUI now automatically calculates shade levels and soft color variants using CSS `color-mix`. You only need to declare the base colors, and HeroUI handles the rest.
+Kinetic now automatically calculates shade levels and soft color variants using CSS `color-mix`. You only need to declare the base colors, and Kinetic handles the rest.
 
 **Background Shade Levels**
 
@@ -544,7 +544,7 @@ Background shades are automatically calculated from `--background`:
 --background: oklch(0.9702 0 0);
 --foreground: var(--eclipse);
 
-/* HeroUI automatically calculates these */
+/* Kinetic automatically calculates these */
 --color-background-secondary: color-mix(in oklab, var(--color-background) 96%, var(--color-foreground) 4%);
 --color-background-tertiary: color-mix(in oklab, var(--color-background) 92%, var(--color-foreground) 8%);
 --color-background-quaternary: color-mix(in oklab, var(--color-background) 86%, var(--color-foreground) 14%);
@@ -559,7 +559,7 @@ Surface levels are automatically calculated from `--surface`:
 --surface: var(--white);
 --surface-foreground: var(--foreground);
 
-/* HeroUI automatically calculates these */
+/* Kinetic automatically calculates these */
 --color-surface-secondary: color-mix(in oklab, var(--surface) 94%, var(--surface-foreground) 6%);
 --color-surface-tertiary: color-mix(in oklab, var(--surface) 92%, var(--surface-foreground) 8%);
 --color-surface-quaternary: color-mix(in oklab, var(--surface) 86%, var(--surface-foreground) 14%);
@@ -576,7 +576,7 @@ Soft color variants are automatically calculated from status colors:
 --warning: oklch(0.7819 0.1585 72.33);
 --success: oklch(0.7329 0.1935 150.81);
 
-/* HeroUI automatically calculates these at 15% opacity */
+/* Kinetic automatically calculates these at 15% opacity */
 --color-accent-soft: color-mix(in oklab, var(--color-accent) 15%, transparent);
 --color-danger-soft: color-mix(in oklab, var(--color-danger) 15%, transparent);
 --color-warning-soft: color-mix(in oklab, var(--color-warning) 15%, transparent);
@@ -717,7 +717,7 @@ type ButtonProps = Button["RootProps"]
 
 **After (Option 2 - Named imports, recommended):**
 ```tsx
-import type { ButtonRootProps } from "@heroui/react"
+import type { ButtonRootProps } from "@kinetic/react"
 
 type ButtonProps = ButtonRootProps
 ```
@@ -728,7 +728,7 @@ Replace `TabListWrapper` with `TabListContainer`:
 
 **Before:**
 ```tsx
-import { Tabs } from "@heroui/react"
+import { Tabs } from "@kinetic/react"
 
 <Tabs.Root>
   <Tabs.ListWrapper>
@@ -742,7 +742,7 @@ import { Tabs } from "@heroui/react"
 
 **After:**
 ```tsx
-import { Tabs } from "@heroui/react"
+import { Tabs } from "@kinetic/react"
 
 <Tabs>
   <Tabs.ListContainer>
@@ -831,10 +831,10 @@ All components now support flexible patterns. Components that support the dual p
 
 You can use any of the three patterns (compound without `.Root`, compound with `.Root`, or named exports) with all these components.
 
-## HeroUI Pro
+## Kinetic Pro
 
-HeroUI Pro is being reshaped from the ground up on top of the new design system. The new Pro version will feature:
-- New components built on top of HeroUI v3
+Kinetic Pro is being reshaped from the ground up on top of the new design system. The new Pro version will feature:
+- New components built on top of Kinetic v3
 - Tailwind CSS v4 native support
 - CSS native animations
 - Enhanced customization options
@@ -851,15 +851,15 @@ We're working towards a stable release in **Q4** this year (2025). This beta rel
 
 ## Community
 
-The reception on the native side has been phenomenal. Thank you for supporting us as we build HeroUI v3! Your feedback helps us improve every day.
+The reception on the native side has been phenomenal. Thank you for supporting us as we build Kinetic v3! Your feedback helps us improve every day.
 
-See what the community is saying: [HeroUI Native Reception](https://x.com/hero_ui/status/1985721976220966926)
+See what the community is saying: [Kinetic Native Reception](https://x.com/hero_ui/status/1985721976220966926)
 
 ## Links
 
 - [Component Documentation](/docs/react/components)
 - [Design System - Figma Kit V3](https://www.figma.com/community/file/1546526812159103429/heroui-figma-kit-v3)
-- [HeroUI Native](https://link.heroui.com/native)
+- [Kinetic Native](https://link.kinetic-ui.com/native)
 - [GitHub Repository](https://github.com/heroui-inc/heroui)
 - [GitHub PR #5872](https://github.com/heroui-inc/heroui/pull/5872)
 

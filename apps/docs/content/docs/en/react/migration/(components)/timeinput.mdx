@@ -1,10 +1,10 @@
 ---
 title: TimeInput
-description: Migration guide for TimeInput to TimeField from HeroUI v2 to v3
+description: Migration guide for TimeInput to TimeField from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 TimeField documentation](/docs/react/components/time-field) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 TimeField documentation](/docs/react/components/time-field) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for TimeInput to TimeField from HeroUI v2 to v3
 In v2, TimeInput was a single component with props:
 
 ```tsx
-import { TimeInput } from "@heroui/react";
+import { TimeInput } from "@kinetic/react";
 
 export default function App() {
   return <TimeInput label="Time" name="time" />;
@@ -22,7 +22,7 @@ export default function App() {
 In v3, TimeField requires compound components with DateInputGroup and a render prop for segments:
 
 ```tsx
-import { TimeField, DateInputGroup, Label } from "@heroui/react";
+import { TimeField, DateInputGroup, Label } from "@kinetic/react";
 
 export default function App() {
   return (
@@ -101,7 +101,7 @@ export default function App() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Description, FieldError, Label } from "@heroui/react";
+    import { Description, FieldError, Label } from "@kinetic/react";
 
     <TimeField className="w-[256px]" name="startTime">
       <Label>Start time</Label>

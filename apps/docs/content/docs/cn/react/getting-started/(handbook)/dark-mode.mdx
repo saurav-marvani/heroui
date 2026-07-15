@@ -1,13 +1,13 @@
 ---
 title: 深色模式
-description: 在 HeroUI v3 中添加浅色、深色以及跟随系统的主题切换
+description: 在 Kinetic v3 中添加浅色、深色以及跟随系统的主题切换
 icon: moon
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI 的深色模式由 CSS 驱动。组件会从根元素读取主题变量，因此你不需要使用 HeroUI Provider。只需在 `<html>` 上添加 `dark` 类或 `data-theme="dark"`，HeroUI 就会应用深色主题。
+Kinetic 的深色模式由 CSS 驱动。组件会从根元素读取主题变量，因此你不需要使用 Kinetic Provider。只需在 `<html>` 上添加 `dark` 类或 `data-theme="dark"`，Kinetic 就会应用深色主题。
 
 ```html
 <html class="dark" data-theme="dark">
@@ -20,7 +20,7 @@ HeroUI 的深色模式由 CSS 驱动。组件会从根元素读取主题变量�
 请保持你的应用根元素上有 `bg-background` 与 `text-foreground` 类，这样页面画布才会随着当前主题变化。
 
 <Callout type="info">
-  HeroUI 内置的浅色和深色主题同时响应 `.light` / `.dark` 类以及 `data-theme="light"` / `data-theme="dark"` 属性。如果你手动同时设置两者，请确保它们的值保持一致。
+  Kinetic 内置的浅色和深色主题同时响应 `.light` / `.dark` 类以及 `data-theme="light"` / `data-theme="dark"` 属性。如果你手动同时设置两者，请确保它们的值保持一致。
 </Callout>
 
 ## 在 Next.js 中使用 next-themes
@@ -103,7 +103,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 // app/components/theme-switcher.tsx
 "use client";
 
-import {Button} from "@heroui/react";
+import {Button} from "@kinetic/react";
 import {useTheme} from "next-themes";
 import {useEffect, useState} from "react";
 
@@ -185,13 +185,13 @@ export default function App({Component, pageProps}: AppProps) {
 
 ## 在 React 中使用 useTheme
 
-当你正在构建一个普通的 React 应用（例如 Vite 或 Create React App），并且不需要 `next-themes` 时，可以使用 HeroUI 提供的 `useTheme` 钩子。
+当你正在构建一个普通的 React 应用（例如 Vite 或 Create React App），并且不需要 `next-themes` 时，可以使用 Kinetic 提供的 `useTheme` 钩子。
 
-该钩子从 `@heroui/react` 中导出。它会将当前选择的主题保存到 `localStorage`，根据用户的操作系统偏好解析 `"system"`，并同时把对应的类与 `data-theme` 属性应用到 `<html>` 上。
+该钩子从 `@kinetic/react` 中导出。它会将当前选择的主题保存到 `localStorage`，根据用户的操作系统偏好解析 `"system"`，并同时把对应的类与 `data-theme` 属性应用到 `<html>` 上。
 
 ```tsx
 // src/components/theme-switcher.tsx
-import {Button, useTheme} from "@heroui/react";
+import {Button, useTheme} from "@kinetic/react";
 
 export function ThemeSwitcher() {
   const {resolvedTheme, setTheme, theme} = useTheme("system");
@@ -219,7 +219,7 @@ export function ThemeSwitcher() {
 ```
 
 <Callout type="warning">
-  每个应用只应使用一个主题控制器。在 Next.js 中，推荐使用 `next-themes` 及其 `useTheme` 钩子；在普通的 React 应用中，请使用 `@heroui/react` 提供的 `useTheme`。
+  每个应用只应使用一个主题控制器。在 Next.js 中，推荐使用 `next-themes` 及其 `useTheme` 钩子；在普通的 React 应用中，请使用 `@kinetic/react` 提供的 `useTheme`。
 </Callout>
 
 ## 同时为两种主题设置样式

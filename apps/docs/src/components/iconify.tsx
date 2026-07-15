@@ -123,6 +123,6 @@ const Iconify = forwardRef<SVGSVGElement, IconifyProps>(({icon: iconProp, ...pro
   );
 });
 
-Iconify.displayName = "HeroUI.Iconify";
+Iconify.displayName = "Kinetic.Iconify";
 
 export {Iconify};

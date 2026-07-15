@@ -41,6 +41,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {datePickerVariants} from "@heroui/styles";
+export {datePickerVariants} from "@kinetic/styles";
 
-export type {DatePickerVariants} from "@heroui/styles";
+export type {DatePickerVariants} from "@kinetic/styles";

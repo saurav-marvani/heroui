@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { ListBox } from '@heroui/react';
+import { ListBox } from '@kinetic/react';
 ```
 
 ### Usage
@@ -25,7 +25,7 @@ import { ListBox } from '@heroui/react';
 Import the ListBox component and access all parts using dot notation.
 
 ```tsx
-import { ListBox, Label, Description, Header } from '@heroui/react';
+import { ListBox, Label, Description, Header } from '@kinetic/react';
 
 export default () => (
   <ListBox>
@@ -95,7 +95,7 @@ ListBox supports virtualization through [Virtualizer](https://react-aria.adobe.c
 ### Passing Tailwind CSS classes
 
 ```tsx
-import { ListBox } from '@heroui/react';
+import { ListBox } from '@kinetic/react';
 
 function CustomListBox() {
   return (
@@ -133,7 +133,7 @@ To customize the ListBox component classes, you can use the `@layer components` 
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -240,16 +240,16 @@ When using render functions with ListBox.Item or ListBox.ItemIndicator, these va
 ### Basic Usage
 
 ```tsx
-import { ListBox, Label, Description } from '@heroui/react';
+import { ListBox, Label, Description } from '@kinetic/react';
 
 <ListBox aria-label="Users" selectionMode="single">
   <ListBox.Item id="1" textValue="Bob">
     <Label>Bob</Label>
-    <Description>bob@heroui.com</Description>
+    <Description>bob@kinetic-ui.com</Description>
   </ListBox.Item>
   <ListBox.Item id="2" textValue="Alice">
     <Label>Alice</Label>
-    <Description>alice@heroui.com</Description>
+    <Description>alice@kinetic-ui.com</Description>
   </ListBox.Item>
 </ListBox>
 ```
@@ -257,7 +257,7 @@ import { ListBox, Label, Description } from '@heroui/react';
 ### With Sections
 
 ```tsx
-import { ListBox, Header, Separator } from '@heroui/react';
+import { ListBox, Header, Separator } from '@kinetic/react';
 
 <ListBox aria-label="Actions" selectionMode="none" onAction={(key) => console.log(key)}>
   <ListBox.Section>
@@ -276,7 +276,7 @@ import { ListBox, Header, Separator } from '@heroui/react';
 ### Controlled Selection
 
 ```tsx
-import { ListBox, Selection } from '@heroui/react';
+import { ListBox, Selection } from '@kinetic/react';
 import { useState } from 'react';
 
 function ControlledListBox() {
@@ -300,7 +300,7 @@ function ControlledListBox() {
 ### Custom Indicator
 
 ```tsx
-import { ListBox, ListBoxItemIndicator } from '@heroui/react';
+import { ListBox, ListBoxItemIndicator } from '@kinetic/react';
 import { Icon } from '@iconify/react';
 
 <ListBox aria-label="Options" selectionMode="multiple">

@@ -3,7 +3,7 @@
 import type {LockableThemeVariableKey} from "../constants";
 
 import {CircleInfo, Lock, LockOpen} from "@gravity-ui/icons";
-import {Label, Tooltip, cn} from "@heroui/react";
+import {Label, Tooltip, cn} from "@kinetic/react";
 import {useState} from "react";
 
 import {useDictionary} from "@/hooks/use-dictionary";

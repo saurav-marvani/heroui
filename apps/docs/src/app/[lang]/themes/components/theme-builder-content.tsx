@@ -1,20 +1,20 @@
 "use client";
 
-import {ScrollShadow} from "@heroui/react";
+import {ScrollShadow} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 import {cn} from "@/utils/cn";
 
-import {HEROUI_PRO_URL} from "../constants";
+import {KINETIC_PRO_URL} from "../constants";
 import {usePreviewTab} from "../hooks";
 
 import {PreviewContainer} from "./preview-container";
 import {ThemeCodePanel} from "./theme-code-panel";
 
 function getProUrl(utm: {campaign?: string; content?: string; medium: string}) {
-  const url = new URL(HEROUI_PRO_URL);
+  const url = new URL(KINETIC_PRO_URL);
 
-  url.searchParams.set("utm_source", "heroui.com");
+  url.searchParams.set("utm_source", "kinetic-ui.com");
   url.searchParams.set("utm_medium", utm.medium);
   if (utm.campaign) url.searchParams.set("utm_campaign", utm.campaign);
   if (utm.content) url.searchParams.set("utm_content", utm.content);

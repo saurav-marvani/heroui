@@ -7,7 +7,7 @@ import path from "path";
 import {notFound} from "next/navigation";
 import {ImageResponse} from "next/og";
 
-import {HeroUILogo} from "@/components/heroui-logo";
+import {KineticLogo} from "@/components/kinetic-logo";
 import {source} from "@/lib/source";
 
 interface GenerateProps {
@@ -107,7 +107,7 @@ export const GET = async (_req: Request, {params}: {params: Promise<{slug: strin
         weight: 600,
       },
     ],
-    icon: <HeroUILogo size={58} />,
+    icon: <KineticLogo size={58} />,
     title: page.data.title,
   });
 };

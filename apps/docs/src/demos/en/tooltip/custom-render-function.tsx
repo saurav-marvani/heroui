@@ -1,7 +1,7 @@
 "use client";
 
 import {CircleInfo} from "@gravity-ui/icons";
-import {Button, Tooltip} from "@heroui/react";
+import {Button, Tooltip} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

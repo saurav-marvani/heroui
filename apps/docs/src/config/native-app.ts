@@ -1,5 +1,5 @@
 /**
- * Centralised configuration for the HeroUI Native mobile app surfaces in the
+ * Centralised configuration for the Kinetic Native mobile app surfaces in the
  * docs site. Used by:
  *  - the QR popover that appears next to every component preview
  *  - the "Try on Device" MDX section in release notes
@@ -12,17 +12,17 @@
  */
 export const NATIVE_APP = {
   /**
-   * App Store listing for the HeroUI Native iOS app. Always defined because
+   * App Store listing for the Kinetic Native iOS app. Always defined because
    * iOS is the canonical Universal-Links target and the App Store badge is
    * always shown in the download UI.
    */
   APP_STORE_URL: "https://apps.apple.com/app/id6757860059",
   /**
-   * Human-readable product name used in copy ("Open in HeroUI Native",
-   * "Download HeroUI Native on the App Store", etc.). Kept here so it tracks
+   * Human-readable product name used in copy ("Open in Kinetic Native",
+   * "Download Kinetic Native on the App Store", etc.). Kept here so it tracks
    * any future rebranding from a single source of truth.
    */
-  NAME: "HeroUI Native",
+  NAME: "Kinetic Native",
   /**
    * Set to `null` while the Android build isn't published yet. Both the QR
    * popover and the DownloadAppBanner render a disabled "Coming soon" state
@@ -45,7 +45,7 @@ export const NATIVE_APP = {
    * `/docs/native-showcase/components/{slug}` Universal Links. The same prefix
    * is encoded into the QR code on every component page so that:
    *  - On-device, the AASA glob (`/docs/native-showcase/components/*`)
-   *    redirects the link into the installed HeroUI Native app.
+   *    redirects the link into the installed Kinetic Native app.
    *  - Off-device (or when the app isn't installed), the browser falls back
    *    to the route handler at `apps/docs/src/app/native-showcase/...`.
    */

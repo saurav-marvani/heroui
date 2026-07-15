@@ -1,10 +1,10 @@
 ---
 title: Toast
-description: Migration guide for Toast from HeroUI v2 to v3
+description: Migration guide for Toast from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  Refer to the [v3 Toast documentation](/docs/react/components/toast) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from HeroUI v2.
+  Refer to the [v3 Toast documentation](/docs/react/components/toast) for complete API reference, styling guide, and advanced examples. This guide only focuses on migrating from Kinetic v2.
 </Callout>
 
 ## Structure Changes
@@ -12,7 +12,7 @@ description: Migration guide for Toast from HeroUI v2 to v3
 In v2, Toast used a provider and hook pattern:
 
 ```tsx
-import { ToastProvider, useToast } from "@heroui/react";
+import { ToastProvider, useToast } from "@kinetic/react";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function MyComponent() {
 In v3, Toast uses a provider component and a global `toast()` function:
 
 ```tsx
-import { Toast } from "@heroui/react";
+import { Toast } from "@kinetic/react";
 
 function App() {
   return (
@@ -111,7 +111,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { toast } from "@heroui/react";
+    import { toast } from "@kinetic/react";
 
     toast.success("Success", {
       description: "Your changes have been saved"
@@ -135,7 +135,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { toast } from "@heroui/react";
+    import { toast } from "@kinetic/react";
 
     toast.success("Success");
     toast.danger("Error");
@@ -164,7 +164,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { toast } from "@heroui/react";
+    import { toast } from "@kinetic/react";
 
     const handleAsync = async () => {
       toast.promise(someAsyncOperation(), {
@@ -194,7 +194,7 @@ function MyComponent() {
   </Tab>
   <Tab value="v3">
     ```tsx
-    import { Toast, ToastContent, ToastTitle } from "@heroui/react";
+    import { Toast, ToastContent, ToastTitle } from "@kinetic/react";
 
     <Toast.Provider>
       {({ toast: toastItem }) => (

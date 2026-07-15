@@ -76,6 +76,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {paginationVariants} from "@heroui/styles";
+export {paginationVariants} from "@kinetic/styles";
 
-export type {PaginationVariants} from "@heroui/styles";
+export type {PaginationVariants} from "@kinetic/styles";

@@ -26,6 +26,6 @@ export type {TagRootProps, TagRemoveButtonProps} from "./tag";
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {tagVariants} from "@heroui/styles";
+export {tagVariants} from "@kinetic/styles";
 
-export type {TagVariants} from "@heroui/styles";
+export type {TagVariants} from "@kinetic/styles";

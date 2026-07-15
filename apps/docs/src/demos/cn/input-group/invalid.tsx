@@ -1,7 +1,7 @@
 "use client";
 
 import {Envelope} from "@gravity-ui/icons";
-import {FieldError, InputGroup, Label, TextField} from "@heroui/react";
+import {FieldError, InputGroup, Label, TextField} from "@kinetic/react";
 
 export function Invalid() {
   return (

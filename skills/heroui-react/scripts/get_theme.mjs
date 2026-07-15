@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Get theme variables and design tokens for HeroUI v3.
+ * Get theme variables and design tokens for Kinetic UI v3.
  *
  * Usage:
  *   node get_theme.mjs
@@ -52,7 +52,7 @@ const FALLBACK_THEME = {
 };
 
 /**
- * Fetch data from HeroUI API with app parameter for analytics.
+ * Fetch data from Kinetic UI API with app parameter for analytics.
  */
 async function fetchApi(endpoint) {
   const separator = endpoint.includes("?") ? "&" : "?";
@@ -60,7 +60,7 @@ async function fetchApi(endpoint) {
 
   try {
     const response = await fetch(url, {
-      headers: {"User-Agent": "HeroUI-Skill/1.0"},
+      headers: {"User-Agent": "Kinetic UI-Skill/1.0"},
       signal: AbortSignal.timeout(30000),
     });
 
@@ -127,7 +127,7 @@ async function main() {
   }
 
   // Output as formatted CSS-like structure for readability
-  console.log("/* HeroUI v3 Theme Variables */");
+  console.log("/* Kinetic UI v3 Theme Variables */");
   console.log(`/* Theme: ${data.theme || "default"} */`);
   console.log(`/* Version: ${version} */`);
   console.log();

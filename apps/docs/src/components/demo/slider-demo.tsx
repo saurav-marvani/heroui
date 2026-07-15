@@ -1,6 +1,6 @@
 "use client";
 
-import {Label, Slider} from "@heroui/react";
+import {Label, Slider} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 

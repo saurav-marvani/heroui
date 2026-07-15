@@ -9,7 +9,7 @@ import {
 import {themes} from "../../styles/theme";
 
 // Register addon to hook into the manager lifecycle properly
-addons.register("heroui-theme-manager", (api) => {
+addons.register("kinetic-theme-manager", (api) => {
   let lastTheme = DEFAULT_THEME;
 
   const updateManagerTheme = (theme: string) => {

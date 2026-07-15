@@ -1,6 +1,6 @@
 "use client";
 
-import {Checkbox, Label} from "@heroui/react";
+import {Checkbox, Label} from "@kinetic/react";
 
 export function CustomRenderFunction() {
   return (

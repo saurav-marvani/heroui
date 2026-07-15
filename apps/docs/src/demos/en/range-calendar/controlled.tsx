@@ -2,7 +2,7 @@
 
 import type {DateValue} from "@internationalized/date";
 
-import {Button, ButtonGroup, Description, RangeCalendar} from "@heroui/react";
+import {Button, ButtonGroup, Description, RangeCalendar} from "@kinetic/react";
 import {
   getLocalTimeZone,
   parseDate,

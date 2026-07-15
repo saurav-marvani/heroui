@@ -21,4 +21,4 @@ export type {HeaderRootProps, HeaderRootProps as HeaderProps} from "./header";
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {headerVariants} from "@heroui/styles";
+export {headerVariants} from "@kinetic/styles";

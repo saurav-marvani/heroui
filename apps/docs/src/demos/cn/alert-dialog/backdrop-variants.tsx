@@ -1,6 +1,6 @@
 "use client";
 
-import {AlertDialog, Button} from "@heroui/react";
+import {AlertDialog, Button} from "@kinetic/react";
 
 const VARIANT_LABELS = {
   blur: "模糊",

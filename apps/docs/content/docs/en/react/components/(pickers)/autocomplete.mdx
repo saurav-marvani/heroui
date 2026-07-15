@@ -11,7 +11,7 @@ links:
 ## Import
 
 ```tsx
-import { Autocomplete, useFilter } from "@heroui/react";
+import { Autocomplete, useFilter } from "@kinetic/react";
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ import { Autocomplete, useFilter } from "@heroui/react";
 Import the Autocomplete component and access all parts using dot notation.
 
 ```tsx
-import {Autocomplete, Label, Description, SearchField, ListBox} from "@heroui/react";
+import {Autocomplete, Label, Description, SearchField, ListBox} from "@kinetic/react";
 
 export default () => (
   <Autocomplete>
@@ -164,7 +164,7 @@ Autocomplete supports virtualization through [Virtualizer](https://react-aria.ad
 ### Passing Tailwind CSS classes
 
 ```tsx
-import {Autocomplete, SearchField, ListBox} from "@heroui/react";
+import {Autocomplete, SearchField, ListBox} from "@kinetic/react";
 
 function CustomAutocomplete() {
   return (
@@ -234,7 +234,7 @@ To customize the Autocomplete component classes, you can use the `@layer compone
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -350,7 +350,7 @@ The component supports both CSS pseudo-classes and data attributes for flexibili
 The `useFilter` hook from React Aria provides filtering functions for autocomplete functionality.
 
 ```tsx
-import {useFilter} from "@heroui/react";
+import {useFilter} from "@kinetic/react";
 
 const {contains} = useFilter({sensitivity: "base"});
 

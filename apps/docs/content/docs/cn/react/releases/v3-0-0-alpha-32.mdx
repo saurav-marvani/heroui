@@ -16,22 +16,22 @@ description: Card 组件重新设计、CloseButton 组件，以及面向 AI 助�
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@alpha @heroui/react@alpha
+    npm i @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@alpha @heroui/react@alpha
+    pnpm add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@alpha @heroui/react@alpha
+    yarn add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@alpha @heroui/react@alpha
+    bun add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
 </Tabs>
@@ -40,7 +40,7 @@ description: Card 组件重新设计、CloseButton 组件，以及面向 AI 助�
 
 ### MCP 服务器
 
-HeroUI 现已包含一个 [MCP 服务器](/docs/ui-for-agents/mcp-server)，可让 Cursor、Claude Code、VS Code Copilot 等 AI 助手直接访问 HeroUI v3 的文档与组件信息。
+Kinetic 现已包含一个 [MCP 服务器](/docs/ui-for-agents/mcp-server)，可让 Cursor、Claude Code、VS Code Copilot 等 AI 助手直接访问 Kinetic v3 的文档与组件信息。
 
 **快速配置：**
 
@@ -48,7 +48,7 @@ HeroUI 现已包含一个 [MCP 服务器](/docs/ui-for-agents/mcp-server)，可�
 
 <div className="flex items-center gap-3 mb-4">
   <a
-    href="https://link.heroui.com/mcp-cursor-install"
+    href="https://link.kinetic-ui.com/mcp-cursor-install"
     className="button button--tertiary button--sm no-underline bg-default/50 dark:bg-default/30"
   >
     <svg viewBox="0 0 466.73 532.09" className="w-5 h-5 fill-current">
@@ -65,7 +65,7 @@ HeroUI 现已包含一个 [MCP 服务器](/docs/ui-for-agents/mcp-server)，可�
   "mcpServers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
@@ -76,7 +76,7 @@ HeroUI 现已包含一个 [MCP 服务器](/docs/ui-for-agents/mcp-server)，可�
 在终端中运行以下命令：
 
 ```bash
-claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
+claude mcp add heroui-react -- npx -y @kinetic/react-mcp@latest
 ```
 
 [了解更多](/docs/ui-for-agents/mcp-server)
@@ -125,7 +125,7 @@ claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
 新增 [CloseButton 组件](/docs/components/close-button)，用于关闭对话框、模态框以及其他可关闭的元素。
 
 ```tsx
-import {CloseButton} from "@heroui/react";
+import {CloseButton} from "@kinetic/react";
 
 // Basic usage
 <CloseButton onPress={() => console.log("Closed")} />
@@ -168,7 +168,7 @@ import {CloseButton} from "@heroui/react";
 3. **更新导入：**
    ```tsx
    // Add CloseButton if needed
-   import {Card, CloseButton} from "@heroui/react";
+   import {Card, CloseButton} from "@kinetic/react";
    ```
 
 ## 链接

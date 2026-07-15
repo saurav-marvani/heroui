@@ -62,7 +62,7 @@ async function fetchJson(path: string): Promise<unknown> {
     const message =
       typeof data === "object" && data !== null && "error" in data && typeof data.error === "string"
         ? data.error
-        : "HeroUI WebMCP request failed";
+        : "Kinetic WebMCP request failed";
 
     throw new Error(message);
   }
@@ -92,7 +92,7 @@ function resolveSameOriginPath(value: string): string | null {
 const tools: WebMCPTool[] = [
   {
     description:
-      "Search HeroUI React and Native documentation. Use this when an agent needs relevant HeroUI docs pages by keyword.",
+      "Search Kinetic React and Native documentation. Use this when an agent needs relevant Kinetic docs pages by keyword.",
     execute(input) {
       const query = getString(input, "query").trim();
       const platform = getPlatform(input);
@@ -119,7 +119,7 @@ const tools: WebMCPTool[] = [
     name: "search_heroui_docs",
   },
   {
-    description: "Retrieve a HeroUI documentation page as markdown by same-origin docs URL.",
+    description: "Retrieve a Kinetic documentation page as markdown by same-origin docs URL.",
     execute(input) {
       const url = resolveSameOriginPath(getString(input, "url"));
 
@@ -132,7 +132,7 @@ const tools: WebMCPTool[] = [
     inputSchema: {
       properties: {
         url: {
-          description: "A HeroUI docs path, for example /docs/react/components/button.",
+          description: "A Kinetic docs path, for example /docs/react/components/button.",
           type: "string",
         },
       },
@@ -143,12 +143,12 @@ const tools: WebMCPTool[] = [
   },
   {
     description:
-      "Navigate the browser to a HeroUI same-origin page such as the homepage or a docs page.",
+      "Navigate the browser to a Kinetic same-origin page such as the homepage or a docs page.",
     execute(input) {
       const url = resolveSameOriginPath(getString(input, "url"));
 
       if (!url) {
-        throw new Error("url must be a same-origin HeroUI homepage, docs, or llms path");
+        throw new Error("url must be a same-origin Kinetic homepage, docs, or llms path");
       }
 
       window.location.assign(url);
@@ -158,7 +158,7 @@ const tools: WebMCPTool[] = [
     inputSchema: {
       properties: {
         url: {
-          description: "A same-origin HeroUI path, for example /docs/react/getting-started.",
+          description: "A same-origin Kinetic path, for example /docs/react/getting-started.",
           type: "string",
         },
       },
@@ -168,7 +168,7 @@ const tools: WebMCPTool[] = [
     name: "navigate_heroui",
   },
   {
-    description: "List HeroUI component documentation pages for React or Native.",
+    description: "List Kinetic component documentation pages for React or Native.",
     execute(input) {
       const platform = getPlatform(input, "react") === "native" ? "native" : "react";
       const limit = Math.min(Math.max(getInteger(input, "limit", 20), 1), 20);
@@ -184,7 +184,7 @@ const tools: WebMCPTool[] = [
       },
       type: "object",
     },
-    name: "list_heroui_components",
+    name: "list_kinetic-ui.components",
   },
 ];
 
@@ -231,7 +231,7 @@ export function WebMCPProvider() {
         }
       } catch (error) {
         if (!didWarn) {
-          console.warn("Unable to register HeroUI WebMCP tools", error);
+          console.warn("Unable to register Kinetic WebMCP tools", error);
           didWarn = true;
         }
       }

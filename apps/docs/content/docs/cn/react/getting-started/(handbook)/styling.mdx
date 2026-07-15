@@ -1,17 +1,17 @@
 ---
 title: 样式
-description: 使用 CSS、Tailwind 或 CSS-in-JS 为 HeroUI 组件设置样式
+description: 使用 CSS、Tailwind 或 CSS-in-JS 为 Kinetic 组件设置样式
 icon: brush
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI 组件提供灵活的样式方案：Tailwind CSS 工具类、配合 [BEM](https://getbem.com/) 类名或数据属性的 CSS、CSS-in-JS 库，以及用于动态样式的渲染属性。
+Kinetic 组件提供灵活的样式方案：Tailwind CSS 工具类、配合 [BEM](https://getbem.com/) 类名或数据属性的 CSS、CSS-in-JS 库，以及用于动态样式的渲染属性。
 
 ## 基础样式
 
-**使用 className：** 所有 HeroUI 组件都接受 `className` 属性：
+**使用 className：** 所有 Kinetic 组件都接受 `className` 属性：
 
 ```tsx
 <Button className="bg-purple-500 hover:bg-purple-600">
@@ -33,7 +33,7 @@ HeroUI 组件提供灵活的样式方案：Tailwind CSS 工具类、配合 [BEM]
 
 ## 滚动条
 
-HeroUI 的滚动插槽在组件 CSS 中使用 `@apply scrollbar`。对于你自己的溢出容器，可使用 `@heroui/styles` 提供的工具类：
+Kinetic 的滚动插槽在组件 CSS 中使用 `@apply scrollbar`。对于你自己的溢出容器，可使用 `@kinetic/styles` 提供的工具类：
 
 ```tsx
 <div className="scrollbar h-64 overflow-y-auto">
@@ -43,8 +43,8 @@ HeroUI 的滚动插槽在组件 CSS 中使用 `@apply scrollbar`。对于你自�
 
 | 工具类 | 效果 |
 |---------|--------|
-| `scrollbar` | HeroUI 滚动条滑块（读取主题的 `--scrollbar-*` 变量） |
-| `scrollbar-thin` | HeroUI 主题化纤细滚动条 |
+| `scrollbar` | Kinetic 滚动条滑块（读取主题的 `--scrollbar-*` 变量） |
+| `scrollbar-thin` | Kinetic 主题化纤细滚动条 |
 | `scrollbar-default` | 操作系统 / 浏览器默认滚动条 |
 | `scrollbar-none` | 隐藏滚动条 |
 
@@ -52,7 +52,7 @@ HeroUI 的滚动插槽在组件 CSS 中使用 `@apply scrollbar`。对于你自�
 
 ## 基于状态的样式
 
-HeroUI 组件通过数据属性公开其状态，类似于 CSS 伪类：
+Kinetic 组件通过数据属性公开其状态，类似于 CSS 伪类：
 
 ```css
 /* Target different states */
@@ -101,7 +101,7 @@ HeroUI 组件通过数据属性公开其状态，类似于 CSS 伪类：
 
 ## BEM 类名
 
-HeroUI 使用 [BEM 方法论](https://getbem.com/) 来保持类名命名的一致性：
+Kinetic 使用 [BEM 方法论](https://getbem.com/) 来保持类名命名的一致性：
 
 ```css
 /* Block */
@@ -145,8 +145,8 @@ HeroUI 使用 [BEM 方法论](https://getbem.com/) 来保持类名命名的一�
 使用 [tailwind-variants](https://tailwind-variants.org/) 创建可复用的自定义组件 —— 它是 Tailwind CSS 的一等公民变体 API：
 
 ```tsx
-import { Button as HeroButton, type ButtonProps } from '@heroui/react';
-import { buttonVariants, tv, type VariantProps } from '@heroui/styles';
+import { Button as HeroButton, type ButtonProps } from '@kinetic/react';
+import { buttonVariants, tv, type VariantProps } from '@kinetic/styles';
 
 const customButtonVariants = tv({
   extend: buttonVariants,
@@ -192,7 +192,7 @@ export function CustomButton({ intent, size, className, ...props }: CustomButton
 
 ```tsx
 import styled from 'styled-components';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 const StyledButton = styled(Button)`
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
@@ -210,7 +210,7 @@ const StyledButton = styled(Button)`
 
 ```tsx
 import { css } from '@emotion/css';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 const buttonStyles = css`
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
@@ -281,7 +281,7 @@ const buttonStyles = css`
 
 ```tsx
 import styles from './Button.module.css';
-import { Button } from '@heroui/react';
+import { Button } from '@kinetic/react';
 
 <Button className={styles.button}>
   Scoped Button
@@ -295,7 +295,7 @@ import { Button } from '@heroui/react';
 
 > **注意：** 完整的类名参考请查看各组件文档：[Button](/docs/components/button#css-classes)、[Accordion](/docs/components/accordion#css-classes)
 
-所有组件的类名请查看 [@heroui/styles/components](https://github.com/heroui-inc/heroui/tree/main/packages/styles/components)。
+所有组件的类名请查看 [@kinetic/styles/components](https://github.com/heroui-inc/heroui/tree/main/packages/styles/components)。
 
 ## 下一步
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * List all available HeroUI v2 to v3 component migration guides.
+ * List all available Kinetic UI v2 to v3 component migration guides.
  *
  * Usage:
  *   node list_migration_guides.mjs

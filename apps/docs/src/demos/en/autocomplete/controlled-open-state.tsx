@@ -8,7 +8,7 @@ import {
   ListBox,
   SearchField,
   useFilter,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {useState} from "react";
 
 export function ControlledOpenState() {

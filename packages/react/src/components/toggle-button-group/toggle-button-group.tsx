@@ -1,10 +1,10 @@
 "use client";
 
 import type {DOMRenderProps} from "../../utils/dom";
-import type {ToggleButtonGroupVariants, ToggleButtonVariants} from "@heroui/styles";
+import type {ToggleButtonGroupVariants, ToggleButtonVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 
-import {toggleButtonGroupVariants} from "@heroui/styles";
+import {toggleButtonGroupVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 import {useSlottedContext} from "react-aria-components/slots";
 import {

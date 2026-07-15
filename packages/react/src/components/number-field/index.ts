@@ -51,6 +51,6 @@ export type {
 /* -------------------------------------------------------------------------------------------------
  * Variants
  * -----------------------------------------------------------------------------------------------*/
-export {numberFieldVariants} from "@heroui/styles";
+export {numberFieldVariants} from "@kinetic/styles";
 
-export type {NumberFieldVariants} from "@heroui/styles";
+export type {NumberFieldVariants} from "@kinetic/styles";

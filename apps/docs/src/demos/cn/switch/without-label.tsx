@@ -1,4 +1,4 @@
-import {Switch} from "@heroui/react";
+import {Switch} from "@kinetic/react";
 
 export function WithoutLabel() {
   return (

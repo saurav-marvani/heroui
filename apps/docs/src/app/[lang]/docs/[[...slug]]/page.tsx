@@ -61,8 +61,8 @@ export default async function Page(props: {params: Promise<{lang: string; slug?:
 
   // TODO: add github last edit
   // const lastEditTime = await getGithubLastEdit({
-  //   owner: "heroui-inc",
-  //   repo: "heroui",
+  //   owner: "kinetic-inc",
+  //   repo: "kinetic",
   //   path: `apps/docs/content/docs/${page.path}`,
   // });
 
@@ -82,11 +82,11 @@ export default async function Page(props: {params: Promise<{lang: string; slug?:
   const pageUrl = `/docs/${slugParts.join("/")}`;
 
   const breadcrumbItems = [
-    {name: "Home", url: "https://heroui.com"},
-    {name: "Docs", url: "https://heroui.com/docs"},
+    {name: "Home", url: "https://kinetic-ui.com"},
+    {name: "Docs", url: "https://kinetic-ui.com/docs"},
     ...slugParts.map((segment, i) => ({
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " "),
-      url: `https://heroui.com/docs/${slugParts.slice(0, i + 1).join("/")}`,
+      url: `https://kinetic-ui.com/docs/${slugParts.slice(0, i + 1).join("/")}`,
     })),
   ];
 
@@ -103,7 +103,7 @@ export default async function Page(props: {params: Promise<{lang: string; slug?:
             getTechArticleJsonLd({
               description: page.data.description ?? "",
               title: page.data.title,
-              url: `https://heroui.com${pageUrl}`,
+              url: `https://kinetic-ui.com${pageUrl}`,
             }),
           ),
         }}

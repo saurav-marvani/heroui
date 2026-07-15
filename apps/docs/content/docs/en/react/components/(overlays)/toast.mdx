@@ -12,7 +12,7 @@ links:
 ## Import
 
 ```tsx
-import { Toast, toast } from '@heroui/react';
+import { Toast, toast } from '@kinetic/react';
 ```
 
 ## Setup
@@ -20,7 +20,7 @@ import { Toast, toast } from '@heroui/react';
 Render the provider in the root of your app.
 
 ```tsx
-import { Toast, Button, toast } from '@heroui/react';
+import { Toast, Button, toast } from '@kinetic/react';
 
 function App() {
   return (
@@ -131,7 +131,7 @@ To customize the Toast component classes, you can use the `@layer components` di
 }
 ```
 
-HeroUI follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
+Kinetic follows the [BEM](https://getbem.com/) methodology to ensure component variants and states are reusable and easy to customize.
 
 ### CSS Classes
 
@@ -259,7 +259,7 @@ A `ToastQueue` manages the state for a `<Toast.Provider>`. The state is stored o
 The default `toast` function provides convenient methods for showing toasts:
 
 ```tsx
-import { toast } from '@heroui/react';
+import { toast } from '@kinetic/react';
 
 // Basic toast (auto-dismisses after 4 seconds by default)
 toast("Event has been created");

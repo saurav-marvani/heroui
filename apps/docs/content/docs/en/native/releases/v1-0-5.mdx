@@ -10,7 +10,7 @@ github:
   <span className="text-sm text-muted">July 2, 2026</span>
 </div>
 
-HeroUI Native v1.0.5 resolves a long-standing `border-field` merge conflict by splitting the field border into separate width and color tokens and configuring `tailwind-variants` globally, migrating Input, InputOTP, Radio, and Checkbox to outline-based focus, active, and invalid states. This release also brings iOS Dynamic Type support to Typography, adds provider-level text input configuration, reworks Popover, Menu, and Select entering animations to mount content only once, aligns the Select check icon with the `accent-soft-foreground` token, and upgrades the toolchain to Expo 57 / React Native 0.86.
+Kinetic Native v1.0.5 resolves a long-standing `border-field` merge conflict by splitting the field border into separate width and color tokens and configuring `tailwind-variants` globally, migrating Input, InputOTP, Radio, and Checkbox to outline-based focus, active, and invalid states. This release also brings iOS Dynamic Type support to Typography, adds provider-level text input configuration, reworks Popover, Menu, and Select entering animations to mount content only once, aligns the Select check icon with the `accent-soft-foreground` token, and upgrades the toolchain to Expo 57 / React Native 0.86.
 
 ## Installation
 
@@ -40,7 +40,7 @@ Update to the latest version:
 </Tabs>
 
 <Callout type="info">
-  **Using AI assistants?** Simply prompt "Hey Cursor, update HeroUI Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server).
+  **Using AI assistants?** Simply prompt "Hey Cursor, update Kinetic Native to the latest version" and your AI assistant will automatically compare versions and apply the necessary changes. Learn more about the [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server).
 </Callout>
 
 ## Try It on Your Device
@@ -97,16 +97,16 @@ Only the default icon color changes when `iconProps.color` is omitted — the AP
 
 ### Provider Text Input Configuration
 
-The [HeroUINativeProvider](/docs/native/getting-started/provider) (and `HeroUINativeProviderRaw`) can now configure a subset of `TextInput` props globally through a new `textInputProps` config, starting with `allowFontScaling` and `maxFontSizeMultiplier`. This mirrors the existing global `textProps` pattern and keeps input font-scaling behavior consistent across the app.
+The [KineticNativeProvider](/docs/native/getting-started/provider) (and `KineticNativeProviderRaw`) can now configure a subset of `TextInput` props globally through a new `textInputProps` config, starting with `allowFontScaling` and `maxFontSizeMultiplier`. This mirrors the existing global `textProps` pattern and keeps input font-scaling behavior consistent across the app.
 
 **New Capability:**
 
 ```tsx
-import { HeroUINativeProvider } from "heroui-native";
+import { KineticNativeProvider } from "heroui-native";
 
 export function App() {
   return (
-    <HeroUINativeProvider
+    <KineticNativeProvider
       config={{
         textInputProps: {
           allowFontScaling: true,
@@ -115,14 +115,14 @@ export function App() {
       }}
     >
       {/* Your app */}
-    </HeroUINativeProvider>
+    </KineticNativeProvider>
   );
 }
 ```
 
 **What's included:**
 
-- New `textInputProps` config on `HeroUINativeConfig` and `HeroUINativeConfigRaw` (`allowFontScaling`, `maxFontSizeMultiplier`)
+- New `textInputProps` config on `KineticNativeConfig` and `KineticNativeConfigRaw` (`allowFontScaling`, `maxFontSizeMultiplier`)
 - New `TextInputComponentProvider` / `useTextInputComponent` and a `HeroTextInput` helper that applies global props as overridable defaults
 - Applied across `Input` (and therefore `TextArea`, `SearchField`, and `InputGroup`) and the `InputOTP` primitive
 

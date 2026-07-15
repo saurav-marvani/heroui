@@ -23,6 +23,6 @@ Closes # <!-- Github issue # here -->
 
 ## 💣 Is this a breaking change (Yes/No):
 
-<!-- If Yes, please describe the impact and migration path for existing HeroUI users. -->
+<!-- If Yes, please describe the impact and migration path for existing Kinetic UI users. -->
 
 ## 📝 Additional Information

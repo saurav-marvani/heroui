@@ -3,7 +3,7 @@
 import type {ThemeVariables, radiusIds} from "../constants";
 
 import {ChevronsExpandVertical} from "@gravity-ui/icons";
-import {InputGroup, ListBox, Popover} from "@heroui/react";
+import {InputGroup, ListBox, Popover} from "@kinetic/react";
 
 import {useDictionary} from "@/hooks/use-dictionary";
 import {cn} from "@/utils/cn";

@@ -1,6 +1,6 @@
 "use client";
 
-import {Calendar} from "@heroui/react";
+import {Calendar} from "@kinetic/react";
 
 export function Basic() {
   return (

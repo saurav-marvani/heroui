@@ -1,7 +1,7 @@
 "use client";
 
 import {Heart, HeartFill} from "@gravity-ui/icons";
-import {ToggleButton} from "@heroui/react";
+import {ToggleButton} from "@kinetic/react";
 import {useState} from "react";
 
 export function Controlled() {

@@ -1,6 +1,6 @@
-import {Avatar, Badge} from "@heroui/react";
+import {Avatar, Badge} from "@kinetic/react";
 
-const AVATAR_URL = "https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg";
+const AVATAR_URL = "https://kinetic-assets.nyc3.cdn.digitaloceanspaces.com/avatars/green.jpg";
 
 export function BadgeDot() {
   const colors = ["accent", "success", "warning", "danger"] as const;

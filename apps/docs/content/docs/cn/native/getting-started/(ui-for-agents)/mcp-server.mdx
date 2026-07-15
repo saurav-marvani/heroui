@@ -1,21 +1,21 @@
 ---
 title: MCP 服务器
-description: 在 AI 助手中直接访问 HeroUI Native 文档
+description: 在 AI 助手中直接访问 Kinetic Native 文档
 ---
 
-HeroUI MCP 服务器让 AI 助手直接读取 HeroUI Native 组件文档，便于在 AI 驱动的开发流程中使用 HeroUI。
+Kinetic MCP 服务器让 AI 助手直接读取 Kinetic Native 组件文档，便于在 AI 驱动的开发流程中使用 Kinetic。
 
 <DocsImage
   src="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/native/hero-native-mcp-light-new.jpg"
   darkSrc="https://heroui-assets.nyc3.cdn.digitaloceanspaces.com/docs/native/hero-native-mcp-dark-new.jpg"
-  alt="HeroUI Native MCP 服务器"
+  alt="Kinetic Native MCP 服务器"
 />
 
 
-当前 MCP 服务器支持 **heroui-native** 与 [stdio 传输](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports#stdio)。npm 包名为 `@heroui/native-mcp`。源码见 [GitHub](https://github.com/heroui-inc/heroui-mcp)。
+当前 MCP 服务器支持 **heroui-native** 与 [stdio 传输](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports#stdio)。npm 包名为 `@kinetic/native-mcp`。源码见 [GitHub](https://github.com/heroui-inc/heroui-mcp)。
 
 <Callout>
-  随着 HeroUI Native 组件增加，MCP 中的可用内容也会同步扩展。
+  随着 Kinetic Native 组件增加，MCP 中的可用内容也会同步扩展。
 </Callout>
 
 ## 快速配置
@@ -24,7 +24,7 @@ HeroUI MCP 服务器让 AI 助手直接读取 HeroUI Native 组件文档，便�
 
 <div className="flex items-center gap-3 mb-4">
   <a
-    href="https://link.heroui.com/native-mcp-cursor-install"
+    href="https://link.kinetic-ui.com/native-mcp-cursor-install"
     className="button button--tertiary button--sm no-underline"
   >
     <svg viewBox="0 0 466.73 532.09" className="w-5 h-5 fill-current">
@@ -41,7 +41,7 @@ HeroUI MCP 服务器让 AI 助手直接读取 HeroUI Native 组件文档，便�
   "mcpServers": {
     "heroui-native": {
       "command": "npx",
-      "args": ["-y", "@heroui/native-mcp@latest"]
+      "args": ["-y", "@kinetic/native-mcp@latest"]
     }
   }
 }
@@ -52,7 +52,7 @@ HeroUI MCP 服务器让 AI 助手直接读取 HeroUI Native 组件文档，便�
 **Claude Code：** 在终端执行：
 
 ```bash
-claude mcp add heroui-native -- npx -y @heroui/native-mcp@latest
+claude mcp add heroui-native -- npx -y @kinetic/native-mcp@latest
 ```
 
 或手动写入项目的 `.mcp.json`：
@@ -62,7 +62,7 @@ claude mcp add heroui-native -- npx -y @heroui/native-mcp@latest
   "mcpServers": {
     "heroui-native": {
       "command": "npx",
-      "args": ["-y", "@heroui/native-mcp@latest"]
+      "args": ["-y", "@kinetic/native-mcp@latest"]
     }
   }
 }
@@ -79,7 +79,7 @@ claude mcp add heroui-native -- npx -y @heroui/native-mcp@latest
   "mcpServers": {
     "heroui-native": {
       "command": "npx",
-      "args": ["-y", "@heroui/native-mcp@latest"]
+      "args": ["-y", "@kinetic/native-mcp@latest"]
     }
   }
 }
@@ -96,7 +96,7 @@ claude mcp add heroui-native -- npx -y @heroui/native-mcp@latest
   "context_servers": {
     "heroui-native": {
       "command": "npx",
-      "args": ["-y", "@heroui/native-mcp@latest"],
+      "args": ["-y", "@kinetic/native-mcp@latest"],
       "env": {}
     }
   }
@@ -115,7 +115,7 @@ claude mcp add heroui-native -- npx -y @heroui/native-mcp@latest
     "heroui-native": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@heroui/native-mcp@latest"]
+      "args": ["-y", "@kinetic/native-mcp@latest"]
     }
   }
 }
@@ -130,7 +130,7 @@ claude mcp add heroui-native -- npx -y @heroui/native-mcp@latest
 ```toml title="config.toml"
 [mcp_servers.heroui-native]
 command = "npx"
-args = ["-y", "@heroui/native-mcp@latest"]
+args = ["-y", "@kinetic/native-mcp@latest"]
 ```
 
 重启 Codex，在 TUI 中运行 `/mcp` 校验服务器已激活。
@@ -145,7 +145,7 @@ args = ["-y", "@heroui/native-mcp@latest"]
   "mcp": {
     "heroui-native": {
       "type": "local",
-      "command": ["npx", "-y", "@heroui/native-mcp@latest"]
+      "command": ["npx", "-y", "@kinetic/native-mcp@latest"]
     }
   }
 }
@@ -159,18 +159,18 @@ args = ["-y", "@heroui/native-mcp@latest"]
 
 配置完成后，可向 AI 提问，例如：
 
-- "Help me install HeroUI Native in my Expo app"
-- "Show me all HeroUI Native components"
+- "Help me install Kinetic Native in my Expo app"
+- "Show me all Kinetic Native components"
 - "What props does the Button component have?"
 - "Give me an example of using the Card component"
 - "What are the theme variables for dark mode?"
 
 ### 自动升级
 
-MCP 也可协助将 HeroUI Native 升级到最新版本，例如：
+MCP 也可协助将 Kinetic Native 升级到最新版本，例如：
 
 ```bash
-"Hey Cursor, update HeroUI Native to the latest version"
+"Hey Cursor, update Kinetic Native to the latest version"
 ```
 
 助手通常会：
@@ -187,10 +187,10 @@ MCP 向 AI 暴露以下工具：
 
 | 工具 | 说明 |
 |------|------|
-| `list_components` | 列出全部 HeroUI Native 组件 |
+| `list_components` | 列出全部 Kinetic Native 组件 |
 | `get_component_docs` | 获取一个或多个组件的完整文档（结构、props、示例与用法模式） |
 | `get_theme_variables` | 读取颜色、排版、间距等主题变量，支持明暗模式 |
-| `get_docs` | 浏览 HeroUI Native 全部文档（指南与原则等）；安装说明可使用路径 `/docs/native/getting-started/quick-start` |
+| `get_docs` | 浏览 Kinetic Native 全部文档（指南与原则等）；安装说明可使用路径 `/docs/native/getting-started/quick-start` |
 
 
 ## 故障排除
@@ -201,6 +201,6 @@ MCP 向 AI 暴露以下工具：
 
 ## 链接
 
-- [npm 包](https://www.npmjs.com/package/@heroui/native-mcp)
+- [npm 包](https://www.npmjs.com/package/@kinetic/native-mcp)
 - [GitHub 仓库](https://github.com/heroui-inc/heroui-mcp)
 - [贡献指南](https://github.com/heroui-inc/heroui-mcp/blob/main/CONTRIBUTING.md)

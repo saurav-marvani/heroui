@@ -1,6 +1,6 @@
 "use client";
 
-import {ScrollShadow} from "@heroui/react";
+import {ScrollShadow} from "@kinetic/react";
 import {useState} from "react";
 
 import {useDictionary} from "@/hooks/use-dictionary";

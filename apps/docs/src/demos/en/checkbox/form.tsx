@@ -1,6 +1,6 @@
 "use client";
 
-import {Button, Checkbox} from "@heroui/react";
+import {Button, Checkbox} from "@kinetic/react";
 import React from "react";
 
 export function Form() {

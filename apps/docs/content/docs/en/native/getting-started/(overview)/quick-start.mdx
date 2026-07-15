@@ -1,17 +1,17 @@
 ---
 title: Quick Start
-description: Get up and running with HeroUI Native
+description: Get up and running with Kinetic Native
 icon: rocket
 ---
 
 Choose the path that fits your project:
 
 - **Option 1** — Scaffold a new, preconfigured project with our CLI. Zero setup.
-- **Option 2** — Add HeroUI Native to an existing React Native or Expo project.
+- **Option 2** — Add Kinetic Native to an existing React Native or Expo project.
 
 ## Option 1: Create a New Project
 
-The fastest way to start. The CLI scaffolds an Expo project with HeroUI Native, all required peer dependencies, Uniwind / Tailwind CSS, global styles, and the `HeroUINativeProvider` already wired up — so you can jump straight to building.
+The fastest way to start. The CLI scaffolds an Expo project with Kinetic Native, all required peer dependencies, Uniwind / Tailwind CSS, global styles, and the `KineticNativeProvider` already wired up — so you can jump straight to building.
 
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
@@ -46,17 +46,17 @@ npm run start
 You're ready to build. Skip ahead to [Use Your First Component](#use-your-first-component) or [browse components](/docs/native/components).
 
 <Callout type="info">
-  The scaffold includes Expo with TypeScript, Uniwind + Tailwind CSS preconfigured, `global.css` with the required imports, and the app entry already wrapped in `GestureHandlerRootView` and `HeroUINativeProvider`.
+  The scaffold includes Expo with TypeScript, Uniwind + Tailwind CSS preconfigured, `global.css` with the required imports, and the app entry already wrapped in `GestureHandlerRootView` and `KineticNativeProvider`.
 </Callout>
 
 ## Option 2: Add to an Existing Project
 
-If you already have a React Native or Expo app, follow these steps to install and configure HeroUI Native manually.
+If you already have a React Native or Expo app, follow these steps to install and configure Kinetic Native manually.
 
 <CopyPrompt
-  prompt={`Set up HeroUI Native in this React Native project.
+  prompt={`Set up Kinetic Native in this React Native project.
 
-Use the HeroUI Native MCP server (@heroui/native-mcp) as the single source of truth for installation steps, peer dependencies, and component APIs. Start by retrieving the latest quick-start / installation guide from the MCP and follow it precisely — do not rely on memory for versions, package names, or setup steps.
+Use the Kinetic Native MCP server (@kinetic/native-mcp) as the single source of truth for installation steps, peer dependencies, and component APIs. Start by retrieving the latest quick-start / installation guide from the MCP and follow it precisely — do not rely on memory for versions, package names, or setup steps.
 
 Before making any changes:
 
@@ -67,16 +67,16 @@ Before making any changes:
 Then apply the setup:
 
 - Install heroui-native plus any missing mandatory+optional peer dependencies.
-- Set up Uniwind + Tailwind CSS (follow the Uniwind quickstart) and add the HeroUI Native imports plus the correct @source line to global.css.
+- Set up Uniwind + Tailwind CSS (follow the Uniwind quickstart) and add the Kinetic Native imports plus the correct @source line to global.css.
 - Make sure GestureHandlerRootView wraps the entire app — it must be the outermost wrapper with style { flex: 1 }.
-- Add HeroUINativeProvider as a direct child of GestureHandlerRootView, wrapping the rest of the app.
+- Add KineticNativeProvider as a direct child of GestureHandlerRootView, wrapping the rest of the app.
 
 When done, summarize the changes you made and tell me how to run the app on iOS / Android.`}
 >
-  **Prefer to let your AI assistant do it?** Install the [HeroUI Native MCP Server](/docs/native/getting-started/mcp-server) in your editor, then paste the prompt into your AI assistant — it will analyze your project and handle the entire setup for you.
+  **Prefer to let your AI assistant do it?** Install the [Kinetic Native MCP Server](/docs/native/getting-started/mcp-server) in your editor, then paste the prompt into your AI assistant — it will analyze your project and handle the entire setup for you.
 </CopyPrompt>
 
-### 1. Install HeroUI Native
+### 1. Install Kinetic Native
 
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
@@ -166,16 +166,16 @@ Inside your `global.css` file add the following imports:
 
 ### 6. Wrap Your App with Provider
 
-Wrap your application with `HeroUINativeProvider`. You must wrap it with `GestureHandlerRootView`:
+Wrap your application with `KineticNativeProvider`. You must wrap it with `GestureHandlerRootView`:
 
 ```tsx
-import { HeroUINativeProvider } from 'heroui-native';
+import { KineticNativeProvider } from 'heroui-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <HeroUINativeProvider>{/* Your app content */}</HeroUINativeProvider>
+      <KineticNativeProvider>{/* Your app content */}</KineticNativeProvider>
     </GestureHandlerRootView>
   );
 }
@@ -204,7 +204,7 @@ If you want to reduce bundle size and import only the components you need, our l
 
 ```tsx
 // Granular imports - use when you need only a few components
-import { HeroUINativeProvider } from "heroui-native/provider";
+import { KineticNativeProvider } from "heroui-native/provider";
 import { Button } from "heroui-native/button";
 import { Card } from "heroui-native/card";
 
@@ -228,16 +228,16 @@ Granular imports are ideal when you only need a few components, as they help kee
   **Important**: To keep the bundle size under control, you must follow the pattern with granular imports consistently. Even one general import from `heroui-native` will break this optimization strategy.
 </Callout>
 
-> **Tip**: For even more control over your bundle, consider using [`HeroUINativeProviderRaw`](/docs/native/getting-started/provider#raw-provider) — a lightweight provider that excludes `ToastProvider` and `PortalHost`.
+> **Tip**: For even more control over your bundle, consider using [`KineticNativeProviderRaw`](/docs/native/getting-started/provider#raw-provider) — a lightweight provider that excludes `ToastProvider` and `PortalHost`.
 
 ## What's Next?
 
-- [HeroUI Native Provider](/docs/native/getting-started/provider)
+- [Kinetic Native Provider](/docs/native/getting-started/provider)
 - [Styling Guide](/docs/native/getting-started/styling)
 - [Theming Documentation](/docs/native/getting-started/theming)
 
 ## Running on Web (Expo)
 
 <Callout type="warning">
-  HeroUI Native is currently not recommended for web use. We are focusing on mobile platforms (iOS and Android) at this time. For web development, please use [HeroUI React](/docs/react/getting-started/quick-start) instead.
+  Kinetic Native is currently not recommended for web use. We are focusing on mobile platforms (iOS and Android) at this time. For web development, please use [Kinetic React](/docs/react/getting-started/quick-start) instead.
 </Callout>

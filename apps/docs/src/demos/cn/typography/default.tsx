@@ -1,4 +1,4 @@
-import {Typography} from "@heroui/react";
+import {Typography} from "@kinetic/react";
 
 export const Default = () => {
   return (
@@ -8,13 +8,13 @@ export const Default = () => {
       <Typography type="h3">默认可组合</Typography>
       <Typography type="h4">小标题</Typography>
       <Typography>
-        HeroUI Typography 以 React Aria Components Text 为原语，提供语义化排版类型与 render prop
+        Kinetic Typography 以 React Aria Components Text 为原语，提供语义化排版类型与 render prop
         多态。
       </Typography>
       <Typography color="muted" type="body-sm">
         用于次要说明的较小弱化正文。
       </Typography>
-      <Typography type="code">pnpm add @heroui/react</Typography>
+      <Typography type="code">pnpm add @kinetic/react</Typography>
     </div>
   );
 };

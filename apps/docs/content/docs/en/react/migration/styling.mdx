@@ -1,17 +1,17 @@
 ---
 title: Styling & Theming
-description: Complete guide to styling changes and theming system migration from HeroUI v2 to v3
+description: Complete guide to styling changes and theming system migration from Kinetic v2 to v3
 ---
 
 <Callout type="info">
-  This guide covers all styling-related changes between HeroUI v2 and v3, including utility classes, component styles, theme system architecture, and visual differences. For component-specific API changes, see individual component migration guides.
+  This guide covers all styling-related changes between Kinetic v2 and v3, including utility classes, component styles, theme system architecture, and visual differences. For component-specific API changes, see individual component migration guides.
 </Callout>
 
 **Note:** The `classNames` prop has been replaced with `className` prop in v3. All components now use the standard React `className` prop instead of the `classNames` object prop from v2.
 
 ## Overview
 
-HeroUI v3 introduces significant changes to the styling system:
+Kinetic v3 introduces significant changes to the styling system:
 
 - **CSS-First Architecture**: Replaces Tailwind plugin with pure CSS files
 - **Standard Tailwind Utilities**: Custom utilities replaced with standard Tailwind classes
@@ -51,7 +51,7 @@ HeroUI v3 introduces significant changes to the styling system:
 
 ### Text Utilities
 
-HeroUI v2 provided custom text size utilities that mapped to CSS variables. v3 uses standard Tailwind text size classes.
+Kinetic v2 provided custom text size utilities that mapped to CSS variables. v3 uses standard Tailwind text size classes.
 
 **v2 Text Utilities:**
 
@@ -182,7 +182,7 @@ v2 provided custom transition utilities with a default duration of 250ms and `ea
 
 **Scrollbar Utilities:**
 
-v2 provided `.scrollbar-hide` and `.scrollbar-default` utilities. v3 now exposes standards-only scrollbar utilities from `@heroui/styles`: `scrollbar`, `scrollbar-thin`, `scrollbar-default`, and `scrollbar-none`. Use `data-scrollbar="thin"`, `data-scrollbar="default"`, or `data-scrollbar="none"` on an ancestor for subtree-level control.
+v2 provided `.scrollbar-hide` and `.scrollbar-default` utilities. v3 now exposes standards-only scrollbar utilities from `@kinetic/styles`: `scrollbar`, `scrollbar-thin`, `scrollbar-default`, and `scrollbar-none`. Use `data-scrollbar="thin"`, `data-scrollbar="default"`, or `data-scrollbar="none"` on an ancestor for subtree-level control.
 
 **Animation Utilities:**
 
@@ -210,7 +210,7 @@ v2 used a Tailwind CSS plugin that:
 
 ```js
 // tailwind.config.js
-const {heroui} = require("@heroui/react");
+const {heroui} = require("@kinetic/react");
 
 module.exports = {
   plugins: [
@@ -256,12 +256,12 @@ v3 uses a pure CSS approach:
 ```css
 /* globals.css */
 @import "tailwindcss";
-@import "@heroui/styles";
+@import "@kinetic/styles";
 ```
 
 **No Tailwind Config Required:**
 
-If you only use HeroUI, you can remove `tailwind.config.js` entirely. If you have custom Tailwind config, keep it but remove the HeroUI plugin.
+If you only use Kinetic, you can remove `tailwind.config.js` entirely. If you have custom Tailwind config, keep it but remove the Kinetic plugin.
 
 ### Architecture Comparison
 
@@ -670,7 +670,7 @@ v3 uses more consistent gap spacing:
   <Tab value="v2">
     ```js
     // tailwind.config.js
-    const {heroui} = require("@heroui/react");
+    const {heroui} = require("@kinetic/react");
 
     module.exports = {
       plugins: [
@@ -695,7 +695,7 @@ v3 uses more consistent gap spacing:
     ```css
     /* globals.css */
     @import "tailwindcss";
-    @import "@heroui/styles";
+    @import "@kinetic/styles";
 
     :root {
       --accent: oklch(0.6204 0.195 253.83);

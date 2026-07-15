@@ -1,17 +1,17 @@
 ---
 title: Styling
-description: Style HeroUI Native components with Tailwind or StyleSheet API
+description: Style Kinetic Native components with Tailwind or StyleSheet API
 icon: brush
 links:
   themes: true
   tailwind: theme
 ---
 
-HeroUI Native components provide flexible styling options: Tailwind CSS utilities, StyleSheet API, and render props for dynamic styling.
+Kinetic Native components provide flexible styling options: Tailwind CSS utilities, StyleSheet API, and render props for dynamic styling.
 
 ## Styling Principles
 
-HeroUI Native is built with `className` as the go-to styling solution. You can use Tailwind CSS classes via the `className` prop on all components.
+Kinetic Native is built with `className` as the go-to styling solution. You can use Tailwind CSS classes via the `className` prop on all components.
 
 **StyleSheet precedence:** The `style` prop (StyleSheet API) can be used and has precedence over `className` when both are provided. This allows you to override Tailwind classes when needed.
 
@@ -24,7 +24,7 @@ HeroUI Native is built with `className` as the go-to styling solution. You can u
 
 ## Basic Styling
 
-**Using className:** All HeroUI Native components accept `className` props:
+**Using className:** All Kinetic Native components accept `className` props:
 
 ```tsx
 import { Button } from 'heroui-native';
@@ -147,7 +147,7 @@ export function CustomButton({
 
 ## Using Component classNames
 
-Each HeroUI Native component exports a `classNames` object that contains the same styling functions used internally by the component. This is particularly useful when you want to style your own custom components to match the appearance of HeroUI Native components.
+Each Kinetic Native component exports a `classNames` object that contains the same styling functions used internally by the component. This is particularly useful when you want to style your own custom components to match the appearance of Kinetic Native components.
 
 For example, you can style a custom `Link` component to look like a `Button`:
 
@@ -214,12 +214,12 @@ const labelClasses = buttonClassNames.label({
 });
 ```
 
-The `classNames` functions accept the same variant props as the components themselves, allowing you to maintain visual consistency across your custom components and HeroUI Native components.
+The `classNames` functions accept the same variant props as the components themselves, allowing you to maintain visual consistency across your custom components and Kinetic Native components.
 
 
 ## Responsive Design
 
-HeroUI Native supports Tailwind's responsive breakpoint system via [Uniwind](https://docs.uniwind.dev/breakpoints). Use breakpoint prefixes like `sm:`, `md:`, `lg:`, and `xl:` to apply styles conditionally based on screen width.
+Kinetic Native supports Tailwind's responsive breakpoint system via [Uniwind](https://docs.uniwind.dev/breakpoints). Use breakpoint prefixes like `sm:`, `md:`, `lg:`, and `xl:` to apply styles conditionally based on screen width.
 
 **Mobile-first approach:** Start with mobile styles (no prefix), then use breakpoints to enhance for larger screens.
 
@@ -267,7 +267,7 @@ For custom breakpoints and more details, see the [Uniwind breakpoints documentat
 
 ## Utilities
 
-HeroUI Native provides utility functions to assist with styling components.
+Kinetic Native provides utility functions to assist with styling components.
 
 ### cn Utility
 

@@ -1,7 +1,7 @@
 "use client";
 
 import {Check, Power} from "@gravity-ui/icons";
-import {Switch} from "@heroui/react";
+import {Switch} from "@kinetic/react";
 
 export function CustomStyles() {
   return (

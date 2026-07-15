@@ -1,6 +1,6 @@
 "use client";
 
-import {Calendar, DateField, DatePicker, Label} from "@heroui/react";
+import {Calendar, DateField, DatePicker, Label} from "@kinetic/react";
 import {getLocalTimeZone, today} from "@internationalized/date";
 import {I18nProvider} from "react-aria-components";
 

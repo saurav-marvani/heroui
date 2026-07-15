@@ -1,8 +1,8 @@
 "use client";
 
-import type {Key} from "@heroui/react";
+import type {Key} from "@kinetic/react";
 
-import {Autocomplete, EmptyState, Label, ListBox, SearchField, useFilter} from "@heroui/react";
+import {Autocomplete, EmptyState, Label, ListBox, SearchField, useFilter} from "@kinetic/react";
 import {useState} from "react";
 
 export function Controlled() {

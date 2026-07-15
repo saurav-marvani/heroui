@@ -16,22 +16,22 @@ Update to the latest version:
 <Tabs items={["npm", "pnpm", "yarn", "bun"]}>
   <Tab value="npm">
     ```bash
-    npm i @heroui/styles@alpha @heroui/react@alpha
+    npm i @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="pnpm">
     ```bash
-    pnpm add @heroui/styles@alpha @heroui/react@alpha
+    pnpm add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="yarn">
     ```bash
-    yarn add @heroui/styles@alpha @heroui/react@alpha
+    yarn add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
   <Tab value="bun">
     ```bash
-    bun add @heroui/styles@alpha @heroui/react@alpha
+    bun add @kinetic/styles@alpha @kinetic/react@alpha
     ```
   </Tab>
 </Tabs>
@@ -40,7 +40,7 @@ Update to the latest version:
 
 ### MCP Server
 
-HeroUI now includes an [MCP server](/docs/ui-for-agents/mcp-server) that lets AI assistants like Cursor, Claude Code, and VS Code Copilot access HeroUI v3 documentation and component information directly.
+Kinetic now includes an [MCP server](/docs/ui-for-agents/mcp-server) that lets AI assistants like Cursor, Claude Code, and VS Code Copilot access Kinetic v3 documentation and component information directly.
 
 **Quick Setup:**
 
@@ -48,7 +48,7 @@ HeroUI now includes an [MCP server](/docs/ui-for-agents/mcp-server) that lets AI
 
 <div className="flex items-center gap-3 mb-4">
   <a
-    href="https://link.heroui.com/mcp-cursor-install"
+    href="https://link.kinetic-ui.com/mcp-cursor-install"
     className="button button--tertiary button--sm no-underline bg-default/50 dark:bg-default/30"
   >
     <svg viewBox="0 0 466.73 532.09" className="w-5 h-5 fill-current">
@@ -65,7 +65,7 @@ Or manually add to **Cursor Settings** → **Tools** → **MCP Servers**:
   "mcpServers": {
     "heroui-react": {
       "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"]
+      "args": ["-y", "@kinetic/react-mcp@latest"]
     }
   }
 }
@@ -76,7 +76,7 @@ Or manually add to **Cursor Settings** → **Tools** → **MCP Servers**:
 Run this command in your terminal:
 
 ```bash
-claude mcp add heroui-react -- npx -y @heroui/react-mcp@latest
+claude mcp add heroui-react -- npx -y @kinetic/react-mcp@latest
 ```
 
 [Learn more](/docs/ui-for-agents/mcp-server)
@@ -125,7 +125,7 @@ The [Card component](/docs/components/card) has been updated with a new variant 
 Added a [CloseButton component](/docs/components/close-button) for closing dialogs, modals, and other dismissible elements.
 
 ```tsx
-import {CloseButton} from "@heroui/react";
+import {CloseButton} from "@kinetic/react";
 
 // Basic usage
 <CloseButton onPress={() => console.log("Closed")} />
@@ -168,7 +168,7 @@ import {CloseButton} from "@heroui/react";
 3. **Update imports:**
    ```tsx
    // Add CloseButton if needed
-   import {Card, CloseButton} from "@heroui/react";
+   import {Card, CloseButton} from "@kinetic/react";
    ```
 
 ## Links

@@ -3,9 +3,9 @@ import type {ThemeId} from "@/app/[lang]/themes/constants";
 import {themeIds} from "@/app/[lang]/themes/constants";
 
 export const DEFAULT_DESIGN_THEME: ThemeId = "default";
-export const DESIGN_THEME_STORAGE_KEY = "heroui-docs-design-theme";
-export const DESIGN_THEME_CHANGE_EVENT = "heroui-docs-design-theme-change";
-export const VIBRANT_STORAGE_KEY = "heroui-docs-vibrant-palette";
+export const DESIGN_THEME_STORAGE_KEY = "kinetic-docs-design-theme";
+export const DESIGN_THEME_CHANGE_EVENT = "kinetic-docs-design-theme-change";
+export const VIBRANT_STORAGE_KEY = "kinetic-docs-vibrant-palette";
 
 export function isDesignThemeId(value: string | null | undefined): value is ThemeId {
   return themeIds.includes(value as ThemeId);

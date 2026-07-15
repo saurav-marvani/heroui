@@ -15,11 +15,11 @@ export async function GET(_: Request, {params}: {params: Promise<{skill: string}
 
     // Normalize skill names
     if (skillName === "react") {
-      skillName = "heroui-react";
+      skillName = "kinetic-react";
     }
 
     if (skillName === "native") {
-      skillName = "heroui-native";
+      skillName = "kinetic-native";
     }
 
     // Validate skill name

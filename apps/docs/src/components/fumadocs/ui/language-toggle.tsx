@@ -2,7 +2,7 @@
 
 import type {ComponentProps} from "react";
 
-import {Button, Dropdown, Header, Label} from "@heroui/react";
+import {Button, Dropdown, Header, Label} from "@kinetic/react";
 import {useI18n} from "fumadocs-ui/contexts/i18n";
 
 import {Languages} from "@/components/fumadocs/ui/icons";

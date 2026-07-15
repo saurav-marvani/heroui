@@ -1,5 +1,5 @@
 import {CircleDollar} from "@gravity-ui/icons";
-import {Card, Link} from "@heroui/react";
+import {Card, Link} from "@kinetic/react";
 
 export function Default() {
   return (
@@ -15,7 +15,7 @@ export function Default() {
       <Card.Footer>
         <Link
           aria-label="Go to Acme Creator Hub (opens in new tab)"
-          href="https://heroui.com"
+          href="https://kinetic-ui.com"
           rel="noopener noreferrer"
           target="_blank"
         >

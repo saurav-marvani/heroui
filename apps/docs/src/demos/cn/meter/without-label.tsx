@@ -1,4 +1,4 @@
-import {Meter} from "@heroui/react";
+import {Meter} from "@kinetic/react";
 
 export function WithoutLabel() {
   return (

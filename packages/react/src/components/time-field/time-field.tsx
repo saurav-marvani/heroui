@@ -1,10 +1,10 @@
 "use client";
 
-import type {TimeFieldVariants} from "@heroui/styles";
+import type {TimeFieldVariants} from "@kinetic/styles";
 import type {ComponentPropsWithRef} from "react";
 import type {TimeValue} from "react-aria-components/TimeField";
 
-import {timeFieldVariants} from "@heroui/styles";
+import {timeFieldVariants} from "@kinetic/styles";
 import React from "react";
 import {TimeField as TimeFieldPrimitive} from "react-aria-components/TimeField";
 

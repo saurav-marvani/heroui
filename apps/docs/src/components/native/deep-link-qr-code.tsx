@@ -1,12 +1,12 @@
 "use client";
 
-import {Link} from "@heroui/react";
+import {Link} from "@kinetic/react";
 import {ReactQRCode} from "@lglab/react-qr-code";
 
 import {NATIVE_APP} from "@/config/native-app";
 import {useIsMobileDevice} from "@/hooks/use-is-mobile-device";
 
-import {HeroUIPlainLogo} from "../heroui-plain-logo";
+import {KineticPlainLogo} from "../kinetic-plain-logo";
 
 /**
  * In-app route segment that hosts component screens. This matches the
@@ -27,9 +27,9 @@ const IN_APP_COMPONENT_PATH = "components";
  * URL that Expo Router can navigate without going through `+native-intent`.
  *
  * Examples:
- *  - `https://heroui.com/docs/native-showcase/components/button` ->
+ *  - `https://kinetic-ui.com/docs/native-showcase/components/button` ->
  *    `herouinative://components/button`
- *  - `https://heroui.com/docs/native-showcase/components/`       ->
+ *  - `https://kinetic-ui.com/docs/native-showcase/components/`       ->
  *    `herouinative://`  (open at the app's initial route)
  *  - `""` (origin not yet resolved on the client) -> `""`
  */
@@ -93,7 +93,7 @@ export const DeepLinkQRCode = ({size = 160, url}: DeepLinkQRCodeProps) => {
         href={mobileUrl || "#"}
       >
         <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-foreground text-background">
-          <HeroUIPlainLogo size={18} />
+          <KineticPlainLogo size={18} />
         </div>
         <div className="flex flex-1 flex-col items-center justify-center">
           <span className="truncate text-sm font-semibold text-foreground">{NATIVE_APP.NAME}</span>

@@ -2,10 +2,10 @@
 
 import type {DOMRenderProps} from "../../utils/dom";
 import type {SurfaceVariants} from "../surface";
-import type {CardVariants} from "@heroui/styles";
+import type {CardVariants} from "@kinetic/styles";
 import type {ReactNode} from "react";
 
-import {cardVariants} from "@heroui/styles";
+import {cardVariants} from "@kinetic/styles";
 import React, {createContext, use} from "react";
 
 import {composeSlotClassName} from "../../utils/compose";

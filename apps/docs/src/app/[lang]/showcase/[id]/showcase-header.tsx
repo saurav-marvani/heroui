@@ -8,11 +8,11 @@ import {
   TooltipContent,
   TooltipRoot,
   TooltipTrigger,
-} from "@heroui/react";
+} from "@kinetic/react";
 import {useParams, useRouter, useSearchParams} from "next/navigation";
 import {useEffect} from "react";
 
-import {HeroUILogo} from "@/components/heroui-logo";
+import {KineticLogo} from "@/components/kinetic-logo";
 import {Iconify} from "@/components/iconify";
 import {useCodePanel} from "@/hooks/use-code-panel";
 import {i18n} from "@/lib/i18n";
@@ -67,7 +67,7 @@ export function ShowcaseHeader() {
         </TooltipRoot>
       </div>
       <div className="flex flex-1 items-center justify-center">
-        <HeroUILogo className="text-foreground/20" />
+        <KineticLogo className="text-foreground/20" />
       </div>
       <div className="flex flex-1 items-center justify-end gap-2">
         <ShowcaseThemeSwitch />
