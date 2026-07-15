@@ -1,5 +1,5 @@
 {
-  "name": "@kinetic/react",
+  "name": "@kinetic/ui",
   "version": "3.2.2",
   "description": "🚀 Beautiful and modern React UI library built with Tailwind CSS 4.0.",
   "license": "MIT",
@@ -13,7 +13,7 @@
   "keywords": [
     "next",
     "next ui",
-    "hero ui",
+    "kinetic ui",
     "components",
     "modern components",
     "react components",
@@ -37,11 +37,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroui-inc/kinetic.git",
+    "url": "https://github.com/kinetic-ui/kinetic.git",
     "directory": "packages/react"
   },
   "bugs": {
-    "url": "https://github.com/heroui-inc/heroui/issues"
+    "url": "https://github.com/kinetic-ui/kinetic/issues"
   },
   "scripts": {
     "dev": "rollup -c rollup.config.mjs --watch",
