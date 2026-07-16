@@ -88,6 +88,13 @@ export * from "./calendar";
 export * from "./calendar-year-picker";
 export * from "./range-calendar";
 
+// Phase 1: Navigation & Layout
+export * from "./app-shell";
+export * from "./split-view";
+
+// Phase 2: Data Display
+export * from "./data-grid";
+
 //  ===================================
 //  Icons
 //  ===================================
