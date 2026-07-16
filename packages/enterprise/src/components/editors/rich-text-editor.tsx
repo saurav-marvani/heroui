@@ -1,27 +1,37 @@
 'use client';
 
-import type { ReactNode } from 'react';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useCallback } from 'react';
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Link from '@tiptap/extension-link';
+import Placeholder from '@tiptap/extension-placeholder';
+import { Button } from '@kinetic/react';
 import { cn } from '../../utils';
 
 interface RichTextEditorProps {
+  /** Initial HTML content */
   value?: string;
+  /** Callback on content change */
   onChange?: (value: string) => void;
+  /** Placeholder text */
   placeholder?: string;
+  /** Custom className */
   className?: string;
+  /** Editor height */
   height?: number | string;
+  /** Read-only mode */
   readOnly?: boolean;
+  /** Show toolbar */
   toolbar?: boolean;
-  toolbarPosition?: 'top' | 'bottom' | 'floating';
-  formats?: string[];
+  /** Focus callback */
   onFocus?: () => void;
+  /** Blur callback */
   onBlur?: () => void;
 }
 
 /**
- * RichTextEditor - Wrapper around BlockNote or similar rich text editor
- * Supports multiple text formats and customizable toolbar
- * Note: This is a simplified version. In production, use @blocknote/react
+ * RichTextEditor - WYSIWYG editor using Tiptap
+ * Provides formatting toolbar with essential text editing features like bold, italic, lists, etc.
  */
 const RichTextEditor = forwardRef<HTMLDivElement, RichTextEditorProps>(
   (
@@ -33,105 +43,192 @@ const RichTextEditor = forwardRef<HTMLDivElement, RichTextEditorProps>(
       height = 300,
       readOnly = false,
       toolbar = true,
-      toolbarPosition = 'top',
-      formats = ['bold', 'italic', 'underline', 'link', 'list'],
       onFocus,
       onBlur,
     },
-    ref
+    ref,
   ) => {
-    const [content, setContent] = React.useState(value);
-    const [isFocused, setIsFocused] = React.useState(false);
+    const editor = useEditor({
+      extensions: [
+        StarterKit,
+        Link.configure({
+          openOnClick: false,
+        }),
+        Placeholder.configure({
+          placeholder,
+        }),
+      ],
+      content: value,
+      editable: !readOnly,
+      onUpdate: ({ editor }) => {
+        onChange?.(editor.getHTML());
+      },
+      onFocus: () => onFocus?.(),
+      onBlur: () => onBlur?.(),
+    });
 
-    const handleChange = (e: React.ChangeEvent<HTMLDivElement>) => {
-      const newContent = e.currentTarget.innerHTML;
-      setContent(newContent);
-      onChange?.(newContent);
-    };
+    const toggleBold = useCallback(() => {
+      editor?.chain().focus().toggleBold().run();
+    }, [editor]);
 
-    const applyFormat = (command: string, value?: string) => {
-      document.execCommand(command, false, value);
-    };
+    const toggleItalic = useCallback(() => {
+      editor?.chain().focus().toggleItalic().run();
+    }, [editor]);
 
-    const formatOptions = {
-      bold: { label: 'B', title: 'Bold', command: 'bold' },
-      italic: { label: 'I', title: 'Italic', command: 'italic' },
-      underline: { label: 'U', title: 'Underline', command: 'underline' },
-      link: { label: '🔗', title: 'Link', command: 'createLink' },
-      list: { label: '•', title: 'List', command: 'insertUnorderedList' },
-      ol: { label: '1.', title: 'Numbered List', command: 'insertOrderedList' },
-      quote: { label: '"', title: 'Quote', command: 'formatBlock', value: '<blockquote>' },
-    };
+    const toggleCode = useCallback(() => {
+      editor?.chain().focus().toggleCode().run();
+    }, [editor]);
+
+    const toggleHeading = useCallback((level: 1 | 2 | 3) => {
+      editor?.chain().focus().toggleHeading({ level }).run();
+    }, [editor]);
+
+    const toggleBulletList = useCallback(() => {
+      editor?.chain().focus().toggleBulletList().run();
+    }, [editor]);
+
+    const toggleOrderedList = useCallback(() => {
+      editor?.chain().focus().toggleOrderedList().run();
+    }, [editor]);
+
+    const toggleBlockquote = useCallback(() => {
+      editor?.chain().focus().toggleBlockquote().run();
+    }, [editor]);
+
+    const toggleCodeBlock = useCallback(() => {
+      editor?.chain().focus().toggleCodeBlock().run();
+    }, [editor]);
+
+    if (!editor) {
+      return <div className="p-4 text-muted-foreground">Loading editor...</div>;
+    }
 
     return (
       <div
         ref={ref}
         className={cn(
           'flex flex-col rounded-lg border border-divider bg-background overflow-hidden',
-          className
+          className,
         )}
         data-slot="rich-text-editor"
       >
         {/* Toolbar */}
-        {toolbar && toolbarPosition === 'top' && (
+        {toolbar && (
           <div className="flex flex-wrap gap-1 p-2 border-b border-divider bg-muted/30">
-            {formats.map((format) => {
-              const option = formatOptions[format as keyof typeof formatOptions];
-              if (!option) return null;
+            <Button
+              size="sm"
+              variant={editor.isActive('bold') ? 'solid' : 'ghost'}
+              onClick={toggleBold}
+              disabled={readOnly}
+              className="font-bold"
+            >
+              B
+            </Button>
 
-              return (
-                <button
-                  key={format}
-                  onClick={() =>
-                    applyFormat(option.command, option.value)
-                  }
-                  className="px-3 py-1.5 text-sm rounded hover:bg-hover transition-colors border border-transparent hover:border-divider"
-                  title={option.title}
-                  disabled={readOnly}
-                >
-                  {option.label}
-                </button>
-              );
-            })}
+            <Button
+              size="sm"
+              variant={editor.isActive('italic') ? 'solid' : 'ghost'}
+              onClick={toggleItalic}
+              disabled={readOnly}
+              className="italic"
+            >
+              I
+            </Button>
+
+            <Button
+              size="sm"
+              variant={editor.isActive('code') ? 'solid' : 'ghost'}
+              onClick={toggleCode}
+              disabled={readOnly}
+              className="font-mono text-xs"
+            >
+              Code
+            </Button>
+
+            <div className="w-px bg-divider" />
+
+            <Button
+              size="sm"
+              variant={editor.isActive('heading', { level: 1 }) ? 'solid' : 'ghost'}
+              onClick={() => toggleHeading(1)}
+              disabled={readOnly}
+              className="text-sm font-bold"
+            >
+              H1
+            </Button>
+
+            <Button
+              size="sm"
+              variant={editor.isActive('heading', { level: 2 }) ? 'solid' : 'ghost'}
+              onClick={() => toggleHeading(2)}
+              disabled={readOnly}
+              className="text-sm font-bold"
+            >
+              H2
+            </Button>
+
+            <div className="w-px bg-divider" />
+
+            <Button
+              size="sm"
+              variant={editor.isActive('bulletList') ? 'solid' : 'ghost'}
+              onClick={toggleBulletList}
+              disabled={readOnly}
+            >
+              •
+            </Button>
+
+            <Button
+              size="sm"
+              variant={editor.isActive('orderedList') ? 'solid' : 'ghost'}
+              onClick={toggleOrderedList}
+              disabled={readOnly}
+            >
+              1.
+            </Button>
+
+            <div className="w-px bg-divider" />
+
+            <Button
+              size="sm"
+              variant={editor.isActive('blockquote') ? 'solid' : 'ghost'}
+              onClick={toggleBlockquote}
+              disabled={readOnly}
+              className="text-sm"
+            >
+              "
+            </Button>
+
+            <Button
+              size="sm"
+              variant={editor.isActive('codeBlock') ? 'solid' : 'ghost'}
+              onClick={toggleCodeBlock}
+              disabled={readOnly}
+              className="text-xs font-mono"
+            >
+              &lt;&gt;
+            </Button>
           </div>
         )}
 
         {/* Editor */}
         <div
-          contentEditable={!readOnly}
-          suppressContentEditableWarning
-          onChange={handleChange}
-          onFocus={() => {
-            setIsFocused(true);
-            onFocus?.();
-          }}
-          onBlur={() => {
-            setIsFocused(false);
-            onBlur?.();
-          }}
-          className={cn(
-            'flex-1 p-4 outline-none focus:ring-inset focus:ring-2 focus:ring-primary overflow-auto',
-            'prose prose-sm max-w-none',
-            readOnly && 'opacity-75 cursor-not-allowed'
-          )}
           style={{ minHeight: height }}
-          data-placeholder={placeholder}
+          className="flex-1 overflow-auto p-4 focus-within:ring-inset focus-within:ring-2 focus-within:ring-primary"
         >
-          {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
-        </div>
-
-        {/* Status Bar */}
-        <div className="px-4 py-2 border-t border-divider bg-muted/20 text-xs text-muted-foreground flex justify-between">
-          <span>
-            {content ? `${content.replace(/<[^>]*>/g, '').length} characters` : 'Empty'}
-          </span>
-          {isFocused && !readOnly && (
-            <span className="text-primary">Editing...</span>
-          )}
+          <EditorContent
+            editor={editor}
+            className={cn(
+              'prose prose-sm max-w-none',
+              'prose-headings:mt-4 prose-headings:mb-2',
+              'prose-p:m-0 prose-p:leading-7',
+              readOnly && 'opacity-75 cursor-not-allowed',
+            )}
+          />
         </div>
       </div>
     );
-  }
+  },
 );
 
 RichTextEditor.displayName = 'RichTextEditor';

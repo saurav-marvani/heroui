@@ -1,150 +1,79 @@
 'use client';
 
-import type { ReactNode } from 'react';
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useMemo } from 'react';
+import JsonView from '@uiw/react-json-view';
+import { lightTheme } from '@uiw/react-json-view/light';
+import { darkTheme } from '@uiw/react-json-view/dark';
 import { cn } from '../../utils';
 
 interface JSONViewerProps {
+  /** JSON data to display */
   data: unknown;
+  /** Custom className */
   className?: string;
+  /** Enable collapsible tree nodes */
   collapsible?: boolean;
-  defaultExpanded?: boolean;
-  indent?: number;
-  onItemClick?: (path: string[], value: unknown) => void;
+  /** Initial collapsed state (true = collapsed, number = depth) */
+  collapsed?: boolean | number;
+  /** Show quote marks around strings */
+  quotes?: boolean;
+  /** Use dark theme */
+  dark?: boolean;
+  /** Enable copy to clipboard button */
+  enableClipboard?: boolean;
+  /** Sort object keys alphabetically */
+  sortKeys?: boolean;
+  /** Maximum string length before truncation */
+  stringMaxLength?: number;
 }
 
 /**
- * JSONViewer - Hierarchical JSON data viewer with expand/collapse
- * Displays JSON data in a readable tree format
+ * JSONViewer - Display JSON data with @uiw/react-json-view
+ * Provides interactive tree view with collapsible nodes and clipboard support
  */
 const JSONViewer = forwardRef<HTMLDivElement, JSONViewerProps>(
-  ({
-    data,
-    className,
-    collapsible = true,
-    defaultExpanded = false,
-    indent = 2,
-    onItemClick,
-  }, ref) => {
-    const [expandedPaths, setExpandedPaths] = useState<Set<string>>(
-      defaultExpanded ? new Set() : new Set()
-    );
-
-    const togglePath = (path: string) => {
-      const newExpanded = new Set(expandedPaths);
-      if (newExpanded.has(path)) {
-        newExpanded.delete(path);
-      } else {
-        newExpanded.add(path);
-      }
-      setExpandedPaths(newExpanded);
-    };
-
-    const renderValue = (
-      value: unknown,
-      path: string[] = [],
-      level: number = 0
-    ): ReactNode => {
-      const pathStr = path.join('.');
-
-      if (value === null) {
-        return <span className="text-muted-foreground">null</span>;
-      }
-
-      if (typeof value === 'boolean') {
-        return <span className="text-warning">{String(value)}</span>;
-      }
-
-      if (typeof value === 'number') {
-        return <span className="text-success">{value}</span>;
-      }
-
-      if (typeof value === 'string') {
-        return <span className="text-danger">"{value}"</span>;
-      }
-
-      if (Array.isArray(value)) {
-        const isExpanded = expandedPaths.has(pathStr);
-
-        return (
-          <div>
-            <button
-              onClick={() => {
-                togglePath(pathStr);
-                onItemClick?.(path, value);
-              }}
-              className="text-foreground hover:text-primary font-mono text-sm"
-            >
-              {collapsible ? (isExpanded ? '▼' : '▶') : ''} [
-            </button>
-            {isExpanded && (
-              <div style={{ marginLeft: `${indent}px` }}>
-                {value.map((item, index) => (
-                  <div key={index} className="font-mono text-sm">
-                    <span className="text-muted-foreground">{index}: </span>
-                    {renderValue(item, [...path, `[${index}]`], level + 1)}
-                    {index < value.length - 1 && (
-                      <span className="text-muted-foreground">,</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-            <span className="text-foreground font-mono">]</span>
-          </div>
-        );
-      }
-
-      if (typeof value === 'object' && value !== null) {
-        const isExpanded = expandedPaths.has(pathStr);
-        const entries = Object.entries(value);
-
-        return (
-          <div>
-            <button
-              onClick={() => {
-                togglePath(pathStr);
-                onItemClick?.(path, value);
-              }}
-              className="text-foreground hover:text-primary font-mono text-sm"
-            >
-              {collapsible ? (isExpanded ? '▼' : '▶') : ''} {'{ '}
-            </button>
-            {isExpanded && (
-              <div style={{ marginLeft: `${indent}px` }}>
-                {entries.map(([key, val], index) => (
-                  <div key={key} className="font-mono text-sm">
-                    <span className="text-primary">"{key}"</span>
-                    <span className="text-muted-foreground">: </span>
-                    {renderValue(val, [...path, key], level + 1)}
-                    {index < entries.length - 1 && (
-                      <span className="text-muted-foreground">,</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-            <span className="text-foreground font-mono">{' }'}</span>
-          </div>
-        );
-      }
-
-      return <span className="text-foreground">{String(value)}</span>;
-    };
+  (
+    {
+      data,
+      className,
+      collapsible = true,
+      collapsed = false,
+      quotes = true,
+      dark = false,
+      enableClipboard = true,
+      sortKeys = false,
+      stringMaxLength = 50,
+    },
+    ref,
+  ) => {
+    // Memoize the theme selection
+    const theme = useMemo(() => (dark ? darkTheme : lightTheme), [dark]);
 
     return (
       <div
         ref={ref}
         className={cn(
-          'rounded-lg border border-divider bg-background p-4 font-mono text-sm overflow-auto max-h-96',
-          className
+          'rounded-lg border border-divider bg-background overflow-auto',
+          'max-h-96 p-4',
+          className,
         )}
         data-slot="json-viewer"
       >
-        {renderValue(data)}
+        <JsonView
+          value={data}
+          style={theme}
+          collapsed={collapsed}
+          enableClipboard={enableClipboard}
+          quotesOnKeys={quotes}
+          collapseStringsAfterLength={stringMaxLength}
+          sortKeys={sortKeys}
+          displayObjectSize={true}
+          displayDataTypes={true}
+          indentWidth={2}
+        />
       </div>
     );
-  }
+  },
 );
 
 JSONViewer.displayName = 'JSONViewer';

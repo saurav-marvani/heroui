@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react';
 import React, { forwardRef, useMemo } from 'react';
+import { useVirtualizer } from '@tanstack/react-virtual';
 import { cn } from '../../utils';
 
 interface Column<T> {
@@ -10,7 +11,6 @@ interface Column<T> {
   accessor: (row: T) => ReactNode;
   width?: number | string;
   sortable?: boolean;
-  resizable?: boolean;
   className?: string;
 }
 
@@ -29,8 +29,8 @@ interface VirtualizedTableProps<T> {
 }
 
 /**
- * VirtualizedTable - High-performance table with virtual scrolling
- * Only renders visible rows to handle large datasets efficiently
+ * VirtualizedTable - High-performance table with @tanstack/react-virtual
+ * Renders only visible rows to efficiently handle large datasets (1000s of rows)
  */
 const VirtualizedTable = forwardRef<
   HTMLDivElement,
@@ -50,113 +50,143 @@ const VirtualizedTable = forwardRef<
       loading = false,
       emptyMessage = 'No data available',
     },
-    ref
+    ref,
   ) => {
-    const [scrollTop, setScrollTop] = React.useState(0);
+    const parentRef = React.useRef<HTMLDivElement>(null);
 
-    const visibleRange = useMemo(() => {
-      const startIndex = Math.floor(scrollTop / rowHeight);
-      const visibleRows = Math.ceil(containerHeight / rowHeight);
-      const endIndex = Math.min(startIndex + visibleRows + 1, data.length);
+    // Initialize virtualizer with tanstack/react-virtual
+    const virtualizer = useVirtualizer({
+      count: data.length,
+      getScrollElement: () => parentRef.current,
+      estimateSize: () => rowHeight,
+      overscan: 10, // Render 10 items outside visible range
+    });
 
-      return { startIndex, endIndex, visibleRows };
-    }, [scrollTop, rowHeight, containerHeight, data.length]);
+    const virtualItems = virtualizer.getVirtualItems();
+    const totalSize = virtualizer.getTotalSize();
 
-    const visibleRows = data.slice(visibleRange.startIndex, visibleRange.endIndex);
+    // Calculate offset for virtual items
+    const paddingTop = virtualItems.length > 0 ? virtualItems?.[0]?.start || 0 : 0;
+    const paddingBottom =
+      virtualItems.length > 0
+        ? totalSize - (virtualItems?.[virtualItems.length - 1]?.end || 0)
+        : 0;
 
-    const totalHeight = data.length * rowHeight;
-    const offsetY = visibleRange.startIndex * rowHeight;
+    if (loading) {
+      return (
+        <div className={cn('w-full animate-pulse', className)}>
+          <div className="h-10 bg-gray-200 rounded mb-2" />
+          <div className="space-y-2">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="h-10 bg-gray-100 rounded" />
+            ))}
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div
         ref={ref}
-        className={cn('flex flex-col border border-divider rounded-lg overflow-hidden', className)}
-        data-slot="virtualized-table"
+        className={cn('relative overflow-hidden rounded-lg border', className)}
       >
-        {/* Header */}
-        <div className="flex bg-muted border-b border-divider sticky top-0 z-10">
-          {columns.map((column) => (
-            <div
-              key={column.id}
-              className={cn(
-                'px-4 py-2 font-semibold text-sm text-foreground flex-shrink-0',
-                column.className
-              )}
-              style={{ width: column.width || 'auto', minWidth: 100 }}
-            >
-              {column.header}
-            </div>
-          ))}
+        {/* Table Header */}
+        <div className="sticky top-0 z-10 bg-background border-b">
+          <div className="flex w-full">
+            {columns.map((column) => (
+              <div
+                key={column.id}
+                style={{
+                  width: column.width || 'auto',
+                  flex: column.width ? 'none' : 1,
+                }}
+                className="px-4 py-3 text-sm font-semibold text-foreground"
+              >
+                {column.header}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Body */}
+        {/* Virtual Scrolling Container */}
         <div
-          className="flex-1 overflow-y-auto relative"
-          style={{ height: containerHeight }}
-          onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
+          ref={parentRef}
+          style={{
+            height: `${containerHeight}px`,
+            overflow: 'auto',
+          }}
+          className="relative"
         >
-          {loading ? (
-            <div className="flex items-center justify-center h-full">
-              <div className="text-center">
-                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
-                <p className="mt-2 text-sm text-muted-foreground">Loading...</p>
-              </div>
-            </div>
-          ) : data.length === 0 ? (
-            <div className="flex items-center justify-center h-full">
-              <p className="text-sm text-muted-foreground">{emptyMessage}</p>
+          {data.length === 0 ? (
+            <div className="flex items-center justify-center h-full text-muted-foreground">
+              {emptyMessage}
             </div>
           ) : (
-            <div style={{ height: totalHeight, position: 'relative' }}>
-              <div style={{ transform: `translateY(${offsetY}px)` }}>
-                {visibleRows.map((row, index) => {
-                  const absoluteIndex = visibleRange.startIndex + index;
-                  const isEven = absoluteIndex % 2 === 0;
+            <div
+              style={{
+                height: `${totalSize}px`,
+              }}
+            >
+              {/* Top padding */}
+              {paddingTop > 0 && (
+                <div style={{ height: paddingTop }} />
+              )}
 
-                  return (
-                    <div
-                      key={keyExtractor(row, absoluteIndex)}
-                      className={cn(
-                        'flex border-b border-divider last:border-b-0 transition-colors',
-                        striped && isEven && 'bg-muted/30',
-                        hover && 'hover:bg-hover cursor-pointer',
-                        onRowClick && 'cursor-pointer'
-                      )}
-                      style={{ height: rowHeight }}
-                      onClick={() => onRowClick?.(row, absoluteIndex)}
-                    >
-                      {columns.map((column) => (
-                        <div
-                          key={column.id}
-                          className={cn(
-                            'flex items-center px-4 py-2 text-sm text-foreground overflow-hidden flex-shrink-0',
-                            column.className
-                          )}
-                          style={{ width: column.width || 'auto', minWidth: 100 }}
-                        >
-                          <div className="truncate">
-                            {column.accessor(row)}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  );
-                })}
-              </div>
+              {/* Rendered items */}
+              {virtualItems.map((virtualItem) => {
+                const row = data[virtualItem.index];
+                const key = keyExtractor(row, virtualItem.index);
+
+                return (
+                  <div
+                    key={key}
+                    data-index={virtualItem.index}
+                    style={{
+                      height: `${rowHeight}px`,
+                      transform: `translateY(${virtualItem.start - paddingTop}px)`,
+                    }}
+                    className={cn(
+                      'flex w-full border-b transition-colors',
+                      striped && virtualItem.index % 2 === 0 && 'bg-muted/30',
+                      hover && 'hover:bg-muted/50 cursor-pointer',
+                      onRowClick && 'cursor-pointer',
+                    )}
+                    onClick={() => onRowClick?.(row, virtualItem.index)}
+                  >
+                    {columns.map((column) => (
+                      <div
+                        key={`${key}-${column.id}`}
+                        style={{
+                          width: column.width || 'auto',
+                          flex: column.width ? 'none' : 1,
+                        }}
+                        className={cn(
+                          'px-4 py-3 text-sm flex items-center overflow-hidden',
+                          column.className,
+                        )}
+                      >
+                        <span className="truncate">
+                          {column.accessor(row)}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
+
+              {/* Bottom padding */}
+              {paddingBottom > 0 && (
+                <div style={{ height: paddingBottom }} />
+              )}
             </div>
           )}
         </div>
-
-        {/* Footer Info */}
-        <div className="flex items-center justify-between border-t border-divider px-4 py-2 text-xs text-muted-foreground bg-muted/20">
-          <span>{data.length} rows</span>
-          <span>Scroll to load more</span>
-        </div>
       </div>
     );
-  }
+  },
 );
 
 VirtualizedTable.displayName = 'VirtualizedTable';
 
-export { VirtualizedTable, type VirtualizedTableProps, type Column };
+export type { Column, VirtualizedTableProps };
+export { VirtualizedTable };

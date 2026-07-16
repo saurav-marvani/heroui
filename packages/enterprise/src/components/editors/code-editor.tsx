@@ -1,27 +1,56 @@
 'use client';
 
-import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
+import Editor from '@monaco-editor/react';
 import { cn } from '../../utils';
 
 interface CodeEditorProps {
+  /** Initial code value */
   value?: string;
+  /** Change callback */
   onChange?: (value: string) => void;
+  /** Programming language */
   language?: string;
-  theme?: 'light' | 'dark';
+  /** Editor theme */
+  theme?: 'light' | 'vs-dark';
+  /** Custom className */
   className?: string;
+  /** Editor height */
   height?: number | string;
+  /** Read-only mode */
   readOnly?: boolean;
+  /** Show line numbers */
   lineNumbers?: boolean;
+  /** Show minimap */
   minimap?: boolean;
+  /** Show language selector */
   showLanguageSelector?: boolean;
+  /** Language change callback */
   onLanguageChange?: (language: string) => void;
 }
 
+const SUPPORTED_LANGUAGES = [
+  'javascript',
+  'typescript',
+  'python',
+  'java',
+  'cpp',
+  'csharp',
+  'go',
+  'rust',
+  'sql',
+  'html',
+  'css',
+  'json',
+  'yaml',
+  'xml',
+  'bash',
+  'dockerfile',
+];
+
 /**
- * CodeEditor - Code editor component
- * Wrapper component - in production, integrate @monaco-editor/react
- * This is a simplified version for demonstration
+ * CodeEditor - Syntax-highlighted code editor using @monaco-editor/react
+ * Provides Microsoft's Monaco editor with full language support and themes
  */
 const CodeEditor = forwardRef<HTMLDivElement, CodeEditorProps>(
   (
@@ -38,114 +67,67 @@ const CodeEditor = forwardRef<HTMLDivElement, CodeEditorProps>(
       showLanguageSelector = true,
       onLanguageChange,
     },
-    ref
+    ref,
   ) => {
-    const [lineCount, setLineCount] = React.useState(
-      value.split('\n').length
-    );
+    const [selectedLanguage, setSelectedLanguage] = React.useState(language);
 
-    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-      const newValue = e.target.value;
-      setLineCount(newValue.split('\n').length);
-      onChange?.(newValue);
+    const handleLanguageChange = (newLanguage: string) => {
+      setSelectedLanguage(newLanguage);
+      onLanguageChange?.(newLanguage);
     };
 
-    const languages = [
-      'javascript',
-      'typescript',
-      'python',
-      'java',
-      'cpp',
-      'csharp',
-      'go',
-      'rust',
-      'sql',
-      'html',
-      'css',
-      'json',
-      'yaml',
-      'xml',
-    ];
+    const monacoTheme = theme === 'light' ? 'vs' : 'vs-dark';
 
     return (
       <div
         ref={ref}
-        className={cn(
-          'flex flex-col rounded-lg border border-divider bg-background overflow-hidden',
-          theme === 'dark' && 'bg-slate-900 text-slate-50',
-          className
-        )}
+        className={cn('flex flex-col rounded-lg border border-divider overflow-hidden', className)}
         data-slot="code-editor"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-2 border-b border-divider bg-muted/30">
-          <span className="text-xs font-semibold text-muted-foreground uppercase">
-            {language}
-          </span>
-          {showLanguageSelector && (
+        {showLanguageSelector && (
+          <div className="flex items-center justify-between px-4 py-2 border-b border-divider bg-muted/30">
+            <span className="text-xs font-semibold text-muted-foreground uppercase">
+              {selectedLanguage}
+            </span>
             <select
-              value={language}
-              onChange={(e) => onLanguageChange?.(e.target.value)}
+              value={selectedLanguage}
+              onChange={(e) => handleLanguageChange(e.target.value)}
               className="text-xs px-2 py-1 rounded border border-divider bg-background hover:bg-hover"
             >
-              {languages.map((lang) => (
+              {SUPPORTED_LANGUAGES.map((lang) => (
                 <option key={lang} value={lang}>
                   {lang}
                 </option>
               ))}
             </select>
-          )}
-        </div>
+          </div>
+        )}
 
-        {/* Editor Container */}
-        <div
-          className="flex flex-1 overflow-hidden"
-          style={{ height }}
-        >
-          {/* Line Numbers */}
-          {lineNumbers && (
-            <div className="flex flex-col items-end px-3 py-2 bg-muted/20 border-r border-divider select-none text-muted-foreground text-xs font-mono leading-relaxed">
-              {Array.from({ length: lineCount }).map((_, i) => (
-                <div key={i}>{i + 1}</div>
-              ))}
-            </div>
-          )}
-
-          {/* Code Textarea */}
-          <textarea
+        {/* Monaco Editor */}
+        <div style={{ height }} className="flex-1 overflow-hidden">
+          <Editor
+            height="100%"
+            language={selectedLanguage}
             value={value}
-            onChange={handleChange}
-            readOnly={readOnly}
-            className={cn(
-              'flex-1 p-4 font-mono text-sm outline-none resize-none bg-background text-foreground',
-              'focus:ring-inset focus:ring-2 focus:ring-primary',
-              readOnly && 'opacity-75 cursor-not-allowed'
-            )}
-            style={{
-              fontFamily: 'monospace',
-              lineHeight: '1.5',
+            onChange={(val) => onChange?.(val || '')}
+            theme={monacoTheme}
+            options={{
+              readOnly,
+              lineNumbers: lineNumbers ? 'on' : 'off',
+              minimap: { enabled: minimap },
+              automaticLayout: true,
+              fontSize: 14,
+              fontFamily: 'Monaco, Menlo, Ubuntu Mono, monospace',
+              padding: { top: 16 },
+              scrollBeyondLastLine: false,
+              wordWrap: 'on',
             }}
-            spellCheck="false"
           />
-
-          {/* Minimap */}
-          {minimap && (
-            <div className="w-12 border-l border-divider bg-muted/10 p-1 text-xs">
-              <div className="h-full bg-gradient-to-b from-primary/20 to-primary/10 rounded text-center text-muted-foreground flex items-center justify-center">
-                ▦
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Footer */}
-        <div className="px-4 py-2 border-t border-divider bg-muted/20 text-xs text-muted-foreground flex justify-between">
-          <span>{value.length} characters</span>
-          <span>{lineCount} lines</span>
         </div>
       </div>
     );
-  }
+  },
 );
 
 CodeEditor.displayName = 'CodeEditor';
