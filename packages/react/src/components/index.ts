@@ -99,6 +99,12 @@ export * from "./kanban-board";
 export * from "./property-grid";
 export * from "./json-viewer";
 
+// Phase 3: Editors & Input
+export * from "./rich-text-editor";
+export * from "./code-editor";
+export * from "./query-builder";
+export * from "./form-wizard";
+
 //  ===================================
 //  Icons
 //  ===================================
