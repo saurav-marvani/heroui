@@ -213,7 +213,7 @@ Components use Tailwind CSS v4 with semantic design tokens:
 - @monaco-editor/react - Code editing
 - @blocknote/react - Rich text editing
 - react-pdf - PDF viewing
-- recharts - Charting
+- react-spectrum-charts - Charting
 - react-big-calendar - Calendar
 
 ## Contributing
