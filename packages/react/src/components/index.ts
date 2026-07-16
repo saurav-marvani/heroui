@@ -94,6 +94,10 @@ export * from "./split-view";
 
 // Phase 2: Data Display
 export * from "./data-grid";
+export * from "./timeline";
+export * from "./kanban-board";
+export * from "./property-grid";
+export * from "./json-viewer";
 
 //  ===================================
 //  Icons

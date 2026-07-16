@@ -23,20 +23,22 @@ export const SplitView = React.forwardRef<HTMLDivElement, SplitViewProps>(
     const containerRef = ref as React.RefObject<HTMLDivElement>;
 
     const handleMouseMove = useCallback((e: MouseEvent) => {
-      if (!isDragging.current.active) return;
+      if (!isDragging.current.active || !containerRef.current) return;
       
       const delta = direction === "horizontal" ? e.clientX - startPos.current : e.clientY - startPos.current;
       const newSizes = [...startSizes.current];
       const containerSize = direction === "horizontal" 
-        ? containerRef.current?.clientWidth 
-        : containerRef.current?.clientHeight;
+        ? containerRef.current.clientWidth
+        : containerRef.current.clientHeight;
       
-      if (containerSize) {
+      if (containerSize > 0) {
         const percentDelta = (delta / containerSize) * 100;
         const index = isDragging.current.index;
-        newSizes[index] = Math.max(10, newSizes[index] + percentDelta);
-        if (index + 1 < newSizes.length) {
-          newSizes[index + 1] = Math.max(10, newSizes[index + 1] - percentDelta);
+        if (newSizes[index] !== undefined) {
+          newSizes[index] = Math.max(10, (newSizes[index] ?? 50) + percentDelta);
+        }
+        if (index + 1 < newSizes.length && newSizes[index + 1] !== undefined) {
+          newSizes[index + 1] = Math.max(10, (newSizes[index + 1] ?? 50) - percentDelta);
         }
         setSizes(newSizes);
         onResize?.(newSizes);

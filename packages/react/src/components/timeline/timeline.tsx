@@ -147,7 +147,7 @@ export const TimelineItem = React.forwardRef<
   TimelineItemProps
 >(
   (
-    {title, description, timestamp, icon, status, className = ""},
+    {title, description, timestamp, status, className = ""},
     ref,
   ) => {
     const statusColor =
