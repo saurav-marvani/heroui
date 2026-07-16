@@ -105,6 +105,13 @@ export * from "./code-editor";
 export * from "./query-builder";
 export * from "./form-wizard";
 
+// Phase 4: AI Components
+export * from "./ai-chat";
+export * from "./conversation";
+export * from "./message-bubble";
+export * from "./streaming-text";
+export * from "./thinking-indicator";
+
 //  ===================================
 //  Icons
 //  ===================================
